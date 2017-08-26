@@ -2,4 +2,5 @@
 
 Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) notes and code by JavaScript
 
-- [union-find](./union-find)
+- [并查集](./union-find)
+- [基本排序](./elementary-sorts)
