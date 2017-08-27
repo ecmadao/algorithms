@@ -6,3 +6,4 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
 - [基本排序](./elementary-sorts)
 - [归并排序](./mergesort)
 - [快速排序](./quicksort)
+- [优先队列](./priority-queues)
