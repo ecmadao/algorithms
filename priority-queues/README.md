@@ -37,7 +37,7 @@
 
 ```javascript
 /*
- * 从根部创建时，数组的元素从头开始依次 push 进代表二叉堆的数组中
+ * 从二叉树根部创建时，数组的元素从头开始依次 push 进代表二叉堆的数组中
  * 然后对新添加的元素进行排序
  * 这其实相当于向一个已存在的二叉堆中添加新元素的过程
 */
@@ -60,7 +60,7 @@ const enqueue = (heaps, child) => {
 
 /*
  * 子节点和父节点进行比较
- 因为是创建最大堆，所以如果子节点的大小大于父节点，则两者交换位置
+ * 因为是创建最大堆，所以如果子节点的大小大于父节点，则两者交换位置
 */
 const sortWithFather = (heaps, childIndex) => {
   const fatherIndex = Math.floor(childIndex / 2);
@@ -78,7 +78,7 @@ const sortWithFather = (heaps, childIndex) => {
 
 ```javascript
 /*
- * 从底部开始创建
+ * 从二叉树底部开始创建
  * 如果不需要保留原数组，我们就可以省略克隆数组这一步，减少更多开销
 */
 const buildFromTail = (array) => {

@@ -5,16 +5,19 @@ const quicksort = (array, start = null, end = null) => {
   if (end === null) end = array.length - 1;
   if (start >= end) return;
 
+  // 基准值为起始值
   const base = array[start];
   let i = start;
   let j = end;
 
   while (true) {
+    // 如果右侧 j 对应的值大于基准值，则继续前进
     while (less(base, array[j])) {
       if (j - 1 < start) break;
       j -= 1;
     }
 
+    // 如果左侧 i 对应的值小于基准值，则继续前进
     while (less(array[i], base)) {
       if (i + 1 > end) break;
       i += 1;
