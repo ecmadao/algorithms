@@ -20,6 +20,7 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
 - [归并排序](./mergesort)
 - [快速排序](./quicksort)
 - [优先队列](./priority-queues)
+- [二叉搜索树](./binary-search-trees)
 
 ### Run demo
 
