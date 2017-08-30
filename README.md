@@ -21,6 +21,7 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
 - [快速排序](./quicksort)
 - [优先队列](./priority-queues)
 - [二叉搜索树](./binary-search-trees)
+- [二叉平衡搜索树](./balanced-search-trees)
 
 ### Run demo
 
