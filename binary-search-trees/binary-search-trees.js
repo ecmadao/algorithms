@@ -1,25 +1,16 @@
-// 递归的提升节点的左子节点
-const elevateLeft = (node) => {
-  // 一直递归到最底部的左子节点
-  while (node !== null && node.left !== null) {
-    // 把当前节点的左子节点链接到当前节点的父节点上（依旧作为左子节点）
-    // 同时改变了左子节点的父节点
-    node.parentNode.leftChild = node.leftChild;
-    elevateRight(node.leftChild.leftChild);
-    break;
-  }
-};
+// 已知传入的节点 A 具有左节点和右节点，返回节点值 A 最接近的 A 的子节点
+const findClosestNode = (node) => {
+  const val = node.node;
+  const leftNode = node.leftChild.rightChild
+    ? node.leftChild.rightChild
+    : node.leftChild;
+  const rightNode = node.rightChild.leftChild
+    ? node.rightChild.leftChild
+    : node.rightChild;
 
-// 递归的提升节点的右子节点
-const elevateRight = (node) => {
-  // 一直递归到最底部的右子节点
-  while (node !== null && node.right !== null) {
-    // 把当前节点的右子节点链接到当前节点的父节点上（依旧作为右子节点）
-    // 同时改变了右子节点的父节点
-    node.parentNode.rightChild = node.rightChild;
-    elevateRight(node.rightChild.rightChild);
-    break;
-  }
+  return (rightNode.node - val) > (leftNode.node - val)
+    ? leftNode
+    : rightNode;
 };
 
 class Node {
@@ -137,6 +128,7 @@ class Node {
 
   remove(val) {
     let findedNode = this.find(val);
+    if (!findedNode) return;
     const childNodeCount = findedNode.childNodeCount;
     const parentNode = findedNode.parentNode;
 
@@ -157,14 +149,10 @@ class Node {
         parentNode.rightChild = childNode;
       }
     } else {
-      // 如果有两个子节点，则根据被删除的节点是其父节点的左还是右子节点，
-      // 来递归的提升被删除节点的左或者右子节点
-      console.log(`isLeftChild ? ${findedNode.isLeftChild}`);
-      if (findedNode.isLeftChild) {
-        elevateLeft(findedNode);
-      } else {
-        elevateRight(findedNode);
-      }
+      // 如果有两个子节点，则找到最节点需要删除的节点的那个子节点
+      const substitute = findClosestNode(findedNode);
+      findedNode.node = substitute.node;
+      this.remove(substitute);
     }
   }
 }
@@ -184,6 +172,7 @@ bst.insert(17);
 bst.insert(5);
 bst.insert(1.5);
 bst.insert(9.5);
+bst.insert(1.7);
 
 console.log(`bst.left: ${bst.left}`); // 1
 console.log(`bst.right: ${bst.right}`); // 20
@@ -218,6 +207,6 @@ console.log(`bst.right: ${bst.right}`); // 11
 console.log('删除有两个子节点的元素：2');
 bst.remove(2);
 console.log(`bst.left: ${bst.left}`); // 1
-console.log(`bst.right: ${bst.right}`); // 20
+console.log(`bst.right: ${bst.right}`); // 11
 console.log(`bst.leftChild.left: ${bst.leftChild.left}`); // 0.1
-console.log(`bst.leftChild.right: ${bst.leftChild.right}`); // 9
+console.log(`bst.leftChild.right: ${bst.leftChild.right}`); // 1.7

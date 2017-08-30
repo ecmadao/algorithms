@@ -155,32 +155,27 @@ class Node {
 - 当删除的节点只有左子节点或者右子节点时，则删除目标节点，并把它的那个子节点提升一级
 
 - 当删除的节点有左右子节点时：
-  - 目标节点是其父节点的左子节点，则递归的提升目标节点的左子节点（确保每个节点始终大于其左子节点）
-  - 目标节点是其父节点的右子节点，则递归的提升目标节点的右子节点（确保每个节点始终小于其右子节点）
+  - 遍历目标节点的子节点，找到最接近目标节点值的元素，然后那它替代目标节点
+  - 删除找到的那个节点（递归）
+
+如何找到最接近目标节点值的元素？有个简单的方法是，找到*目标节点左子树的最右边的右子树*和*目标节点右子树最左边的左子树*，取两者之间更接近目标节点的元素。如果没有，则用第一层子树的值代替。
+
+![](./img/binarytree-delete.png)
 
 ```javascript
-// 递归的提升节点的左子节点
-const elevateLeft = (node) => {
-  // 一直递归到最底部的左子节点
-  while (node !== null && node.left !== null) {
-    // 把当前节点的左子节点链接到当前节点的父节点上（依旧作为左子节点）
-    // 同时改变了左子节点的父节点
-    node.parentNode.leftChild = node.leftChild;
-    elevateRight(node.leftChild.leftChild);
-    break;
-  }
-};
+// 已知传入的节点 A 具有左节点和右节点，返回节点值 A 最接近的 A 的子节点
+const findClosestNode = (node) => {
+  const val = node.node;
+  const leftNode = node.leftChild.rightChild
+    ? node.leftChild.rightChild
+    : node.leftChild;
+  const rightNode = node.rightChild.leftChild
+    ? node.rightChild.leftChild
+    : node.rightChild;
 
-// 递归的提升节点的右子节点
-const elevateRight = (node) => {
-  // 一直递归到最底部的右子节点
-  while (node !== null && node.right !== null) {
-    // 把当前节点的右子节点链接到当前节点的父节点上（依旧作为右子节点）
-    // 同时改变了右子节点的父节点
-    node.parentNode.rightChild = node.rightChild;
-    elevateRight(node.rightChild.rightChild);
-    break;
-  }
+  return (rightNode.node - val) > (leftNode.node - val)
+    ? leftNode
+    : rightNode;
 };
 
 // 在 Node 中进行修改
@@ -258,13 +253,10 @@ class Node {
         parentNode.rightChild = childNode;
       }
     } else {
-      // 如果有两个子节点，则根据被删除的节点是其父节点的左还是右子节点，
-      // 来递归的提升被删除节点的左或者右子节点
-      if (findedNode.isLeftChild) {
-        elevateLeft(findedNode);
-      } else {
-        elevateRight(findedNode);
-      }
+      // 如果有两个子节点，则找到最节点需要删除的节点的那个子节点
+      const substitute = findClosestNode(findedNode);
+      findedNode.node = substitute.node;
+      this.remove(substitute);
     }
   }
 }
