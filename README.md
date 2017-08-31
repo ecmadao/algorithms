@@ -23,6 +23,7 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
 - [二叉搜索树](./binary-search-trees)
 - 平衡二叉搜索树
   - [AVL 二叉搜索树](./balanced-search-trees)
+  - [2-3 二叉搜索树](./2-3-search-trees)
   - [红黑二叉搜索树](./red-black-bsts)
 
 ### Run demo
