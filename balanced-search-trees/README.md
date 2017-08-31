@@ -1,4 +1,4 @@
-## 平衡二叉搜索树
+## AVL 树
 
 一般的二叉查找树的查询复杂度是跟目标结点到树根的距离（即深度）有关，因此当结点的深度普遍较大时，查询的均摊复杂度会上升，为了更高效的查询，平衡树应运而生了。
 
@@ -10,9 +10,13 @@
 
 ![平衡树](./img/250px-AVLtreef.svg.png)
 
-### AVL 树
+AVL 树是平衡二叉搜索树的一种，具有以下性质：它是一棵空树，或**它的左右两个子树的高度差的绝对值不超过 1**，并且左右两个子树都是一棵平衡二叉树。利用这种平衡的性质，可以避免二叉搜索树某个子节点过深，或者树删除元素重新排列导致某节点过深的失衡问题。
 
-AVL 树具有以下性质：它是一棵空树，或**它的左右两个子树的高度差的绝对值不超过 1**，并且左右两个子树都是一棵平衡二叉树。利用这种平衡的性质，可以避免二叉搜索树某个子节点过深，或者树删除元素重新排列导致某节点过深的失衡问题。
+### 数据查找
+
+AVL 树的查找过程和[二叉搜索树](./binary-search-trees)一致
+
+### 数据插入
 
 当插入一个数据，使 AVL 树失去平衡时，无非有四种情况（及其应对方案）：
 
@@ -65,8 +69,8 @@ const targetNode = node.leftChild;
     // 为了能够让这个方法更通用，我们假设不知道当前节点是其父节点的左子节点还是右子节点，
     // 因此需要进行判断
     const parentChildPosition = node.isLeftChild
-    ? 'leftChild'
-    : 'rightChild';
+      ? 'leftChild'
+      : 'rightChild';
     node.parentNode[parentChildPosition] = targetNode;
     targetNode.parentNode = node.parentNode;
   }
@@ -167,16 +171,52 @@ const rlRotate = (node) => {
 };
 ```
 
-### 红黑树
+### 数据删除
 
-红黑树是规定了如下特性的二叉搜索树：
+类似于[二叉搜索树](../binary-search-trees)那样删除树中的元素，然后再重新让其恢复平衡。
 
-- 每个节点或者是黑色，或者是红色
-- 根节点是黑色
-- 每个叶子节点（NIL）是黑色【注意：这里叶子节点，是指为空(NIL或NULL)的叶子节点！】
-- 如果一个节点是红色的，则它的子节点必须是黑色的
-- 从一个节点到该节点的子孙节点的所有路径上包含相同数目的黑节点。
+```javascript
+class Node {
+  remove(val) {
+    let findedNode = this.find(val);
+    this.removeNode(findedNode);
+  }
 
-在对红黑树进行插入删除的时候进行必要的操作维护红黑树的性质，保持树高平衡性。
+  removeNode() {
+    // 跟二叉搜索树的方法基本一致
+    // 省略了删除的代码
 
-### B 树
+    // 但是最后我们需要让树恢复平衡
+    const recheckNode = findedNode || parentNode;
+    if (recheckNode) {
+      const balance = recheckNode.balance;
+      if (Math.abs(balance) > 1) {
+        recheckNode.rebalanceAfterDel(balance);
+      }
+    }
+  }
+
+  // 根据删除完以后的子树的结构，来判断它是哪种情况的失衡
+  rebalanceAfterDel(balance) {
+    if (balance > 0) {
+      // left
+      if (this.leftChild.leftChild) {
+        // 左左
+        rightRotate(this);
+      } else {
+        // 左右
+        lrRotate(this);
+      }
+    } else if (balance < 0) {
+      // right
+      if (this.rightChild.rightChild) {
+        // 右右
+        leftRotate(this);
+      } else {
+        // 右左
+        rlRotate(this);
+      }
+    }
+  }
+}
+```

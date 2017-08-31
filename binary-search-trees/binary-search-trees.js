@@ -128,31 +128,34 @@ class Node {
 
   remove(val) {
     let findedNode = this.find(val);
+    this.removeNode(findedNode);
+  }
+
+  removeNode(findedNode) {
     if (!findedNode) return;
+
     const childNodeCount = findedNode.childNodeCount;
-    const parentNode = findedNode.parentNode;
 
-    console.log(`findedNode.value: ${findedNode.node}`);
-
-    if (!childNodeCount) {
-      // 如果要移除的目标节点没有左右子节点，则直接删除
-      findedNode.destory();
-      findedNode = null;
-    } else if (childNodeCount === 1) {
-      // 否则如果只有一个子节点，则把仅有的那个子节点提升
-      const childNode = findedNode.left !== null
-        ? findedNode.leftChild
-        : findedNode.rightChild;
-      if (findedNode.isLeftChild) {
-        parentNode.leftChild = childNode;
-      } else {
-        parentNode.rightChild = childNode;
-      }
-    } else {
-      // 如果有两个子节点，则找到最节点需要删除的节点的那个子节点
+    if (childNodeCount === 2) {
+      // 如果有两个子节点，则找到最接近需要删除的节点的那个子节点
       const substitute = findClosestNode(findedNode);
       findedNode.node = substitute.node;
-      this.remove(substitute);
+      substitute.remove(substitute.node);
+    } else {
+      const parentNode = findedNode.parentNode;
+      const childKey = findedNode.isLeftChild
+        ? 'leftChild'
+        : 'rightChild';
+      // 如果要移除的目标节点没有左右子节点，则直接删除
+      let childNode = null;
+      if (childNodeCount) {
+        // 如果只有一个子节点，则把仅有的那个子节点提升
+        childNode = findedNode.leftChild || findedNode.rightChild;
+        childNode.parentNode = parentNode;
+      }
+      parentNode[childKey] = childNode;
+      findedNode.destory();
+      findedNode = null;
     }
   }
 }
@@ -210,3 +213,7 @@ console.log(`bst.left: ${bst.left}`); // 1
 console.log(`bst.right: ${bst.right}`); // 11
 console.log(`bst.leftChild.left: ${bst.leftChild.left}`); // 0.1
 console.log(`bst.leftChild.right: ${bst.leftChild.right}`); // 1.7
+
+console.log('删除有一个子节点的元素：1');
+bst.remove(1);
+console.log(`bst.left: ${bst.left}`); // 0.1

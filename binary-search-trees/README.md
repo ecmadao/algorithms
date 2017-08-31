@@ -235,28 +235,34 @@ class Node {
 
   remove(val) {
     let findedNode = this.find(val);
+    this.removeNode(findedNode);
+  }
+
+  removeNode(findedNode) {
+    if (!findedNode) return;
+
     const childNodeCount = findedNode.childNodeCount;
     const parentNode = findedNode.parentNode;
+    const childKey = findedNode.isLeftChild
+      ? 'leftChild'
+      : 'rightChild';
 
-    if (!childNodeCount) {
-      // 如果要移除的目标节点没有左右子节点，则直接删除
-      findedNode.destory();
-      findedNode = null;
-    } else if (childNodeCount === 1) {
-      // 否则如果只有一个子节点，则把仅有的那个子节点提升
-      const childNode = findedNode.left !== null
-        ? findedNode.left
-        : findedNode.right;
-      if (findedNode.isLeftChild) {
-        parentNode.leftChild = childNode;
-      } else {
-        parentNode.rightChild = childNode;
-      }
-    } else {
-      // 如果有两个子节点，则找到最节点需要删除的节点的那个子节点
+    if (childNodeCount === 2) {
+      // 如果有两个子节点，则找到最接近需要删除的节点的那个子节点
       const substitute = findClosestNode(findedNode);
       findedNode.node = substitute.node;
-      this.remove(substitute);
+      substitute.remove(substitute.node);
+    } else {
+      // 如果要移除的目标节点没有左右子节点，则直接删除
+      let childNode = null;
+      if (childNodeCount) {
+        // 如果只有一个子节点，则把仅有的那个子节点提升
+        childNode = findedNode.leftChild || findedNode.rightChild;
+        childNode.parentNode = parentNode;
+      }
+      parentNode[childKey] = childNode
+      findedNode.destory();
+      findedNode = null;
     }
   }
 }
