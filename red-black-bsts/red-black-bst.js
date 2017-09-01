@@ -1,49 +1,3 @@
-## 红黑二叉搜索树
-
-红黑树是规定了如下特性的二叉搜索树：
-
-- 每个节点或者是黑色，或者是红色
-- 根节点是黑色
-- 每个叶子节点（NIL）是黑色【注意：这里叶子节点，是**指为空（NIL 或 NULL）的叶子节点**！】
-- 如果一个节点是红色的，则它的子节点必须是黑色的
-- **每个红色节点必须有两个黑色的子节点。**（从每个叶子到根的所有路径上不能有两个连续的红色节点）
-- 从一个节点到该节点的子孙节点的所有路径上包含相同数目的黑节点。
-- 红色节点必须在左侧。如果不在，则通过旋转进行调整
-- 新插入的节点为红色，然后再进行调整使树重新恢复平衡
-
-在对红黑树进行插入删除的时候进行必要的操作维护红黑树的性质，保持树高平衡性。下图示例源自[维基百科-红黑树](https://zh.wikipedia.org/wiki/%E7%BA%A2%E9%BB%91%E6%A0%91)：
-
-![](./img/900px-Red-black_tree_example.svg.png)
-
-### 数据插入
-
-当插入一个数据时，寻找到树的最底部，然后插入一个红色节点。之后，根据红黑树的定义来让其恢复平衡。而其恢复平衡的方式和 AVL 树稍有不同的是，在左、右旋转完成之后，会把对应节点的颜色交换；除此以外，还多了一个反转节点颜色的方法。
-
-#### 红色节点插入到了右子节点
-
-在最简单的情况下，一个新插入的节点作为红色节点插入到了右侧。此时需要把它和它的父元素进行左旋，使红色节点转换到左侧。
-
-![](./img/rotate-sample.png)
-
-#### 有连续两个互链接的红色子节点
-
-当有两个相互链接的红色节点时，
-
-- 如果是左左红，则右旋再反色
-- 如果是右右红，则左旋再反色
-- 如果是左右红，则左右旋再反色
-- 如果是右左红，则右左旋再反色
-
-![](./img/rotate-sample2.png)
-
-#### 左右两个子节点都是红色子节点
-
-反色处理，把两个红色的子节点转为黑色。若父节点不是根节点，则同时把它们的父节点转为红色。
-
-```javascript
-// 这些是进行平衡操作是所需的辅助方法
-// 大体上和 AVL 二叉树的方法一直，但是需要交互节点的颜色
-
 /*
  * 把 nodeA 的父节点设置为 nodeB 的父节点
  * 1. 确定 nodeA 是其父节点的左子节点还是右子节点
@@ -123,27 +77,65 @@ const flipColor = (node) => {
     node.color = 'red';
   }
 };
-```
 
----
-
-一个更加完整的插入流程如下所示：
-
-1. 首先从根节点开始，先插入 `10`，然后插入 `5 15`，则出现两个红色子节点，需要反色：
-
-![](./img/insert1.png)
-
-2. 然后继续插入 `7`，7 成为红色右子节点，所以需要左旋处理：
-
-![](./img/insert2.png)
-
-3. 接着插入 `6`，6 成为 5 的红色右子节点，需要左旋处理。处理完成之后出现了两个连续的左左红节点，因而需要右旋处理；紧接着成为左右两个红色节点，需要反色处理：
-
-![](./img/insert3.png)
-
-```javascript
-// 具体的插入操作如下
 class Node {
+  constructor(options) {
+    const {
+      val,
+      color = 'red',
+      parentNode = null,
+    } = options;
+    this.val = val;
+    this.color = color;
+    this.leftNode = null;
+    this.rightNode = null;
+    this.parentNode = parentNode;
+  }
+
+  get node() {
+    return this.val;
+  }
+
+  set node(val) {
+    this.val = val;
+  }
+
+  // get left child node value
+  get left() {
+    return this.leftNode ? this.leftNode.node : null;
+  }
+
+  // get left child node
+  get leftChild() {
+    return this.leftNode;
+  }
+
+  // set left child node
+  set leftChild(leftNode) {
+    if (leftNode !== null && this.node < leftNode.node) {
+      throw new Error('Left node value should be smaller than root node value!');
+    }
+    this.leftNode = leftNode;
+  }
+
+  // get right child node value
+  get right() {
+    return this.rightNode ? this.rightNode.node : null;
+  }
+
+  // get right child node
+  get rightChild() {
+    return this.rightNode;
+  }
+
+  // set right child node
+  set rightChild(rightNode) {
+    if (rightNode !== null && this.node > rightNode.node) {
+      throw new Error('Right node value should be bigger than root node value!');
+    }
+    this.rightNode = rightNode;
+  }
+
   // 判断当前节点属于父节点的左子节点还是右子节点
   get isLeftChild() {
     return this.parentNode.leftChild === this;
@@ -159,6 +151,23 @@ class Node {
 
   get hasRedRightChild() {
     return this.rightChild && this.rightChild.color === 'red';
+  }
+
+  // 和普通二叉搜索树的 find 方法一样
+  find(val) {
+    // 若 target === 根节点的值，则直接查找成功
+    if (this.node === val) return this;
+
+    if (val < this.node) {
+      // 若 target < 根节点的值，则搜索左子节点
+      if (this.left === null) return null;
+      return this.leftChild.find(val);
+    } else if (val > this.node) {
+      // 若 target > 根节点的值，则搜索右子节点
+      if (this.right === null) return null;
+      return this.rightChild.find(val);
+    }
+    return null;
   }
 
   insert(val) {
@@ -190,7 +199,6 @@ class Node {
 
   checkBalance() {
     let targetNode = this;
-    // 先检查有没有需要反色
     targetNode.flipColor();
     // 检查是否需要左旋
     if (targetNode.hasRedRightChild) {
@@ -209,4 +217,24 @@ class Node {
     }
   }
 }
-```
+
+const bst = new Node({
+  val: 10,
+  color: 'black'
+});
+
+console.log('\nInsert 5 15');
+bst.insert(5);
+bst.insert(15);
+console.log(`bst.left: ${bst.left}, bst.leftColor: ${bst.leftChild.color}`);
+console.log(`bst.right: ${bst.right}, bst.rightColor: ${bst.rightChild.color}`);
+
+console.log('\nInsert 7');
+bst.insert(7);
+console.log(`bst.left: ${bst.left}, bst.leftColor: ${bst.leftChild.color}`);
+console.log(`bst.leftChild.left: ${bst.leftChild.left}, bst.left.leftChildColor: ${bst.leftChild.leftChild.color}`);
+
+console.log('\nInsert 6');
+bst.insert(6);
+console.log(`bst.left: ${bst.left}, bst.leftColor: ${bst.leftChild.color}`);
+console.log(`bst.leftChild.left: ${bst.leftChild.left}, bst.left.leftChildColor: ${bst.leftChild.leftChild.color}`);
