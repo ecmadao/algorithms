@@ -1,6 +1,6 @@
 ## Algorithms
 
-Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) notes and code by JavaScript
+Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) notes and code by Node.js
 
 ### 预储备
 
@@ -25,6 +25,7 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
   - [AVL 二叉搜索树](./balanced-search-trees)
   - [2-3 二叉搜索树](./2-3-search-trees)
   - [红黑二叉搜索树](./red-black-bsts)
+  - [区间二叉搜索树](./interval-search-trees)
 
 ### Run demo
 
