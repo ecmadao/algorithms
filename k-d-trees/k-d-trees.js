@@ -60,10 +60,6 @@ class Heap {
     this.sortWithChild(this.heaps.length);
   }
 
-  pop() {
-    this.heaps.pop();
-  }
-
   dequeue() {
     // 首先，根部元素和底部最后一位元素交换位置
     exchange(this.heaps, 0, this.heaps.length - 1);
@@ -90,6 +86,7 @@ class Node {
     this.visited = false;
   }
 
+  // 根据输入的点，走到当前节点最底部的位置
   bottom(point) {
     if (!this.leftNode && !this.rightNode) return this;
 
@@ -105,6 +102,8 @@ class Node {
     return this.rightNode.bottom(point);
   }
 
+  // 计算在当前节点时，目标点到当前节点分隔维度的直线距离
+  // 以此来断定需不需要遍历节点的子树
   verticalDistance(point) {
     return Math.abs(this.point[this.dimensional] - point[this.dimensional]);
   }
@@ -143,13 +142,6 @@ const getDimensional = (dataset) => {
   return dimensional;
 };
 
-// 获取两点距离
-// 为方便起见，没有开方
-const getDistance = (pointA, pointB) =>
-  pointA.reduce((pre, next, index) => {
-    return pre + Math.pow((next - pointB[index]), 2);
-  }, 0);
-
 const build = (dataset, parentNode = null) => {
   if (!dataset.length) return null;
   const dimensional = getDimensional(dataset);
@@ -170,6 +162,13 @@ const build = (dataset, parentNode = null) => {
   node.rightNode = rightNode;
   return node;
 };
+
+// 获取两点距离
+// 为方便起见，没有开方
+const getDistance = (pointA, pointB) =>
+pointA.reduce((pre, next, index) => {
+  return pre + Math.pow((next - pointB[index]), 2);
+}, 0);
 
 // const datas = [
 //   [2, 3],
@@ -236,6 +235,7 @@ const bottomPoint = node.bottom(target);
 console.log(`bottomPoint.point: ${bottomPoint.point}`);
 
 const backpropagation = (node) => {
+  if (node.visited) return;
   node.visited = true;
   const distance = getDistance(target, node.point);
   // 如果还没填充满，则继续填充
@@ -248,11 +248,11 @@ const backpropagation = (node) => {
     // 如果当前节点和目标点的距离小于已存距离的最大值，则将最大值出堆
     // 然后把新的点填充进去
     if (nearbyPoints.max > distance) {
-      nearbyPoints.pop();
-      nearbyPoints.enqueue({
+      nearbyPoints.heaps[0] = {
         value: distance,
         point: node.point
-      });
+      };
+      nearbyPoints.sortWithChild(1);
     }
   }
 
@@ -271,5 +271,4 @@ const backpropagation = (node) => {
 };
 
 backpropagation(bottomPoint);
-// console.log(nearbyPoints);
 nearbyPoints.heaps.map(item => console.log(item));

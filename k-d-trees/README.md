@@ -17,6 +17,78 @@
 1. 在 K 维数据集合中选择具有最大方差的维度 d，然后在该维度上选择中值对该数据集进行划分，得到左右两个子集合
 2. 对两个子树重复步骤 1，直至所有子集合都不能再划分为止
 
+```javascript
+class Node {
+  constructor(options) {
+    const {
+      point, // 将点转换为数组的格式 (1, 2) => [1, 2]
+      dimensional, // 因此可以利用索引来代表不同维度
+      parentNode = null,
+    } = options;
+    this.point = point;
+    this.parentNode = parentNode;
+    this.dimensional = dimensional;
+    this.leftNode = null;
+    this.rightNode = null;
+    this.visited = false;
+  }
+}
+
+// 计算方差
+const getVariance = (array) => {
+  const avg = array.reduce((pre, next) => pre + next, 0) / array.length;
+  return array.reduce((pre, next) => Math.pow(next - avg, 2) + pre, 0) / array.length;
+};
+
+// 获取中位数所在的索引
+// TODO: 使用算法来优化这一过程
+const getCentralIndex = (dataset, dimensional) => {
+  if (dataset.length <= 1) return 0;
+  dataset.sort((pre, current) => pre[dimensional] - current[dimensional]);
+  return Math.floor(dataset.length / 2);
+};
+
+// 通过最大方差来获取分隔的维度
+// TODO: 使用算法来优化这一过程
+const getDimensional = (dataset) => {
+  const point = dataset[0];
+  let dimensional = null;
+  let maxVariance = null;
+
+  // i means current dimensional
+  for (let i = 0; i < point.length; i += 1) {
+    const datas = dataset.map(point => point[i]);
+    const variance = getVariance(datas);
+    if (!maxVariance || variance > maxVariance) {
+      maxVariance = variance;
+      dimensional = i;
+    }
+  }
+  return dimensional;
+};
+
+const build = (dataset, parentNode = null) => {
+  if (!dataset.length) return null;
+  const dimensional = getDimensional(dataset);
+  const centralIndex = getCentralIndex(dataset, dimensional);
+  const left = dataset.slice(0, centralIndex);
+  const right = dataset.slice(centralIndex + 1);
+
+  const node = new Node({
+    point: dataset[centralIndex],
+    dimensional,
+    parentNode
+  });
+
+  const leftNode = build(left, node);
+  const rightNode = build(right, node);
+
+  node.leftNode = leftNode;
+  node.rightNode = rightNode;
+  return node;
+};
+```
+
 ### k-d 树的搜索
 
 给定一个点 p 和一个 k-d 树，可以搜索到距离 p 点最近的点：
@@ -28,8 +100,33 @@
     - D1 > D，则维度的另一边不可能存在更近的点，不做操作。
   2. 继续向上回溯，到父节点，重复 2.1 的操作
 
-
 如果要获取距离指定点最近的 N 个点，则从底部节点开始，先对结果进行填充，把各点存起来；之后如果计算得到距离更小的值，则进行替换。这样即是 k-d 树在 knn 算法中的应用。
+
+```javascript
+class Node {
+  // 根据输入的点，走到当前节点最底部的位置
+  bottom(point) {
+    if (!this.leftNode && !this.rightNode) return this;
+
+    const splitValue = this.point[this.dimensional];
+    const target = point[this.dimensional];
+
+    if (target === splitValue) return this;
+    if (target < splitValue) {
+      if (!this.leftNode) return this;
+      return this.leftNode.bottom(point);
+    }
+    if (!this.rightNode) return this;
+    return this.rightNode.bottom(point);
+  }
+
+  // 计算在当前节点时，目标点到当前节点分隔维度的直线距离
+  // 以此来断定需不需要遍历节点的子树
+  verticalDistance(point) {
+    return Math.abs(this.point[this.dimensional] - point[this.dimensional]);
+  }
+}
+```
 
 而我们在其遍历过程中，储存个点和目标点的距离，并筛选出有最小距离的几个点时，可以通过最大二叉堆来优化算法速度。即：
 
