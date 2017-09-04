@@ -200,3 +200,5 @@ class Node {
 ```
 
 ### 节点删除
+
+- [2-3 查找树的插入与删除](http://vkadoo.com/E6C342C71A40DC810C356864151CDC80.AHtml)

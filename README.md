@@ -26,6 +26,7 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
   - [2-3 二叉搜索树](./2-3-search-trees)
   - [红黑二叉搜索树](./red-black-bsts)
   - [区间二叉搜索树](./interval-search-trees)
+- [k-d 树](./k-d-trees)
 
 ### Run demo
 
