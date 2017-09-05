@@ -132,7 +132,7 @@ const getDimensional = (dataset) => {
 
   // i means current dimensional
   for (let i = 0; i < point.length; i += 1) {
-    const datas = dataset.map(point => point[i]);
+    const datas = dataset.map(p => p[i]);
     const variance = getVariance(datas);
     if (!maxVariance || variance > maxVariance) {
       maxVariance = variance;
@@ -142,6 +142,7 @@ const getDimensional = (dataset) => {
   return dimensional;
 };
 
+// 构造 kd-tree
 const build = (dataset, parentNode = null) => {
   if (!dataset.length) return null;
   const dimensional = getDimensional(dataset);
@@ -244,16 +245,14 @@ const backpropagation = (node) => {
       value: distance,
       point: node.point
     });
-  } else {
+  } else if (nearbyPoints.max > distance) {
     // 如果当前节点和目标点的距离小于已存距离的最大值，则将最大值出堆
     // 然后把新的点填充进去
-    if (nearbyPoints.max > distance) {
-      nearbyPoints.heaps[0] = {
-        value: distance,
-        point: node.point
-      };
-      nearbyPoints.sortWithChild(1);
-    }
+    nearbyPoints.heaps[0] = {
+      value: distance,
+      point: node.point
+    };
+    nearbyPoints.sortWithChild(1);
   }
 
   // 如果目标点到当前节点分割线的距离小于最大值，
