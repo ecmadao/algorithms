@@ -21,25 +21,25 @@
 
 var insert = function(node, val, parent) {
   if (!node) {
-      node = new Node(val);
-      return node;
+    node = new Node(val);
+    return node;
   }
   if (val >= node.val) {
-      if (node.next) {
-          insert(node.next, val, node);
-      } else {
-          node.next = new Node(val);
-      }
+    if (node.next) {
+      insert(node.next, val, node);
+    } else {
+      node.next = new Node(val);
+    }
   } else {
-      if (parent) {
-          var newNode = new Node(val);
-          parent.next = newNode;
-          newNode.next = node;
-      } else {
-          parent = new Node(val);
-          parent.next = node;
-          return parent;
-      }
+    if (parent) {
+      var newNode = new Node(val);
+      parent.next = newNode;
+      newNode.next = node;
+    } else {
+      parent = new Node(val);
+      parent.next = node;
+      return parent;
+    }
   }
 };
 
@@ -57,20 +57,20 @@ var findMedianSortedArrays = function(nums1, nums2) {
   var node = null;
   var nextNode = null;
   for (let i = 0; i < nums1.length; i += 1) {
-      var num = nums1[i];
-      var newNode = new Node(num);
-      if (!node) {
-          node = newNode;
-          nextNode = node;
-      } else {
-          nextNode.next = newNode;
-          nextNode = newNode;
-      }
+    var num = nums1[i];
+    var newNode = new Node(num);
+    if (!node) {
+      node = newNode;
+      nextNode = node;
+    } else {
+      nextNode.next = newNode;
+      nextNode = newNode;
+    }
   }
 
   for (let i = 0; i < nums2.length; i += 1) {
-      var insertResult = insert(node, nums2[i]);
-      node = insertResult || node;
+    var insertResult = insert(node, nums2[i]);
+    node = insertResult || node;
   }
 
   var total = nums1.length + nums2.length;
@@ -80,11 +80,11 @@ var findMedianSortedArrays = function(nums1, nums2) {
   var sum = 0;
 
   while(index <= mid) {
-      if (index === mid || (count === 2 && index === mid - 1)) {
-          sum += node.val;
-      }
-      index += 1;
-      node = node.next;
+    if (index === mid || (count === 2 && index === mid - 1)) {
+      sum += node.val;
+    }
+    index += 1;
+    node = node.next;
   }
 
   return sum / count;

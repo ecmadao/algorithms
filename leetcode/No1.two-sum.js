@@ -21,15 +21,15 @@ var twoSum = function(nums, target) {
   var set = new Set(nums);
   var indexA = null; var indexB = null;
   for (let i = 0; i < nums.length; i += 1) {
-      var numberA = nums[i];
-      var numberB = target - numberA;
-      if (set.has(numberB)) {
-          var index = nums.indexOf(numberB);
-          if (i === index) continue;
-          indexA = i;
-          indexB = index;
-          break;
-      }
+    var numberA = nums[i];
+    var numberB = target - numberA;
+    if (set.has(numberB)) {
+      var index = nums.indexOf(numberB);
+      if (i === index) continue;
+      indexA = i;
+      indexB = index;
+      break;
+    }
   }
   if (indexA === null) throw new Error('Has no solution!');
   return [indexA, indexB];

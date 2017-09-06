@@ -28,7 +28,13 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
   - [区间二叉搜索树](./interval-search-trees)
 - [k-d 树](./k-d-trees)
 
-### [Leetcode](./leetcode)
+### Leetcode
+
+1. `Easy` [Two Sum](./leetcode/No1.two-sum.js)
+2. `Medium` [Add Two NUmbers](./leetcode/No2.add-two-numbers.js)
+3. `Medium` [Longest Substring Without Repeating Characters](./leetcode/No3.longest-substring-without-repeating-characters.js)
+4. `Hard` [Median of Two Sorted Arrays](./leetcode/No4.median-of-two-sorted-arrays.js)
+5. `Medium` [Longest Palindromic Substring](./leetcode/No5.longest-palindromic-substring.js)
 
 ### Run demo
 

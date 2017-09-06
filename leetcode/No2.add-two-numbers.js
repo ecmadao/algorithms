@@ -22,7 +22,6 @@
  *     this.next = null;
  * }
  */
-
 function ListNode(val) {
   this.val = val;
   this.next = null;
@@ -31,8 +30,8 @@ function ListNode(val) {
 function listToArray(list) {
   var result = [];
   while(list) {
-      result.push(list.val);
-      list = list.next;
+    result.push(list.val);
+    list = list.next;
   }
   return result;
 }
@@ -48,22 +47,22 @@ var addTwoNumbers = function(l1, l2) {
   var upper = 0;
 
   while(l1 || l2) {
-      var value1 = l1 ? l1.val : 0;
-      var value2 = l2 ? l2.val : 0;
-      var sum = value1 + value2 + upper;
-      var val = sum % 10;
-      upper = Math.floor(sum / 10);
+    var value1 = l1 ? l1.val : 0;
+    var value2 = l2 ? l2.val : 0;
+    var sum = value1 + value2 + upper;
+    var val = sum % 10;
+    upper = Math.floor(sum / 10);
 
-      var newList = new ListNode(val);
-      if (!l) {
-          l = newList;
-          nextList = l;
-      } else {
-          nextList.next = newList;
-          nextList = newList;
-      }
-      l1 = l1 ? l1.next : null;
-      l2 = l2 ? l2.next : null;
+    var newList = new ListNode(val);
+    if (!l) {
+      l = newList;
+      nextList = l;
+    } else {
+      nextList.next = newList;
+      nextList = newList;
+    }
+    l1 = l1 ? l1.next : null;
+    l2 = l2 ? l2.next : null;
   }
 
   // 注意考虑最后进位的情况

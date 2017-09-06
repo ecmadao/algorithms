@@ -23,21 +23,21 @@ var lengthOfLongestSubstring = function(s) {
   var string = '';
   var set = new Set();
   for (let i = 0; i < s.length; i += 1) {
-      var item = s[i];
-      if (!set.has(item)) {
-          set.add(item);
-          string = string + item;
-      } else {
-          if (string.length > maxString.length) {
-              maxString = string;
-          }
-          var index = string.indexOf(item);
-          string = string.slice(index + 1) + item;
-          set = new Set(string.split(''));
+    var item = s[i];
+    if (!set.has(item)) {
+      set.add(item);
+      string = string + item;
+    } else {
+      if (string.length > maxString.length) {
+        maxString = string;
       }
+      var index = string.indexOf(item);
+      string = string.slice(index + 1) + item;
+      set = new Set(string.split(''));
+    }
   }
   if (string.length > maxString.length) {
-      maxString = string;
+    maxString = string;
   }
   return maxString.length;
 };
