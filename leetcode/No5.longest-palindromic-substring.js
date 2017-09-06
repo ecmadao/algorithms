@@ -56,4 +56,10 @@ var longestPalindrome = function(s) {
 /*
  * 除了上面的方法以外，还有一种更加优化的方式，叫做 Manacher 算法
  * 其本质和上式一样，也是从左向右进行遍历
+ *
+ * 参考文献：
+ * https://www.61mon.com/index.php/archives/181/
+ * https://segmentfault.com/a/1190000003914228
+ * http://articles.leetcode.com/longest-palindromic-substring-part-ii
+ * https://www.felix021.com/blog/read.php?2040
  */

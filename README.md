@@ -1,6 +1,6 @@
 ## Algorithms
 
-Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) notes and code by Node.js
+Algorithms notes & code & leetcode solution by Node.js.
 
 ### 预储备
 
@@ -35,6 +35,8 @@ Coursera [algorithms course](https://www.coursera.org/learn/algorithms-part1/) n
 3. `Medium` [Longest Substring Without Repeating Characters](./leetcode/No3.longest-substring-without-repeating-characters.js)
 4. `Hard` [Median of Two Sorted Arrays](./leetcode/No4.median-of-two-sorted-arrays.js)
 5. `Medium` [Longest Palindromic Substring](./leetcode/No5.longest-palindromic-substring.js)
+6. `Medium` [ZigZag Conversion](./leetcode/No6.zigzag-conversion.js)
+9. `Easy` [Palindrome Number](./leetcode/No9.palindrome-number.js)
 
 ### Run demo
 
