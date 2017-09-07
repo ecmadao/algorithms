@@ -39,6 +39,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No9. `Easy` [Palindrome Number](./leetcode/No9.palindrome-number.js)
 - No10. `Hard` [Regular Expression Matching](./leetcode/No10.regular-expression-matching.js)
 - No11. `Medium` [Container With Most Water](./leetcode/No11.container-with-most-water.js)
+- No12. `Medium` [Integer to Roman](./leetcode/No12.integer-to-roman.js)
+- No13. `Easy` [Roman to Integer](./leetcode/No13.roman-to-integer.js)
 
 ### Run demo
 
