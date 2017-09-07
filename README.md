@@ -30,21 +30,22 @@ Algorithms notes & code & leetcode solution by Node.js.
 
 ### Leetcode
 
-- No1. `Easy` [Two Sum](./leetcode/No1.two-sum.js)
-- No2. `Medium` [Add Two NUmbers](./leetcode/No2.add-two-numbers.js)
-- No3. `Medium` [Longest Substring Without Repeating Characters](./leetcode/No3.longest-substring-without-repeating-characters.js)
-- No4. `Hard` [Median of Two Sorted Arrays](./leetcode/No4.median-of-two-sorted-arrays.js)
-- No5. `Medium` [Longest Palindromic Substring](./leetcode/No5.longest-palindromic-substring.js)
-- No6. `Medium` [ZigZag Conversion](./leetcode/No6.zigzag-conversion.js)
-- No7. `Easy` [Reverse Integer](./leetcode/No7.reverse-integer.js)
-- No8. `Medium` [String to Integer (atoi)](./leetcode/No8.string-to-integer.js)
-- No9. `Easy` [Palindrome Number](./leetcode/No9.palindrome-number.js)
-- No10. `Hard` [Regular Expression Matching](./leetcode/No10.regular-expression-matching.js)
-- No11. `Medium` [Container With Most Water](./leetcode/No11.container-with-most-water.js)
-- No12. `Medium` [Integer to Roman](./leetcode/No12.integer-to-roman.js)
-- No13. `Easy` [Roman to Integer](./leetcode/No13.roman-to-integer.js)
-- No14. `Easy` [Longest Common Prefix](./leetcode/No14.longest-common-prefix.js)
-- No15. `Medium` [3Sum](./leetcode/No15.3sum.js)
+- No.1 `Easy` [Two Sum](./leetcode/No1.two-sum.js)
+- No.2 `Medium` [Add Two NUmbers](./leetcode/No2.add-two-numbers.js)
+- No.3 `Medium` [Longest Substring Without Repeating Characters](./leetcode/No3.longest-substring-without-repeating-characters.js)
+- No.4 `Hard` [Median of Two Sorted Arrays](./leetcode/No4.median-of-two-sorted-arrays.js)
+- No.5 `Medium` [Longest Palindromic Substring](./leetcode/No5.longest-palindromic-substring.js)
+- No.6 `Medium` [ZigZag Conversion](./leetcode/No6.zigzag-conversion.js)
+- No.7 `Easy` [Reverse Integer](./leetcode/No7.reverse-integer.js)
+- No.8 `Medium` [String to Integer (atoi)](./leetcode/No8.string-to-integer.js)
+- No.9 `Easy` [Palindrome Number](./leetcode/No9.palindrome-number.js)
+- No.10 `Hard` [Regular Expression Matching](./leetcode/No10.regular-expression-matching.js)
+- No.11 `Medium` [Container With Most Water](./leetcode/No11.container-with-most-water.js)
+- No.12 `Medium` [Integer to Roman](./leetcode/No12.integer-to-roman.js)
+- No.13 `Easy` [Roman to Integer](./leetcode/No13.roman-to-integer.js)
+- No.14 `Easy` [Longest Common Prefix](./leetcode/No14.longest-common-prefix.js)
+- No.15 `Medium` [3Sum](./leetcode/No15.3sum.js)
+- No.16 `Medium` [3Sum Closest](./leetcode/No16.3sum-closest.js)
 
 ### Run demo
 
