@@ -36,6 +36,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No4. `Hard` [Median of Two Sorted Arrays](./leetcode/No4.median-of-two-sorted-arrays.js)
 - No5. `Medium` [Longest Palindromic Substring](./leetcode/No5.longest-palindromic-substring.js)
 - No6. `Medium` [ZigZag Conversion](./leetcode/No6.zigzag-conversion.js)
+- No7. `Easy` [Reverse Integer](./leetcode/No7.reverse-integer.js)
+- No8. `Medium` [String to Integer (atoi)](./leetcode/No8.string-to-integer.js)
 - No9. `Easy` [Palindrome Number](./leetcode/No9.palindrome-number.js)
 - No10. `Hard` [Regular Expression Matching](./leetcode/No10.regular-expression-matching.js)
 - No11. `Medium` [Container With Most Water](./leetcode/No11.container-with-most-water.js)
