@@ -43,6 +43,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No11. `Medium` [Container With Most Water](./leetcode/No11.container-with-most-water.js)
 - No12. `Medium` [Integer to Roman](./leetcode/No12.integer-to-roman.js)
 - No13. `Easy` [Roman to Integer](./leetcode/No13.roman-to-integer.js)
+- No14. `Easy` [Longest Common Prefix](./leetcode/No14.longest-common-prefix.js)
+- No15. `Medium` [3Sum](./leetcode/No15.3sum.js)
 
 ### Run demo
 
