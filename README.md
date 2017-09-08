@@ -31,7 +31,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 ### Leetcode
 
 - No.1 `Easy` [Two Sum](./leetcode/No1.two-sum.js)
-- No.2 `Medium` [Add Two NUmbers](./leetcode/No2.add-two-numbers.js)
+- No.2 `Medium` [Add Two Numbers](./leetcode/No2.add-two-numbers.js)
 - No.3 `Medium` [Longest Substring Without Repeating Characters](./leetcode/No3.longest-substring-without-repeating-characters.js)
 - No.4 `Hard` [Median of Two Sorted Arrays](./leetcode/No4.median-of-two-sorted-arrays.js)
 - No.5 `Medium` [Longest Palindromic Substring](./leetcode/No5.longest-palindromic-substring.js)
@@ -46,6 +46,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.14 `Easy` [Longest Common Prefix](./leetcode/No14.longest-common-prefix.js)
 - No.15 `Medium` [3Sum](./leetcode/No15.3sum.js)
 - No.16 `Medium` [3Sum Closest](./leetcode/No16.3sum-closest.js)
+- No.17 `Medium` [Letter Combinations of a Phone Number](./leetcode/No17.letter-combinations-of-a-phone-number.js)
+- No.18 `Medium` [4Sum](./leetcode/No18.4sum.js)
 
 ### Run demo
 
