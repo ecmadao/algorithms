@@ -50,6 +50,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.18 `Medium` [4Sum](./leetcode/No18.4sum.js)
 - No.19 `Medium` [Remove Nth Node From End of List](./leetcode/No19.remove-nth-node-from-end-of-list.js)
 - No.20 `Easy` [Valid Parentheses](./leetcode/No20.valid-parentheses.js)
+- No.21 `Easy` [Merge Two Sorted Lists](./leetcode/No21.merge-two-sorted-lists.js)
+- No.22 `Medium` [Generate Parentheses](./leetcode/No22.generate-parentheses.js)
 
 ### Run demo
 

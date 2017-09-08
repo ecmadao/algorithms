@@ -19,6 +19,11 @@
  * 已知两个排好序的数组，求两数组顺序合并之后的中位数。要求时间复杂度为 O(log (m+n))
  */
 
+/*
+ * 思路：
+ * 将两个数组转换为链表
+ */
+
 var insert = function(node, val, parent) {
   if (!node) {
     node = new Node(val);
