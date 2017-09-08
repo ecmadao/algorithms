@@ -48,6 +48,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.16 `Medium` [3Sum Closest](./leetcode/No16.3sum-closest.js)
 - No.17 `Medium` [Letter Combinations of a Phone Number](./leetcode/No17.letter-combinations-of-a-phone-number.js)
 - No.18 `Medium` [4Sum](./leetcode/No18.4sum.js)
+- No.19 `Medium` [Remove Nth Node From End of List](./leetcode/No19.remove-nth-node-from-end-of-list.js)
+- No.20 `Easy` [Valid Parentheses](./leetcode/No20.valid-parentheses.js)
 
 ### Run demo
 
