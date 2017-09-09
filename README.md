@@ -54,6 +54,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.22 `Medium` [Generate Parentheses](./leetcode/No22.generate-parentheses.js)
 - No.23 `Hard` [Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
 - No.24 `Medium` [Swap Nodes in Pairs](./leetcode/No24.swap-nodes-in-pairs.js)
+- No.25 `Hard` [Reverse Nodes in k-Group](./leetcode/No25.reverse-nodes-in-k-group.js)
 
 ### Run demo
 
