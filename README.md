@@ -52,6 +52,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.20 `Easy` [Valid Parentheses](./leetcode/No20.valid-parentheses.js)
 - No.21 `Easy` [Merge Two Sorted Lists](./leetcode/No21.merge-two-sorted-lists.js)
 - No.22 `Medium` [Generate Parentheses](./leetcode/No22.generate-parentheses.js)
+- No.23 `Hard` [Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
+- No.24 `Medium` [Swap Nodes in Pairs](./leetcode/No24.swap-nodes-in-pairs.js)
 
 ### Run demo
 
