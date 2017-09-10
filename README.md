@@ -57,6 +57,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.25 `Hard` [Reverse Nodes in k-Group](./leetcode/No25.reverse-nodes-in-k-group.js)
 - No.26 `Easy` [Remove Duplicates from Sorted Array](./leetcode/No26.remove-duplicates-from-sorted-array.js)
 - No.27 `Easy` [Remove Element](./leetcode/No27.remove-element.js)
+- No.28 `Easy` [Implement strStr()](./leetcode/No28.implement-strStr.js)
+- No.29 `Medium` [Divide Two Integers](./leetcode/No29.divide-two-integers.js)
 
 ### Run demo
 
