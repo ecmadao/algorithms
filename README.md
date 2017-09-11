@@ -61,6 +61,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.29 `Medium` [Divide Two Integers](./leetcode/No29.divide-two-integers.js)
 - No.30 `Hard` [Substring with Concatenation of All Words](./leetcode/No30.substring-with-concatenation-of-all-words.js)
 - No.31 `Medium` [Next Permutation](./leetcode/No31.next-permutation.js)
+- No.32 `Hard` [Longest Valid Parentheses](./leetcode/No32.longest-valid-parentheses.js)
 
 ### Run demo
 
