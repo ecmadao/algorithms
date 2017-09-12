@@ -63,6 +63,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.31 `Medium` [Next Permutation](./leetcode/No31.next-permutation.js)
 - No.32 `Hard` [Longest Valid Parentheses](./leetcode/No32.longest-valid-parentheses.js)
 - No.33 `Medium` [Search in Rotated Sorted Array](./leetcode/No33.search-in-rotated-sorted-array.js)
+- No.34 `Medium` [Search for a Range](./leetcode/No34.search-for-a-range.js)
 
 ### Run demo
 
