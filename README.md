@@ -65,6 +65,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.33 `Medium` [Search in Rotated Sorted Array](./leetcode/No33.search-in-rotated-sorted-array.js)
 - No.34 `Medium` [Search for a Range](./leetcode/No34.search-for-a-range.js)
 - No.35 `Easy` [Search Insert Position](./leetcode/No35.search-insert-position.js)
+- No.36 `Medium` [Valid Sudoku](./leetcode/No36.valid-sudoku.js)
 
 ### Run demo
 
