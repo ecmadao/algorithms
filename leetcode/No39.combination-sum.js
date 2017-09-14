@@ -31,52 +31,58 @@
  * 逐步降低 count，并计算当前差值：remainder = target - count * num，从剩下的数组中寻找 remainder
  */
 
-/**
- * @param {number[]} candidates
- * @param {number} target
- * @return {number[][]}
- */
-var combinationSum = function(candidates, target) {
-  var results = [];
-
-  for (var i = 0; i < candidates.length; i += 1) {
-    var num = candidates[i];
-    if (num === target) {
-      results.push([num]);
-      continue;
-    }
-    var count = Math.floor(target / num);
-
-    while(count >= 1) {
-      var remainder = target - count * num;
-
-      if (remainder === 0) {
-        results.push(
-          new Array(count).fill(num)
-        );
-        count -= 1;
+var combination = function(candidates) {
+  var findTarget = function(base, target, start) {
+    var results = [];
+    for (var i = start; i < candidates.length; i += 1) {
+      var num = candidates[i];
+      if (num === target) {
+        results.push([...base, num]);
         continue;
       }
-      var nums = combinationSum(candidates.slice(i + 1), remainder);
+      var count = Math.floor(target / num);
 
-      if (nums.length) {
-        var base = new Array(count).fill(num);
-        results.push(
-          ...nums.map((array) => {
-            var items = base.concat(array);
-            return items;
-          })
-        );
+      while(count >= 1) {
+        var newBase = [...base, ...new Array(count).fill(num)];
+        var remainder = target - count * num;
+
+        if (remainder === 0) {
+          results.push(newBase);
+          count -= 1;
+          continue;
+        }
+        var nums = findTarget(newBase, remainder, i + 1);
+
+        if (nums.length) {
+          results = results.concat(nums);
+        }
+        count -= 1;
       }
-      count -= 1;
     }
-  }
+    return results;
+  };
+  return findTarget;
+};
+
+/**
+* @param {number[]} candidates
+* @param {number} target
+* @return {number[][]}
+*/
+var combinationSum = function(candidates, target) {
+  var findTarget = combination(candidates);
+  var results = findTarget([], target, 0);
   return results;
 };
 
 // test case
-// const results = combinationSum([2, 3, 6, 7], 7);
-// console.log(results);
+var results;
+
+results = combinationSum([2, 3, 6, 7], 7);
+console.log(results);
 
 const results = combinationSum([1], 2);
+console.log(results);
+
+results = combinationSum([7,3,2], 18);
 console.log(results);
