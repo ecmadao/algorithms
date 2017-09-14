@@ -37,7 +37,6 @@
  * @return {number[][]}
  */
 var combinationSum = function(candidates, target) {
-  var set = new Set(candidates);
   var results = [];
 
   for (var i = 0; i < candidates.length; i += 1) {
