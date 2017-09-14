@@ -66,7 +66,9 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.34 `Medium` [Search for a Range](./leetcode/No34.search-for-a-range.js)
 - No.35 `Easy` [Search Insert Position](./leetcode/No35.search-insert-position.js)
 - No.36 `Medium` [Valid Sudoku](./leetcode/No36.valid-sudoku.js)
-- No.36 `Hard` [Sudoku Solver](./leetcode/No37.sudoku-solver.js)
+- No.37 `Hard` [Sudoku Solver](./leetcode/No37.sudoku-solver.js)
+- No.38 `Easy` [Count and Say](./leetcode/No38.count-and-say.js)
+- No.39 `Medium` [Combination Sum](./leetcode/No39.combination-sum.js)
 
 ### Run demo
 
