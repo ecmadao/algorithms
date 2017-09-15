@@ -70,6 +70,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.38 `Easy` [Count and Say](./leetcode/No38.count-and-say.js)
 - No.39 `Medium` [Combination Sum](./leetcode/No39.combination-sum.js)
 - No.40 `Medium` [Combination Sum II](./leetcode/No40.combination-sum-II.js)
+- No.41 `Hard` [First Missing Positive](./leetcode/No41.first-missing-positive.js)
 
 ### Run demo
 
