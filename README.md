@@ -72,6 +72,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.40 `Medium` [Combination Sum II](./leetcode/No40.combination-sum-II.js)
 - No.41 `Hard` [First Missing Positive](./leetcode/No41.first-missing-positive.js)
 - No.42 `Hard` [Trapping Rain Water](./leetcode/No42.trapping-rain-water.js)
+- No.42 `Medium` [Multiply Strings](./leetcode/No43.multiply-strings.js)
 
 ### Run demo
 
