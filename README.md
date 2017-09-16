@@ -75,6 +75,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.43 `Medium` [Multiply Strings](./leetcode/No43.multiply-strings.js)
 - No.45 `Hard` [Jump Game II](./leetcode/No45.jump-game-II.js)
 - No.46 `Medium` [Permutations](./leetcode/No46.permutations.js)
+- No.47 `Medium` [Permutations II](./leetcode/No47.permutations-II.js)
 
 ### Run demo
 

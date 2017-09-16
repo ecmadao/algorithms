@@ -3,21 +3,20 @@
  * Medium
  *
  * Desc:
- * Given a collection of distinct numbers, return all possible permutations.
+ * Given a collection of numbers that might contain duplicates, return all possible unique permutations.
  *
  * Example:
- * [1,2,3] have the following permutations:
+ * [1,1,2] have the following unique permutations:
  * [
- *    [1,2,3],
- *    [1,3,2],
- *    [2,1,3],
- *    [2,3,1],
- *    [3,1,2],
- *    [3,2,1]
+ *    [1,1,2],
+ *    [1,2,1],
+ *    [2,1,1]
  * ]
  *
- * 求数组内元素的所有排列组合。注意处理数值相同的元素
- * 例如，[1, 1, 2] 的排列组合为 [1, 1, 2], [1, 2, 1], [2, 1, 1]
+ * 还是排列组合，但是数组内可能会有重复的数字。
+ * 所以看见这题我是懵逼的，因为它的要求其实就是我在写 46 题时专门注意的点，即处理数组内的重复数字。
+ * (所以说其实 46 题不用考虑处理重复数字的问题？？)
+ * 直接用 46 题的代码直接 AC...
  */
 
 var treeLayer = function(nums, path, layer, results, usedSet) {
@@ -57,7 +56,7 @@ var treeLayer = function(nums, path, layer, results, usedSet) {
 * @param {number[]} nums
 * @return {number[][]}
 */
-var permute = function(nums) {
+var permuteUnique = function(nums) {
   nums.sort((a, b) => a - b);
   var results = [];
   treeLayer(nums, [], 0, results);
