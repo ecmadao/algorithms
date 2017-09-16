@@ -77,6 +77,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.46 `Medium` [Permutations](./leetcode/No46.permutations.js)
 - No.47 `Medium` [Permutations II](./leetcode/No47.permutations-II.js)
 - No.48 `Medium` [Rotate Image](./leetcode/No48.rotate-image.js)
+- No.49 `Medium` [Group Anagrams](./leetcode/No49.group-anagrams.js)
 
 ### Run demo
 
