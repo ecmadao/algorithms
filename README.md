@@ -76,6 +76,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.45 `Hard` [Jump Game II](./leetcode/No45.jump-game-II.js)
 - No.46 `Medium` [Permutations](./leetcode/No46.permutations.js)
 - No.47 `Medium` [Permutations II](./leetcode/No47.permutations-II.js)
+- No.48 `Medium` [Rotate Image](./leetcode/No48.rotate-image.js)
 
 ### Run demo
 
