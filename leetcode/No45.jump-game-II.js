@@ -62,3 +62,33 @@ jump([4,3,1,1,4]);
 jump([1,1,1,1,4]);
 jump([1,1,3,1,4]);
 jump([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+
+/* ========================== ADVANCD ========================== */
+
+/**
+ * 一个更快的方法，在最慢的情况下也只有 O(n) 的复杂度
+ * 我们从左向右遍历数组 nums，索引为 i，而 i + nums[i] 代表从当前位置上最远可以跳到的位置
+ * 用 max 当前最远可以跳到的位置，初始为 0；用 current 保存最远可以跳到的位置，初始也为 0。
+ * 遍历的过程中，每次都要更新 current 确保其有最大值：current = Math.max(current, i + nums[i])
+ * 当 i > max 时，通过 max = current 来更新最远可以到达的距离，并且前进的步数 + 1
+ * 而当 max >= nums.length - 1 时，代表已经到达末尾，可以退出循环
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var jump = function(nums) {
+  var max = 0;
+  var current = 0;
+  var jumpCount = 0;
+  for (var i = 0; i < nums.length; i += 1) {
+    if (max >= nums.length - 1) break;
+    if (i > max) {
+      max = current;
+      jumpCount += 1;
+    }
+    current = Math.max(current, i + nums[i]);
+  }
+  return jumpCount;
+};
