@@ -80,6 +80,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.49 `Medium` [Group Anagrams](./leetcode/No49.group-anagrams.js)
 - No.50 `Medium` [Pow(x, n)](./leetcode/No50.pow-x-n.js)
 - No.51 `Hard` [N-Queens](./leetcode/No51.n-queens.js)
+- No.52 `Hard` [N-Queens II](./leetcode/No52.n-queens-II.js)
 
 ### Run demo
 
