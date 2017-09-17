@@ -33,8 +33,8 @@ var solve = function(row, column, maxRow, maxColumn, board, picked) {
     picked = new Set();
   }
 
-  if (column > maxColumn) return getFromIntersection(row + 1, 0, maxRow, maxColumn, board, picked);
-  if (board[row][column] !== '.') return getFromIntersection(row, column + 1, maxRow, maxColumn, board, picked);
+  if (column > maxColumn) return solve(row + 1, 0, maxRow, maxColumn, board, picked);
+  if (board[row][column] !== '.') return solve(row, column + 1, maxRow, maxColumn, board, picked);
 
   var rowId = `r${row + 1}`;
   var columnId = `c${column + 1}`;
@@ -55,7 +55,7 @@ var solve = function(row, column, maxRow, maxColumn, board, picked) {
       columnSet.delete(val);
       boxSet.delete(val);
       board[row][column] = val;
-      if (getFromIntersection(row, column + 1, maxRow, maxColumn, board, picked)) {
+      if (solve(row, column + 1, maxRow, maxColumn, board, picked)) {
         result = true;
         break;
       } else {
