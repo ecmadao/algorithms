@@ -40,7 +40,24 @@ var twoSumFunc1 = function(nums, target) {
   return [indexA, indexB];
 };
 
-/* =================== 两端向中央收缩法 ===================== */
+/* =================== 目前最快的方法 =================== */
+// 不再利用 Set 进行 “数字是否存在” 的检查，而是使用 value 做键，index 做值
+var twoSum = function(nums, target) {
+  var data = {};
+  for (var i = 0; i < nums.length; i += 1) {
+    var num = nums[i];
+    if (data[target - num] !== undefined) {
+      return [data[target - num], i];
+    } else {
+      data[num] = i;
+    }
+  }
+  return [];
+};
+
+/* =================== 两端向中央收缩法 =================== */
+// 如果是要求求出具体的数字使得两者之和 = target，则可以使用两端向中央收缩法
+// 这样的方法要求数据事先拍好了序，因此如果我们自己排序的话，则会打乱其原有索引，故不适合当前题目的要求
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -57,8 +74,7 @@ var twoSumFunc1 = function(nums, target) {
 var twoSumFunc2 = function(nums, target) {
   nums.sort((a, b) => a - b);
   var i = 0;
-  var j = nums.length;
-  var mapped = new Set();
+  var j = nums.length - 1;
   var results = [];
 
   while(i < j) {
@@ -70,7 +86,7 @@ var twoSumFunc2 = function(nums, target) {
     } else if (numA + numB < target) {
       i += 1;
     } else {
-      results = [i, j];
+      results = [numA + numB];
       break;
     }
   }

@@ -54,7 +54,7 @@ var getPrecipitationFromGroove = function(height, start, end) {
  * 在已知左高点的情况下，向右遍历寻找凹槽的右高点
  * 限制条件有：
  * 1. 右高点必须大于其左侧元素（处于递增状态）
- * 2. 右高点必须小于等于左高点（短板已经确定，再大也没意义） 
+ * 2. 右高点必须小于等于左高点（短板已经确定，再大也没意义）
  * 3. 右高点和左高点只差力求最小（两高度最接近）
 */
 var findMinOffsetHeight = function(height, start, end, target) {
