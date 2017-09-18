@@ -81,6 +81,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.50 `Medium` [Pow(x, n)](./leetcode/No50.pow-x-n.js)
 - No.51 `Hard` [N-Queens](./leetcode/No51.n-queens.js)
 - No.52 `Hard` [N-Queens II](./leetcode/No52.n-queens-II.js)
+- No.53 `Easy` [Maximum Subarray](./leetcode/No53.maximum-subarray.js)
 
 ### Run demo
 
