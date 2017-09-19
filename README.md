@@ -82,6 +82,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.51 `Hard` [N-Queens](./leetcode/No51.n-queens.js)
 - No.52 `Hard` [N-Queens II](./leetcode/No52.n-queens-II.js)
 - No.53 `Easy` [Maximum Subarray](./leetcode/No53.maximum-subarray.js)
+- No.67 `Easy` [Add Binary](./leetcode/No67.add-binary.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.653 `Easy` [Two Sum IV - Input is a BST](./leetcode/No653.two-sum-IV-input-is-a-BST.js)
 
