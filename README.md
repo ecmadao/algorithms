@@ -82,6 +82,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.51 `Hard` [N-Queens](./leetcode/No51.n-queens.js)
 - No.52 `Hard` [N-Queens II](./leetcode/No52.n-queens-II.js)
 - No.53 `Easy` [Maximum Subarray](./leetcode/No53.maximum-subarray.js)
+- No.54 `Medium` [Spiral Matrix](./leetcode/No54.spiral-matrix.js)
 - No.62 `Medium` [Unique Paths](./leetcode/No62.unique-paths.js)
 - No.63 `Medium` [Unique Paths II](./leetcode/No63.unique-paths-II.js)
 - No.67 `Easy` [Add Binary](./leetcode/No67.add-binary.js)
