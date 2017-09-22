@@ -89,6 +89,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.67 `Easy` [Add Binary](./leetcode/No67.add-binary.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.278 `Easy` [First Bad Version](./leetcode/No278.first-bad-version.js)
+- No.442 `Easy` [Find All Duplicates in an Array](./leetcode/No442.find-all-duplicates-in-an-array.js)
+- No.448 `Easy` [Find All Numbers Disappeared in an Array](./leetcode/No448.find-all-numbers-disappeared-in-an-array.js)
 - No.653 `Easy` [Two Sum IV - Input is a BST](./leetcode/No653.two-sum-IV-input-is-a-BST.js)
 
 ### Run demo
