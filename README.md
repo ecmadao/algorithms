@@ -84,6 +84,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.53 `Easy` [Maximum Subarray](./leetcode/No53.maximum-subarray.js)
 - No.54 `Medium` [Spiral Matrix](./leetcode/No54.spiral-matrix.js)
 - No.55 `Medium` [Jump Game](./leetcode/No55.jump-game.js)
+- No.56 `Medium` [Merge Intervals](./leetcode/No56.merge-intervals.js)
 - No.59 `Medium` [Spiral Matrix II](./leetcode/No59.spiral-matrix-II.js)
 - No.60 `Medium` [Permutation Sequence](./leetcode/No60.permutation-sequence.js)
 - No.62 `Medium` [Unique Paths](./leetcode/No62.unique-paths.js)
