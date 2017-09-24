@@ -167,9 +167,9 @@ const build = (dataset, parentNode = null) => {
 // 获取两点距离
 // 为方便起见，没有开方
 const getDistance = (pointA, pointB) =>
-pointA.reduce((pre, next, index) => {
-  return pre + Math.pow((next - pointB[index]), 2);
-}, 0);
+  pointA.reduce((pre, next, index) => {
+    return pre + Math.pow((next - pointB[index]), 2);
+  }, 0);
 
 // const datas = [
 //   [2, 3],
