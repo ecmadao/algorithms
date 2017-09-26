@@ -95,6 +95,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.141 `Easy` [Linked List Cycle](./leetcode/No141.linked-list-cycle.js)
 - No.142 `Medium` [Linked List Cycle II](./leetcode/No142.linked-list-cycle-II.js)
+- No.147 `Medium` [Insertion Sort List](./leetcode/No147.insertion-sort-list.js)
 - No.148 `Medium` [Sort List](./leetcode/No148.sort-list.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.260 `Medium` [Single Number III](./leetcode/No260.single-number-III.js)
