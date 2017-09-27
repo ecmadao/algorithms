@@ -99,6 +99,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.148 `Medium` [Sort List](./leetcode/No148.sort-list.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.260 `Medium` [Single Number III](./leetcode/No260.single-number-III.js)
+- No.263 `Easy` [Ugly Number](./leetcode/No263.ugly-number.js)
+- No.264 `Medium` [Ugly Number II](./leetcode/No264.ugly-number-II.js)
 - No.268 `Easy` [Missing Number](./leetcode/No268.missing-number.js)
 - No.278 `Easy` [First Bad Version](./leetcode/No278.first-bad-version.js)
 - No.287 `Medium` [Find the Duplicate Number](./leetcode/No287.find-the-duplicate-number.js)
