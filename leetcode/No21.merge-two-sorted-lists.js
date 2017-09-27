@@ -18,44 +18,30 @@
  * }
  */
 
-
-var insert = function(node, val, parent) {
-  var newNode;
-  if (!node) {
-    newNode = new ListNode(val);
-    if (parent) parent.next = newNode;
-    return newNode;
-  }
-  if (node.val < val) {
-    insert(node.next, val, node);
-  } else {
-    newNode = new ListNode(val);
-    newNode.next = node;
-
-    if (!parent) return newNode;
-    parent.next = newNode;
-  }
-}
-
 /**
-* @param {ListNode} l1
-* @param {ListNode} l2
-* @return {ListNode}
-*/
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
 var mergeTwoLists = function(l1, l2) {
-  var result = null;
-  var insertResult = null;
-  while(l1 || l2) {
-    if (l1) {
-      insertResult = insert(result, l1.val);
-      result = insertResult || result;
+  var result = new ListNode();
+  var current = result;
+
+  while(l1 && l2) {
+    if (l1.val < l2.val) {
+      current.next = l1;
       l1 = l1.next;
-    }
-    if (l2) {
-      insertResult = insert(result, l2.val);
-      result = insertResult || result;
+    } else {
+      current.next = l2;
       l2 = l2.next;
     }
+    current = current.next;
   }
-  return result;
+
+  if (l1) {
+    current.next = l1;
+  } else if (l2) {
+    current.next = l2;
+  }
+  return result.next;
 };

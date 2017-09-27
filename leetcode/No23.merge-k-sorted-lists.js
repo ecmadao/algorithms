@@ -28,40 +28,45 @@
  * }
  */
 
-var insert = function(node, val, parent) {
-  var newNode;
-  if (!node) {
-    newNode = new ListNode(val);
-    if (parent) parent.next = newNode;
-    return newNode;
-  }
-  if (node.val < val) {
-    insert(node.next, val, node);
-  } else {
-    newNode = new ListNode(val);
-    newNode.next = node;
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+var mergeTwoLists = function(l1, l2) {
+  var result = new ListNode();
+  var current = result;
 
-    if (!parent) return newNode;
-    parent.next = newNode;
+  while(l1 && l2) {
+    if (l1.val < l2.val) {
+      current.next = l1;
+      l1 = l1.next;
+    } else {
+      current.next = l2;
+      l2 = l2.next;
+    }
+    current = current.next;
   }
-}
+
+  if (l1) {
+    current.next = l1;
+  } else if (l2) {
+    current.next = l2;
+  }
+  return result.next;
+};
 
 /**
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
 var mergeKLists = function(lists) {
-  var result = null;
-  var insertResult = null;
+  if (lists.length === 0) return [];
+  if (lists.length === 1) return lists[0];
+  var result = [lists[0]];
 
-  for (var i = 0; i < lists.length; i += 1) {
-    var list = lists[i];
-
-    while(list) {
-      insertResult = insert(result, list.val);
-      result = insertResult || result;
-      list = list.next;
-    }
+  for (var i = 1; i < lists.length; i += 1) {
+    result = [mergeTwoLists(result[0], lists[i])];
   }
-  return result;
+  return result[0];
 };
