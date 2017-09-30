@@ -93,6 +93,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.67 `Easy` [Add Binary](./leetcode/No67.add-binary.js)
 - No.71 `Medium` [Simplify Path](./leetcode/No71.simplify-path.js)
 - No.75 `Medium` [Sort Colors](./leetcode/No75.sort-colors.js)
+- No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.141 `Easy` [Linked List Cycle](./leetcode/No141.linked-list-cycle.js)
