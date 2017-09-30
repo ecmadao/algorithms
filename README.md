@@ -85,6 +85,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.54 `Medium` [Spiral Matrix](./leetcode/No54.spiral-matrix.js)
 - No.55 `Medium` [Jump Game](./leetcode/No55.jump-game.js)
 - No.56 `Medium` [Merge Intervals](./leetcode/No56.merge-intervals.js)
+- No.57 `Hard` [Insert Interval](./leetcode/No57.insert-interval.js)
 - No.58 `Easy` [Length of Last Word](./leetcode/No58.length-of-last-word.js)
 - No.59 `Medium` [Spiral Matrix II](./leetcode/No59.spiral-matrix-II.js)
 - No.60 `Medium` [Permutation Sequence](./leetcode/No60.permutation-sequence.js)
