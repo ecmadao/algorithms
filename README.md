@@ -114,10 +114,12 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.278 `Easy` [First Bad Version](./leetcode/No278.first-bad-version.js)
 - No.279 `Medium` [Perfect Squares](./leetcode/No279.perfect-squares.js)
 - No.287 `Medium` [Find the Duplicate Number](./leetcode/No287.find-the-duplicate-number.js)
+- No.367 `Easy` [Valid Perfect Square](./leetcode/No367.valid-perfect-square.js)
 - No.389 `Easy` [Find the Difference](./leetcode/No389.find-the-difference.js)
 - No.442 `Easy` [Find All Duplicates in an Array](./leetcode/No442.find-all-duplicates-in-an-array.js)
 - No.448 `Easy` [Find All Numbers Disappeared in an Array](./leetcode/No448.find-all-numbers-disappeared-in-an-array.js)
 - No.560 `Medium` [Subarray Sum Equals K](./leetcode/No560.subarray-sum-equals-k.js)
+- No.633 `Easy` [Sum of Square Numbers](./leetcode/No633.sum-of-square-numbers.js)
 - No.653 `Easy` [Two Sum IV - Input is a BST](./leetcode/No653.two-sum-IV-input-is-a-BST.js)
 - No.658 `Medium` [Find K Closest Elements](./leetcode/No658.find-k-closest-elements.js)
 
