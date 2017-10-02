@@ -98,6 +98,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.69 `Easy` [Sqrt(x)](./leetcode/No69.sqrt(x).js)
 - No.70 `Easy` [Climbing Stairs](./leetcode/No70.climbing-stairs.js)
 - No.71 `Medium` [Simplify Path](./leetcode/No71.simplify-path.js)
+- No.73 `Medium` [Set Matrix Zeroes](./leetcode/No73.set-matrix-zeroes.js)
 - No.75 `Medium` [Sort Colors](./leetcode/No75.sort-colors.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
