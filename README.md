@@ -27,6 +27,9 @@ Algorithms notes & code & leetcode solution by Node.js.
   - [红黑二叉搜索树](./red-black-bsts)
   - [区间二叉搜索树](./interval-search-trees)
 - [k-d 树](./k-d-trees)
+- 字典树
+  - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
+  - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
 
 ### [Leetcode](./leetcode)
 
@@ -114,6 +117,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.148 `Medium` [Sort List](./leetcode/No148.sort-list.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
+- No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
 - No.231 `Easy` [Power of Two](./leetcode/No231.power-of-two.js)
 - No.240 `Medium` [Search a 2D Matrix II](./leetcode/No240.search-a-2d-matrix-II.js)
 - No.260 `Medium` [Single Number III](./leetcode/No260.single-number-III.js)
