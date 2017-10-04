@@ -103,6 +103,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.75 `Medium` [Sort Colors](./leetcode/No75.sort-colors.js)
 - No.76 `Hard` [Minimum Window Substring](./leetcode/No76.minimum-window-substring.js)
 - No.77 `Medium` [Combinations](./leetcode/No77.combinations.js)
+- No.78 `Medium` [Subsets](./leetcode/No78.subsets.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)

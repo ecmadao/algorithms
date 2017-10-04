@@ -34,22 +34,17 @@
  */
 var combine = function(n, k) {
   var results = [];
-  var chooseNum = function(result, used, min, layer) {
+  var chooseNum = function(result, min, layer) {
     for (var i = min + 1; i <= n; i += 1) {
-      if (!used[i]) {
-        used[i] = true;
-        result.push(i);
-        if (layer === k) {
-          var r = [...result];
-          results.push(r);
-        } else {
-          chooseNum(result, used, i, layer + 1);
-        }
-        used[i] = false;
-        result.pop();
+      result.push(i);
+      if (layer === k) {
+        results.push(result.slice(0));
+      } else {
+        chooseNum(result, i, layer + 1);
       }
+      result.pop();
     }
   }
-  chooseNum([], {}, 0, 1);
+  chooseNum([], 0, 1);
   return results;
 };
