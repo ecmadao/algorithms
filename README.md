@@ -118,6 +118,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
+- No.211 `Medium` [Add and Search Word - Data structure design](./leetcode/No211.add-and-search-word-data-structure-design.js)
 - No.212 `Hard` [Word Search II](./leetcode/No212.word-search-II.js)
 - No.231 `Easy` [Power of Two](./leetcode/No231.power-of-two.js)
 - No.240 `Medium` [Search a 2D Matrix II](./leetcode/No240.search-a-2d-matrix-II.js)
