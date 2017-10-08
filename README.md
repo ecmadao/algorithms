@@ -111,6 +111,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.80 `Medium` [Remove Duplicates from Sorted Array II](./leetcode/No80.remove-duplicates-from-sorted-array-II.js)
 - No.81 `Medium` [Search in Rotated Sorted Array II](./leetcode/No81.search-in-rotated-sorted-array-II.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
+- No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
+- No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.141 `Easy` [Linked List Cycle](./leetcode/No141.linked-list-cycle.js)
