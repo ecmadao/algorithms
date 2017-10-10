@@ -126,6 +126,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.212 `Hard` [Word Search II](./leetcode/No212.word-search-II.js)
 - No.217 `Easy` [Contains Duplicate](./leetcode/No217.contains-duplicate.js)
 - No.219 `Easy` [Contains Duplicate II](./leetcode/No219.contains-duplicate-II.js)
+- No.220 `Medium` [Contains Duplicate III](./leetcode/No220.contains-duplicate-III.js)
 - No.225 `Easy` [Implement Stack using Queues](./leetcode/No225.implement-stack-using-queues.js)
 - No.231 `Easy` [Power of Two](./leetcode/No231.power-of-two.js)
 - No.232 `Easy` [Implement Queue using Stacks](./leetcode/No232.implement-queue-using-stacks.js)
