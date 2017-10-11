@@ -47,6 +47,7 @@ var containsNearbyAlmostDuplicate = function(nums, k, t) {
       return true;
     }
     tmp[n] = num;
+    // 把超出索引范围的数字所属的桶去除
     if (i >= k) delete tmp[Math.floor(nums[i - k] / w)];
   }
   return false;
