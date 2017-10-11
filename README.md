@@ -110,6 +110,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.79 `Medium` [Word Search](./leetcode/No79.word-search.js)
 - No.80 `Medium` [Remove Duplicates from Sorted Array II](./leetcode/No80.remove-duplicates-from-sorted-array-II.js)
 - No.81 `Medium` [Search in Rotated Sorted Array II](./leetcode/No81.search-in-rotated-sorted-array-II.js)
+- No.82 `Medium` [Remove Duplicates from Sorted List II](./leetcode/No82.remove-duplicates-from-sorted-list-II.js)
 - No.83 `Easy` [Remove Duplicates from Sorted List](./leetcode/No83.remove-duplicates-from-sorted-list.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
