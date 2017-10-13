@@ -112,6 +112,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.81 `Medium` [Search in Rotated Sorted Array II](./leetcode/No81.search-in-rotated-sorted-array-II.js)
 - No.82 `Medium` [Remove Duplicates from Sorted List II](./leetcode/No82.remove-duplicates-from-sorted-list-II.js)
 - No.83 `Easy` [Remove Duplicates from Sorted List](./leetcode/No83.remove-duplicates-from-sorted-list.js)
+- No.85 `Hard` [Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.92 `Medium` [Reverse Linked List II](./leetcode/No92.reverse-linked-list-II.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
