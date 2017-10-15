@@ -149,6 +149,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.367 `Easy` [Valid Perfect Square](./leetcode/No367.valid-perfect-square.js)
 - No.389 `Easy` [Find the Difference](./leetcode/No389.find-the-difference.js)
 - No.442 `Easy` [Find All Duplicates in an Array](./leetcode/No442.find-all-duplicates-in-an-array.js)
+- No.445 `Medium` [Add Two Numbers II](./leetcode/No445.add-two-numbers-II.js)
 - No.448 `Easy` [Find All Numbers Disappeared in an Array](./leetcode/No448.find-all-numbers-disappeared-in-an-array.js)
 - No.523 `Medium` [Continuous Subarray Sum](./leetcode/No523.continuous-subarray-sum.js)
 - No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/No530.minimum-absolute-difference-in-BST.js)
