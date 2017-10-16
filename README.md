@@ -30,6 +30,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - 字典树
   - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
   - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
+- 决策树
 
 ### [Leetcode](./leetcode)
 
@@ -114,6 +115,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.83 `Easy` [Remove Duplicates from Sorted List](./leetcode/No83.remove-duplicates-from-sorted-list.js)
 - No.84 `Hard` [Largest Rectangle in Histogram](./leetcode/No84.largest-rectangle-in-histogram.js)
 - No.85 `Hard` [Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
+- No.86 `Medium` [Partition List](./leetcode/No86.partition-list.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.92 `Medium` [Reverse Linked List II](./leetcode/No92.reverse-linked-list-II.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
@@ -162,5 +164,6 @@ Algorithms notes & code & leetcode solution by Node.js.
 
 - 环境要求：>= Node.js v7
 - 如果 Node 版本较低，则可以自行选择使用 Babel 进行转换
+- Leetcode 题解代码直接在浏览器中即可运行（ES5 语法）
 - 直接运行各个文件夹下的 `js` 文件即可查看算法运行的结果
 - 例如在项目根目录下 `node ./priority-queues/binary-heaps.js`
