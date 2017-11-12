@@ -115,6 +115,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.84 `Hard` [Largest Rectangle in Histogram](./leetcode/No84.largest-rectangle-in-histogram.js)
 - No.85 `Hard` [Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
 - No.86 `Medium` [Partition List](./leetcode/No86.partition-list.js)
+- No.87 `Hard` [Scramble String](./leetcode/No87.scramble-string.js)
 - No.88 `Easy` [Merge Sorted Array](./leetcode/No88.merge-sorted-array.js)
 - No.90 `Medium` [Subsets II](./leetcode/No90.subsets-II.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
