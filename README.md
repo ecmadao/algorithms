@@ -116,6 +116,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.85 `Hard` [Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
 - No.86 `Medium` [Partition List](./leetcode/No86.partition-list.js)
 - No.88 `Easy` [Merge Sorted Array](./leetcode/No88.merge-sorted-array.js)
+- No.90 `Medium` [Subsets II](./leetcode/No90.subsets-II.js)
 - No.91 `Medium` [Decode Ways](./leetcode/No91.decode-ways.js)
 - No.92 `Medium` [Reverse Linked List II](./leetcode/No92.reverse-linked-list-II.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)

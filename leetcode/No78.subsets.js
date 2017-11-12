@@ -57,3 +57,24 @@ var subsets = function(nums) {
 
   return results;
 };
+
+/**
+ * Solution2:
+ * 已知数组中没有重复元素，所以我们不用考虑过滤问题
+ * 遍历数组，对于每一个元素，都把它加入到之前生成的子集中，返回一组新的子集，这个子集就是该元素所能够生成的子集
+ * 然后把这组子集加入到要返回的结果中去
+ */
+
+const subsets = (nums) => {
+  const results = [[]];
+  for (let i = 0; i < nums.length; i += 1) {
+    const arr = results.map((item) => {
+      return [
+        ...item,
+        nums[i]
+      ];
+    });
+    results.push(...arr);
+  }
+  return results;
+};
