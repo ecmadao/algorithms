@@ -122,6 +122,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.92 `Medium` [Reverse Linked List II](./leetcode/No92.reverse-linked-list-II.js)
 - No.93 `Medium` [Restore IP Addresses](./leetcode/No93.restore-ip-addresses.js)
 - No.94 `Medium` [Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
+- No.96 `Medium` [Unique Binary Search Trees](./leetcode/No96.unique-binary-search-trees.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
