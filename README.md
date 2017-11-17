@@ -125,6 +125,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.95 `Medium` [Unique Binary Search Trees II](./leetcode/No95.unique-binary-search-trees-II.js)
 - No.96 `Medium` [Unique Binary Search Trees](./leetcode/No96.unique-binary-search-trees.js)
 - No.98 `Medium` [Validate Binary Search Tree](./leetcode/No98.validate-binary-search-tree.js)
+- No.100 `Easy` [Same Tree](./leetcode/No100.same-tree.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
