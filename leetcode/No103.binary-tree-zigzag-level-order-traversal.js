@@ -3,8 +3,8 @@
  * Medium
  *
  * Desc:
- * Given a binary tree, return the level order traversal of its nodes' values.
- * (ie, from left to right, level by level).
+ * Given a binary tree, return the zigzag level order traversal of its nodes' values.
+ * (ie, from left to right, then right to left for the next level and alternate between).
  *
  * Example:
  * Given binary tree [3,9,20,null,null,15,7],
@@ -13,10 +13,10 @@
   9  20
     /  \
    15   7
- * return its level order traversal as:
+ * return its zigzag level order traversal as:
  * [
  *  [3],
- *  [9,20],
+ *  [20,9],
  *  [15,7]
  * ]
  */
@@ -32,20 +32,25 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function(root) {
+var zigzagLevelOrder = function(root) {
   const results = [];
   if (!root) return results;
-  const getLayerValues = (nodes) => {
+  const getLayerValues = (nodes, fromLeftToRight = true) => {
     const childs = [];
     const values = [];
     for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
       values.push(node.val);
-      if (node.left) childs.push(node.left);
-      if (node.right) childs.push(node.right);
+      if (fromLeftToRight) {
+        if (node.left) childs.unshift(node.left);
+        if (node.right) childs.unshift(node.right);
+      } else {
+        if (node.right) childs.unshift(node.right);
+        if (node.left) childs.unshift(node.left);
+      }
     }
     results.push(values);
-    if (childs.length) getLayerValues(childs);
+    if (childs.length) getLayerValues(childs, !fromLeftToRight);
   };
   getLayerValues([root]);
   return results;
