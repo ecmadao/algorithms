@@ -131,6 +131,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.103 `Medium` [Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
 - No.104 `Easy` [Maximum Depth of Binary Tree](./leetcode/No104.maximum-depth-of-binary-tree.js)
 - No.105 `Medium` [Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+- No.106 `Medium` [Construct Binary Tree from Inorder and Postorder Traversal](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
