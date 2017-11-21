@@ -135,6 +135,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.107 `Easy` [Binary Tree Level Order Traversal II](./leetcode/No107.binary-tree-level-order-traversal-II.js)
 - No.108 `Easy` [Convert Sorted Array to Binary Search Tree](./leetcode/No108.convert-sorted-array-to-binary-search-tree.js)
 - No.109 `Medium` [Convert Sorted List to Binary Search Tree](./leetcode/No109.convert-sorted-list-to-binary-search-tree.js)
+- No.110 `Easy` [Balanced Binary Tree](./leetcode/No110.balanced-binary-tree.js)
 - No.112 `Easy` [Path Sum](./leetcode/No112.path-sum.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
