@@ -138,6 +138,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.110 `Easy` [Balanced Binary Tree](./leetcode/No110.balanced-binary-tree.js)
 - No.111 `Easy` [Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
 - No.112 `Easy` [Path Sum](./leetcode/No112.path-sum.js)
+- No.113 `Easy` [Path Sum II](./leetcode/No113.path-sum-II.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
