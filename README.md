@@ -140,6 +140,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.112 `Easy` [Path Sum](./leetcode/No112.path-sum.js)
 - No.113 `Medium` [Path Sum II](./leetcode/No113.path-sum-II.js)
 - No.114 `Medium` [Flatten Binary Tree to Linked List](./leetcode/No114.flatten-binary-tree-to-linked-list.js)
+- No.116 `Medium` [Populating Next Right Pointers in Each Node](./leetcode/No116.populating-next-right-pointers-in-each-node.js)
+- No.117 `Medium` [Populating Next Right Pointers in Each Node II](./leetcode/No117.populating-next-right-pointers-in-each-node-II.js)
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
