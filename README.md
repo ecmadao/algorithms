@@ -145,6 +145,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.118 `Easy` [Pascal's Triangle](./leetcode/No118.pascal's-triangle.js)
 - No.119 `Easy` [Pascal's Triangle II](./leetcode/No119.pascal's-triangle-II.js)
 - No.120 `Medium` [Triangle](./leetcode/No120.triangle.js)
+- No.121 `Easy` [Best Time to Buy and Sell Stock](./leetcode/No121.best-time-to-buy-and-sell-stock.js)
+- No.122 `Easy` [Best Time to Buy and Sell Stock II](./leetcode/No122.best-time-to-buy-and-sell-stock-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.138 `Medium` [Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
