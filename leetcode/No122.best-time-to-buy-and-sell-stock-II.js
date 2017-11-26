@@ -9,7 +9,7 @@
  * However, you may not engage in multiple transactions at the same time
  * (ie, you must sell the stock before you buy again).
  *
- * 和上一题相比，在一个时间周期内不限制买卖次数，但是在买之前要保证已经全部卖完了
+ * 和上一题相比，在一个时间周期内不限制买卖次数，但是在买入之前要保证已经全部卖出了
  */
 
 /**
