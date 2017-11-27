@@ -189,6 +189,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.633 `Easy` [Sum of Square Numbers](./leetcode/No633.sum-of-square-numbers.js)
 - No.653 `Easy` [Two Sum IV - Input is a BST](./leetcode/No653.two-sum-IV-input-is-a-BST.js)
 - No.658 `Medium` [Find K Closest Elements](./leetcode/No658.find-k-closest-elements.js)
+- No.680 `Easy` [Valid Palindrome II](./leetcode/No680.valid-palindrome-II.js)
 
 ### Run demo
 
