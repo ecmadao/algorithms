@@ -154,6 +154,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.127 `Medium` [Word Ladder](./leetcode/No127.word-ladder.js)
 - No.128 `Hard` [Longest Consecutive Sequence](./leetcode/No128.longest-consecutive-sequence.js)
 - No.129 `Medium` [Sum Root to Leaf Numbers](./leetcode/No129.sum-root-to-leaf-numbers.js)
+- No.130 `Medium` [Surrounded Regions](./leetcode/No130.surrounded-regions.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.138 `Medium` [Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
