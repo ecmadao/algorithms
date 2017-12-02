@@ -17,6 +17,10 @@
  * X X X X
  * X X X X
  * X O X X
+ *
+ * 要求把矩阵中被 X 包围（上下左右方向）的 O 全部替换为 X。对于边缘的 O，不算被包围，因此保留
+ * 所以，和边缘的 O 相接的 O 也不会被 X 包围
+ * Flood fill 算法：https://zh.wikipedia.org/wiki/Flood_fill
  */
 
 /**
