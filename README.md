@@ -156,6 +156,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.129 `Medium` [Sum Root to Leaf Numbers](./leetcode/No129.sum-root-to-leaf-numbers.js)
 - No.130 `Medium` [Surrounded Regions](./leetcode/No130.surrounded-regions.js)
 - No.131 `Medium` [Palindrome Partitioning](./leetcode/No131.palindrome-partitioning.js)
+- No.132 `Hard` [Palindrome Partitioning II](./leetcode/No132.palindrome-partitioning-II.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.138 `Medium` [Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
