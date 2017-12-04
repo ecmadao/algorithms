@@ -163,6 +163,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.138 `Medium` [Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
+- No.139 `Medium` [Word Break](./leetcode/No139.word-break.js)
 - No.141 `Easy` [Linked List Cycle](./leetcode/No141.linked-list-cycle.js)
 - No.142 `Medium` [Linked List Cycle II](./leetcode/No142.linked-list-cycle-II.js)
 - No.143 `Medium` [Reorder List](./leetcode/No143.reorder-list.js)
