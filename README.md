@@ -159,6 +159,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.132 `Hard` [Palindrome Partitioning II](./leetcode/No132.palindrome-partitioning-II.js)
 - No.133 `Medium` [Clone Graph](./leetcode/No133.clone-graph.js)
 - No.134 `Medium` [Gas Station](./leetcode/No134.gas-station.js)
+- No.135 `Hard` [Candy](./leetcode/No135.candy.js)
 - No.136 `Easy` [Single Number](./leetcode/No136.single-number.js)
 - No.137 `Medium` [Single Number II](./leetcode/No137.single-number-II.js)
 - No.138 `Medium` [Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
