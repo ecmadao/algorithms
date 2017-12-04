@@ -12,6 +12,8 @@
  * s = "leetcode",
  * dict = ["leet", "code"].
  * Return true because "leetcode" can be segmented as "leet code".
+ *
+ * 判断一个单词是否可以利用给定数组中的各元素进行截断。数组内元素没有重复，但可以重复使用
  */
 
 /**
@@ -24,17 +26,17 @@ var wordBreak = function(s, wordDict) {
   const tmp = {};
 
   const check = (index) => {
-    if (index >= s.length) return true;
     if (tmp[index] !== undefined) return tmp[index];
+    if (index >= s.length) return true;
     for (let i = index; i < s.length; i += 1) {
       if (set.has(s.slice(index, i + 1))) {
-        const result = check(i + 1);
-        tmp[i + 1] = result;
-        if (result) return true;
+        tmp[i + 1] = check(i + 1);
+        if (tmp[i + 1]) {
+          return true;
+        }
       }
     }
-    tmp[index] = false;
     return false;
-  }
+  };
   return check(0);
 };
