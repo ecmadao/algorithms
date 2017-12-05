@@ -168,6 +168,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.141 `Easy` [Linked List Cycle](./leetcode/No141.linked-list-cycle.js)
 - No.142 `Medium` [Linked List Cycle II](./leetcode/No142.linked-list-cycle-II.js)
 - No.143 `Medium` [Reorder List](./leetcode/No143.reorder-list.js)
+- No.144 `Medium` [Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
 - No.147 `Medium` [Insertion Sort List](./leetcode/No147.insertion-sort-list.js)
 - No.148 `Medium` [Sort List](./leetcode/No148.sort-list.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
