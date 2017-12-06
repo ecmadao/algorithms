@@ -16,9 +16,10 @@
  *
  * Note:
  * Recursive solution is trivial, could you do it iteratively?
+ *
+ * 前序遍历树：根左右
  */
 
-/* ============================ Recursive Solution ============================ */
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -26,6 +27,8 @@
  *     this.left = this.right = null;
  * }
  */
+
+/* ============================ Recursive Solution ============================ */
 /**
  * @param {TreeNode} root
  * @return {number[]}
@@ -43,6 +46,10 @@ var preorderTraversal_recursive = function(root) {
 };
 
 /* ============================ Iteratively Solution ============================ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
 var preorderTraversal_iteratively = (root) => {
   if (!root) return [];
   const leftNodes = [root.left];
