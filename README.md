@@ -170,6 +170,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.143 `Medium` [Reorder List](./leetcode/No143.reorder-list.js)
 - No.144 `Medium` [Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
 - No.145 `Hard` [Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
+- No.146 `Hard` [LRU Cache](./leetcode/No146.lru-cache.js)
 - No.147 `Medium` [Insertion Sort List](./leetcode/No147.insertion-sort-list.js)
 - No.148 `Medium` [Sort List](./leetcode/No148.sort-list.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
