@@ -173,6 +173,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.146 `Hard` [LRU Cache](./leetcode/No146.lru-cache.js)
 - No.147 `Medium` [Insertion Sort List](./leetcode/No147.insertion-sort-list.js)
 - No.148 `Medium` [Sort List](./leetcode/No148.sort-list.js)
+- No.150 `Medium` [Evaluate Reverse Polish Notation](./leetcode/No150.evaluate-reverse-polish-notation.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.206 `Easy` [Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
