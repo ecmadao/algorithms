@@ -176,6 +176,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.150 `Medium` [Evaluate Reverse Polish Notation](./leetcode/No150.evaluate-reverse-polish-notation.js)
 - No.151 `Medium` [Reverse Words in a String](./leetcode/No151.reverse-words-in-a-string.js)
 - No.152 `Medium` [Maximum Product Subarray](./leetcode/No152.maximum-product-subarray.js)
+- No.153 `Medium` [Find Minimum in Rotated Sorted Array](./leetcode/No153.find-minimum-in-rotated-sorted-array.js)
+- No.154 `Hard` [Find Minimum in Rotated Sorted Array II](./leetcode/No154.find-minimum-in-rotated-sorted-array-II.js)
 - No.155 `Easy` [Min Stack](./leetcode/No155.min-stack.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
