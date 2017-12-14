@@ -2,8 +2,8 @@
 
 ### 堆，栈
 
-- 栈，又称堆栈，是一种**后进先出**（LIFO, Last in first out）的有序集合
-- 堆，又称队列，是一种**先进先出**（FIFO, First in first out）的有序集合
+- 堆，是一种**后进先出**（LIFO, Last in first out）的有序集合
+- 栈，又称堆栈，是一种**先进先出**（FIFO, First in first out）的有序集合
 
 ### 链表
 
