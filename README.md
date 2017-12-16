@@ -180,6 +180,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.154 `Hard` [Find Minimum in Rotated Sorted Array II](./leetcode/No154.find-minimum-in-rotated-sorted-array-II.js)
 - No.155 `Easy` [Min Stack](./leetcode/No155.min-stack.js)
 - No.160 `Easy` [Intersection of Two Linked Lists](./leetcode/No160.intersection-of-two-linked-lists.js)
+- No.162 `Medium` [Find Peak Element](./leetcode/No162.find-peak-element.js)
 - No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/No167.two-sum-II-input-array-is-sorted.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.206 `Easy` [Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
