@@ -22,7 +22,8 @@
  * Binary tree [1,2,3], return false.
  *
  * 验证一个二叉树是否合法
- * 注意，对于一个合法的二叉树而言，某一个节点的左子节点下的所有数值都小于该节点的数值；右子节点下的所有数值都大于该节点的数值
+ * 注意，对于一个合法的二叉树而言，某一个节点的左子节点下的所有数值都小于该节点的数值；
+ * 右子节点下的所有数值都大于该节点的数值
  */
 
 /**
@@ -36,10 +37,10 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isValidBST = function(root) {
+const isValidBST = (root) => {
   if (!root) return true;
   const isNodeValidate = (options) => {
-    let {
+    const {
       node,
       lessThan = null,
       greatThan = null

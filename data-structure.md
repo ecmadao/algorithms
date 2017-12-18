@@ -1,9 +1,40 @@
 ## JavaScript 数据结构
 
-### 堆，栈
+### 堆，栈，队列
 
-- 堆，是一种**后进先出**（LIFO, Last in first out）的有序集合
-- 栈，又称堆栈，是一种**先进先出**（FIFO, First in first out）的有序集合
+#### 堆，heap
+
+堆是满足一定限制的树型结构
+
+LeetCode 上相关题目：
+
+1. [No23. Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
+1. [No264. Ugly Number II](./leetcode/No264.ugly-number-II.js)
+
+#### 栈，stack
+
+栈又称堆栈，是一种**先进后出**（FILO, First in Lirst out）的有序集合
+
+LeetCode 上相关题目：
+
+1. [No20. Valid Parentheses](./leetcode/No20.valid-parentheses.js)
+2. [No42. Trapping Rain Water](./leetcode/No42.trapping-rain-water.js)
+3. [No71. Simplify Path](./leetcode/No71.simplify-path.js)
+4. [No84. Largest Rectangle in Histogram](./leetcode/No84.largest-rectangle-in-histogram.js)
+5. [No85. Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
+6. [No94. Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
+7. [No103. Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
+8. [No144. Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
+9. [No145. Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
+10. [No150. Evaluate Reverse Polish Notation](./leetcode/No150.evaluate-reverse-polish-notation.js)
+11. [No155. Min Stack](./leetcode/No155.min-stack.js)
+12. [No173. Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
+13. [No225. Implement Stack using Queues](./leetcode/No225.implement-stack-using-queues.js)
+14. [No232. Implement Queue using Stacks](./leetcode/No232.implement-queue-using-stacks.js)
+
+#### 队列，queue
+
+队列是一种**先进先出**（FIFO, First in first out）的有序集合
 
 ### 链表
 
