@@ -8,8 +8,8 @@
 
 LeetCode 上相关题目：
 
-1. [No23. Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
-1. [No264. Ugly Number II](./leetcode/No264.ugly-number-II.js)
+1. [No.23 Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
+1. [No.264 Ugly Number II](./leetcode/No264.ugly-number-II.js)
 
 #### 栈，stack
 
@@ -17,20 +17,20 @@ LeetCode 上相关题目：
 
 LeetCode 上相关题目：
 
-1. [No20. Valid Parentheses](./leetcode/No20.valid-parentheses.js)
-2. [No42. Trapping Rain Water](./leetcode/No42.trapping-rain-water.js)
-3. [No71. Simplify Path](./leetcode/No71.simplify-path.js)
-4. [No84. Largest Rectangle in Histogram](./leetcode/No84.largest-rectangle-in-histogram.js)
-5. [No85. Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
-6. [No94. Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
-7. [No103. Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
-8. [No144. Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
-9. [No145. Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
-10. [No150. Evaluate Reverse Polish Notation](./leetcode/No150.evaluate-reverse-polish-notation.js)
-11. [No155. Min Stack](./leetcode/No155.min-stack.js)
-12. [No173. Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
-13. [No225. Implement Stack using Queues](./leetcode/No225.implement-stack-using-queues.js)
-14. [No232. Implement Queue using Stacks](./leetcode/No232.implement-queue-using-stacks.js)
+1. [No.20 Valid Parentheses](./leetcode/No20.valid-parentheses.js)
+2. [No.42 Trapping Rain Water](./leetcode/No42.trapping-rain-water.js)
+3. [No.71 Simplify Path](./leetcode/No71.simplify-path.js)
+4. [No.84 Largest Rectangle in Histogram](./leetcode/No84.largest-rectangle-in-histogram.js)
+5. [No.85 Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
+6. [No.94 Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
+7. [No.103 Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
+8. [No.144 Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
+9. [No.145 Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
+10. [No.150 Evaluate Reverse Polish Notation](./leetcode/No150.evaluate-reverse-polish-notation.js)
+11. [No.155 Min Stack](./leetcode/No155.min-stack.js)
+12. [No.173 Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
+13. [No.225 Implement Stack using Queues](./leetcode/No225.implement-stack-using-queues.js)
+14. [No.232 Implement Queue using Stacks](./leetcode/No232.implement-queue-using-stacks.js)
 
 #### 队列，queue
 
@@ -56,7 +56,35 @@ LeetCode 上相关题目：
 
 对于双向链表而言，则多了设置 `pre` 指向上一个元素的一步。
 
+LeetCode 上相关题目：
+
+1. [No.2 Add Two Numbers](./leetcode/No02.add-two-numbers.js)
+2. [No.19 Remove Nth Node From End of List](./leetcode/No19.remove-nth-node-from-end-of-list.js)
+3. [No.21 Merge Two Sorted Lists](./leetcode/No21.merge-two-sorted-lists.js)
+4. [No.23 Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
+5. [No.24 Swap Nodes in Pairs](./leetcode/No24.swap-nodes-in-pairs.js)
+6. [No.25 Reverse Nodes in k-Group](./leetcode/No25.reverse-nodes-in-k-group.js)
+7. [No.61 Rotate List](./leetcode/No61.rotate-list.js)
+8. [No.82 Remove Duplicates from Sorted List II](./leetcode/No82.remove-duplicates-from-sorted-list-II.js)
+9. [No.83 Remove Duplicates from Sorted List](./leetcode/No83.remove-duplicates-from-sorted-list.js)
+10. [No.86 Partition List](./leetcode/No86.partition-list.js)
+11. [No.92 Reverse Linked List II](./leetcode/No92.reverse-linked-list-II.js)
+12. [No.109 Convert Sorted List to Binary Search Tree](./leetcode/No109.convert-sorted-list-to-binary-search-tree.js)
+13. [No.138 Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
+14. [No.141 Linked List Cycle](./leetcode/No141.linked-list-cycle.js)
+15. [No.142 Linked List Cycle II](./leetcode/No142.linked-list-cycle-II.js)
+16. [No.143 Reorder List](./leetcode/No143.reorder-list.js)
+17. [No.147 Insertion Sort List](./leetcode/No147.insertion-sort-list.js)
+18. [No.148 Sort List](./leetcode/No148.sort-list.js)
+19. [No.160 Intersection of Two Linked Lists](./leetcode/No160.intersection-of-two-linked-lists.js)
+20. [No.206 Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
+21. [No.445 Add Two Numbers II](./leetcode/No445.add-two-numbers-II.js)
+
 ### 集合与字典（映射）
+
+LeetCode 上相关题目：
+
+1. [No.560 Subarray Sum Equals K](./leetcode/No560.subarray-sum-equals-k.js)
 
 #### 集合
 
@@ -113,24 +141,24 @@ LeetCode 上相关题目：
 
 按照从最小到最大的顺序访问二叉树中的各节点。即对于每个节点，先遍历左子节点，然后根节点，最后右子节点。LeetCode 中相关题目：
 
-1. [No94. Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
-2. [No173. Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
-3. [No105. Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
-4. [No106. Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+1. [No.94 Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
+2. [No.173 Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
+3. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+4. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
 - 前序遍历（preorder）
 
 先访问父节点，再访问其所有子节点。即中左右顺序。LeetCode 中相关题目：
 
-1. [No144. Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
-2. [No105. Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+1. [No.144 Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
+2. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 
 - 后序遍历（postorder）
 
 先访问所有子节点，再访问父节点。即左右中。LeetCode 中相关题目：
 
-1. [No145. Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
-2. [No106. Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+1. [No.145 Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
+2. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
 ### 图
 
@@ -155,6 +183,10 @@ LeetCode 上相关题目：
 3. 待与该顶点相连的所有变都经过以后，将该顶点标记为**已完全探索**。
 4. **每个顶点至多访问两次**（未查看 -> 已查看，已查看 -> 已完全探索）
 
+LeetCode 上相关题目：
+
+1. [No.133 Clone Graph](./leetcode/No133.clone-graph.js)
+
 ### 深度优先搜索 DFS/Depth-First-Search
 
 深度优先搜索：**栈的形式储存待访问顶点，元素后入先出**。
@@ -175,25 +207,25 @@ LeetCode 上相关题目：
 
 LeetCode 上 DFS 相关题目：
 
-1. [No98. Validate Binary Search Tree](./leetcode/No98.validate-binary-search-tree.js)
-2. [No100. Same Tree](./leetcode/No100.same-tree.js)
-3. [No101. Symmetric Tree](./leetcode/No101.symmetric-tree.js)
-4. [No104. Maximum Depth of Binary Tree](./leetcode/No104.maximum-depth-of-binary-tree.js)
-5. [No105. Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
-6. [No106. Construct Binary Tree from Inorder and Postorder Traversal](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
-7. [No108. Convert Sorted Array to Binary Search Tree](./leetcode/No108.convert-sorted-array-to-binary-search-tree.js)
-8. [No109. Convert Sorted List to Binary Search Tree](./leetcode/No109.convert-sorted-list-to-binary-search-tree.js)
-9. [No110. Balanced Binary Tree](./leetcode/No110.balanced-binary-tree.js)
-10. [No111. Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
-11. [No112. Path Sum](./leetcode/No112.path-sum.js)
-12. [No113. Path Sum II](./leetcode/No113.path-sum-II.js)
-13. [No114. Flatten Binary Tree to Linked List](./leetcode/No114.flatten-binary-tree-to-linked-list.js)
-14. [No116. Populating Next Right Pointers in Each Node](./leetcode/No116.populating-next-right-pointers-in-each-node.js)
-15. [No117. Populating Next Right Pointers in Each Node II](../leetcode/No117.populating-next-right-pointers-in-each-node-II.js)
-16. [No124. Binary Tree Maximum Path Sum](./leetcode/No124.binary-tree-maximum-path-sum.js)
-17. [No129. Sum Root to Leaf Numbers](./leetcode/No129.sum-root-to-leaf-numbers.js)
-18. [No130. Surrounded Regions](./leetcode/No130.surrounded-regions.js)
-19. [No133. Clone Graph](./leetcode/No133.clone-graph.js)
+1. [No.98 Validate Binary Search Tree](./leetcode/No98.validate-binary-search-tree.js)
+2. [No.100 Same Tree](./leetcode/No100.same-tree.js)
+3. [No.101 Symmetric Tree](./leetcode/No101.symmetric-tree.js)
+4. [No.104 Maximum Depth of Binary Tree](./leetcode/No104.maximum-depth-of-binary-tree.js)
+5. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+6. [No.106 Construct Binary Tree from Inorder and Postorder Traversal](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+7. [No.108 Convert Sorted Array to Binary Search Tree](./leetcode/No108.convert-sorted-array-to-binary-search-tree.js)
+8. [No.109 Convert Sorted List to Binary Search Tree](./leetcode/No109.convert-sorted-list-to-binary-search-tree.js)
+9. [No.110 Balanced Binary Tree](./leetcode/No110.balanced-binary-tree.js)
+10. [No.111 Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
+11. [No.112 Path Sum](./leetcode/No112.path-sum.js)
+12. [No.113 Path Sum II](./leetcode/No113.path-sum-II.js)
+13. [No.114 Flatten Binary Tree to Linked List](./leetcode/No114.flatten-binary-tree-to-linked-list.js)
+14. [No.116 Populating Next Right Pointers in Each Node](./leetcode/No116.populating-next-right-pointers-in-each-node.js)
+15. [No.117 Populating Next Right Pointers in Each Node II](../leetcode/No117.populating-next-right-pointers-in-each-node-II.js)
+16. [No.124 Binary Tree Maximum Path Sum](./leetcode/No124.binary-tree-maximum-path-sum.js)
+17. [No.129 Sum Root to Leaf Numbers](./leetcode/No129.sum-root-to-leaf-numbers.js)
+18. [No.130 Surrounded Regions](./leetcode/No130.surrounded-regions.js)
+19. [No.133 Clone Graph](./leetcode/No133.clone-graph.js)
 
 ### 广度优先搜索 BFS/Breadth-First-Search
 
@@ -217,16 +249,16 @@ LeetCode 上 DFS 相关题目：
 
 LeetCode 上 BFS 相关题目：
 
-1. [No101. Symmetric Tree](./leetcode/No101.symmetric-tree.js)
-2. [No102. Binary Tree Level Order Traversal](./leetcode/No102.binary-tree-level-order-traversal.js)
-3. [No103. Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
-4. [No107. Binary Tree Level Order Traversal II](./leetcode/No107.binary-tree-level-order-traversal-II.js)
-5. [No111. Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
-6. [No126. Word Ladder II](./leetcode/No126.word-ladder-II.js)
-7. [No127. Word Ladder](./leetcode/No127.word-ladder.js)
-8. [No130. Surrounded Regions](./leetcode/No130.surrounded-regions.js)
-9. [No133. Clone Graph](./leetcode/No133.clone-graph.js)
-10. [No279. Perfect Squares](./leetcode/No279.perfect-squares.js)
+1. [No.101 Symmetric Tree](./leetcode/No101.symmetric-tree.js)
+2. [No.102 Binary Tree Level Order Traversal](./leetcode/No102.binary-tree-level-order-traversal.js)
+3. [No.103 Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
+4. [No.107 Binary Tree Level Order Traversal II](./leetcode/No107.binary-tree-level-order-traversal-II.js)
+5. [No.111 Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
+6. [No.126 Word Ladder II](./leetcode/No126.word-ladder-II.js)
+7. [No.127 Word Ladder](./leetcode/No127.word-ladder.js)
+8. [No.130 Surrounded Regions](./leetcode/No130.surrounded-regions.js)
+9. [No.133 Clone Graph](./leetcode/No133.clone-graph.js)
+10. [No.279 Perfect Squares](./leetcode/No279.perfect-squares.js)
 
 ### 算法基本概念
 
