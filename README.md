@@ -188,6 +188,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.169 `Easy` [Majority Element](./leetcode/No169.majority-element.js)
 - No.171 `Easy` [Excel Sheet Column Number](./leetcode/No171.excel-sheet-column-number.js)
 - No.172 `Easy` [Factorial Trailing Zeroes](./leetcode/No172.factorial-trailing-zeroes.js)
+- No.173 `Medium` [Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.206 `Easy` [Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
 - No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
@@ -227,6 +228,5 @@ Algorithms notes & code & leetcode solution by Node.js.
 
 - 环境要求：>= Node.js v7
 - 如果 Node 版本较低，则可以自行选择使用 Babel 进行转换
-- Leetcode 题解代码直接在浏览器中即可运行（ES5 语法）
-- 直接运行各个文件夹下的 `js` 文件即可查看算法运行的结果
-- 例如在项目根目录下 `node ./priority-queues/binary-heaps.js`
+- Leetcode 题解代码直接在浏览器中即可运行（ES5/ES6 语法）
+- 直接运行各个文件夹下的 `js` 文件即可查看算法运行的结果，例如在项目根目录下 `node ./priority-queues/binary-heaps.js`
