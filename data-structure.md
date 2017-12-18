@@ -78,17 +78,28 @@
 
 #### BST 的遍历
 
-- 中序遍历
+- 中序遍历（inorder）
 
-按照从最小到最大的顺序访问二叉树中的各节点。
+按照从最小到最大的顺序访问二叉树中的各节点。即对于每个节点，先遍历左子节点，然后根节点，最后右子节点。LeetCode 中相关题目：
 
-- 先序遍历
+1. [No94. Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
+2. [No173. Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
+3. [No105. Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+4. [No106. Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
-先访问父节点，再访问其所有子节点。
+- 前序遍历（preorder）
 
-- 后序遍历
+先访问父节点，再访问其所有子节点。即中左右顺序。LeetCode 中相关题目：
 
-先访问所有子节点，再访问父节点。
+1. [No144. Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
+2. [No105. Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+
+- 后序遍历（postorder）
+
+先访问所有子节点，再访问父节点。即左右中。LeetCode 中相关题目：
+
+1. [No145. Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
+2. [No106. Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
 ### 图
 
@@ -113,11 +124,9 @@
 3. 待与该顶点相连的所有变都经过以后，将该顶点标记为**已完全探索**。
 4. **每个顶点至多访问两次**（未查看 -> 已查看，已查看 -> 已完全探索）
 
-#### 深度优先搜索 DFS & 广度优先搜索 BFS
+### 深度优先搜索 DFS/Depth-First-Search
 
-两者基本相同，但待访问顶点列表的数据结构不同。
-
-- 深度优先搜索：**栈的形式储存待访问顶点，元素后入先出**。
+深度优先搜索：**栈的形式储存待访问顶点，元素后入先出**。
 
 从指定的第一个顶点开始遍历图，沿着某路径直到最后一个顶点；然后原路退回后搜索下一个路径。即先深入访问，再增加广度。
 
@@ -133,7 +142,31 @@
 
 3. 邻节点访问完毕之后，标注 V 为**已完全探索**
 
-- 广度优先搜索：**队列的形式储存待访问顶点，元素先入先出**。
+LeetCode 上 DFS 相关题目：
+
+1. [No98. Validate Binary Search Tree](./leetcode/No98.validate-binary-search-tree.js)
+2. [No100. Same Tree](./leetcode/No100.same-tree.js)
+3. [No101. Symmetric Tree](./leetcode/No101.symmetric-tree.js)
+4. [No104. Maximum Depth of Binary Tree](./leetcode/No104.maximum-depth-of-binary-tree.js)
+5. [No105. Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+6. [No106. Construct Binary Tree from Inorder and Postorder Traversal](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+7. [No108. Convert Sorted Array to Binary Search Tree](./leetcode/No108.convert-sorted-array-to-binary-search-tree.js)
+8. [No109. Convert Sorted List to Binary Search Tree](./leetcode/No109.convert-sorted-list-to-binary-search-tree.js)
+9. [No110. Balanced Binary Tree](./leetcode/No110.balanced-binary-tree.js)
+10. [No111. Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
+11. [No112. Path Sum](./leetcode/No112.path-sum.js)
+12. [No113. Path Sum II](./leetcode/No113.path-sum-II.js)
+13. [No114. Flatten Binary Tree to Linked List](./leetcode/No114.flatten-binary-tree-to-linked-list.js)
+14. [No116. Populating Next Right Pointers in Each Node](./leetcode/No116.populating-next-right-pointers-in-each-node.js)
+15. [No117. Populating Next Right Pointers in Each Node II](../leetcode/No117.populating-next-right-pointers-in-each-node-II.js)
+16. [No124. Binary Tree Maximum Path Sum](./leetcode/No124.binary-tree-maximum-path-sum.js)
+17. [No129. Sum Root to Leaf Numbers](./leetcode/No129.sum-root-to-leaf-numbers.js)
+18. [No130. Surrounded Regions](./leetcode/No130.surrounded-regions.js)
+19. [No133. Clone Graph](./leetcode/No133.clone-graph.js)
+
+### 广度优先搜索 BFS/Breadth-First-Search
+
+广度优先搜索：**队列的形式储存待访问顶点，元素先入先出**。
 
 从指定的第一个顶点开始遍历图，先访问所有的相邻点，即访问图的一层，然后深入到下一层进行递归。
 
@@ -151,6 +184,18 @@
 
    2.4. 将 V 标注为**已完全探索**
 
+LeetCode 上 BFS 相关题目：
+
+1. [No101. Symmetric Tree](./leetcode/No101.symmetric-tree.js)
+2. [No102. Binary Tree Level Order Traversal](./leetcode/No102.binary-tree-level-order-traversal.js)
+3. [No103. Binary Tree Zigzag Level Order Traversal](./leetcode/No103.binary-tree-zigzag-level-order-traversal.js)
+4. [No107. Binary Tree Level Order Traversal II](./leetcode/No107.binary-tree-level-order-traversal-II.js)
+5. [No111. Minimum Depth of Binary Tree](./leetcode/No111.minimum-depth-of-binary-tree.js)
+6. [No126. Word Ladder II](./leetcode/No126.word-ladder-II.js)
+7. [No127. Word Ladder](./leetcode/No127.word-ladder.js)
+8. [No130. Surrounded Regions](./leetcode/No130.surrounded-regions.js)
+9. [No133. Clone Graph](./leetcode/No133.clone-graph.js)
+10. [No279. Perfect Squares](./leetcode/No279.perfect-squares.js)
 
 ### 算法基本概念
 
