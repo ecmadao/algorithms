@@ -187,6 +187,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.168 `Easy` [Excel Sheet Column Title](./leetcode/No168.excel-sheet-column-title.js)
 - No.169 `Easy` [Majority Element](./leetcode/No169.majority-element.js)
 - No.171 `Easy` [Excel Sheet Column Number](./leetcode/No171.excel-sheet-column-number.js)
+- No.172 `Easy` [Factorial Trailing Zeroes](./leetcode/No172.factorial-trailing-zeroes.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.206 `Easy` [Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
 - No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
