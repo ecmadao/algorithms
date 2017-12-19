@@ -1,20 +1,20 @@
 const insertionSort = (arr, num) => {
   let index = null;
   for (let i = arr.length - 1; i >= 0; i -= 1) {
-      if (arr[i] >= num) {
-          if (i === 0 || arr[i - 1] <= num) {
-              index = 0;
-              break;
-          }
-      } else {
-          index = i + 1;
-          break;
+    if (arr[i] >= num) {
+      if (i === 0 || arr[i - 1] <= num) {
+        index = 0;
+        break;
       }
+    } else {
+      index = i + 1;
+      break;
+    }
   }
   return [
-      ...arr.slice(0, index),
-      num,
-      ...arr.slice(index)
+    ...arr.slice(0, index),
+    num,
+    ...arr.slice(index)
   ];
 };
 
@@ -28,21 +28,21 @@ const bucketSort = function(nums) {
   const tmp = {};
 
   for (let i = 0; i < nums.length; i += 1) {
-      const num = nums[i];
-      const section = Math.floor((num - min) / interval);
-      if (tmp[section] === undefined) {
-          tmp[section] = [num];
-      } else {
-          tmp[section] = insertionSort(tmp[section], num);
-      }
+    const num = nums[i];
+    const section = Math.floor((num - min) / interval);
+    if (tmp[section] === undefined) {
+      tmp[section] = [num];
+    } else {
+      tmp[section] = insertionSort(tmp[section], num);
+    }
   }
 
   let result = [];
   const sections = Object.keys(tmp);
   for (let i = 0; i < sections.length; i += 1) {
-      const section = sections[i];
-      const arr = tmp[section];
-      result = result.concat(arr);
+    const section = sections[i];
+    const arr = tmp[section];
+    result = result.concat(arr);
   }
   return result;
 };

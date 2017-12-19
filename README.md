@@ -221,6 +221,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/No530.minimum-absolute-difference-in-BST.js)
 - No.560 `Medium` [Subarray Sum Equals K](./leetcode/No560.subarray-sum-equals-k.js)
 - No.599 `Easy` [Minimum Index Sum of Two Lists](./leetcode/No599.minimum-index-sum-of-two-lists.js)
+- No.621 `Medium` [Task Scheduler](./leetcode/No621.task-scheduler.js)
 - No.633 `Easy` [Sum of Square Numbers](./leetcode/No633.sum-of-square-numbers.js)
 - No.653 `Easy` [Two Sum IV - Input is a BST](./leetcode/No653.two-sum-IV-input-is-a-BST.js)
 - No.658 `Medium` [Find K Closest Elements](./leetcode/No658.find-k-closest-elements.js)
