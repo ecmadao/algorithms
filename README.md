@@ -196,6 +196,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
 - No.211 `Medium` [Add and Search Word - Data structure design](./leetcode/No211.add-and-search-word-data-structure-design.js)
 - No.212 `Hard` [Word Search II](./leetcode/No212.word-search-II.js)
+- No.215 `Medium` [Kth Largest Element in an Array](./leetcode/No215.kth-largest-element-in-an-array.js)
 - No.217 `Easy` [Contains Duplicate](./leetcode/No217.contains-duplicate.js)
 - No.219 `Easy` [Contains Duplicate II](./leetcode/No219.contains-duplicate-II.js)
 - No.220 `Medium` [Contains Duplicate III](./leetcode/No220.contains-duplicate-III.js)
