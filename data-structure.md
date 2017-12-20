@@ -117,6 +117,27 @@ LeetCode 上相关题目：
 
 ### 散列
 
+LeetCode 上相关题目：
+
+1. [No.1 Two Sum](./leetcode/No01.two-sum.js)
+2. [No.3 Longest Substring Without Repeating Characters](./leetcode/No03.longest-substring-without-repeating-characters.js)
+3. [No.18 4Sum](./leetcode/No18.4sum.js)
+4. [No.30 Substring with Concatenation of All Words](./leetcode/No30.substring-with-concatenation-of-all-words.js)
+5. [No.36 Valid Sudoku](./leetcode/No36.valid-sudoku.js)
+6. [No.37 Sudoku Solver](./leetcode/No37.sudoku-solver.js)
+7. [No.49 Group Anagrams](./leetcode/No49.group-anagrams.js)
+8. [No.76 Minimum Window Substring](./leetcode/No76.minimum-window-substring.js)
+9. [No.85 Maximal Rectangle](./leetcode/No85.maximal-rectangle.js)
+10. [No.94 Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
+11. [No.136 Single Number](./leetcode/No136.single-number.js)
+12. [No.138 Copy List with Random Pointer](./leetcode/No138.copy-list-with-random-pointer.js)
+13. [No.166 Fraction to Recurring Decimal](./leetcode/No166.fraction-to-recurring-decimal.js)
+14. [No.204 Count Primes](./leetcode/No204.count-primes.js)
+15. [No.217 Contains Duplicate](./leetcode/No217.contains-duplicate.js)
+16. [No.219 Contains Duplicate II](./leetcode/No219.contains-duplicate-II.js)
+17. [No.389 Find the Difference](./leetcode/No389.find-the-difference.js)
+18. [No.599 Minimum Index Sum of Two Lists](./leetcode/No599.minimum-index-sum-of-two-lists.js)
+
 `HashTable`（或 `HashMap` ）。对散列中的元素而言，拥有一个特殊的键值（通常通过元素的 ASCII 码获取到），以此来增加索引的速度。除此以外，在删除某个元素以后，散列对该键的索引值将指向 `undefined` ，也就因此避免了改变其他元素的位置。
 
 但其实有时候，不同元素计算得到的 `key` 依旧会有重复。如果是不加处理的普通散列，则当 `key` 重复时，后加入的元素会覆盖原有的元素。但我们可以通过`分离链接` 或者 `线性探索` 的方法解决这个问题。
@@ -147,9 +168,10 @@ LeetCode 上相关题目：
 按照从最小到最大的顺序访问二叉树中的各节点。即对于每个节点，先遍历左子节点，然后根节点，最后右子节点。LeetCode 中相关题目：
 
 1. [No.94 Binary Tree Inorder Traversal](./leetcode/No94.binary-tree-inorder-traversal.js)
-2. [No.173 Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
-3. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
-4. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+2. [No.99 Recover Binary Search Tree](./leetcode/No99.recover-binary-search-tree.js)
+3. [No.173 Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
+4. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+5. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
 - 前序遍历（preorder）
 
