@@ -30,19 +30,71 @@
  *     this.left = this.right = null;
  * }
  */
+
+/* ============================ Recursive Solution ============================ */
 /**
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function(root) {
-  var result = [];
+const inorderTraversal_recursive = (root) => {
+  const result = [];
   if (!root) return result;
   if (root.left) {
-    result.push(...inorderTraversal(root.left));
+    result.push(...inorderTraversal_recursive(root.left));
   }
   result.push(root.val);
   if (root.right) {
-    result.push(...inorderTraversal(root.right));
+    result.push(...inorderTraversal_recursive(root.right));
+  }
+  return result;
+};
+
+/* ============================ Iteratively Solution ============================ */
+const inorderTraversal_iteratively = (root) => {
+  const result = [];
+  if (!root) return result;
+
+  const nodes = [];
+  let node = root;
+  while (node || nodes.length) {
+    if (node) {
+      nodes.push(node);
+      node = node.left;
+    } else {
+      const tmp = nodes.pop();
+      result.push(tmp.val);
+      node = tmp.right;
+    }
+  }
+  return result;
+};
+
+/* ============================ Morris Solution ============================ */
+const inorderTraversal_morris = (root) => {
+  const result = [];
+  if (!root) return result;
+
+  let node = root;
+  let preNode = null;
+  while (node) {
+    if (!node.left) {
+      result.push(node.val);
+      node = node.right;
+    } else {
+      preNode = node.left;
+      while (preNode.right !== null && preNode.right !== node) {
+        preNode = preNode.right;
+      }
+
+      if (!preNode.right) {
+        preNode.right = node;
+        node = node.left;
+      } else {
+        preNode.right = null;
+        result.push(node.val);
+        node = node.right;
+      }
+    }
   }
   return result;
 };

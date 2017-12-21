@@ -161,7 +161,19 @@ LeetCode 上相关题目：
 - 遍历 BST，每个节点只取其*左侧的子节点*进行递归，直至没有子节点。最终所得的数是树中的*最小值*。
 - 遍历 BST，每个节点只取其*右侧的子节点*进行递归，直至没有子节点。最终所得的数是树中的*最大值*。
 
+#### 前驱和后继
+
+- 前驱节点：节点值小于当前节点值，且值最大的节点。即左子树的最右节点
+- 后继节点：节点值大于当前节点值，且值最小的节点。即右子树的最左节点
+
 #### BST 的遍历
+
+- 前序遍历（preorder）
+
+先访问父节点，再访问其所有子节点。即中左右顺序。LeetCode 中相关题目：
+
+1. [No.144 Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
+2. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 
 - 中序遍历（inorder）
 
@@ -173,19 +185,20 @@ LeetCode 上相关题目：
 4. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 5. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
-- 前序遍历（preorder）
-
-先访问父节点，再访问其所有子节点。即中左右顺序。LeetCode 中相关题目：
-
-1. [No.144 Binary Tree Preorder Traversal](./leetcode/No144.binary-tree-preorder-traversal.js)
-2. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
-
 - 后序遍历（postorder）
 
 先访问所有子节点，再访问父节点。即左右中。LeetCode 中相关题目：
 
 1. [No.145 Binary Tree Postorder Traversal](./leetcode/No145.binary-tree-postorder-traversal.js)
 2. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+
+对于前/中/后序三种遍历，都可以通过三种形式实现：
+
+1. 递归：实现方式最简单，O(n) 空间复杂度
+2. 循环：实现方式较递归稍复杂，利用堆/队列，O(n) 空间复杂度
+3. Morris 算法：最优，O(1) 空间复杂度：[Morris Traversal方法遍历二叉树（非递归，不用栈，O(1)空间）](https://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html)
+
+查看[中序遍历的递归/循环/Morris 实现](./leetcode/No94.binary-tree-inorder-traversal.js)
 
 ### 图
 
