@@ -214,6 +214,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.278 `Easy` [First Bad Version](./leetcode/No278.first-bad-version.js)
 - No.279 `Medium` [Perfect Squares](./leetcode/No279.perfect-squares.js)
 - No.287 `Medium` [Find the Duplicate Number](./leetcode/No287.find-the-duplicate-number.js)
+- No.363 `Hard` [Max Sum of Rectangle No Larger Than K](./leetcode/No363.max-sum-of-rectangle-no-larger-than-k.js)
 - No.367 `Easy` [Valid Perfect Square](./leetcode/No367.valid-perfect-square.js)
 - No.389 `Easy` [Find the Difference](./leetcode/No389.find-the-difference.js)
 - No.442 `Easy` [Find All Duplicates in an Array](./leetcode/No442.find-all-duplicates-in-an-array.js)
