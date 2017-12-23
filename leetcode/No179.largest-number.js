@@ -100,3 +100,6 @@ var largestNumber = function(nums) {
   }
   return result.length ? result.join('') : '0';
 };
+
+
+largestNumber([3, 30, 34, 5, 9]); // -> 9534330

@@ -194,6 +194,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.173 `Medium` [Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
 - No.175 `Easy` [Combine Two Tables](./leetcode/No175.combine-two-tables.sql)
 - No.179 `Medium` [Largest Number](./leetcode/No179.largest-number.js)
+- No.187 `Medium` [Repeated DNA Sequences](./leetcode/No187.repeated-dna-sequences.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.206 `Easy` [Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
 - No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
