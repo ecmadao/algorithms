@@ -4,13 +4,14 @@
 
 #### 堆，heap
 
-堆是满足一定限制的树型结构
+堆是满足一定限制的树型结构。关于二叉堆的更多实现细节，查看[优先队列](./priority-queues)
 
 LeetCode 上相关题目：
 
 1. [No.23 Merge k Sorted Lists](./leetcode/No23.merge-k-sorted-lists.js)
-2. [No.215 Kth Largest Element in an Array](./leetcode/No215.kth-largest-element-in-an-array.js)
-3. [No.264 Ugly Number II](./leetcode/No264.ugly-number-II.js)
+2. [No.179 Largest Number](./leetcode/No179.largest-number.js)
+3. [No.215 Kth Largest Element in an Array](./leetcode/No215.kth-largest-element-in-an-array.js)
+4. [No.264 Ugly Number II](./leetcode/No264.ugly-number-II.js)
 
 #### 栈，stack
 
