@@ -192,6 +192,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.171 `Easy` [Excel Sheet Column Number](./leetcode/No171.excel-sheet-column-number.js)
 - No.172 `Easy` [Factorial Trailing Zeroes](./leetcode/No172.factorial-trailing-zeroes.js)
 - No.173 `Medium` [Binary Search Tree Iterator](./leetcode/No173.binary-search-tree-iterator.js)
+- No.174 `Hard` [Dungeon Game](./leetcode/No174.dungeon-game.js)
 - No.175 `Easy` [Combine Two Tables](./leetcode/No175.combine-two-tables.sql)
 - No.179 `Medium` [Largest Number](./leetcode/No179.largest-number.js)
 - No.187 `Medium` [Repeated DNA Sequences](./leetcode/No187.repeated-dna-sequences.js)
