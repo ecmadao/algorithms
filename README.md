@@ -196,6 +196,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.175 `Easy` [Combine Two Tables](./leetcode/No175.combine-two-tables.sql)
 - No.179 `Medium` [Largest Number](./leetcode/No179.largest-number.js)
 - No.187 `Medium` [Repeated DNA Sequences](./leetcode/No187.repeated-dna-sequences.js)
+- No.188 `Hard` [Best Time to Buy and Sell Stock IV](./leetcode/No188.best-time-to-buy-and-sell-stock-iv.js)
+- No.189 `Easy` [Rotate Array](./leetcode/No189.rotate-array.js)
 - No.204 `Easy` [Count Primes](./leetcode/No204.count-primes.js)
 - No.206 `Easy` [Reverse Linked List](./leetcode/No206.reverse-linked-list.js)
 - No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/No208.implement-trie-prefix-tree.js)
