@@ -12,6 +12,7 @@ LeetCode 上相关题目：
 2. [No.179 Largest Number](./leetcode/No179.largest-number.js)
 3. [No.215 Kth Largest Element in an Array](./leetcode/No215.kth-largest-element-in-an-array.js)
 4. [No.264 Ugly Number II](./leetcode/No264.ugly-number-II.js)
+5. [No.347 Top K Frequent Elements](./leetcode/No347.top-k-frequent-elements.js)
 
 #### 栈，stack
 
