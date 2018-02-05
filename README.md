@@ -222,6 +222,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.347 `Medium` [Top K Frequent Elements](./leetcode/No347.top-k-frequent-elements.js)
 - No.363 `Hard` [Max Sum of Rectangle No Larger Than K](./leetcode/No363.max-sum-of-rectangle-no-larger-than-k.js)
 - No.367 `Easy` [Valid Perfect Square](./leetcode/No367.valid-perfect-square.js)
+- No.387 `Easy` [First Unique Character in a String](./leetcode/No387.first-unique-character-in-a-string.js)
 - No.389 `Easy` [Find the Difference](./leetcode/No389.find-the-difference.js)
 - No.442 `Easy` [Find All Duplicates in an Array](./leetcode/No442.find-all-duplicates-in-an-array.js)
 - No.445 `Medium` [Add Two Numbers II](./leetcode/No445.add-two-numbers-II.js)
