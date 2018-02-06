@@ -216,6 +216,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.263 `Easy` [Ugly Number](./leetcode/No263.ugly-number.js)
 - No.264 `Medium` [Ugly Number II](./leetcode/No264.ugly-number-II.js)
 - No.268 `Easy` [Missing Number](./leetcode/No268.missing-number.js)
+- No.274 `Medium` [H-Index](./leetcode/No274.h-index.js)
+- No.275 `Medium` [H-Index II](./leetcode/No275.h-index-II.js)
 - No.278 `Easy` [First Bad Version](./leetcode/No278.first-bad-version.js)
 - No.279 `Medium` [Perfect Squares](./leetcode/No279.perfect-squares.js)
 - No.287 `Medium` [Find the Duplicate Number](./leetcode/No287.find-the-duplicate-number.js)
