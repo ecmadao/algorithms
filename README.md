@@ -220,6 +220,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.275 `Medium` [H-Index II](./leetcode/No275.h-index-II.js)
 - No.278 `Easy` [First Bad Version](./leetcode/No278.first-bad-version.js)
 - No.279 `Medium` [Perfect Squares](./leetcode/No279.perfect-squares.js)
+- No.283 `Easy` [Move Zeroes](./leetcode/No283.move-zeroes.js)
 - No.287 `Medium` [Find the Duplicate Number](./leetcode/No287.find-the-duplicate-number.js)
 - No.347 `Medium` [Top K Frequent Elements](./leetcode/No347.top-k-frequent-elements.js)
 - No.349 `Easy` [Intersection of Two Arrays](./leetcode/No349.intersection-of-two-arrays.js)
