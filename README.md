@@ -230,6 +230,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.350 `Easy` [Intersection of Two Arrays II](./leetcode/No350.intersection-of-two-arrays-II.js)
 - No.363 `Hard` [Max Sum of Rectangle No Larger Than K](./leetcode/No363.max-sum-of-rectangle-no-larger-than-k.js)
 - No.367 `Easy` [Valid Perfect Square](./leetcode/No367.valid-perfect-square.js)
+- No.376 `Medium` [Wiggle Subsequence](./leetcode/No376.wiggle-subsequence.js)
 - No.380 `Medium` [Insert Delete GetRandom O(1)](./leetcode/No380.insert-delete-getRandom-o(1).js)
 - No.387 `Easy` [First Unique Character in a String](./leetcode/No387.first-unique-character-in-a-string.js)
 - No.389 `Easy` [Find the Difference](./leetcode/No389.find-the-difference.js)
