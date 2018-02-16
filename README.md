@@ -230,6 +230,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.350 `Easy` [Intersection of Two Arrays II](./leetcode/No350.intersection-of-two-arrays-II.js)
 - No.363 `Hard` [Max Sum of Rectangle No Larger Than K](./leetcode/No363.max-sum-of-rectangle-no-larger-than-k.js)
 - No.367 `Easy` [Valid Perfect Square](./leetcode/No367.valid-perfect-square.js)
+- No.380 `Medium` [Insert Delete GetRandom O(1)](./leetcode/No380.insert-delete-getRandom-o(1).js)
 - No.387 `Easy` [First Unique Character in a String](./leetcode/No387.first-unique-character-in-a-string.js)
 - No.389 `Easy` [Find the Difference](./leetcode/No389.find-the-difference.js)
 - No.409 `Easy` [Longest Palindrome](./leetcode/No409.longest-palindrome.js)
@@ -250,6 +251,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.658 `Medium` [Find K Closest Elements](./leetcode/No658.find-k-closest-elements.js)
 - No.659 `Medium` [Split Array into Consecutive Subsequences](./leetcode/No659.split-array-into-consecutive-subsequences.js)
 - No.680 `Easy` [Valid Palindrome II](./leetcode/No680.valid-palindrome-II.js)
+- No.718 `Medium` [Maximum Length of Repeated Subarray](./leetcode/No718.maximum-length-of-repeated-subarray.js)
 
 ### Run demo
 
