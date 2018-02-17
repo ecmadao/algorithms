@@ -242,6 +242,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.451 `Medium` [Sort Characters By Frequency](./leetcode/No451.sort-characters-by-frequency.js)
 - No.454 `Medium` [4Sum II](./leetcode/No454.4sum-II.js)
 - No.460 `Hard` [LFU Cache](./leetcode/No460.lfu-cache.js)
+- No.486 `Medium` [Predict the Winner](./leetcode/No486.predict-the-winner.js)
 - No.523 `Medium` [Continuous Subarray Sum](./leetcode/No523.continuous-subarray-sum.js)
 - No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/No530.minimum-absolute-difference-in-BST.js)
 - No.541 `Easy` [Reverse String II](./leetcode/No541.reverse-string-II.js)
