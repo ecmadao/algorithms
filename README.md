@@ -210,6 +210,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.220 `Medium` [Contains Duplicate III](./leetcode/No220.contains-duplicate-III.js)
 - No.225 `Easy` [Implement Stack using Queues](./leetcode/No225.implement-stack-using-queues.js)
 - No.229 `Medium` [Majority Element II](./leetcode/No229.majority-element-II.js)
+- No.230 `Medium` [Kth Smallest Element in a BST](./leetcode/No230.kth-smallest-element-in-a-bst.js)
 - No.231 `Easy` [Power of Two](./leetcode/No231.power-of-two.js)
 - No.232 `Easy` [Implement Queue using Stacks](./leetcode/No232.implement-queue-using-stacks.js)
 - No.234 `Easy` [Palindrome Linked List](./leetcode/No234.palindrome-linked-list.js)
