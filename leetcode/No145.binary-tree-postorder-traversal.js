@@ -47,7 +47,7 @@ var postorderTraversal_recursive = function(root) {
   return result;
 };
 
-/* ============================ Iteratively Solution ============================ */
+/* ============================ Iteratively Solution 1 ============================ */
 const noneAvailableLeft = (node) => !node.left || (node.left && node.left.visited);
 const noneAvailableRight = (node) => !node.right || (node.right && node.right.visited);
 /**
@@ -70,6 +70,41 @@ const postorderTraversal = (root) => {
       } else if (root.right && !root.right.visited) {
         parentNode = root;
         root = root.right;
+      }
+    }
+  }
+  return result;
+};
+
+/* ============================ Iteratively Solution 2 ============================ */
+
+const postorderTraversal = (root) => {
+  const result = [];
+  let node = root;
+  const nodes = [];
+  const childNodeDone = (treeNode) => {
+    if (!treeNode.left && !treeNode.right) return true;
+    if (treeNode.left) {
+      if (treeNode.left.done && (!treeNode.right || treeNode.right.done)) return true;
+    }
+    if (treeNode.right) {
+      if (treeNode.right.done && (!treeNode.left || treeNode.left.done)) return true;
+    }
+    return false;
+  };
+  while (node || nodes.length) {
+    if (node && !node.done) {
+      nodes.push(node);
+      node = node.left;
+    } else {
+      node = nodes.pop();
+      if (childNodeDone(node)) {
+        result.push(node.val);
+        node.done = true;
+        node = null;
+      } else {
+        nodes.push(node);
+        node = node.right;
       }
     }
   }

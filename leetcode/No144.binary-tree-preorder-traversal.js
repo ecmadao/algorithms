@@ -50,7 +50,7 @@ var preorderTraversal_recursive = function(root) {
  * @param {TreeNode} root
  * @return {number[]}
  */
-var preorderTraversal_iteratively = (root) => {
+const preorderTraversal_iteratively_1 = (root) => {
   if (!root) return [];
   const leftNodes = [root.left];
   const rightNodes = [root.right];
@@ -74,6 +74,28 @@ var preorderTraversal_iteratively = (root) => {
         leftNodes.push(node.left);
         rightNodes.push(node.right);
       }
+    }
+  }
+  return result;
+};
+
+/* ============================ Iteratively Solution ============================ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+const preorderTraversal_iteratively_2 = (root) => {
+  const result = [];
+  let node = root;
+  const nodes = [];
+  while (node || nodes.length) {
+    if (node) {
+      result.push(node.val);
+      nodes.push(node);
+      node = node.left;
+    } else {
+      node = nodes.pop();
+      node = node.right;
     }
   }
   return result;

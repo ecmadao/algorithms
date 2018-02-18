@@ -33,6 +33,7 @@
  * If the scores of both players are equal, then player 1 is still the winner.
  */
 
+/* ================== SOLUTION 1 ================== */
 /**
  * @param {number[]} nums
  * @return {boolean}
@@ -46,4 +47,24 @@ var PredictTheWinner = function(nums) {
   };
 
   return choseNumber(0, nums.length - 1, 1) >= 0;
+};
+
+/* ================== SOLUTION 2 ================== */
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+const PredictTheWinner = (nums) => {
+  const tmp = [];
+  for (let i = nums.length - 1; i >= 0; i -= 1) {
+    tmp[i] = [];
+    tmp[i][i] = nums[i];
+    for (let j = i + 1; j < nums.length; j += 1) {
+      tmp[i][j] = Math.max(
+        nums[i] - tmp[i + 1][j],
+        nums[j] - tmp[i][j - 1]
+      );
+    }
+  }
+  return tmp[0][nums.length - 1] >= 0;
 };

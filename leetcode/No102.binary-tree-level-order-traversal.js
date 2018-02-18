@@ -19,6 +19,8 @@
  *  [9,20],
  *  [15,7]
  * ]
+ *
+ * 层序遍历，一次遍历树的一层
  */
 
 /**
@@ -28,6 +30,8 @@
  *     this.left = this.right = null;
  * }
  */
+
+ /* ============================ Recursive Solution ============================ */
 /**
  * @param {TreeNode} root
  * @return {number[][]}
@@ -49,4 +53,31 @@ var levelOrder = function(root) {
   };
   getLayerValues([root]);
   return results;
+};
+
+/* ============================ Iteratively Solution ============================ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+const levelOrder_iteratively = (root) => {
+  const result = [];
+  let nodes = [root];
+  let tmp = [];
+  let tmpVal = [];
+  let layer = 0;
+  while (nodes.length) {
+    const node = nodes.shift();
+    node && tmpVal.push(node.val);
+    node && node.left && tmp.push(node.left);
+    node && node.right && tmp.push(node.right);
+    if (!nodes.length && tmpVal.length) {
+      nodes = tmp;
+      result[layer] = tmpVal;
+      layer += 1;
+      tmpVal = [];
+      tmp = [];
+    }
+  }
+  return result;
 };
