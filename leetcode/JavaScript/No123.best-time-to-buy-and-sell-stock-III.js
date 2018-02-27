@@ -101,5 +101,5 @@ const maxProfit_2 = (prices) => {
 * =================== 方法三 ===================
 * 可以作为 No.188 Best Time to Buy and Sell Stock IV 的特殊情况处理：
 * 限制的 k 次交易，k = 2
-* 过程略，可见 ./leetcode/No188.best-time-to-buy-and-sell-stock-iv.js
+* 过程略，可见 ./leetcode/JavaScript/No188.best-time-to-buy-and-sell-stock-iv.js
 */
