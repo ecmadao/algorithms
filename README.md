@@ -259,6 +259,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 ### [LeetCode - Swift4 Solution](./leetcode/Swift4)
 
 - No.01 `Easy` [Two Sum](./leetcode/Swift4/No01.two-sum.swift)
+- No.02 `Medium` [Add Two Numbers](./leetcode/Swift4/No02.add-two-numbers.swift)
 
 ### Run demo
 
