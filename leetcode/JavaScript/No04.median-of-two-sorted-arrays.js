@@ -97,3 +97,9 @@ var findMedianSortedArrays = function(nums1, nums2) {
 
 findMedianSortedArrays([1, 2], [3, 4]);
 findMedianSortedArrays([], [3, 4]);
+
+/**
+ * 思路二：
+ * 并归排序
+ * 解略。可查看 Swift 解法
+ */

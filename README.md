@@ -261,6 +261,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.01 `Easy` [Two Sum](./leetcode/Swift4/No01.two-sum.swift)
 - No.02 `Medium` [Add Two Numbers](./leetcode/Swift4/No02.add-two-numbers.swift)
 - No.03 `Medium` [Longest Substring Without Repeating Characters](./leetcode/Swift4/No03.longest-substring-without-repeating-characters.swift)
+- No.04 `Hard` [Median of Two Sorted Arrays](./leetcode/Swift4/No04.median-of-two-sorted-arrays.swift)
 
 ### Run demo
 

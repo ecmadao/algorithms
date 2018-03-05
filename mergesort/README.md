@@ -13,12 +13,12 @@ result = []
 # 同时遍历
 # i = 0, j = 0
 1 3 5 7 | 2 4 6 8
-# arrayLeft[i] < arrayRight[j]，则将 arrayA[i] 放入结果中，然后 i 递增 1
+# arrayLeft[i] < arrayRight[j]，则将 arrayLeft[i] 放入结果中，然后 i 递增 1
 
 # i = 1, j = 0
 1 3 5 7 | 2 4 6 8
 result = [1]
-# arrayA[i] > arrayB[j]，则将 arrayB[j] 放入结果中，然后 j 递增 1
+# arrayLeft[i] > arrayRight[j]，则将 arrayRight[j] 放入结果中，然后 j 递增 1
 
 # i = 1, j = 1
 1 3 5 7 | 2 4 6 8
