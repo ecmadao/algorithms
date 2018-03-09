@@ -26,9 +26,23 @@
  * @param {number} x
  * @return {number}
  */
-var reverse = function(x) {
+const reverse_1 = (x) => {
   var multi = x < 0 ? -1 : 1;
   var num = x * multi;
   var result = Number(num.toString().split('').reverse().join(''));
   return result > 2147483647 ? 0 : result * multi;
+};
+
+const reverse_2 = (x) => {
+  let result = 0;
+  let remain = Math.abs(x);
+  const multi = x < 0 ? -1 : 1;
+  const MAX = 2147483647;
+
+  while (remain !== 0) {
+    result = result * 10 + remain % 10;
+    remain = Math.floor(remain / 10);
+    if (remain !== 0 && MAX / 10 < result) return 0;
+  }
+  return result * multi;
 };
