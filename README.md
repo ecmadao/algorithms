@@ -265,6 +265,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.05 `Medium` [Longest Palindromic Substring](./leetcode/Swift4/No05.longest-palindromic-substring.swift)
 - No.06 `Medium` [ZigZag Conversion](./leetcode/Swift4/No06.zigzag-conversion.swift)
 - No.07 `Easy` [Reverse Integer](./leetcode/Swift4/No07.reverse-integer.swift)
+- No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift4/No08.string-to-integer(atoi).swift)
 
 ### Run demo
 
