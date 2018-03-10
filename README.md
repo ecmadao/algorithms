@@ -265,11 +265,18 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.05 `Medium` [Longest Palindromic Substring](./leetcode/Swift4/No05.longest-palindromic-substring.swift)
 - No.06 `Medium` [ZigZag Conversion](./leetcode/Swift4/No06.zigzag-conversion.swift)
 - No.07 `Easy` [Reverse Integer](./leetcode/Swift4/No07.reverse-integer.swift)
-- No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift4/No08.string-to-integer(atoi).swift)
+- No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift4/No08.string-to-integer-atoi.swift)
+- No.09 `Easy` [Palindrome Number](./leetcode/Swift4/No09.palindrome-number.swift)
 
 ### Run demo
+
+对于 JavaScript：
 
 - 环境要求：>= Node.js v7
 - 如果 Node 版本较低，则可以自行选择使用 Babel 进行转换
 - Leetcode 题解代码直接在浏览器中即可运行（ES5/ES6 语法）
 - 直接运行各个文件夹下的 `js` 文件即可查看算法运行的结果，例如在项目根目录下 `node ./priority-queues/binary-heaps.js`
+
+对于 Swift：
+
+- Swift 版本 >= 4.0

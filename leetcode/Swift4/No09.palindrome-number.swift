@@ -12,29 +12,18 @@
  * There is a more generic way of solving this problem.
  *
  * 判断数字是否回文
- * 其本身想考核的一些问题，比如 32 位 int 类型数字最大值等，但在 js 面前没有意义（js 是 64 位浮点类型）
  */
 
- /**
- * @param {number} x
- * @return {boolean}
- */
-var isPalindrome = function(x) {
-  x = x.toString();
-  if (x[0] === '-') {
-    return false;
-  }
-
-  var i = 0;
-  var j = x.length - 1;
-  var result = true;
-
-  while(i < j) {
-    if(x[i] !== x[j]){
-      result = false;
+class Solution {
+    func isPalindrome(_ x: Int) -> Bool {
+        if x < 0 { return false }
+        var num = 0
+        var raw = x
+        while raw > 0 {
+            num = num * 10 + raw % 10
+            raw = raw / 10
+        }
+        return num == x
     }
-    i += 1;
-    j -= 1;
-  }
-  return result;
-};
+}
+
