@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Algorithms](#algorithms)
+  - [预储备](#%E9%A2%84%E5%82%A8%E5%A4%87)
+  - [Menu](#menu)
+  - [Leetcode - JavaScript Solution](#leetcode---javascript-solution)
+  - [LeetCode - Swift4 Solution](#leetcode---swift4-solution)
+  - [Run demo](#run-demo)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Algorithms
 
 Algorithms notes & code & leetcode solution by Node.js.

@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [JavaScript 数据结构](#javascript-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
+  - [堆，栈，队列](#%E5%A0%86%E6%A0%88%E9%98%9F%E5%88%97)
+    - [堆，heap](#%E5%A0%86heap)
+    - [栈，stack](#%E6%A0%88stack)
+    - [队列，queue](#%E9%98%9F%E5%88%97queue)
+  - [链表](#%E9%93%BE%E8%A1%A8)
+  - [集合与字典（映射）](#%E9%9B%86%E5%90%88%E4%B8%8E%E5%AD%97%E5%85%B8%E6%98%A0%E5%B0%84)
+    - [集合](#%E9%9B%86%E5%90%88)
+    - [字典（映射）](#%E5%AD%97%E5%85%B8%E6%98%A0%E5%B0%84)
+  - [散列](#%E6%95%A3%E5%88%97)
+  - [二叉树](#%E4%BA%8C%E5%8F%89%E6%A0%91)
+    - [二叉搜索树（BST）](#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91bst)
+    - [前驱和后继](#%E5%89%8D%E9%A9%B1%E5%92%8C%E5%90%8E%E7%BB%A7)
+    - [BST 的遍历](#bst-%E7%9A%84%E9%81%8D%E5%8E%86)
+  - [图](#%E5%9B%BE)
+    - [图的遍历](#%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86)
+  - [深度优先搜索 DFS/Depth-First-Search](#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-dfsdepth-first-search)
+  - [广度优先搜索 BFS/Breadth-First-Search](#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-bfsbreadth-first-search)
+  - [算法基本概念](#%E7%AE%97%E6%B3%95%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
+    - [复杂度 - 大 O 表示法](#%E5%A4%8D%E6%9D%82%E5%BA%A6---%E5%A4%A7-o-%E8%A1%A8%E7%A4%BA%E6%B3%95)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## JavaScript 数据结构
 
 ### 堆，栈，队列

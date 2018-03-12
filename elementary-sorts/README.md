@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [基本排序](#%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F)
+  - [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
+  - [插入排序](#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
+  - [希尔排序](#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F)
+  - [洗牌](#%E6%B4%97%E7%89%8C)
+  - [桶排序 Bucket sort](#%E6%A1%B6%E6%8E%92%E5%BA%8F-bucket-sort)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 基本排序
 
 - 堆栈：后进（push）先出（pop）

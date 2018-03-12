@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [AVL 树](#avl-%E6%A0%91)
+  - [数据查找](#%E6%95%B0%E6%8D%AE%E6%9F%A5%E6%89%BE)
+  - [数据插入](#%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5)
+    - [左左失衡](#%E5%B7%A6%E5%B7%A6%E5%A4%B1%E8%A1%A1)
+    - [右右失衡](#%E5%8F%B3%E5%8F%B3%E5%A4%B1%E8%A1%A1)
+    - [左右失衡](#%E5%B7%A6%E5%8F%B3%E5%A4%B1%E8%A1%A1)
+    - [右左失衡](#%E5%8F%B3%E5%B7%A6%E5%A4%B1%E8%A1%A1)
+  - [数据删除](#%E6%95%B0%E6%8D%AE%E5%88%A0%E9%99%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## AVL 树
 
 一般的二叉查找树的查询复杂度是跟目标结点到树根的距离（即深度）有关，因此当结点的深度普遍较大时，查询的均摊复杂度会上升，为了更高效的查询，平衡树应运而生了。

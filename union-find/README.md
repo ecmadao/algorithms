@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Union-find](#union-find)
+  - [快速查找](#%E5%BF%AB%E9%80%9F%E6%9F%A5%E6%89%BE)
+  - [快速并集](#%E5%BF%AB%E9%80%9F%E5%B9%B6%E9%9B%86)
+  - [增强型快速并集](#%E5%A2%9E%E5%BC%BA%E5%9E%8B%E5%BF%AB%E9%80%9F%E5%B9%B6%E9%9B%86)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Union-find
 
 Union-find，并查集，用于解决动态连通性问题。

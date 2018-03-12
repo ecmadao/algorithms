@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [优先队列](#%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97)
+  - [二叉堆](#%E4%BA%8C%E5%8F%89%E5%A0%86)
+    - [二叉堆的创建](#%E4%BA%8C%E5%8F%89%E5%A0%86%E7%9A%84%E5%88%9B%E5%BB%BA)
+    - [二叉堆的移除](#%E4%BA%8C%E5%8F%89%E5%A0%86%E7%9A%84%E7%A7%BB%E9%99%A4)
+  - [堆排序](#%E5%A0%86%E6%8E%92%E5%BA%8F)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 优先队列
 
 对于普通的队列而言，数据先进先出：元素在队列尾追加，而从队列头删除。而在优先队列中，元素被赋予了一种优先级，在出队列时，优先级最高的元素会最先被推出并删除。

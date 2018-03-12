@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [区间二叉搜索树](#%E5%8C%BA%E9%97%B4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)
+  - [插入区间](#%E6%8F%92%E5%85%A5%E5%8C%BA%E9%97%B4)
+  - [搜索](#%E6%90%9C%E7%B4%A2)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 区间二叉搜索树
 
 区间二叉搜索树，也叫线段树，是二叉树的一种。但它最大的不同是，它的每个节点储存的都是一个区间而不是数字，即 `[start, end]` ，而其左右子树，则是根据插入区间的左端点大小进行比较来决定的。在区间树同一层的节点所代表的区间，相互不会重叠。

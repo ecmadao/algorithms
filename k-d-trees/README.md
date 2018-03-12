@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [k-d 树](#k-d-%E6%A0%91)
+  - [k-d 树的创建](#k-d-%E6%A0%91%E7%9A%84%E5%88%9B%E5%BB%BA)
+  - [k-d 树的搜索](#k-d-%E6%A0%91%E7%9A%84%E6%90%9C%E7%B4%A2)
+    - [推荐资料](#%E6%8E%A8%E8%8D%90%E8%B5%84%E6%96%99)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## k-d 树
 
 所谓 k-d 树，其实就是 K-维树，在 K 维度的空间，每次选择一个维度 D 来里进行切分，直到无法分割为止。比如有一堆 K 维度的数据，我们每次针对某一维度，利用其中位数进行分割成两个部分。然后在这两个分割结果中，分别改变维度继续切分。

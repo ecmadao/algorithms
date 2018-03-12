@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [2-3 二叉搜索树](#2-3-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)
+  - [节点搜索](#%E8%8A%82%E7%82%B9%E6%90%9C%E7%B4%A2)
+  - [节点插入](#%E8%8A%82%E7%82%B9%E6%8F%92%E5%85%A5)
+  - [节点删除](#%E8%8A%82%E7%82%B9%E5%88%A0%E9%99%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 2-3 二叉搜索树
 
 2-3 二叉搜索树的每个节点要么有 2 个子节点和 1 个数据元素，要么有 3个子节点和 2 个数据元素。

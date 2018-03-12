@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [红黑二叉搜索树](#%E7%BA%A2%E9%BB%91%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)
+  - [数据插入](#%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5)
+    - [红色节点插入到了右子节点](#%E7%BA%A2%E8%89%B2%E8%8A%82%E7%82%B9%E6%8F%92%E5%85%A5%E5%88%B0%E4%BA%86%E5%8F%B3%E5%AD%90%E8%8A%82%E7%82%B9)
+    - [有连续两个互链接的红色子节点](#%E6%9C%89%E8%BF%9E%E7%BB%AD%E4%B8%A4%E4%B8%AA%E4%BA%92%E9%93%BE%E6%8E%A5%E7%9A%84%E7%BA%A2%E8%89%B2%E5%AD%90%E8%8A%82%E7%82%B9)
+    - [左右两个子节点都是红色子节点](#%E5%B7%A6%E5%8F%B3%E4%B8%A4%E4%B8%AA%E5%AD%90%E8%8A%82%E7%82%B9%E9%83%BD%E6%98%AF%E7%BA%A2%E8%89%B2%E5%AD%90%E8%8A%82%E7%82%B9)
+  - [数据删除](#%E6%95%B0%E6%8D%AE%E5%88%A0%E9%99%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 红黑二叉搜索树
 
 红黑树是规定了如下特性的二叉搜索树：

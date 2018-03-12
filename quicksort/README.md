@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [快速排序](#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F)
+  - [普通快排](#%E6%99%AE%E9%80%9A%E5%BF%AB%E6%8E%92)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 快速排序
 
 ### [普通快排](./quicksort.js)
