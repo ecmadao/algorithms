@@ -23,17 +23,37 @@
  *
  * 从实现的技术上讲，这道题应该是 Easy 难度，唯一坑人的是要考虑清楚需求：要实现的 match 必须全量匹配才算 true
  * 比如，'abcd' match  'd*'，用正则可以 match 到 d，但是 d !== abcd，故返回 false
- *
- * 感觉这题真正应该考核的是从根本的原理上手动实现一个正则匹配？那我显然是投机取巧了 ==
  */
 
- /**
+/**
+ * Test case
+ * isMatch("acccc","aa*..*b*") -> true
+ * isMatch("ab",".*...*") -> true
+ * isMatch("ab",".*...*.") -> false
+ */
+
+/**
  * @param {string} s
  * @param {string} p
  * @return {boolean}
+ *
+ * 投机取巧解法
  */
-var isMatch = function(s, p) {
+var isMatch_easy = function(s, p) {
   var matchResult = s.match(new RegExp(p, 'g'));
   var result = matchResult ? matchResult[0] === s : false;
   return result;
+};
+
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {boolean}
+ *
+ * 实现正则匹配解法
+ */
+const isMatch = (s, p) => {
+  // TODO:
+  // Already on the way.
+  // can also check ./leetcode/Swift4/No10.regular-expression-matching.swift
 };

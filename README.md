@@ -267,6 +267,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.07 `Easy` [Reverse Integer](./leetcode/Swift4/No07.reverse-integer.swift)
 - No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift4/No08.string-to-integer-atoi.swift)
 - No.09 `Easy` [Palindrome Number](./leetcode/Swift4/No09.palindrome-number.swift)
+- No.10 `Hard` [Regular Expression Matching](./leetcode/Swift4/No10.regular-expression-matching.swift)
 
 ### Run demo
 
