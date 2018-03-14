@@ -269,19 +269,19 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.680 `Easy` [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)
 - No.718 `Medium` [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js)
 
-### [LeetCode - Swift4 Solution](./leetcode/Swift4)
+### [LeetCode - Swift4 Solution](./leetcode/Swift)
 
-- No.01 `Easy` [Two Sum](./leetcode/Swift4/No01.two-sum.swift)
-- No.02 `Medium` [Add Two Numbers](./leetcode/Swift4/No02.add-two-numbers.swift)
-- No.03 `Medium` [Longest Substring Without Repeating Characters](./leetcode/Swift4/No03.longest-substring-without-repeating-characters.swift)
-- No.04 `Hard` [Median of Two Sorted Arrays](./leetcode/Swift4/No04.median-of-two-sorted-arrays.swift)
-- No.05 `Medium` [Longest Palindromic Substring](./leetcode/Swift4/No05.longest-palindromic-substring.swift)
-- No.06 `Medium` [ZigZag Conversion](./leetcode/Swift4/No06.zigzag-conversion.swift)
-- No.07 `Easy` [Reverse Integer](./leetcode/Swift4/No07.reverse-integer.swift)
-- No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift4/No08.string-to-integer-atoi.swift)
-- No.09 `Easy` [Palindrome Number](./leetcode/Swift4/No09.palindrome-number.swift)
-- No.10 `Hard` [Regular Expression Matching](./leetcode/Swift4/No10.regular-expression-matching.swift)
-- No.11 `Medium` [Container With Most Water](./leetcode/Swift4/No11.container-with-most-water.swift)
+- No.01 `Easy` [Two Sum](./leetcode/Swift/No01.two-sum.swift)
+- No.02 `Medium` [Add Two Numbers](./leetcode/Swift/No02.add-two-numbers.swift)
+- No.03 `Medium` [Longest Substring Without Repeating Characters](./leetcode/Swift/No03.longest-substring-without-repeating-characters.swift)
+- No.04 `Hard` [Median of Two Sorted Arrays](./leetcode/Swift/No04.median-of-two-sorted-arrays.swift)
+- No.05 `Medium` [Longest Palindromic Substring](./leetcode/Swift/No05.longest-palindromic-substring.swift)
+- No.06 `Medium` [ZigZag Conversion](./leetcode/Swift/No06.zigzag-conversion.swift)
+- No.07 `Easy` [Reverse Integer](./leetcode/Swift/No07.reverse-integer.swift)
+- No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift/No08.string-to-integer-atoi.swift)
+- No.09 `Easy` [Palindrome Number](./leetcode/Swift/No09.palindrome-number.swift)
+- No.10 `Hard` [Regular Expression Matching](./leetcode/Swift/No10.regular-expression-matching.swift)
+- No.11 `Medium` [Container With Most Water](./leetcode/Swift/No11.container-with-most-water.swift)
 
 ### Run demo
 

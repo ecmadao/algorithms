@@ -55,5 +55,5 @@ var isMatch_easy = function(s, p) {
 const isMatch = (s, p) => {
   // TODO:
   // Already on the way.
-  // can also check ./leetcode/Swift4/No10.regular-expression-matching.swift
+  // can also check ./leetcode/Swift/No10.regular-expression-matching.swift
 };
