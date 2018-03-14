@@ -43,7 +43,7 @@ class Solution {
         var result = [String]()
         var startIndex = p.startIndex
 
-        while startIndex.encodedOffset < p.count {
+        while startIndex < p.count {
             if startIndex.encodedOffset < p.count - 1 {
                 let nextIndex = p.index(startIndex, offsetBy: 1)
                 if p[nextIndex] == "*" {
@@ -70,26 +70,21 @@ class Solution {
             if strIndex < strList.count && listIndex >= matchList.count { return false }
 
             let matchStr = matchList[listIndex]
-            if matchStr[matchStr.index(matchStr.endIndex, offsetBy: -1)] != "*" {
+            if !matchStr.hasSuffix("*") {
                 var sIndex = strIndex
                 for char in matchStr {
                     if sIndex >= strList.count { return false }
-                    if char != "." {
-                        if strList[sIndex] != char { return false }
-                    }
+                    if char != "." && strList[sIndex] != char { return false }
                     sIndex += 1
                 }
                 return match(strIndex: sIndex, listIndex: listIndex + 1)
             } else {
                 var count = 0
                 let prefix = matchStr[matchStr.startIndex]
-                var strMatch = true
                 while count <= strList.count - strIndex {
-                    var result = false
-
-                    strMatch = count == 0 ? true : strMatch && (prefix == "." || prefix == strList[count + strIndex - 1])
+                    let strMatch = count == 0 || prefix == "." || prefix == strList[count + strIndex - 1]
                     if strMatch {
-                        result = match(strIndex: count + strIndex, listIndex: listIndex + 1)
+                        let result = match(strIndex: count + strIndex, listIndex: listIndex + 1)
                         if result { return true }
                     } else {
                         return false
