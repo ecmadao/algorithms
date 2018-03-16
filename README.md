@@ -282,6 +282,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.09 `Easy` [Palindrome Number](./leetcode/Swift/No09.palindrome-number.swift)
 - No.10 `Hard` [Regular Expression Matching](./leetcode/Swift/No10.regular-expression-matching.swift)
 - No.11 `Medium` [Container With Most Water](./leetcode/Swift/No11.container-with-most-water.swift)
+- No.12 `Medium` [Integer to Roman](./leetcode/Swift/No12.integer-to-roman.swift)
 
 ### Run demo
 
