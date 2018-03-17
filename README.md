@@ -283,6 +283,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.10 `Hard` [Regular Expression Matching](./leetcode/Swift/No10.regular-expression-matching.swift)
 - No.11 `Medium` [Container With Most Water](./leetcode/Swift/No11.container-with-most-water.swift)
 - No.12 `Medium` [Integer to Roman](./leetcode/Swift/No12.integer-to-roman.swift)
+- No.13 `Easy` [Roman to Integer](./leetcode/Swift/No13.roman-to-integer.swift)
 
 ### Run demo
 
