@@ -256,6 +256,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.454 `Medium` [4Sum II](./leetcode/JavaScript/No454.4sum-II.js)
 - No.460 `Hard` [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js)
 - No.486 `Medium` [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js)
+- No.520 `Easy` [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)
 - No.523 `Medium` [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js)
 - No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)
 - No.541 `Easy` [Reverse String II](./leetcode/JavaScript/No541.reverse-string-II.js)
@@ -285,6 +286,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.12 `Medium` [Integer to Roman](./leetcode/Swift/No12.integer-to-roman.swift)
 - No.13 `Easy` [Roman to Integer](./leetcode/Swift/No13.roman-to-integer.swift)
 - No.14 `Easy` [Longest Common Prefix](./leetcode/Swift/No14.longest-common-prefix.swift)
+- No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 
 ### Run demo
 

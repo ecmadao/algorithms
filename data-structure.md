@@ -44,7 +44,7 @@ LeetCode 上相关题目：
 
 #### 栈，stack
 
-栈又称堆栈，是一种**先进后出**（FILO, First in Lirst out）的有序集合
+栈又称堆栈，是一种**先进后出**（FILO - First in Lirst out，也可以是后进先出 LIFO - Last in First out）的有序集合
 
 LeetCode 上相关题目：
 
