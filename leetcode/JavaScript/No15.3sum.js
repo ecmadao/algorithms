@@ -74,8 +74,9 @@ var threeEqualZero = function(nums, third, results) {
 /**
  * @param {number[]} nums
  * @return {number[][]}
+ * =========== 解法一 ===========
  */
-var threeSum = function(nums) {
+var threeSum_1 = function(nums) {
   var mapped = new Set();
   var results = [];
   nums.sort((a, b) => a - b);
@@ -88,6 +89,46 @@ var threeSum = function(nums) {
   console.log('threeSum result');
   console.log(results);
   return results;
+};
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ * =========== 解法二 ===========
+ */
+var threeSum_2 = function(nums) {
+  const sortedNums = nums.sort((a, b) => a - b);
+  const result = [];
+
+  for (let i = 0; i < sortedNums.length; i += 1) {
+    const num = sortedNums[i];
+    if (i > 0 && sortedNums[i - 1] === num) continue;
+    let start = i + 1;
+    let end = sortedNums.length - 1;
+
+    while (start < end) {
+      const total = num + sortedNums[start] + sortedNums[end];
+      if (total < 0) {
+        start += 1;
+      } else if (total > 0) {
+        end -= 1;
+      } else {
+        result.push([num, sortedNums[start], sortedNums[end]]);
+
+        while (start < end && sortedNums[start] === sortedNums[start + 1]) {
+          start += 1;
+        }
+        while (start < end && sortedNums[end] === sortedNums[end - 1]) {
+          end -= 1;
+        }
+
+        start += 1;
+        end -= 1;
+      }
+    }
+  }
+
+  return result;
 };
 
 threeSum([0, 0, 0, 0])
