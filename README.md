@@ -287,6 +287,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.13 `Easy` [Roman to Integer](./leetcode/Swift/No13.roman-to-integer.swift)
 - No.14 `Easy` [Longest Common Prefix](./leetcode/Swift/No14.longest-common-prefix.swift)
 - No.15 `Medium` [3Sum](./leetcode/Swift/No15.3sum.swift)
+- No.16 `Medium` [3Sum Closest](./leetcode/Swift/No16.3sum-closest.swift)
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 
 ### Run demo

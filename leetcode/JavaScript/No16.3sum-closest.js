@@ -41,8 +41,9 @@ var getTowClosest = function(nums, target) {
 * @param {number[]} nums
 * @param {number} target
 * @return {number}
+* =========== 解法一 ===========
 */
-var threeSumClosest = function(nums, target) {
+var threeSumClosest_1 = function(nums, target) {
   nums.sort((a, b) => a - b);
   var length = nums.length;
   var mapped = new Set();
@@ -59,6 +60,43 @@ var threeSumClosest = function(nums, target) {
     if (Math.abs(closest - target) < Math.abs(result - target)) {
       result = closest;
       if (result === target) break;
+    }
+  }
+  return result;
+};
+
+
+/**
+* @param {number[]} nums
+* @param {number} target
+* @return {number}
+* =========== 解法二 ===========
+*/
+const threeSumClosest_2 = (nums, target) => {
+  const sortedNums = nums.sort((a, b) => a - b);
+  let result = nums[0] + nums[1] + nums[2];
+  let diff = Math.abs(result - target);
+
+  for (let i = 0; i < sortedNums.length; i += 1) {
+    const num = sortedNums[i];
+    let start = i + 1;
+    let end = sortedNums.length - 1;
+
+    while (start < end) {
+      const sum = num + sortedNums[start] + sortedNums[end];
+      if (sum === target) {
+        return target;
+      } else {
+        if (Math.abs(sum - target) < diff) {
+          diff = Math.abs(sum - target);
+          result = sum;
+        }
+        if (sum < target) {
+          start += 1;
+        } else {
+          end -= 1;
+        }
+      }
     }
   }
   return result;
