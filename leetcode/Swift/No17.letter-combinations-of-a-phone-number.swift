@@ -27,7 +27,7 @@ class Solution {
         return result
     }
 
-    func letterCombinations_BruteForce(_ digits: String) -> [String] {
+    func letterCombinations(_ digits: String) -> [String] {
         let dict = mapIntToLetter(start: 2, end: 9)
         var result = [String]()
 
@@ -46,9 +46,5 @@ class Solution {
             result = newResult
         }
         return result
-    }
-
-    func letterCombinations(_ digits: String) -> [String] {
-      // TODO
     }
 }

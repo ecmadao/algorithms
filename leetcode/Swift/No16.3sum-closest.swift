@@ -25,19 +25,18 @@ class Solution {
 
             while start < end {
                 var sum = num + sortedNums[start] + sortedNums[end];
-                if sum == target {
+                guard sum != target else {
                     return target
+                }
+                let newDiff = abs(sum - target)
+                if newDiff < diff {
+                    diff = newDiff
+                    result = sum
+                }
+                if sum > target {
+                    end -= 1
                 } else {
-                    if (abs(sum - target) < diff) {
-                        diff = abs(sum - target)
-                        result = sum
-                    }
-                    diff = min(diff, abs(sum - target))
-                    if sum > target {
-                        end -= 1
-                    } else {
-                        start += 1
-                    }
+                    start += 1
                 }
             }
         }
