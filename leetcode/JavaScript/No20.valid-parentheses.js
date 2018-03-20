@@ -11,37 +11,30 @@
  * 例如，'[](){}' 是正确闭合的，'{[()]}' 也是正确闭合的，但 '[](}' 这样的就不是
  */
 
-var BracketsMap = {
-  '(': ')',
-  '{': '}',
-  '[': ']',
-};
-
 /**
 * @param {string} s
 * @return {boolean}
 *
-* 思路：运用堆栈
+* 思路：运用栈
 */
 var isValid = function(s) {
-  var queue = [];
-  var validate = true;
-  var leftBrackets = new Set(['(', '[', '{']);
-  var rightBrackets = new Set([')', ']', '}']);
+  let validate = true;
+  const stack = [];
+  const BracketsMap = {
+    ')': '(',
+    ']': '[',
+    '}': '{'
+  };
 
   for (var i = 0; i < s.length; i += 1) {
     var str = s[i];
-    if (rightBrackets.has(str)) {
-      var target = queue.pop();
-      if (BracketsMap[target] !== str) {
-        validate = false;
-        break;
+    if (BracketsMap[str]) {
+      if (stack.pop() !== BracketsMap[str]) {
+        return false;
       }
-    }
-    if (leftBrackets.has(str)) {
-      queue.push(str);
+    } else {
+      stack.push(str);
     }
   }
-  validate = queue.length > 0 ? false : validate;
-  return validate;
+  return stack.length === 0;
 };
