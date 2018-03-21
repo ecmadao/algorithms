@@ -256,6 +256,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.454 `Medium` [4Sum II](./leetcode/JavaScript/No454.4sum-II.js)
 - No.460 `Hard` [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js)
 - No.486 `Medium` [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js)
+- No.500 `Easy` [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)
 - No.520 `Easy` [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)
 - No.523 `Medium` [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js)
 - No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)
@@ -292,6 +293,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.18 `Medium` [4Sum](./leetcode/Swift/No18.4sum.swift)
 - No.19 `Medium` [Remove Nth Node From End of List](./leetcode/Swift/No19.remove-nth-node-from-end-of-list.swift)
 - No.20 `Easy` [Valid Parentheses](./leetcode/Swift/No20.valid-parentheses.swift)
+- No.500 `Easy` [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift)
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 
 ### Run demo
