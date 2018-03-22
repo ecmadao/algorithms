@@ -262,6 +262,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)
 - No.541 `Easy` [Reverse String II](./leetcode/JavaScript/No541.reverse-string-II.js)
 - No.560 `Medium` [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js)
+- No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)
 - No.599 `Easy` [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)
 - No.621 `Medium` [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js)
 - No.633 `Easy` [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)
@@ -295,6 +296,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.20 `Easy` [Valid Parentheses](./leetcode/Swift/No20.valid-parentheses.swift)
 - No.500 `Easy` [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift)
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
+- No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
 
 ### Run demo
 
