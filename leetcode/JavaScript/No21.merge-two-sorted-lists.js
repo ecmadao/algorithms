@@ -6,8 +6,7 @@
  * Merge two sorted linked lists and return it as a new list.
  * The new list should be made by splicing together the nodes of the first two lists.
  *
- * 合并两个已经排好序的数组
- * 运用链表即可
+ * 合并两个已经排好序的链表
  */
 
  /**

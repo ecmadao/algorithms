@@ -294,6 +294,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.18 `Medium` [4Sum](./leetcode/Swift/No18.4sum.swift)
 - No.19 `Medium` [Remove Nth Node From End of List](./leetcode/Swift/No19.remove-nth-node-from-end-of-list.swift)
 - No.20 `Easy` [Valid Parentheses](./leetcode/Swift/No20.valid-parentheses.swift)
+- No.21 `Easy` [Merge Two Sorted Lists](./leetcode/Swift/No21.merge-two-sorted-lists.swift)
 - No.500 `Easy` [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift)
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 - No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
