@@ -31,10 +31,13 @@
  * 4. 当前面总共插入 x 个 ) 后，在最后一层（第 n 层）一定是插入 n - x 个 )
  *
  * 然后就是用什么数据结构来实现的问题了。
+ */
+
+/**
+ * ============== 方法一 ==============
  * 为了保证算法的销量和可读性，我们可以构建一个树，树的第 n 层上的所有节点，代表上述第 n 个 * 所在位置的所有可能取值
  * 各个节点有 childs 属性，代表以当前节点的取值为基础，之后下一个 * 节点的所有可能取值
  */
-
 function Node(val) {
   this.val = val;
   this.childs = [];
@@ -76,7 +79,7 @@ var readTree = function(node) {
 * @param {number} n
 * @return {string[]}
 */
-var generateParenthesis = function(n) {
+var generateParenthesis_solution_1 = function(n) {
   var nodes = buildTree(1, n, 0);
   var results = [];
 
@@ -84,4 +87,28 @@ var generateParenthesis = function(n) {
     results.push(...readTree(nodes[i]));
   }
   return results;
+};
+
+/**
+ * ============== 方法二 ==============
+ * 运用递归
+ */
+var generateParenthesis_solution_2 = function(n) {
+  const result = [];
+  const buildParenthesis = (prefix, maxLeft, maxRight, usedRight) => {
+    if (maxLeft === n) {
+      result.push(prefix + "(" + ")".repeat(maxRight));
+    } else {
+      for (let i = 0; i <= maxRight; i += 1) {
+        buildParenthesis(
+          prefix + "(" + ")".repeat(i),
+          maxLeft + 1,
+          maxLeft + 1 - i - usedRight,
+          usedRight + i
+        );
+      }
+    }
+  }
+  buildParenthesis("", 1, 1, 0);
+  return result;
 };
