@@ -25,30 +25,22 @@ class Solution {
         var list1 = l1
         var list2 = l2
 
-        var head: ListNode = ListNode(0)
+        let head: ListNode = ListNode(0)
         var tmp = head
         while list1 != nil && list2 != nil {
             let v1 = list1!.val
             let v2 = list2!.val
 
-            let val = v1 >= v2 ? v2 : v1
-            let node = ListNode(val)
-            if head == nil {
-                head = node
-                tmp = head
-            } else {
-                tmp.next = node
-                tmp = node
-            }
-            if v1 >= v2 {
+            if v1 > v2 {
+                tmp.next = list2!
                 list2 = list2?.next
             } else {
+                tmp.next = list1!
                 list1 = list1?.next
             }
+            tmp = tmp.next!
         }
-        if  tmp != nil {
-            tmp.next = list1 != nil ? list1 : list2
-        }
+        tmp.next = list1 ?? list2
         return head.next
     }
 }

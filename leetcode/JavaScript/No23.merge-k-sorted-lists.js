@@ -61,12 +61,11 @@ var mergeTwoLists = function(l1, l2) {
  * @return {ListNode}
  */
 var mergeKLists = function(lists) {
-  if (lists.length === 0) return [];
-  if (lists.length === 1) return lists[0];
-  var result = [lists[0]];
+  if (lists.length === 0) return null;
+  var result = lists[0];
 
   for (var i = 1; i < lists.length; i += 1) {
-    result = [mergeTwoLists(result[0], lists[i])];
+    result = mergeTwoLists(result, lists[i]);
   }
-  return result[0];
+  return resul;
 };
