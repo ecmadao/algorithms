@@ -303,15 +303,24 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 - No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
 
+### [Codewars - Haskell Solution](./codewars/Haskell)
+
+- `7 kyu` [You're a square!](./codewars/Haskell/you're-a-square.hs)
+- `6 kyu` [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)
+
 ### Run demo
 
-对于 JavaScript：
+JavaScript：
 
 - 环境要求：>= Node.js v7
 - 如果 Node 版本较低，则可以自行选择使用 Babel 进行转换
 - Leetcode 题解代码直接在浏览器中即可运行（ES5/ES6 语法）
 - 直接运行各个文件夹下的 `js` 文件即可查看算法运行的结果，例如在项目根目录下 `node ./priority-queues/binary-heaps.js`
 
-对于 Swift：
+Swift：
 
 - Swift 版本 >= 4.0
+
+Haskell:
+
+- Using GHCi and load `hs` files.
