@@ -7,6 +7,7 @@
   - [Menu](#menu)
   - [LeetCode - JavaScript Solution](#leetcode---javascript-solution)
   - [LeetCode - Swift4 Solution](#leetcode---swift4-solution)
+  - [LeetCode - Haskell Solution](#leetcode---haskell-solution)
   - [Codewars - Haskell Solution](#codewars---haskell-solution)
   - [Run demo](#run-demo)
 
@@ -112,7 +113,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.64 `Medium` [Minimum Path Sum](./leetcode/JavaScript/No64.minimum-path-sum.js)
 - No.66 `Easy` [Plus One](./leetcode/JavaScript/No66.plus-one.js)
 - No.67 `Easy` [Add Binary](./leetcode/JavaScript/No67.add-binary.js)
-- No.69 `Easy` [Sqrt(x)](./leetcode/JavaScript/No69.sqrt(x).js)
+- No.69 `Easy` [Sqrt(x)](./leetcode/JavaScript/No69.sqrt-x.js)
 - No.70 `Easy` [Climbing Stairs](./leetcode/JavaScript/No70.climbing-stairs.js)
 - No.71 `Medium` [Simplify Path](./leetcode/JavaScript/No71.simplify-path.js)
 - No.73 `Medium` [Set Matrix Zeroes](./leetcode/JavaScript/No73.set-matrix-zeroes.js)
@@ -307,12 +308,15 @@ Algorithms notes & code & leetcode solution by Node.js.
 ### [LeetCode - Haskell Solution](./leetcode/Haskell)
 
 - No.12 `Medium` [Integer to Roman](./leetcode/Haskell/No12.integer-to-roman.hs)
+- No.69 `Easy` [Sqrt(x)](./leetcode/Haskell/No69.sqrt-x.hs)
 
 ### [Codewars - Haskell Solution](./codewars/Haskell)
 
 - `7 kyu` [You're a square!](./codewars/Haskell/you're-a-square.hs)
 - `6 kyu` [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)
 - `6 kyu` [Which are in?](./codewars/Haskell/which-are-in.hs)
+- `6 kyu` [Decode the Morse code](./codewars/Haskell/decode-the-morse-code.hs)
+- `6 kyu` [Is a number prime?](./codewars/Haskell/is-a-number-prime.hs)
 
 ### Run demo
 
