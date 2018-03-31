@@ -7,6 +7,7 @@
   - [Menu](#menu)
   - [LeetCode - JavaScript Solution](#leetcode---javascript-solution)
   - [LeetCode - Swift4 Solution](#leetcode---swift4-solution)
+  - [Codewars - Haskell Solution](#codewars---haskell-solution)
   - [Run demo](#run-demo)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -303,10 +304,15 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 - No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
 
+### [LeetCode - Haskell Solution](./leetcode/Haskell)
+
+- No.12 `Medium` [Integer to Roman](./leetcode/Haskell/No12.integer-to-roman.hs)
+
 ### [Codewars - Haskell Solution](./codewars/Haskell)
 
 - `7 kyu` [You're a square!](./codewars/Haskell/you're-a-square.hs)
 - `6 kyu` [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)
+- `6 kyu` [Which are in?](./codewars/Haskell/which-are-in.hs)
 
 ### Run demo
 

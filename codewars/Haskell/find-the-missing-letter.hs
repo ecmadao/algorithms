@@ -23,4 +23,4 @@ _findMissingLetter cs = head $ [(head cs)..(last cs)] List.\\ cs
 
 -- Solution 1
 findMissingLetter :: [Char] -> Char
-findMissingLetter cs = head [x | x <- [(head cs)..(last cs)], (x `elem` cs) /= True]
+findMissingLetter cs = head [x | x <- [(head cs)..(last cs)], x `notElem` cs]
