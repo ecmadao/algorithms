@@ -301,6 +301,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.23 `Hard` [Merge k Sorted Lists](./leetcode/Swift/No23.merge-k-sorted-lists.swift)
 - No.24 `Medium` [Swap Nodes in Pairs](./leetcode/Swift/No24.swap-nodes-in-pairs.swift)
 - No.25 `Hard` [Reverse Nodes in k-Group](./leetcode/Swift/No25.reverse-nodes-in-k-group.swift)
+- No.69 `Easy` [Sqrt(x)](./leetcode/Swift/No69.sqrt-x.js)
 - No.500 `Easy` [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift)
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 - No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
@@ -317,6 +318,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `6 kyu` [Which are in?](./codewars/Haskell/which-are-in.hs)
 - `6 kyu` [Decode the Morse code](./codewars/Haskell/decode-the-morse-code.hs)
 - `6 kyu` [Is a number prime?](./codewars/Haskell/is-a-number-prime.hs)
+- `7 kyu` [The highest profit wins!](./codewars/Haskell/the-highest-profit-wins.hs)
 
 ### Run demo
 
@@ -333,4 +335,4 @@ Swift：
 
 Haskell:
 
-- Using GHCi and load `hs` files.
+- Using GHCi and load `.hs` files

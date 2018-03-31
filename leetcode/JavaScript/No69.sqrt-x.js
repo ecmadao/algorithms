@@ -7,14 +7,14 @@
  * Compute and return the square root of x.
  *
  * 求最接近 x 的开方的整数（返回的结果的平方要小于等于 x）
- * 考核二分法
  */
 
 /**
  * @param {number} x
  * @return {number}
+ * 二分法
  */
-var mySqrt = function(x) {
+var mySqrt_1 = function(x) {
   var max = x;
   var min = 0;
   while(min < max) {
@@ -26,4 +26,25 @@ var mySqrt = function(x) {
     }
   }
   return min;
+};
+
+/**
+ * @param {number} x
+ * @return {number}
+ * 牛顿法开方
+ * 效率比二分法低，更适合寻找无限逼近开方的浮点数
+ */
+const mySqrt_2 = (x) => {
+  let result = 1;
+  // 对于牛顿法而言，寻找一个数字 t, 令 t 约等于 (c / t + t) / 2 时，t 即为 c 的开方
+  const newton = (c, t) => (c / t + t) / 2;
+
+  while (result <= x / 2) {
+    const offset = newton(x, result);
+    if (Math.floor(Math.abs(offset - result)) === 0) break;
+    result += 1;
+  }
+  return result * result > x
+    ? result - 1
+    : result;
 };
