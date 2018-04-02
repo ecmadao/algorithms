@@ -24,3 +24,19 @@ isPrime x
   | x == 2 = True
   | otherwise = all (==True) $ [x `mod` a /= 0 | a <- [2..(floor $ sqrt (fromIntegral x))]]
 
+
+{-
+-- 关于素数获取
+-- 更高效的方法：埃拉托斯特尼筛法
+给定从 2 开始的连续一些列的数，2 为素数，而 2 之后的所有以 2 为因数的数均不是素数，可以被筛选掉
+同理，2 之后的 3 是素数，3 后面所有以 3 为因数的数不是素数，应该被筛选掉
+-}
+
+sieve :: (Integral a) => [a] -> [a]
+sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
+
+-- 获取前 N 个素数
+getPrimes n = take n $ sieve [2..]
+
+-- getPrimes 10
+-- [2,3,5,7,11,13,17,19,23,29]
