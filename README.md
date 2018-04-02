@@ -324,6 +324,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `6 kyu` [Is a number prime?](./codewars/Haskell/is-a-number-prime.hs)
 - `7 kyu` [The highest profit wins!](./codewars/Haskell/the-highest-profit-wins.hs)
 - `7 kyu` [Complementary DNA](./codewars/Haskell/complementary-dna.hs)
+- `7 kyu` [Descending Order](./codewars/Haskell/descending-order.hs)
+- `5 kyu` [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)
 
 ### Run demo
 
