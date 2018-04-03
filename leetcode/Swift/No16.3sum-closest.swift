@@ -24,7 +24,7 @@ class Solution {
             var end = sortedNums.count - 1
 
             while start < end {
-                var sum = num + sortedNums[start] + sortedNums[end];
+                var sum = num + sortedNums[start] + sortedNums[end]
                 guard sum != target else {
                     return target
                 }

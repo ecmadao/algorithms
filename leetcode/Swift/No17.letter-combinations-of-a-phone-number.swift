@@ -32,12 +32,12 @@ class Solution {
         var result = [String]()
 
         for char in digits {
-            let letters = dict[Int(String(char))!, default: [Character]()];
+            let letters = dict[Int(String(char))!, default: [Character]()]
             if result.count == 0 {
                 result = letters.map { String($0) }
                 continue
             }
-            var newResult = [String]();
+            var newResult = [String]()
             for letter in letters {
                 for existStr in result {
                     newResult.append("\(existStr)\(letter)")
