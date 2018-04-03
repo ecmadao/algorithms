@@ -19,9 +19,8 @@ You may be given negative numbers as well (or 0).
 
 isPrime :: Integer -> Bool
 isPrime x
-  | x <= 0 = False
-  | x == 1 = False
-  | x == 2 = True
+  | x <= 1 = False
+  | x <= 2 = True
   | otherwise = all (==True) $ [x `mod` a /= 0 | a <- [2..(floor $ sqrt (fromIntegral x))]]
 
 

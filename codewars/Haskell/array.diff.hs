@@ -22,3 +22,7 @@ import qualified Data.List as List
 -- (List.\\) :: Eq a => [a] -> [a] -> [a]
 difference :: Eq a => [a] -> [a] -> [a]
 difference a b = foldl (\x y -> x ++ (List.\\) [y] b) [] a
+
+
+_difference :: Eq a => [a] -> [a] -> [a]
+_difference xs ys = filter (`notElem` ys) xs
