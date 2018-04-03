@@ -318,6 +318,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 
 ### [Codewars - Haskell Solution](./codewars/Haskell)
 
+![codewars-badges](https://www.codewars.com/users/ecmadao/badges/micro)
+
 - `7 kyu` [You're a square!](./codewars/Haskell/you're-a-square.hs)
 - `6 kyu` [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)
 - `6 kyu` [Which are in?](./codewars/Haskell/which-are-in.hs)
@@ -329,6 +331,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `5 kyu` [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)
 - `5 kyu` [Weight for weight](./codewars/Haskell/weight-for-weight.hs)
 - `6 kyu` [CamelCase Method](./codewars/Haskell/camelcase-method.hs)
+- `6 kyu` [Reverse words](./codewars/Haskell/reverse-words.hs)
+- `6 kyu` [Array.diff](./codewars/Haskell/array.diff.hs)
 
 ### Run demo
 
