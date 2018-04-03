@@ -304,6 +304,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.24 `Medium` [Swap Nodes in Pairs](./leetcode/Swift/No24.swap-nodes-in-pairs.swift)
 - No.25 `Hard` [Reverse Nodes in k-Group](./leetcode/Swift/No25.reverse-nodes-in-k-group.swift)
 - No.26 `Easy` [Remove Duplicates from Sorted Array](./leetcode/Swift/No26.remove-duplicates-from-sorted-array.swift)
+- No.27 `Easy` [Remove Element](./leetcode/Swift/No27.remove-element.swift)
 - No.69 `Easy` [Sqrt(x)](./leetcode/Swift/No69.sqrt-x.js)
 - No.203 `Easy` [Remove Linked List Elements](./leetcode/Swift/No203.remove-linked-list-elements.swift)
 - No.500 `Easy` [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift)
@@ -326,6 +327,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `7 kyu` [Complementary DNA](./codewars/Haskell/complementary-dna.hs)
 - `7 kyu` [Descending Order](./codewars/Haskell/descending-order.hs)
 - `5 kyu` [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)
+- `5 kyu` [Weight for weight](./codewars/Haskell/weight-for-weight.hs)
+- `6 kyu` [CamelCase Method](./codewars/Haskell/camelcase-method.hs)
 
 ### Run demo
 
