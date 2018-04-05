@@ -33,6 +33,3 @@ _gap g (n1:n2:ns') = if n2 - n1 == g then Just (n1, n2) else _gap g (n2:ns')
 gap :: Integer -> Integer -> Integer -> Maybe (Integer, Integer)
 gap g m n = _gap g primes
   where primes = [x | x <- [m..n], isPrime x]
-  -- | length result <= 1 = Nothing
-  -- | otherwise = Just (result !! 0, result !! 1)
-  -- where result = [x | x <- [m, (m + g - 1)..n], isPrime x]

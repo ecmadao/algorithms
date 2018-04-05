@@ -336,9 +336,12 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `5 kyu` [Memoized Fibonacci](./codewars/Haskell/memoized-fibonacci.hs)
 - `5 kyu` [Gap in Primes](./codewars/Haskell/gap-in-primes.hs)
 - `5 kyu` [The Hashtag Generator](./codewars/Haskell/the-hashtag-generator.hs)
+- `5 kyu` [Find the missing term in an Arithmetic Progression](./codewars/Haskell/find-the-missing-term-in-an-arithmetic-progression.hs)
 - `4 kyu` [Reverse polish notation calculator](./codewars/Haskell/reverse-polish-notation-calculator.hs)
 - `4 kyu` [Twice linear](./codewars/Haskell/twice-linear.hs)
 - `4 kyu` [Roman Numerals Encoder](./codewars/Haskell/roman-numerals-encoder.hs)
+- `4 kyu` [Range Extraction](./codewars/Haskell/range-extraction.hs)
+- `3 kyu` [Point in Polygon](./codewars/Haskell/point-in-polygon.hs)
 
 ### Run demo
 
