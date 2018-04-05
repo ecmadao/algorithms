@@ -335,6 +335,9 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `6 kyu` [Array.diff](./codewars/Haskell/array.diff.hs)
 - `5 kyu` [Memoized Fibonacci](./codewars/Haskell/memoized-fibonacci.hs)
 - `5 kyu` [Gap in Primes](./codewars/Haskell/gap-in-primes.hs)
+- `5 kyu` [The Hashtag Generator](./codewars/Haskell/the-hashtag-generator.hs)
+- `4 kyu` [Reverse polish notation calculator](./codewars/Haskell/reverse-polish-notation-calculator.hs)
+- `4 kyu` [Twice linear](./codewars/Haskell/twice-linear.hs)
 
 ### Run demo
 
