@@ -40,11 +40,10 @@ Focus attention on efficiency
 --     ni = (arr !! i) * 2 + 1
 --     nj = (arr !! j) * 3 + 1
 
--- TODO:
--- Time out error when submit
 
+-- Time out error when submit
 dblLinear :: Int -> Integer
-dblLinear n = _generate 0 0 [1]
+dblLinear_timeout n = _generate 0 0 [1]
     where
       _generate i j arr
         | length arr == (n + 1) = head arr
@@ -54,6 +53,21 @@ dblLinear n = _generate 0 0 [1]
         where
           ni = (arr !! i) * 2 + 1
           nj = (arr !! j) * 3 + 1
+
+
+-- Passed
+merge :: (Ord a) => [a] -> [a] -> [a]
+merge (a:as) (b:bs)
+  | a < b     = a : merge as (b:bs)
+  | a > b     = b : merge (a:as) bs
+  | otherwise = a : merge as bs
+
+dblSequence :: [Integer]
+dblSequence = next 1
+  where next n = n : merge (next (2*n+1)) (next (3*n+1))
+
+dblLinear :: Int -> Integer
+dblLinear = (dblSequence !!)
 
 {-
 Test case
