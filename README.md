@@ -5,10 +5,13 @@
 - [Algorithms](#algorithms)
   - [预储备](#%E9%A2%84%E5%82%A8%E5%A4%87)
   - [Menu](#menu)
-  - [LeetCode - JavaScript Solution](#leetcode---javascript-solution)
-  - [LeetCode - Swift4 Solution](#leetcode---swift4-solution)
-  - [LeetCode - Haskell Solution](#leetcode---haskell-solution)
-  - [Codewars - Haskell Solution](#codewars---haskell-solution)
+  - [LeetCode](#leetcode)
+    - [JavaScript Solution](#javascript-solution)
+    - [Swift4 Solution](#swift4-solution)
+    - [Haskell Solution](#haskell-solution)
+  - [Codewars](#codewars)
+    - [Haskell Solution](#haskell-solution-1)
+    - [JavaScript Solution](#javascript-solution-1)
   - [Run demo](#run-demo)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
