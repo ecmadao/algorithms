@@ -38,6 +38,5 @@ crossCheck ([p1], n) p2 point = ([p2], count)
     crossed = isCross [p1,p2] point
     count = if crossed then n + 1 else n
 
--- pointInPoly (p1:p2:ps) point = odd $ snd $ foldl (\t p -> crossCheck t p) ([p1,p2], 0) ps
 pointInPoly :: [Point] -> Point -> Bool
 pointInPoly (p1:ps) point = odd $ snd $ foldl (\t p -> crossCheck t p point) ([p1], 0) (ps ++ [p1])

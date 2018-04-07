@@ -46,7 +46,9 @@ Algorithms notes & code & leetcode solution by Node.js.
   - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
   - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
 
-### [LeetCode - JavaScript Solution](./leetcode/JavaScript)
+### [LeetCode](https://leetcode.com/ecmadao/)
+
+#### [JavaScript Solution](./leetcode/JavaScript)
 
 - No.01 `Easy` [Two Sum](./leetcode/JavaScript/No01.two-sum.js)
 - No.02 `Medium` [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)
@@ -276,7 +278,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.680 `Easy` [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)
 - No.718 `Medium` [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js)
 
-### [LeetCode - Swift4 Solution](./leetcode/Swift)
+#### [Swift4 Solution](./leetcode/Swift)
 
 - No.01 `Easy` [Two Sum](./leetcode/Swift/No01.two-sum.swift)
 - No.02 `Medium` [Add Two Numbers](./leetcode/Swift/No02.add-two-numbers.swift)
@@ -311,14 +313,15 @@ Algorithms notes & code & leetcode solution by Node.js.
 - No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
 - No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
 
-### [LeetCode - Haskell Solution](./leetcode/Haskell)
+#### [Haskell Solution](./leetcode/Haskell)
 
 - No.12 `Medium` [Integer to Roman](./leetcode/Haskell/No12.integer-to-roman.hs)
 - No.69 `Easy` [Sqrt(x)](./leetcode/Haskell/No69.sqrt-x.hs)
 
-### [Codewars - Haskell Solution](./codewars/Haskell)
+### [Codewars](https://www.codewars.com/users/ecmadao)
 
 ![codewars-badges](https://www.codewars.com/users/ecmadao/badges/micro)
+#### [Haskell Solution](./codewars/Haskell)
 
 - `7 kyu` [You're a square!](./codewars/Haskell/you're-a-square.hs)
 - `7 kyu` [The highest profit wins!](./codewars/Haskell/the-highest-profit-wins.hs)
@@ -341,7 +344,13 @@ Algorithms notes & code & leetcode solution by Node.js.
 - `4 kyu` [Twice linear](./codewars/Haskell/twice-linear.hs)
 - `4 kyu` [Roman Numerals Encoder](./codewars/Haskell/roman-numerals-encoder.hs)
 - `4 kyu` [Range Extraction](./codewars/Haskell/range-extraction.hs)
+- `4 kyu` [Find all possible number combos that sum to a number](./codewars/Haskell/find-all-possible-number-combos-that-sum-to-a-number.hs)
 - `3 kyu` [Point in Polygon](./codewars/Haskell/point-in-polygon.hs)
+
+#### [JavaScript Solution](./codewars/JavaScript)
+
+- `4 kyu` [Twice linear](./codewars/JavaScript/twice-linear.js)
+- `4 kyu` [Find all possible number combos that sum to a number](./codewars/JavaScript/find-all-possible-number-combos-that-sum-to-a-number.js)
 
 ### Run demo
 
