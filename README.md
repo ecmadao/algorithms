@@ -4,7 +4,7 @@
 
 - [Algorithms](#algorithms)
   - [预储备](#%E9%A2%84%E5%82%A8%E5%A4%87)
-  - [Menu](#menu)
+  - [Topic](#topic)
   - [LeetCode](#leetcode)
     - [JavaScript Solution](#javascript-solution)
     - [Swift4 Solution](#swift4-solution)
@@ -31,7 +31,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 - 二叉树
 - 图
 
-### Menu
+### Topic
 
 - [并查集](./union-find)
 - [基本排序](./elementary-sorts)
@@ -48,312 +48,353 @@ Algorithms notes & code & leetcode solution by Node.js.
 - 字典树
   - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
   - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
+- [排列组合](./permutation-and-combination)
 
 ### [LeetCode](https://leetcode.com/ecmadao/)
 
 #### [JavaScript Solution](./leetcode/JavaScript)
 
-- No.01 `Easy` [Two Sum](./leetcode/JavaScript/No01.two-sum.js)
-- No.02 `Medium` [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)
-- No.03 `Medium` [Longest Substring Without Repeating Characters](./leetcode/JavaScript/No03.longest-substring-without-repeating-characters.js)
-- No.04 `Hard` [Median of Two Sorted Arrays](./leetcode/JavaScript/No04.median-of-two-sorted-arrays.js)
-- No.05 `Medium` [Longest Palindromic Substring](./leetcode/JavaScript/No05.longest-palindromic-substring.js)
-- No.06 `Medium` [ZigZag Conversion](./leetcode/JavaScript/No06.zigzag-conversion.js)
-- No.07 `Easy` [Reverse Integer](./leetcode/JavaScript/No07.reverse-integer.js)
-- No.08 `Medium` [String to Integer (atoi)](./leetcode/JavaScript/No08.string-to-integer.js)
-- No.09 `Easy` [Palindrome Number](./leetcode/JavaScript/No09.palindrome-number.js)
-- No.10 `Hard` [Regular Expression Matching](./leetcode/JavaScript/No10.regular-expression-matching.js)
-- No.11 `Medium` [Container With Most Water](./leetcode/JavaScript/No11.container-with-most-water.js)
-- No.12 `Medium` [Integer to Roman](./leetcode/JavaScript/No12.integer-to-roman.js)
-- No.13 `Easy` [Roman to Integer](./leetcode/JavaScript/No13.roman-to-integer.js)
-- No.14 `Easy` [Longest Common Prefix](./leetcode/JavaScript/No14.longest-common-prefix.js)
-- No.15 `Medium` [3Sum](./leetcode/JavaScript/No15.3sum.js)
-- No.16 `Medium` [3Sum Closest](./leetcode/JavaScript/No16.3sum-closest.js)
-- No.17 `Medium` [Letter Combinations of a Phone Number](./leetcode/JavaScript/No17.letter-combinations-of-a-phone-number.js)
-- No.18 `Medium` [4Sum](./leetcode/JavaScript/No18.4sum.js)
-- No.19 `Medium` [Remove Nth Node From End of List](./leetcode/JavaScript/No19.remove-nth-node-from-end-of-list.js)
-- No.20 `Easy` [Valid Parentheses](./leetcode/JavaScript/No20.valid-parentheses.js)
-- No.21 `Easy` [Merge Two Sorted Lists](./leetcode/JavaScript/No21.merge-two-sorted-lists.js)
-- No.22 `Medium` [Generate Parentheses](./leetcode/JavaScript/No22.generate-parentheses.js)
-- No.23 `Hard` [Merge k Sorted Lists](./leetcode/JavaScript/No23.merge-k-sorted-lists.js)
-- No.24 `Medium` [Swap Nodes in Pairs](./leetcode/JavaScript/No24.swap-nodes-in-pairs.js)
-- No.25 `Hard` [Reverse Nodes in k-Group](./leetcode/JavaScript/No25.reverse-nodes-in-k-group.js)
-- No.26 `Easy` [Remove Duplicates from Sorted Array](./leetcode/JavaScript/No26.remove-duplicates-from-sorted-array.js)
-- No.27 `Easy` [Remove Element](./leetcode/JavaScript/No27.remove-element.js)
-- No.28 `Easy` [Implement strStr()](./leetcode/JavaScript/No28.implement-strStr.js)
-- No.29 `Medium` [Divide Two Integers](./leetcode/JavaScript/No29.divide-two-integers.js)
-- No.30 `Hard` [Substring with Concatenation of All Words](./leetcode/JavaScript/No30.substring-with-concatenation-of-all-words.js)
-- No.31 `Medium` [Next Permutation](./leetcode/JavaScript/No31.next-permutation.js)
-- No.32 `Hard` [Longest Valid Parentheses](./leetcode/JavaScript/No32.longest-valid-parentheses.js)
-- No.33 `Medium` [Search in Rotated Sorted Array](./leetcode/JavaScript/No33.search-in-rotated-sorted-array.js)
-- No.34 `Medium` [Search for a Range](./leetcode/JavaScript/No34.search-for-a-range.js)
-- No.35 `Easy` [Search Insert Position](./leetcode/JavaScript/No35.search-insert-position.js)
-- No.36 `Medium` [Valid Sudoku](./leetcode/JavaScript/No36.valid-sudoku.js)
-- No.37 `Hard` [Sudoku Solver](./leetcode/JavaScript/No37.sudoku-solver.js)
-- No.38 `Easy` [Count and Say](./leetcode/JavaScript/No38.count-and-say.js)
-- No.39 `Medium` [Combination Sum](./leetcode/JavaScript/No39.combination-sum.js)
-- No.40 `Medium` [Combination Sum II](./leetcode/JavaScript/No40.combination-sum-II.js)
-- No.41 `Hard` [First Missing Positive](./leetcode/JavaScript/No41.first-missing-positive.js)
-- No.42 `Hard` [Trapping Rain Water](./leetcode/JavaScript/No42.trapping-rain-water.js)
-- No.43 `Medium` [Multiply Strings](./leetcode/JavaScript/No43.multiply-strings.js)
-- No.45 `Hard` [Jump Game II](./leetcode/JavaScript/No45.jump-game-II.js)
-- No.46 `Medium` [Permutations](./leetcode/JavaScript/No46.permutations.js)
-- No.47 `Medium` [Permutations II](./leetcode/JavaScript/No47.permutations-II.js)
-- No.48 `Medium` [Rotate Image](./leetcode/JavaScript/No48.rotate-image.js)
-- No.49 `Medium` [Group Anagrams](./leetcode/JavaScript/No49.group-anagrams.js)
-- No.50 `Medium` [Pow(x, n)](./leetcode/JavaScript/No50.pow-x-n.js)
-- No.51 `Hard` [N-Queens](./leetcode/JavaScript/No51.n-queens.js)
-- No.52 `Hard` [N-Queens II](./leetcode/JavaScript/No52.n-queens-II.js)
-- No.53 `Easy` [Maximum Subarray](./leetcode/JavaScript/No53.maximum-subarray.js)
-- No.54 `Medium` [Spiral Matrix](./leetcode/JavaScript/No54.spiral-matrix.js)
-- No.55 `Medium` [Jump Game](./leetcode/JavaScript/No55.jump-game.js)
-- No.56 `Medium` [Merge Intervals](./leetcode/JavaScript/No56.merge-intervals.js)
-- No.57 `Hard` [Insert Interval](./leetcode/JavaScript/No57.insert-interval.js)
-- No.58 `Easy` [Length of Last Word](./leetcode/JavaScript/No58.length-of-last-word.js)
-- No.59 `Medium` [Spiral Matrix II](./leetcode/JavaScript/No59.spiral-matrix-II.js)
-- No.60 `Medium` [Permutation Sequence](./leetcode/JavaScript/No60.permutation-sequence.js)
-- No.61 `Medium` [Rotate List](./leetcode/JavaScript/No61.rotate-list.js)
-- No.62 `Medium` [Unique Paths](./leetcode/JavaScript/No62.unique-paths.js)
-- No.63 `Medium` [Unique Paths II](./leetcode/JavaScript/No63.unique-paths-II.js)
-- No.64 `Medium` [Minimum Path Sum](./leetcode/JavaScript/No64.minimum-path-sum.js)
-- No.66 `Easy` [Plus One](./leetcode/JavaScript/No66.plus-one.js)
-- No.67 `Easy` [Add Binary](./leetcode/JavaScript/No67.add-binary.js)
-- No.69 `Easy` [Sqrt(x)](./leetcode/JavaScript/No69.sqrt-x.js)
-- No.70 `Easy` [Climbing Stairs](./leetcode/JavaScript/No70.climbing-stairs.js)
-- No.71 `Medium` [Simplify Path](./leetcode/JavaScript/No71.simplify-path.js)
-- No.73 `Medium` [Set Matrix Zeroes](./leetcode/JavaScript/No73.set-matrix-zeroes.js)
-- No.74 `Medium` [Search a 2D Matrix](./leetcode/JavaScript/No74.search-a-2d-matrix.js)
-- No.75 `Medium` [Sort Colors](./leetcode/JavaScript/No75.sort-colors.js)
-- No.76 `Hard` [Minimum Window Substring](./leetcode/JavaScript/No76.minimum-window-substring.js)
-- No.77 `Medium` [Combinations](./leetcode/JavaScript/No77.combinations.js)
-- No.78 `Medium` [Subsets](./leetcode/JavaScript/No78.subsets.js)
-- No.79 `Medium` [Word Search](./leetcode/JavaScript/No79.word-search.js)
-- No.80 `Medium` [Remove Duplicates from Sorted Array II](./leetcode/JavaScript/No80.remove-duplicates-from-sorted-array-II.js)
-- No.81 `Medium` [Search in Rotated Sorted Array II](./leetcode/JavaScript/No81.search-in-rotated-sorted-array-II.js)
-- No.82 `Medium` [Remove Duplicates from Sorted List II](./leetcode/JavaScript/No82.remove-duplicates-from-sorted-list-II.js)
-- No.83 `Easy` [Remove Duplicates from Sorted List](./leetcode/JavaScript/No83.remove-duplicates-from-sorted-list.js)
-- No.84 `Hard` [Largest Rectangle in Histogram](./leetcode/JavaScript/No84.largest-rectangle-in-histogram.js)
-- No.85 `Hard` [Maximal Rectangle](./leetcode/JavaScript/No85.maximal-rectangle.js)
-- No.86 `Medium` [Partition List](./leetcode/JavaScript/No86.partition-list.js)
-- No.87 `Hard` [Scramble String](./leetcode/JavaScript/No87.scramble-string.js)
-- No.88 `Easy` [Merge Sorted Array](./leetcode/JavaScript/No88.merge-sorted-array.js)
-- No.90 `Medium` [Subsets II](./leetcode/JavaScript/No90.subsets-II.js)
-- No.91 `Medium` [Decode Ways](./leetcode/JavaScript/No91.decode-ways.js)
-- No.92 `Medium` [Reverse Linked List II](./leetcode/JavaScript/No92.reverse-linked-list-II.js)
-- No.93 `Medium` [Restore IP Addresses](./leetcode/JavaScript/No93.restore-ip-addresses.js)
-- No.94 `Medium` [Binary Tree Inorder Traversal](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
-- No.95 `Medium` [Unique Binary Search Trees II](./leetcode/JavaScript/No95.unique-binary-search-trees-II.js)
-- No.96 `Medium` [Unique Binary Search Trees](./leetcode/JavaScript/No96.unique-binary-search-trees.js)
-- No.97 `Hard` [Interleaving String](./leetcode/JavaScript/No97.interleaving-string.js)
-- No.98 `Medium` [Validate Binary Search Tree](./leetcode/JavaScript/No98.validate-binary-search-tree.js)
-- No.99 `Hard` [Recover Binary Search Tree](./leetcode/JavaScript/No99.recover-binary-search-tree.js)
-- No.100 `Easy` [Same Tree](./leetcode/JavaScript/No100.same-tree.js)
-- No.101 `Easy` [Symmetric Tree](./leetcode/JavaScript/No101.symmetric-tree.js)
-- No.102 `Medium` [Binary Tree Level Order Traversal](./leetcode/JavaScript/No102.binary-tree-level-order-traversal.js)
-- No.103 `Medium` [Binary Tree Zigzag Level Order Traversal](./leetcode/JavaScript/No103.binary-tree-zigzag-level-order-traversal.js)
-- No.104 `Easy` [Maximum Depth of Binary Tree](./leetcode/JavaScript/No104.maximum-depth-of-binary-tree.js)
-- No.105 `Medium` [Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/JavaScript/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
-- No.106 `Medium` [Construct Binary Tree from Inorder and Postorder Traversal](./leetcode/JavaScript/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
-- No.107 `Easy` [Binary Tree Level Order Traversal II](./leetcode/JavaScript/No107.binary-tree-level-order-traversal-II.js)
-- No.108 `Easy` [Convert Sorted Array to Binary Search Tree](./leetcode/JavaScript/No108.convert-sorted-array-to-binary-search-tree.js)
-- No.109 `Medium` [Convert Sorted List to Binary Search Tree](./leetcode/JavaScript/No109.convert-sorted-list-to-binary-search-tree.js)
-- No.110 `Easy` [Balanced Binary Tree](./leetcode/JavaScript/No110.balanced-binary-tree.js)
-- No.111 `Easy` [Minimum Depth of Binary Tree](./leetcode/JavaScript/No111.minimum-depth-of-binary-tree.js)
-- No.112 `Easy` [Path Sum](./leetcode/JavaScript/No112.path-sum.js)
-- No.113 `Medium` [Path Sum II](./leetcode/JavaScript/No113.path-sum-II.js)
-- No.114 `Medium` [Flatten Binary Tree to Linked List](./leetcode/JavaScript/No114.flatten-binary-tree-to-linked-list.js)
-- No.116 `Medium` [Populating Next Right Pointers in Each Node](./leetcode/JavaScript/No116.populating-next-right-pointers-in-each-node.js)
-- No.117 `Medium` [Populating Next Right Pointers in Each Node II](./leetcode/JavaScript/No117.populating-next-right-pointers-in-each-node-II.js)
-- No.118 `Easy` [Pascal's Triangle](./leetcode/JavaScript/No118.pascal's-triangle.js)
-- No.119 `Easy` [Pascal's Triangle II](./leetcode/JavaScript/No119.pascal's-triangle-II.js)
-- No.120 `Medium` [Triangle](./leetcode/JavaScript/No120.triangle.js)
-- No.121 `Easy` [Best Time to Buy and Sell Stock](./leetcode/JavaScript/No121.best-time-to-buy-and-sell-stock.js)
-- No.122 `Easy` [Best Time to Buy and Sell Stock II](./leetcode/JavaScript/No122.best-time-to-buy-and-sell-stock-II.js)
-- No.123 `Hard` [Best Time to Buy and Sell Stock III](./leetcode/JavaScript/No123.best-time-to-buy-and-sell-stock-III.js)
-- No.124 `Hard` [Binary Tree Maximum Path Sum](./leetcode/JavaScript/No124.binary-tree-maximum-path-sum.js)
-- No.125 `Easy` [Valid Palindrome](./leetcode/JavaScript/No125.valid-palindrome.js)
-- No.126 `Hard` [Word Ladder II](./leetcode/JavaScript/No126.word-ladder-II.js)
-- No.127 `Medium` [Word Ladder](./leetcode/JavaScript/No127.word-ladder.js)
-- No.128 `Hard` [Longest Consecutive Sequence](./leetcode/JavaScript/No128.longest-consecutive-sequence.js)
-- No.129 `Medium` [Sum Root to Leaf Numbers](./leetcode/JavaScript/No129.sum-root-to-leaf-numbers.js)
-- No.130 `Medium` [Surrounded Regions](./leetcode/JavaScript/No130.surrounded-regions.js)
-- No.131 `Medium` [Palindrome Partitioning](./leetcode/JavaScript/No131.palindrome-partitioning.js)
-- No.132 `Hard` [Palindrome Partitioning II](./leetcode/JavaScript/No132.palindrome-partitioning-II.js)
-- No.133 `Medium` [Clone Graph](./leetcode/JavaScript/No133.clone-graph.js)
-- No.134 `Medium` [Gas Station](./leetcode/JavaScript/No134.gas-station.js)
-- No.135 `Hard` [Candy](./leetcode/JavaScript/No135.candy.js)
-- No.136 `Easy` [Single Number](./leetcode/JavaScript/No136.single-number.js)
-- No.137 `Medium` [Single Number II](./leetcode/JavaScript/No137.single-number-II.js)
-- No.138 `Medium` [Copy List with Random Pointer](./leetcode/JavaScript/No138.copy-list-with-random-pointer.js)
-- No.139 `Medium` [Word Break](./leetcode/JavaScript/No139.word-break.js)
-- No.140 `Hard` [Word Break II](./leetcode/JavaScript/No140.word-break-II.js)
-- No.141 `Easy` [Linked List Cycle](./leetcode/JavaScript/No141.linked-list-cycle.js)
-- No.142 `Medium` [Linked List Cycle II](./leetcode/JavaScript/No142.linked-list-cycle-II.js)
-- No.143 `Medium` [Reorder List](./leetcode/JavaScript/No143.reorder-list.js)
-- No.144 `Medium` [Binary Tree Preorder Traversal](./leetcode/JavaScript/No144.binary-tree-preorder-traversal.js)
-- No.145 `Hard` [Binary Tree Postorder Traversal](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
-- No.146 `Hard` [LRU Cache](./leetcode/JavaScript/No146.lru-cache.js)
-- No.147 `Medium` [Insertion Sort List](./leetcode/JavaScript/No147.insertion-sort-list.js)
-- No.148 `Medium` [Sort List](./leetcode/JavaScript/No148.sort-list.js)
-- No.150 `Medium` [Evaluate Reverse Polish Notation](./leetcode/JavaScript/No150.evaluate-reverse-polish-notation.js)
-- No.151 `Medium` [Reverse Words in a String](./leetcode/JavaScript/No151.reverse-words-in-a-string.js)
-- No.152 `Medium` [Maximum Product Subarray](./leetcode/JavaScript/No152.maximum-product-subarray.js)
-- No.153 `Medium` [Find Minimum in Rotated Sorted Array](./leetcode/JavaScript/No153.find-minimum-in-rotated-sorted-array.js)
-- No.154 `Hard` [Find Minimum in Rotated Sorted Array II](./leetcode/JavaScript/No154.find-minimum-in-rotated-sorted-array-II.js)
-- No.155 `Easy` [Min Stack](./leetcode/JavaScript/No155.min-stack.js)
-- No.160 `Easy` [Intersection of Two Linked Lists](./leetcode/JavaScript/No160.intersection-of-two-linked-lists.js)
-- No.162 `Medium` [Find Peak Element](./leetcode/JavaScript/No162.find-peak-element.js)
-- No.164 `Hard` [Maximum Gap](./leetcode/JavaScript/No164.maximum-gap.js)
-- No.165 `Medium` [Compare Version Numbers](./leetcode/JavaScript/No165.compare-version-numbers.js)
-- No.166 `Medium` [Fraction to Recurring Decimal](./leetcode/JavaScript/No166.fraction-to-recurring-decimal.js)
-- No.167 `Easy` [Two Sum II - Input array is sorted](./leetcode/JavaScript/No167.two-sum-II-input-array-is-sorted.js)
-- No.168 `Easy` [Excel Sheet Column Title](./leetcode/JavaScript/No168.excel-sheet-column-title.js)
-- No.169 `Easy` [Majority Element](./leetcode/JavaScript/No169.majority-element.js)
-- No.171 `Easy` [Excel Sheet Column Number](./leetcode/JavaScript/No171.excel-sheet-column-number.js)
-- No.172 `Easy` [Factorial Trailing Zeroes](./leetcode/JavaScript/No172.factorial-trailing-zeroes.js)
-- No.173 `Medium` [Binary Search Tree Iterator](./leetcode/JavaScript/No173.binary-search-tree-iterator.js)
-- No.174 `Hard` [Dungeon Game](./leetcode/JavaScript/No174.dungeon-game.js)
-- No.175 `Easy` [Combine Two Tables](./leetcode/JavaScript/No175.combine-two-tables.sql)
-- No.179 `Medium` [Largest Number](./leetcode/JavaScript/No179.largest-number.js)
-- No.187 `Medium` [Repeated DNA Sequences](./leetcode/JavaScript/No187.repeated-dna-sequences.js)
-- No.188 `Hard` [Best Time to Buy and Sell Stock IV](./leetcode/JavaScript/No188.best-time-to-buy-and-sell-stock-iv.js)
-- No.189 `Easy` [Rotate Array](./leetcode/JavaScript/No189.rotate-array.js)
-- No.203 `Easy` [Remove Linked List Elements](./leetcode/JavaScript/No203.remove-linked-list-elements.js)
-- No.204 `Easy` [Count Primes](./leetcode/JavaScript/No204.count-primes.js)
-- No.206 `Easy` [Reverse Linked List](./leetcode/JavaScript/No206.reverse-linked-list.js)
-- No.208 `Medium` [Implement Trie (Prefix Tree)](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js)
-- No.209 `Medium` [Minimum Size Subarray Sum](./leetcode/JavaScript/No209.minimum-size-subarray-sum.js)
-- No.211 `Medium` [Add and Search Word - Data structure design](./leetcode/JavaScript/No211.add-and-search-word-data-structure-design.js)
-- No.212 `Hard` [Word Search II](./leetcode/JavaScript/No212.word-search-II.js)
-- No.215 `Medium` [Kth Largest Element in an Array](./leetcode/JavaScript/No215.kth-largest-element-in-an-array.js)
-- No.217 `Easy` [Contains Duplicate](./leetcode/JavaScript/No217.contains-duplicate.js)
-- No.219 `Easy` [Contains Duplicate II](./leetcode/JavaScript/No219.contains-duplicate-II.js)
-- No.220 `Medium` [Contains Duplicate III](./leetcode/JavaScript/No220.contains-duplicate-III.js)
-- No.225 `Easy` [Implement Stack using Queues](./leetcode/JavaScript/No225.implement-stack-using-queues.js)
-- No.229 `Medium` [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js)
-- No.230 `Medium` [Kth Smallest Element in a BST](./leetcode/JavaScript/No230.kth-smallest-element-in-a-bst.js)
-- No.231 `Easy` [Power of Two](./leetcode/JavaScript/No231.power-of-two.js)
-- No.232 `Easy` [Implement Queue using Stacks](./leetcode/JavaScript/No232.implement-queue-using-stacks.js)
-- No.234 `Easy` [Palindrome Linked List](./leetcode/JavaScript/No234.palindrome-linked-list.js)
-- No.237 `Easy` [Delete Node in a Linked List](./leetcode/JavaScript/No237.delete-node-in-a-linked-list.js)
-- No.240 `Medium` [Search a 2D Matrix II](./leetcode/JavaScript/No240.search-a-2d-matrix-II.js)
-- No.260 `Medium` [Single Number III](./leetcode/JavaScript/No260.single-number-III.js)
-- No.263 `Easy` [Ugly Number](./leetcode/JavaScript/No263.ugly-number.js)
-- No.264 `Medium` [Ugly Number II](./leetcode/JavaScript/No264.ugly-number-II.js)
-- No.268 `Easy` [Missing Number](./leetcode/JavaScript/No268.missing-number.js)
-- No.274 `Medium` [H-Index](./leetcode/JavaScript/No274.h-index.js)
-- No.275 `Medium` [H-Index II](./leetcode/JavaScript/No275.h-index-II.js)
-- No.278 `Easy` [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)
-- No.279 `Medium` [Perfect Squares](./leetcode/JavaScript/No279.perfect-squares.js)
-- No.283 `Easy` [Move Zeroes](./leetcode/JavaScript/No283.move-zeroes.js)
-- No.287 `Medium` [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js)
-- No.344 `Easy` [Reverse String](./leetcode/JavaScript/No344.reverse-string.js)
-- No.347 `Medium` [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js)
-- No.349 `Easy` [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)
-- No.350 `Easy` [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)
-- No.363 `Hard` [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js)
-- No.367 `Easy` [Valid Perfect Square](./leetcode/JavaScript/No367.valid-perfect-square.js)
-- No.376 `Medium` [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js)
-- No.380 `Medium` [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o(1).js)
-- No.387 `Easy` [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)
-- No.389 `Easy` [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)
-- No.409 `Easy` [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)
-- No.442 `Easy` [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)
-- No.445 `Medium` [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js)
-- No.448 `Easy` [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)
-- No.451 `Medium` [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js)
-- No.454 `Medium` [4Sum II](./leetcode/JavaScript/No454.4sum-II.js)
-- No.460 `Hard` [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js)
-- No.486 `Medium` [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js)
-- No.500 `Easy` [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)
-- No.520 `Easy` [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)
-- No.523 `Medium` [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js)
-- No.530 `Easy` [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)
-- No.541 `Easy` [Reverse String II](./leetcode/JavaScript/No541.reverse-string-II.js)
-- No.560 `Medium` [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js)
-- No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)
-- No.599 `Easy` [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)
-- No.621 `Medium` [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js)
-- No.633 `Easy` [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)
-- No.653 `Easy` [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)
-- No.658 `Medium` [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js)
-- No.659 `Medium` [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js)
-- No.680 `Easy` [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)
-- No.718 `Medium` [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js)
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 004 | [Median of Two Sorted Arrays](./leetcode/JavaScript/No04.median-of-two-sorted-arrays.js)  | `Hard` |
+| 010 | [Regular Expression Matching](./leetcode/JavaScript/No10.regular-expression-matching.js)  | `Hard` |
+| 023 | [Merge k Sorted Lists](./leetcode/JavaScript/No23.merge-k-sorted-lists.js)  | `Hard` |
+| 025 | [Reverse Nodes in k-Group](./leetcode/JavaScript/No25.reverse-nodes-in-k-group.js)  | `Hard` |
+| 030 | [Substring with Concatenation of All Words](./leetcode/JavaScript/No30.substring-with-concatenation-of-all-words.js)  | `Hard` |
+| 032 | [Longest Valid Parentheses](./leetcode/JavaScript/No32.longest-valid-parentheses.js)  | `Hard` |
+| 037 | [Sudoku Solver](./leetcode/JavaScript/No37.sudoku-solver.js)  | `Hard` |
+| 041 | [First Missing Positive](./leetcode/JavaScript/No41.first-missing-positive.js) | `Hard` |
+| 042 | [Trapping Rain Water](./leetcode/JavaScript/No42.trapping-rain-water.js) | `Hard` |
+| 045 | [Jump Game II](./leetcode/JavaScript/No45.jump-game-II.js) | `Hard` |
+| 051 | [N-Queens](./leetcode/JavaScript/No51.n-queens.js) | `Hard` |
+| 052 | [N-Queens II](./leetcode/JavaScript/No52.n-queens-II.js) | `Hard` |
+| 057 | [Insert Interval](./leetcode/JavaScript/No57.insert-interval.js) | `Hard` |
+| 076 | [Minimum Window Substring](./leetcode/JavaScript/No76.minimum-window-substring.js) | `Hard` |
+| 084 | [Largest Rectangle in Histogram](./leetcode/JavaScript/No84.largest-rectangle-in-histogram.js) | `Hard` |
+| 085 | [Maximal Rectangle](./leetcode/JavaScript/No85.maximal-rectangle.js) | `Hard` |
+| 087 | [Scramble String](./leetcode/JavaScript/No87.scramble-string.js) | `Hard` |
+| 097 | [Interleaving String](./leetcode/JavaScript/No97.interleaving-string.js) | `Hard` |
+| 099 | [Recover Binary Search Tree](./leetcode/JavaScript/No99.recover-binary-search-tree.js) | `Hard` |
+| 123 | [Best Time to Buy and Sell Stock III](./leetcode/JavaScript/No123.best-time-to-buy-and-sell-stock-III.js) | `Hard` |
+| 124 | [Binary Tree Maximum Path Sum](./leetcode/JavaScript/No124.binary-tree-maximum-path-sum.js) | `Hard` |
+| 126 | [Word Ladder II](./leetcode/JavaScript/No126.word-ladder-II.js) | `Hard` |
+| 128 | [Longest Consecutive Sequence](./leetcode/JavaScript/No128.longest-consecutive-sequence.js) | `Hard` |
+| 132 | [Palindrome Partitioning II](./leetcode/JavaScript/No132.palindrome-partitioning-II.js) | `Hard` |
+| 135 | [Candy](./leetcode/JavaScript/No135.candy.js) | `Hard` |
+| 140 | [Word Break II](./leetcode/JavaScript/No140.word-break-II.js) | `Hard` |
+| 145 | [Binary Tree Postorder Traversal](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js) | `Hard` |
+| 146 | [LRU Cache](./leetcode/JavaScript/No146.lru-cache.js) | `Hard` |
+| 154 | [Find Minimum in Rotated Sorted Array II](./leetcode/JavaScript/No154.find-minimum-in-rotated-sorted-array-II.js) | `Hard` |
+| 164 | [Maximum Gap](./leetcode/JavaScript/No164.maximum-gap.js) | `Hard` |
+| 174 | [Dungeon Game](./leetcode/JavaScript/No174.dungeon-game.js) | `Hard` |
+| 188 | [Best Time to Buy and Sell Stock IV](./leetcode/JavaScript/No188.best-time-to-buy-and-sell-stock-iv.js) | `Hard` |
+| 212 | [Word Search II](./leetcode/JavaScript/No212.word-search-II.js) | `Hard` |
+| 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
+| 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
+
+
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 002 | [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)  | `Medium` |
+| 003 | [Longest Substring Without Repeating Characters](./leetcode/JavaScript/No03.longest-substring-without-repeating-characters.js)  | `Medium` |
+| 005 | [Longest Palindromic Substring](./leetcode/JavaScript/No05.longest-palindromic-substring.js)  | `Medium` |
+| 006 | [ZigZag Conversion](./leetcode/JavaScript/No06.zigzag-conversion.js)  | `Medium` |
+| 008 | [String to Integer (atoi)](./leetcode/JavaScript/No08.string-to-integer.js)  | `Medium` |
+| 011 | [Container With Most Water](./leetcode/JavaScript/No11.container-with-most-water.js)  | `Medium` |
+| 012 | [Integer to Roman](./leetcode/JavaScript/No12.integer-to-roman.js)  | `Medium` |
+| 015 | [3Sum](./leetcode/JavaScript/No15.3sum.js)  | `Medium` |
+| 016 | [3Sum Closest](./leetcode/JavaScript/No16.3sum-closest.js)  | `Medium` |
+| 017 | [Letter Combinations of a Phone Number](./leetcode/JavaScript/No17.letter-combinations-of-a-phone-number.js)  | `Medium` |
+| 018 | [4Sum](./leetcode/JavaScript/No18.4sum.js)  | `Medium` |
+| 019 | [Remove Nth Node From End of List](./leetcode/JavaScript/No19.remove-nth-node-from-end-of-list.js)  | `Medium` |
+| 022 | [Generate Parentheses](./leetcode/JavaScript/No22.generate-parentheses.js)  | `Medium` |
+| 024 | [Swap Nodes in Pairs](./leetcode/JavaScript/No24.swap-nodes-in-pairs.js)  | `Medium` |
+| 029 | [Divide Two Integers](./leetcode/JavaScript/No29.divide-two-integers.js)  | `Medium` |
+| 031 | [Next Permutation](./leetcode/JavaScript/No31.next-permutation.js)  | `Medium` |
+| 033 | [Search in Rotated Sorted Array](./leetcode/JavaScript/No33.search-in-rotated-sorted-array.js)  | `Medium` |
+| 034 | [Search for a Range](./leetcode/JavaScript/No34.search-for-a-range.js)  | `Medium` |
+| 036 | [Valid Sudoku](./leetcode/JavaScript/No36.valid-sudoku.js)  | `Medium` |
+| 039 | [Combination Sum](./leetcode/JavaScript/No39.combination-sum.js)  | `Medium` |
+| 040 | [Combination Sum II](./leetcode/JavaScript/No40.combination-sum-II.js)  | `Medium` |
+| 043 | [Multiply Strings](./leetcode/JavaScript/No43.multiply-strings.js)  | `Medium` |
+| 046 | [Permutations](./leetcode/JavaScript/No46.permutations.js) | `Medium` |
+| 047 | [Permutations II](./leetcode/JavaScript/No47.permutations-II.js) | `Medium` |
+| 048 | [Rotate Image](./leetcode/JavaScript/No48.rotate-image.js) | `Medium` |
+| 049 | [Group Anagrams](./leetcode/JavaScript/No49.group-anagrams.js) | `Medium` |
+| 050 | [Pow(x, n)](./leetcode/JavaScript/No50.pow-x-n.js) | `Medium` |
+| 054 | [Spiral Matrix](./leetcode/JavaScript/No54.spiral-matrix.js) | `Medium` |
+| 055 | [Jump Game](./leetcode/JavaScript/No55.jump-game.js) | `Medium` |
+| 056 | [Merge Intervals](./leetcode/JavaScript/No56.merge-intervals.js) | `Medium` |
+| 059 | [Spiral Matrix II](./leetcode/JavaScript/No59.spiral-matrix-II.js) | `Medium` |
+| 060 | [Permutation Sequence](./leetcode/JavaScript/No60.permutation-sequence.js) | `Medium` |
+| 061 | [Rotate List](./leetcode/JavaScript/No61.rotate-list.js) | `Medium` |
+| 062 | [Unique Paths](./leetcode/JavaScript/No62.unique-paths.js) | `Medium` |
+| 063 | [Unique Paths II](./leetcode/JavaScript/No63.unique-paths-II.js) | `Medium` |
+| 064 | [Minimum Path Sum](./leetcode/JavaScript/No64.minimum-path-sum.js) | `Medium` |
+| 071 | [Simplify Path](./leetcode/JavaScript/No71.simplify-path.js) | `Medium` |
+| 073 | [Set Matrix Zeroes](./leetcode/JavaScript/No73.set-matrix-zeroes.js) | `Medium` |
+| 074 | [Search a 2D Matrix](./leetcode/JavaScript/No74.search-a-2d-matrix.js) | `Medium` |
+| 075 | [Sort Colors](./leetcode/JavaScript/No75.sort-colors.js) | `Medium` |
+| 077 | [Combinations](./leetcode/JavaScript/No77.combinations.js) | `Medium` |
+| 078 | [Subsets](./leetcode/JavaScript/No78.subsets.js) | `Medium` |
+| 079 | [Word Search](./leetcode/JavaScript/No79.word-search.js) | `Medium` |
+| 080 | [Remove Duplicates from Sorted Array II](./leetcode/JavaScript/No80.remove-duplicates-from-sorted-array-II.js) | `Medium` |
+| 081 | [Search in Rotated Sorted Array II](./leetcode/JavaScript/No81.search-in-rotated-sorted-array-II.js) | `Medium` |
+| 082 | [Remove Duplicates from Sorted List II](./leetcode/JavaScript/No82.remove-duplicates-from-sorted-list-II.js) | `Medium` |
+| 086 | [Partition List](./leetcode/JavaScript/No86.partition-list.js) | `Medium` |
+| 090 | [Subsets II](./leetcode/JavaScript/No90.subsets-II.js) | `Medium` |
+| 091 | [Decode Ways](./leetcode/JavaScript/No91.decode-ways.js) | `Medium` |
+| 092 | [Reverse Linked List II](./leetcode/JavaScript/No92.reverse-linked-list-II.js) | `Medium` |
+| 093 | [Restore IP Addresses](./leetcode/JavaScript/No93.restore-ip-addresses.js) | `Medium` |
+| 094 | [Binary Tree Inorder Traversal](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js) | `Medium` |
+| 095 | [Unique Binary Search Trees II](./leetcode/JavaScript/No95.unique-binary-search-trees-II.js) | `Medium` |
+| 096 | [Unique Binary Search Trees](./leetcode/JavaScript/No96.unique-binary-search-trees.js) | `Medium` |
+| 098 | [Validate Binary Search Tree](./leetcode/JavaScript/No98.validate-binary-search-tree.js) | `Medium` |
+| 102 | [Binary Tree Level Order Traversal](./leetcode/JavaScript/No102.binary-tree-level-order-traversal.js) | `Medium` |
+| 103 | [Binary Tree Zigzag Level Order Traversal](./leetcode/JavaScript/No103.binary-tree-zigzag-level-order-traversal.js) | `Medium` |
+| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/JavaScript/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js) | `Medium` |
+| 106 | [Construct Binary Tree from Inorder and Postorder Traversal](./leetcode/JavaScript/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js) | `Medium` |
+| 109 | [Convert Sorted List to Binary Search Tree](./leetcode/JavaScript/No109.convert-sorted-list-to-binary-search-tree.js) | `Medium` |
+| 113 | [Path Sum II](./leetcode/JavaScript/No113.path-sum-II.js) | `Medium` |
+| 114 | [Flatten Binary Tree to Linked List](./leetcode/JavaScript/No114.flatten-binary-tree-to-linked-list.js) | `Medium` |
+| 116 | [Populating Next Right Pointers in Each Node](./leetcode/JavaScript/No116.populating-next-right-pointers-in-each-node.js) | `Medium` |
+| 117 | [Populating Next Right Pointers in Each Node II](./leetcode/JavaScript/No117.populating-next-right-pointers-in-each-node-II.js) | `Medium` |
+| 120 | [Triangle](./leetcode/JavaScript/No120.triangle.js) | `Medium` |
+| 127 | [Word Ladder](./leetcode/JavaScript/No127.word-ladder.js) | `Medium` |
+| 129 | [Sum Root to Leaf Numbers](./leetcode/JavaScript/No129.sum-root-to-leaf-numbers.js) | `Medium` |
+| 130 | [Surrounded Regions](./leetcode/JavaScript/No130.surrounded-regions.js) | `Medium` |
+| 131 | [Palindrome Partitioning](./leetcode/JavaScript/No131.palindrome-partitioning.js) | `Medium` |
+| 133 | [Clone Graph](./leetcode/JavaScript/No133.clone-graph.js) | `Medium` |
+| 134 | [Gas Station](./leetcode/JavaScript/No134.gas-station.js) | `Medium` |
+| 137 | [Single Number II](./leetcode/JavaScript/No137.single-number-II.js) | `Medium` |
+| 138 | [Copy List with Random Pointer](./leetcode/JavaScript/No138.copy-list-with-random-pointer.js) | `Medium` |
+| 139 | [Word Break](./leetcode/JavaScript/No139.word-break.js) | `Medium` |
+| 142 | [Linked List Cycle II](./leetcode/JavaScript/No142.linked-list-cycle-II.js) | `Medium` |
+| 143 | [Reorder List](./leetcode/JavaScript/No143.reorder-list.js) | `Medium` |
+| 144 | [Binary Tree Preorder Traversal](./leetcode/JavaScript/No144.binary-tree-preorder-traversal.js) | `Medium` |
+| 147 | [Insertion Sort List](./leetcode/JavaScript/No147.insertion-sort-list.js) | `Medium` |
+| 148 | [Sort List](./leetcode/JavaScript/No148.sort-list.js) | `Medium` |
+| 150 | [Evaluate Reverse Polish Notation](./leetcode/JavaScript/No150.evaluate-reverse-polish-notation.js) | `Medium` |
+| 151 | [Reverse Words in a String](./leetcode/JavaScript/No151.reverse-words-in-a-string.js) | `Medium` |
+| 152 | [Maximum Product Subarray](./leetcode/JavaScript/No152.maximum-product-subarray.js) | `Medium` |
+| 153 | [Find Minimum in Rotated Sorted Array](./leetcode/JavaScript/No153.find-minimum-in-rotated-sorted-array.js) | `Medium` |
+| 162 | [Find Peak Element](./leetcode/JavaScript/No162.find-peak-element.js) | `Medium` |
+| 165 | [Compare Version Numbers](./leetcode/JavaScript/No165.compare-version-numbers.js) | `Medium` |
+| 166 | [Fraction to Recurring Decimal](./leetcode/JavaScript/No166.fraction-to-recurring-decimal.js) | `Medium` |
+| 173 | [Binary Search Tree Iterator](./leetcode/JavaScript/No173.binary-search-tree-iterator.js) | `Medium` |
+| 179 | [Largest Number](./leetcode/JavaScript/No179.largest-number.js) | `Medium` |
+| 187 | [Repeated DNA Sequences](./leetcode/JavaScript/No187.repeated-dna-sequences.js) | `Medium` |
+| 208 | [Implement Trie (Prefix Tree)](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js) | `Medium` |
+| 209 | [Minimum Size Subarray Sum](./leetcode/JavaScript/No209.minimum-size-subarray-sum.js) | `Medium` |
+| 211 | [Add and Search Word - Data structure design](./leetcode/JavaScript/No211.add-and-search-word-data-structure-design.js) | `Medium` |
+| 215 | [Kth Largest Element in an Array](./leetcode/JavaScript/No215.kth-largest-element-in-an-array.js) | `Medium` |
+| 220 | [Contains Duplicate III](./leetcode/JavaScript/No220.contains-duplicate-III.js) | `Medium` |
+| 229 | [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js) | `Medium` |
+| 230 | [Kth Smallest Element in a BST](./leetcode/JavaScript/No230.kth-smallest-element-in-a-bst.js) | `Medium` |
+| 240 | [Search a 2D Matrix II](./leetcode/JavaScript/No240.search-a-2d-matrix-II.js) | `Medium` |
+| 260 | [Single Number III](./leetcode/JavaScript/No260.single-number-III.js) | `Medium` |
+| 264 | [Ugly Number II](./leetcode/JavaScript/No264.ugly-number-II.js) | `Medium` |
+| 274 | [H-Index](./leetcode/JavaScript/No274.h-index.js) | `Medium` |
+| 275 | [H-Index II](./leetcode/JavaScript/No275.h-index-II.js) | `Medium` |
+| 279 | [Perfect Squares](./leetcode/JavaScript/No279.perfect-squares.js) | `Medium` |
+| 287 | [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
+| 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
+| 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
+| 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
+| 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
+| 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
+| 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
+| 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
+| 523 | [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js) | `Medium` |
+| 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
+| 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
+| 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
+| 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
+
+
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
+| 007 | [Reverse Integer](./leetcode/JavaScript/No07.reverse-integer.js)  | `Easy` |
+| 009 | [Palindrome Number](./leetcode/JavaScript/No09.palindrome-number.js)  | `Easy` |
+| 013 | [Roman to Integer](./leetcode/JavaScript/No13.roman-to-integer.js)  | `Easy` |
+| 014 | [Longest Common Prefix](./leetcode/JavaScript/No14.longest-common-prefix.js)  | `Easy` |
+| 020 | [Valid Parentheses](./leetcode/JavaScript/No20.valid-parentheses.js)  | `Easy` |
+| 021 | [Merge Two Sorted Lists](./leetcode/JavaScript/No21.merge-two-sorted-lists.js)  | `Easy` |
+| 026 | [Remove Duplicates from Sorted Array](./leetcode/JavaScript/No26.remove-duplicates-from-sorted-array.js)  | `Easy` |
+| 027 | [Remove Element](./leetcode/JavaScript/No27.remove-element.js)  | `Easy` |
+| 028 | [Implement strStr()](./leetcode/JavaScript/No28.implement-strStr.js)  | `Easy` |
+| 035 | [Search Insert Position](./leetcode/JavaScript/No35.search-insert-position.js)  | `Easy` |
+| 038 | [Count and Say](./leetcode/JavaScript/No38.count-and-say.js)  | `Easy` |
+| 053 | [Maximum Subarray](./leetcode/JavaScript/No53.maximum-subarray.js)  | `Easy` |
+| 058 | [Length of Last Word](./leetcode/JavaScript/No58.length-of-last-word.js)  | `Easy` |
+| 066 | [Plus One](./leetcode/JavaScript/No66.plus-one.js)  | `Easy` |
+| 067 | [Add Binary](./leetcode/JavaScript/No67.add-binary.js)  | `Easy` |
+| 069 | [Sqrt(x)](./leetcode/JavaScript/No69.sqrt-x.js)  | `Easy` |
+| 070 | [Climbing Stairs](./leetcode/JavaScript/No70.climbing-stairs.js)  | `Easy` |
+| 083 | [Remove Duplicates from Sorted List](./leetcode/JavaScript/No83.remove-duplicates-from-sorted-list.js)  | `Easy` |
+| 088 | [Merge Sorted Array](./leetcode/JavaScript/No88.merge-sorted-array.js)  | `Easy` |
+| 100 | [Same Tree](./leetcode/JavaScript/No100.same-tree.js)  | `Easy` |
+| 101 | [Symmetric Tree](./leetcode/JavaScript/No101.symmetric-tree.js)  | `Easy` |
+| 104 | [Maximum Depth of Binary Tree](./leetcode/JavaScript/No104.maximum-depth-of-binary-tree.js)  | `Easy` |
+| 107 | [Binary Tree Level Order Traversal II](./leetcode/JavaScript/No107.binary-tree-level-order-traversal-II.js)  | `Easy` |
+| 108 | [Convert Sorted Array to Binary Search Tree](./leetcode/JavaScript/No108.convert-sorted-array-to-binary-search-tree.js)  | `Easy` |
+| 110 | [Balanced Binary Tree](./leetcode/JavaScript/No110.balanced-binary-tree.js)  | `Easy` |
+| 111 | [Minimum Depth of Binary Tree](./leetcode/JavaScript/No111.minimum-depth-of-binary-tree.js)  | `Easy` |
+| 112 | [Path Sum](./leetcode/JavaScript/No112.path-sum.js)  | `Easy` |
+| 118 | [Pascal's Triangle](./leetcode/JavaScript/No118.pascal's-triangle.js)  | `Easy` |
+| 119 | [Pascal's Triangle II](./leetcode/JavaScript/No119.pascal's-triangle-II.js)  | `Easy` |
+| 121 | [Best Time to Buy and Sell Stock](./leetcode/JavaScript/No121.best-time-to-buy-and-sell-stock.js)  | `Easy` |
+| 122 | [Best Time to Buy and Sell Stock II](./leetcode/JavaScript/No122.best-time-to-buy-and-sell-stock-II.js)  | `Easy` |
+| 125 | [Valid Palindrome](./leetcode/JavaScript/No125.valid-palindrome.js)  | `Easy` |
+| 136 | [Single Number](./leetcode/JavaScript/No136.single-number.js)  | `Easy` |
+| 141 | [Linked List Cycle](./leetcode/JavaScript/No141.linked-list-cycle.js)  | `Easy` |
+| 155 | [Min Stack](./leetcode/JavaScript/No155.min-stack.js)  | `Easy` |
+| 160 | [Intersection of Two Linked Lists](./leetcode/JavaScript/No160.intersection-of-two-linked-lists.js)  | `Easy` |
+| 167 | [Two Sum II - Input array is sorted](./leetcode/JavaScript/No167.two-sum-II-input-array-is-sorted.js)  | `Easy` |
+| 168 | [Excel Sheet Column Title](./leetcode/JavaScript/No168.excel-sheet-column-title.js)  | `Easy` |
+| 169 | [Majority Element](./leetcode/JavaScript/No169.majority-element.js)  | `Easy` |
+| 171 | [Excel Sheet Column Number](./leetcode/JavaScript/No171.excel-sheet-column-number.js)  | `Easy` |
+| 172 | [Factorial Trailing Zeroes](./leetcode/JavaScript/No172.factorial-trailing-zeroes.js)  | `Easy` |
+| 175 | [Combine Two Tables](./leetcode/JavaScript/No175.combine-two-tables.sql)  | `Easy` |
+| 189 | [Rotate Array](./leetcode/JavaScript/No189.rotate-array.js)  | `Easy` |
+| 203 | [Remove Linked List Elements](./leetcode/JavaScript/No203.remove-linked-list-elements.js)  | `Easy` |
+| 204 | [Count Primes](./leetcode/JavaScript/No204.count-primes.js)  | `Easy` |
+| 206 | [Reverse Linked List](./leetcode/JavaScript/No206.reverse-linked-list.js)  | `Easy` |
+| 217 | [Contains Duplicate](./leetcode/JavaScript/No217.contains-duplicate.js)  | `Easy` |
+| 219 | [Contains Duplicate II](./leetcode/JavaScript/No219.contains-duplicate-II.js)  | `Easy` |
+| 225 | [Implement Stack using Queues](./leetcode/JavaScript/No225.implement-stack-using-queues.js)  | `Easy` |
+| 231 | [Power of Two](./leetcode/JavaScript/No231.power-of-two.js)  | `Easy` |
+| 232 | [Implement Queue using Stacks](./leetcode/JavaScript/No232.implement-queue-using-stacks.js)  | `Easy` |
+| 234 | [Palindrome Linked List](./leetcode/JavaScript/No234.palindrome-linked-list.js)  | `Easy` |
+| 237 | [Delete Node in a Linked List](./leetcode/JavaScript/No237.delete-node-in-a-linked-list.js)  | `Easy` |
+| 263 | [Ugly Number](./leetcode/JavaScript/No263.ugly-number.js)  | `Easy` |
+| 268 | [Missing Number](./leetcode/JavaScript/No268.missing-number.js)  | `Easy` |
+| 278 | [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)  | `Easy` |
+| 283 | [Move Zeroes](./leetcode/JavaScript/No283.move-zeroes.js)  | `Easy` |
+| 344 | [Reverse String](./leetcode/JavaScript/No344.reverse-string.js)  | `Easy` |
+| 349 | [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)  | `Easy` |
+| 350 | [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)  | `Easy` |
+| 367 | [Valid Perfect Square](./leetcode/JavaScript/No367.valid-perfect-square.js)  | `Easy` |
+| 387 | [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)  | `Easy` |
+| 389 | [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)  | `Easy` |
+| 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
+| 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
+| 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
+| 500 | [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)  | `Easy` |
+| 520 | [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)  | `Easy` |
+| 530 | [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)  | `Easy` |
+| 541 | [Reverse String II](./leetcode/JavaScript/No541.reverse-string-II.js)  | `Easy` |
+| 594 | [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)  | `Easy` |
+| 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
+| 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
+| 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
+| 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
 
-- No.01 `Easy` [Two Sum](./leetcode/Swift/No01.two-sum.swift)
-- No.02 `Medium` [Add Two Numbers](./leetcode/Swift/No02.add-two-numbers.swift)
-- No.03 `Medium` [Longest Substring Without Repeating Characters](./leetcode/Swift/No03.longest-substring-without-repeating-characters.swift)
-- No.04 `Hard` [Median of Two Sorted Arrays](./leetcode/Swift/No04.median-of-two-sorted-arrays.swift)
-- No.05 `Medium` [Longest Palindromic Substring](./leetcode/Swift/No05.longest-palindromic-substring.swift)
-- No.06 `Medium` [ZigZag Conversion](./leetcode/Swift/No06.zigzag-conversion.swift)
-- No.07 `Easy` [Reverse Integer](./leetcode/Swift/No07.reverse-integer.swift)
-- No.08 `Medium` [String to Integer (atoi)](./leetcode/Swift/No08.string-to-integer-atoi.swift)
-- No.09 `Easy` [Palindrome Number](./leetcode/Swift/No09.palindrome-number.swift)
-- No.10 `Hard` [Regular Expression Matching](./leetcode/Swift/No10.regular-expression-matching.swift)
-- No.11 `Medium` [Container With Most Water](./leetcode/Swift/No11.container-with-most-water.swift)
-- No.12 `Medium` [Integer to Roman](./leetcode/Swift/No12.integer-to-roman.swift)
-- No.13 `Easy` [Roman to Integer](./leetcode/Swift/No13.roman-to-integer.swift)
-- No.14 `Easy` [Longest Common Prefix](./leetcode/Swift/No14.longest-common-prefix.swift)
-- No.15 `Medium` [3Sum](./leetcode/Swift/No15.3sum.swift)
-- No.16 `Medium` [3Sum Closest](./leetcode/Swift/No16.3sum-closest.swift)
-- No.17 `Medium` [Letter Combinations of a Phone Number](./leetcode/Swift/No17.letter-combinations-of-a-phone-number.swift)
-- No.18 `Medium` [4Sum](./leetcode/Swift/No18.4sum.swift)
-- No.19 `Medium` [Remove Nth Node From End of List](./leetcode/Swift/No19.remove-nth-node-from-end-of-list.swift)
-- No.20 `Easy` [Valid Parentheses](./leetcode/Swift/No20.valid-parentheses.swift)
-- No.21 `Easy` [Merge Two Sorted Lists](./leetcode/Swift/No21.merge-two-sorted-lists.swift)
-- No.22 `Medium` [Generate Parentheses](./leetcode/Swift/No22.generate-parentheses.swift)
-- No.23 `Hard` [Merge k Sorted Lists](./leetcode/Swift/No23.merge-k-sorted-lists.swift)
-- No.24 `Medium` [Swap Nodes in Pairs](./leetcode/Swift/No24.swap-nodes-in-pairs.swift)
-- No.25 `Hard` [Reverse Nodes in k-Group](./leetcode/Swift/No25.reverse-nodes-in-k-group.swift)
-- No.26 `Easy` [Remove Duplicates from Sorted Array](./leetcode/Swift/No26.remove-duplicates-from-sorted-array.swift)
-- No.27 `Easy` [Remove Element](./leetcode/Swift/No27.remove-element.swift)
-- No.69 `Easy` [Sqrt(x)](./leetcode/Swift/No69.sqrt-x.js)
-- No.203 `Easy` [Remove Linked List Elements](./leetcode/Swift/No203.remove-linked-list-elements.swift)
-- No.500 `Easy` [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift)
-- No.520 `Easy` [Detect Capital](./leetcode/Swift/No520.detect-capital.swift)
-- No.594 `Easy` [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift)
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 004 | [Median of Two Sorted Arrays](./leetcode/Swift/No04.median-of-two-sorted-arrays.swift)  | `Hard` |
+| 010 | [Regular Expression Matching](./leetcode/Swift/No10.regular-expression-matching.swift)  | `Hard` |
+| 023 | [Merge k Sorted Lists](./leetcode/Swift/No23.merge-k-sorted-lists.swift)  | `Hard` |
+| 025 | [Reverse Nodes in k-Group](./leetcode/Swift/No25.reverse-nodes-in-k-group.swift)  | `Hard` |
+
+
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 002 | [Add Two Numbers](./leetcode/Swift/No02.add-two-numbers.swift)  | `Medium` |
+| 003 | [Longest Substring Without Repeating Characters](./leetcode/Swift/No03.longest-substring-without-repeating-characters.swift)  | `Medium` |
+| 005 | [Longest Palindromic Substring](./leetcode/Swift/No05.longest-palindromic-substring.swift)  | `Medium` |
+| 006 | [ZigZag Conversion](./leetcode/Swift/No06.zigzag-conversion.swift)  | `Medium` |
+| 008 | [String to Integer (atoi)](./leetcode/Swift/No08.string-to-integer-atoi.swift) | `Medium` |
+| 011 | [Container With Most Water](./leetcode/Swift/No11.container-with-most-water.swift) | `Medium` |
+| 012 | [Integer to Roman](./leetcode/Swift/No12.integer-to-roman.swift) | `Medium` |
+| 015 | [3Sum](./leetcode/Swift/No15.3sum.swift) | `Medium` |
+| 016 | [3Sum Closest](./leetcode/Swift/No16.3sum-closest.swift) | `Medium` |
+| 017 | [Letter Combinations of a Phone Number](./leetcode/Swift/No17.letter-combinations-of-a-phone-number.swift) | `Medium` |
+| 018 | [4Sum](./leetcode/Swift/No18.4sum.swift) | `Medium` |
+| 019 | [Remove Nth Node From End of List](./leetcode/Swift/No19.remove-nth-node-from-end-of-list.swift) | `Medium` |
+| 022 | [Generate Parentheses](./leetcode/Swift/No22.generate-parentheses.swift) | `Medium` |
+| 024 | [Swap Nodes in Pairs](./leetcode/Swift/No24.swap-nodes-in-pairs.swift) | `Medium` |
+
+
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 001 | [Two Sum](./leetcode/Swift/No01.two-sum.swift)  | `Easy` |
+| 007 | [Reverse Integer](./leetcode/Swift/No07.reverse-integer.swift)  | `Easy` |
+| 009 | [Palindrome Number](./leetcode/Swift/No09.palindrome-number.swift)  | `Easy` |
+| 013 | [Roman to Integer](./leetcode/Swift/No13.roman-to-integer.swift) | `Easy` |
+| 014 | [Longest Common Prefix](./leetcode/Swift/No14.longest-common-prefix.swift) | `Easy` |
+| 020 | [Valid Parentheses](./leetcode/Swift/No20.valid-parentheses.swift) | `Easy` |
+| 021 | [Merge Two Sorted Lists](./leetcode/Swift/No21.merge-two-sorted-lists.swift) | `Easy` |
+| 026 | [Remove Duplicates from Sorted Array](./leetcode/Swift/No26.remove-duplicates-from-sorted-array.swift) | `Easy` |
+| 027 | [Remove Element](./leetcode/Swift/No27.remove-element.swift) | `Easy` |
+| 069 | [Sqrt(x)](./leetcode/Swift/No69.sqrt-x.js) | `Easy` |
+| 203 | [Remove Linked List Elements](./leetcode/Swift/No203.remove-linked-list-elements.swift) | `Easy` |
+| 500 | [Keyboard Row](./leetcode/Swift/No500.keyboard-row.swift) | `Easy` |
+| 520 | [Detect Capital](./leetcode/Swift/No520.detect-capital.swift) | `Easy` |
+| 594 | [Longest Harmonious Subsequence](./leetcode/Swift/No594.longest-harmonious-subsequence.swift) | `Easy` |
+
 
 #### [Haskell Solution](./leetcode/Haskell)
 
-- No.12 `Medium` [Integer to Roman](./leetcode/Haskell/No12.integer-to-roman.hs)
-- No.69 `Easy` [Sqrt(x)](./leetcode/Haskell/No69.sqrt-x.hs)
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 012 | [Integer to Roman](./leetcode/Haskell/No12.integer-to-roman.hs)  | `Medium` |
+| 069 | [Sqrt(x)](./leetcode/Haskell/No69.sqrt-x.hs)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
 ![codewars-badges](https://www.codewars.com/users/ecmadao/badges/micro)
 #### [Haskell Solution](./codewars/Haskell)
 
-- `7 kyu` [You're a square!](./codewars/Haskell/you're-a-square.hs)
-- `7 kyu` [The highest profit wins!](./codewars/Haskell/the-highest-profit-wins.hs)
-- `7 kyu` [Complementary DNA](./codewars/Haskell/complementary-dna.hs)
-- `7 kyu` [Descending Order](./codewars/Haskell/descending-order.hs)
-- `6 kyu` [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)
-- `6 kyu` [Which are in?](./codewars/Haskell/which-are-in.hs)
-- `6 kyu` [Decode the Morse code](./codewars/Haskell/decode-the-morse-code.hs)
-- `6 kyu` [Is a number prime?](./codewars/Haskell/is-a-number-prime.hs)
-- `6 kyu` [CamelCase Method](./codewars/Haskell/camelcase-method.hs)
-- `6 kyu` [Reverse words](./codewars/Haskell/reverse-words.hs)
-- `6 kyu` [Array.diff](./codewars/Haskell/array.diff.hs)
-- `5 kyu` [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)
-- `5 kyu` [Weight for weight](./codewars/Haskell/weight-for-weight.hs)
-- `5 kyu` [Memoized Fibonacci](./codewars/Haskell/memoized-fibonacci.hs)
-- `5 kyu` [Gap in Primes](./codewars/Haskell/gap-in-primes.hs)
-- `5 kyu` [The Hashtag Generator](./codewars/Haskell/the-hashtag-generator.hs)
-- `5 kyu` [Find the missing term in an Arithmetic Progression](./codewars/Haskell/find-the-missing-term-in-an-arithmetic-progression.hs)
-- `4 kyu` [Reverse polish notation calculator](./codewars/Haskell/reverse-polish-notation-calculator.hs)
-- `4 kyu` [Twice linear](./codewars/Haskell/twice-linear.hs)
-- `4 kyu` [Roman Numerals Encoder](./codewars/Haskell/roman-numerals-encoder.hs)
-- `4 kyu` [Range Extraction](./codewars/Haskell/range-extraction.hs)
-- `4 kyu` [Find all possible number combos that sum to a number](./codewars/Haskell/find-all-possible-number-combos-that-sum-to-a-number.hs)
-- `3 kyu` [Point in Polygon](./codewars/Haskell/point-in-polygon.hs)
+| Title | Kyu |
+| ------------- | ------------- |
+| [Point in Polygon](./codewars/Haskell/point-in-polygon.hs)  | `3 kyu` |
+
+| Title | Kyu |
+| ------------- | ------------- |
+| [Find all possible number combos that sum to a number](./codewars/Haskell/find-all-possible-number-combos-that-sum-to-a-number.hs)  | `4 kyu` |
+| [Range Extraction](./codewars/Haskell/range-extraction.hs)  | `4 kyu` |
+| [Roman Numerals Encoder](./codewars/Haskell/roman-numerals-encoder.hs)  | `4 kyu` |
+| [Twice linear](./codewars/Haskell/twice-linear.hs)  | `4 kyu` |
+| [Reverse polish notation calculator](./codewars/Haskell/reverse-polish-notation-calculator.hs)  | `4 kyu` |
+
+| Title | Kyu |
+| ------------- | ------------- |
+| [Find the missing term in an Arithmetic Progression](./codewars/Haskell/find-the-missing-term-in-an-arithmetic-progression.hs)  | `5 kyu` |
+| [The Hashtag Generator](./codewars/Haskell/the-hashtag-generator.hs)  | `5 kyu` |
+| [Gap in Primes](./codewars/Haskell/gap-in-primes.hs)  | `5 kyu` |
+| [Memoized Fibonacci](./codewars/Haskell/memoized-fibonacci.hs)  | `5 kyu` |
+| [Weight for weight](./codewars/Haskell/weight-for-weight.hs)  | `5 kyu` |
+| [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)  | `5 kyu` |
+
+| Title | Kyu |
+| ------------- | ------------- |
+| [Array.diff](./codewars/Haskell/array.diff.hs)  | `6 kyu` |
+| [Reverse words](./codewars/Haskell/reverse-words.hs)  | `6 kyu` |
+| [CamelCase Method](./codewars/Haskell/camelcase-method.hs)  | `6 kyu` |
+| [Is a number prime?](./codewars/Haskell/is-a-number-prime.hs)  | `6 kyu` |
+| [Decode the Morse code](./codewars/Haskell/decode-the-morse-code.hs)  | `6 kyu` |
+| [Which are in?](./codewars/Haskell/which-are-in.hs)  | `6 kyu` |
+| [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)  | `6 kyu` |
+
+| Title | Kyu |
+| ------------- | ------------- |
+| [Descending Order](./codewars/Haskell/descending-order.hs)  | `7 kyu` |
+| [Complementary DNA](./codewars/Haskell/complementary-dna.hs)  | `7 kyu` |
+| [The highest profit wins!](./codewars/Haskell/the-highest-profit-wins.hs)  | `7 kyu` |
+| [You're a square!](./codewars/Haskell/you're-a-square.hs) | `7 kyu` |
+
 
 #### [JavaScript Solution](./codewars/JavaScript)
 
-- `4 kyu` [Twice linear](./codewars/JavaScript/twice-linear.js)
-- `4 kyu` [Find all possible number combos that sum to a number](./codewars/JavaScript/find-all-possible-number-combos-that-sum-to-a-number.js)
+| Title | Kyu |
+| ------------- | ------------- |
+| [Twice linear](./codewars/JavaScript/twice-linear.js)  | `4 kyu` |
+| [Find all possible number combos that sum to a number](./codewars/JavaScript/find-all-possible-number-combos-that-sum-to-a-number.js)  | `4 kyu` |
 
 ### Run demo
 
