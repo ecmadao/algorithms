@@ -14,23 +14,21 @@
  * ]
  *
  * 还是排列组合，但是数组内可能会有重复的数字。
- * 所以看见这题我是懵逼的，因为它的要求其实就是我在写 46 题时专门注意的点，即处理数组内的重复数字。
- * (所以说其实 46 题不用考虑处理重复数字的问题？？)
- * 直接用 46 题的代码直接 AC...
  */
 
-var treeLayer = function(nums, path, layer, results, usedSet) {
-  var pre = null;
-  for (var i = 0; i < nums.length; i += 1) {
-    var num = nums[i];
-    var key = `${i}-${num}`;
-    var set;
+/* ===================================== SOLUTION 1 ======================================= */
 
-    if (!usedSet) {
-      set = new Set();
-    } else {
-      set = new Set([...usedSet]);
-    }
+/*
+ * 思路一：
+ * 多叉树
+ */
+
+var treeLayer = function(nums, path, layer, results, usedCacheSet) {
+  let pre = null;
+  for (let i = 0; i < nums.length; i += 1) {
+    const num = nums[i];
+    const key = `${i}-${num}`;
+    const set = usedCacheSet ? new Set([...usedCacheSet]) : new Set();
 
     if (set.has(key)) {
       continue;
@@ -43,7 +41,7 @@ var treeLayer = function(nums, path, layer, results, usedSet) {
     set.add(key);
     pre = num;
 
-    var p = [...path, num];
+    const p = [...path, num];
     if (p.length === nums.length) {
       results.push(p);
     } else {
@@ -56,9 +54,42 @@ var treeLayer = function(nums, path, layer, results, usedSet) {
 * @param {number[]} nums
 * @return {number[][]}
 */
-var permuteUnique = function(nums) {
+var permuteUnique_tree = function(nums) {
   nums.sort((a, b) => a - b);
-  var results = [];
+  const results = [];
   treeLayer(nums, [], 0, results);
   return results;
+};
+
+/* ===================================== SOLUTION 2 ======================================= */
+
+/*
+ * 思路二：
+ * 1. 将列表中的每一个元素插入到由剩下元素组成的各个全排列列表的头部
+ * 2. 给定列表的第一个元素，插入到剩下元素组成的全排列列表的各个位置
+ * 3. 利用 set 避免重复遍历
+ */
+
+const permuteUnique_insert = (nums) => {
+  const permute = (nums) => {
+    if (nums.length === 1) return [[nums[0]]];
+    const cache = new Set();
+
+    const result = [];
+    for (let i = 0; i < nums.length; i += 1) {
+      const num = nums[i];
+      if (cache.has(num)) continue;
+      cache.add(num);
+      const remains = [...nums.slice(0, i), ...nums.slice(i + 1)];
+      const arrays = permute(remains);
+      for (const array of arrays) {
+        result.push(
+          [num, ...array]
+        );
+      }
+    }
+    return result;
+  };
+
+  return permute(nums);
 };

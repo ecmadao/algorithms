@@ -24,11 +24,17 @@
  * 用数组返回所有可能的解，摆放皇后的地方用 Q 表示，否则用 . 表示
  */
 
-/**
+ /**
  * 思路：
  * 在国际象棋里，皇后可以沿着横排、数列、对角线进行走动、攻击，且格树不限。
  * 因此，为了能够在 n * n 的棋盘上交叉摆放开 n 皇后且无法相互攻击，则任意两个都不能位于同一行、同一列、同一对角线
- * 总体上，还是使用回溯法，在每行的时候都进行遍历，假设遍历的某个点为皇后位置（通过已有的皇后进行验证，确定该位置对之前的皇后合法，才会假设它是当前行的皇后）
+ */
+
+/* ===================================== SOLUTION 1 ======================================= */
+
+/**
+ * 思路：
+ * 使用回溯法，在每行的时候都进行遍历，假设遍历的某个点为皇后位置（通过已有的皇后进行验证，确定该位置对之前的皇后合法，才会假设它是当前行的皇后）
  * 然后继续对下一行遍历并筛选出皇后位置。如果无法得到合法的位置，则回溯到上一次的假设，重新取值
  *
  * （回溯法的思路跟第 37 题 Sudoku solver 基本一致）
@@ -73,8 +79,9 @@ var getQueues = function(n, results) {
 /**
 * @param {number} n
 * @return {string[][]}
+* 回溯法
 */
-var solveNQueens = function(n) {
+var solveNQueens_recall = function(n) {
   if (n === 1) return [['Q']];
   if (n <= 3) return [];
   var results = [];
@@ -82,4 +89,56 @@ var solveNQueens = function(n) {
   var notAvaliableColumn = new Set();
   getQueue(1, [], notAvaliableColumn, 1);
   return results;
+};
+
+/* ===================================== SOLUTION 2 ======================================= */
+
+/**
+ * 思路：
+ * 创建一个长度为 n 的列表，列表内每一位上的数字，代表该列的皇后所应该放置的位置。
+ * 因为任意两个皇后不能排在同一排，因此，该列表应该是 [0..(n - 1)]，即列表内元素在该闭区间内，且没有重复元素
+ * 我们可以从初始化的 [0,1,2..(n-1)] 列表出发，求其全排列，在全排列的过程中，直接筛选剔除掉不符合题意的值
+ * （任意两个元素位于对角线上的全排列应该被剔除）
+ */
+
+const inTheDiagonal = (point1, point2) =>
+  Math.abs(point1.r - point2.r) === Math.abs(point1.c - point2.c);
+
+// 保证要插入的元素和列表中的每个元素都不在对角线上
+const checkValidate = (num, array) =>
+  array.every((n, i) => !inTheDiagonal({ c: i + 1, r: n }, { c: 0, r: num }))
+
+const permute = (set) => {
+  if (set.size === 1) return [[[...set.values()][0]]];
+
+  const result = [];
+  const values = [...set.values()];
+  for (const val of values) {
+    set.delete(val);
+    const nextSet = new Set([...set]);
+    const arrays = permute(nextSet);
+    for (const array of arrays) {
+      if (checkValidate(num, array)) {
+        array.unshift(num);
+        result.push(array);
+      }
+    }
+    set.add(val);
+  }
+  return result;
+};
+
+
+/**
+* @param {number} n
+* @return {string[][]}
+* 全排列法
+*/
+const solveNQueens_permutation = (n) => {
+  const baseArray = [];
+  for (let i = 0; i < n; i += 1) {
+    baseArray.push(i);
+  }
+  const solutions = permute(new Set(baseArray));
+  return solutions;
 };
