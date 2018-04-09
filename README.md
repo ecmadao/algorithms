@@ -353,6 +353,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | Title | Kyu |
 | ------------- | ------------- |
 | [Point in Polygon](./codewars/Haskell/point-in-polygon.hs)  | `3 kyu` |
+| [Sudoku Solver](./codewars/Haskell/sudoku-solver.hs)  | `3 kyu` |
 
 | Title | Kyu |
 | ------------- | ------------- |
@@ -393,6 +394,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 
 | Title | Kyu |
 | ------------- | ------------- |
+| [Sudoku Solver](./codewars/JavaScript/sudoku-solver.js)  | `3 kyu` |
 | [Twice linear](./codewars/JavaScript/twice-linear.js)  | `4 kyu` |
 | [Find all possible number combos that sum to a number](./codewars/JavaScript/find-all-possible-number-combos-that-sum-to-a-number.js)  | `4 kyu` |
 

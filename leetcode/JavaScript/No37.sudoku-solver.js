@@ -24,29 +24,27 @@
  * 3. 利用回溯法继续遍历、回退
  */
 
-var data = {};
-
-var solve = function(row, column, maxRow, maxColumn, board, picked) {
+var solve = function(tmp, row, column, maxRow, maxColumn, board, picked) {
   if (row > maxRow) return true;
 
   if (column === 0) {
     picked = new Set();
   }
 
-  if (column > maxColumn) return solve(row + 1, 0, maxRow, maxColumn, board, picked);
-  if (board[row][column] !== '.') return solve(row, column + 1, maxRow, maxColumn, board, picked);
+  if (column > maxColumn) return solve(tmp, row + 1, 0, maxRow, maxColumn, board, picked);
+  if (board[row][column] !== '.') return solve(tmp, row, column + 1, maxRow, maxColumn, board, picked);
 
   var rowId = `r${row + 1}`;
   var columnId = `c${column + 1}`;
 
   var boxRow = Math.floor(row / 3) + 1;
   var boxColumn = Math.floor(column / 3) + 1;
-  var boxId = `b${(boxRow - 1) * 3 + boxColumn}`;
+  var boxId = `b${boxRow}${boxColumn}`;
 
   var result = false;
-  var rowSet = data[rowId];
-  var columnSet = data[columnId];
-  var boxSet = data[boxId];
+  var rowSet = tmp[rowId];
+  var columnSet = tmp[columnId];
+  var boxSet = tmp[boxId];
 
   for (var val of rowSet.keys()) {
     if (picked.has(val)) continue;
@@ -55,7 +53,7 @@ var solve = function(row, column, maxRow, maxColumn, board, picked) {
       columnSet.delete(val);
       boxSet.delete(val);
       board[row][column] = val;
-      if (solve(row, column + 1, maxRow, maxColumn, board, picked)) {
+      if (solve(tmp, row, column + 1, maxRow, maxColumn, board, picked)) {
         result = true;
         break;
       } else {
@@ -71,7 +69,8 @@ var solve = function(row, column, maxRow, maxColumn, board, picked) {
 };
 
 var solveSudoku = function(board) {
-  console.log(board);
+  const tmp = {};
+
   for (var i = 0; i < board.length; i += 1) {
     var box = board[i];
 
@@ -84,27 +83,28 @@ var solveSudoku = function(board) {
 
       var columnId = `c${j + 1}`;
       var boxColumn = Math.floor(j / 3) + 1;
-      var boxId = `b${(boxRow - 1) * 3 + boxColumn}`;
+      var boxId = `b${boxRow}${boxColumn}`;
 
-      if (!data[boxId]) {
-        data[boxId] = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+      if (!tmp[boxId]) {
+        tmp[boxId] = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
       }
-      if (!data[columnId]) {
-        data[columnId] = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+      if (!tmp[columnId]) {
+        tmp[columnId] = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
       }
-      if (!data[rowId]) {
-        data[rowId] = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+      if (!tmp[rowId]) {
+        tmp[rowId] = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
       }
       var num = box[j];
       if (num === '.') continue;
 
-      data[columnId].delete(num);
-      data[rowId].delete(num);
-      data[boxId].delete(num);
+      tmp[columnId].delete(num);
+      tmp[rowId].delete(num);
+      tmp[boxId].delete(num);
     }
   }
 
   solve(
+    tmp,
     0,
     0,
     board.length - 1,
