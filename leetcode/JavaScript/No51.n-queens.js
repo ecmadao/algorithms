@@ -108,24 +108,31 @@ const inTheDiagonal = (point1, point2) =>
 const checkValidate = (num, array) =>
   array.every((n, i) => !inTheDiagonal({ c: i + 1, r: n }, { c: 0, r: num }))
 
-const permute = (set) => {
-  if (set.size === 1) return [[[...set.values()][0]]];
-
-  const result = [];
-  const values = [...set.values()];
-  for (const val of values) {
-    set.delete(val);
-    const nextSet = new Set([...set]);
-    const arrays = permute(nextSet);
-    for (const array of arrays) {
-      if (checkValidate(num, array)) {
-        array.unshift(num);
-        result.push(array);
-      }
-    }
-    set.add(val);
+/**
+ * baseBoard =
+ * ["....",
+ *  "....",
+ *  "....",
+ *  "...."]
+ * array = [2,0,3,1]
+ *
+ * return
+ * [".Q..",
+ *  "...Q",
+ *  "Q...",
+ *  "..Q."]
+ */
+const convertArrayToBoard = (n, array) => {
+  const baseBoard = [];
+  for (let i = 0; i < n; i += 1) {
+    baseBoard.push(new Array(n).fill('.'));
   }
-  return result;
+  for (let c = 0; c < array.length; c += 1) {
+    const tmp = baseBoard[array[c]];
+    tmp[c] = 'Q';
+    baseBoard[array[c]] = tmp.join('');
+  }
+  return baseBoard;
 };
 
 
@@ -135,10 +142,39 @@ const permute = (set) => {
 * 全排列法
 */
 const solveNQueens_permutation = (n) => {
+  if (n === 1) return [['Q']];
+  if (n <= 3) return [];
+
   const baseArray = [];
   for (let i = 0; i < n; i += 1) {
     baseArray.push(i);
   }
-  const solutions = permute(new Set(baseArray));
-  return solutions;
+  const boards = [];
+
+  const permute = (set) => {
+    if (set.size === 1) return [[[...set.values()][0]]];
+
+    const result = [];
+    const values = [...set.values()];
+    for (const val of values) {
+      set.delete(val);
+      const nextSet = new Set([...set]);
+      const arrays = permute(nextSet);
+      for (const array of arrays) {
+        if (checkValidate(val, array)) {
+          array.unshift(val);
+          result.push(array);
+
+          if (array.length === n) {
+            boards.push(convertArrayToBoard(n, array));
+          }
+        }
+      }
+      set.add(val);
+    }
+    return result;
+  };
+
+  permute(new Set(baseArray));
+  return boards;
 };

@@ -85,8 +85,8 @@ const permute = (set) => {
     const nextSet = new Set([...set]);
     const arrays = permute(nextSet);
     for (const array of arrays) {
-      if (checkValidate(num, array)) {
-        array.unshift(num);
+      if (checkValidate(val, array)) {
+        array.unshift(val);
         result.push(array);
       }
     }

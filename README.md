@@ -318,6 +318,8 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 019 | [Remove Nth Node From End of List](./leetcode/Swift/No19.remove-nth-node-from-end-of-list.swift) | `Medium` |
 | 022 | [Generate Parentheses](./leetcode/Swift/No22.generate-parentheses.swift) | `Medium` |
 | 024 | [Swap Nodes in Pairs](./leetcode/Swift/No24.swap-nodes-in-pairs.swift) | `Medium` |
+| 046 | [Permutations](./leetcode/Swift/No46.permutations.swift) | `Medium` |
+| 047 | [Permutations II](./leetcode/Swift/No47.permutations-ii.swift) | `Medium` |
 
 
 | No  | Title | Difficulty |
