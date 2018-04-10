@@ -91,10 +91,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 212 | [Word Search II](./leetcode/JavaScript/No212.word-search-II.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
-
-
-| No  | Title | Difficulty |
-| ------------- | ------------- | ------------- |
+|  |  |  |
 | 002 | [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)  | `Medium` |
 | 003 | [Longest Substring Without Repeating Characters](./leetcode/JavaScript/No03.longest-substring-without-repeating-characters.js)  | `Medium` |
 | 005 | [Longest Palindromic Substring](./leetcode/JavaScript/No05.longest-palindromic-substring.js)  | `Medium` |
@@ -211,10 +208,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
-
-
-| No  | Title | Difficulty |
-| ------------- | ------------- | ------------- |
+|  |  |  |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
 | 007 | [Reverse Integer](./leetcode/JavaScript/No07.reverse-integer.js)  | `Easy` |
 | 009 | [Palindrome Number](./leetcode/JavaScript/No09.palindrome-number.js)  | `Easy` |
@@ -300,10 +294,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 010 | [Regular Expression Matching](./leetcode/Swift/No10.regular-expression-matching.swift)  | `Hard` |
 | 023 | [Merge k Sorted Lists](./leetcode/Swift/No23.merge-k-sorted-lists.swift)  | `Hard` |
 | 025 | [Reverse Nodes in k-Group](./leetcode/Swift/No25.reverse-nodes-in-k-group.swift)  | `Hard` |
-
-
-| No  | Title | Difficulty |
-| ------------- | ------------- | ------------- |
+|  |  |  |
 | 002 | [Add Two Numbers](./leetcode/Swift/No02.add-two-numbers.swift)  | `Medium` |
 | 003 | [Longest Substring Without Repeating Characters](./leetcode/Swift/No03.longest-substring-without-repeating-characters.swift)  | `Medium` |
 | 005 | [Longest Palindromic Substring](./leetcode/Swift/No05.longest-palindromic-substring.swift)  | `Medium` |
@@ -320,10 +311,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 024 | [Swap Nodes in Pairs](./leetcode/Swift/No24.swap-nodes-in-pairs.swift) | `Medium` |
 | 046 | [Permutations](./leetcode/Swift/No46.permutations.swift) | `Medium` |
 | 047 | [Permutations II](./leetcode/Swift/No47.permutations-ii.swift) | `Medium` |
-
-
-| No  | Title | Difficulty |
-| ------------- | ------------- | ------------- |
+|  |  |  |
 | 001 | [Two Sum](./leetcode/Swift/No01.two-sum.swift)  | `Easy` |
 | 007 | [Reverse Integer](./leetcode/Swift/No07.reverse-integer.swift)  | `Easy` |
 | 009 | [Palindrome Number](./leetcode/Swift/No09.palindrome-number.swift)  | `Easy` |
@@ -356,26 +344,22 @@ Algorithms notes & code & leetcode solution by Node.js.
 | ------------- | ------------- |
 | [Point in Polygon](./codewars/Haskell/point-in-polygon.hs)  | `3 kyu` |
 | [Sudoku Solver](./codewars/Haskell/sudoku-solver.hs)  | `3 kyu` |
-
-| Title | Kyu |
-| ------------- | ------------- |
+| [Calculator](./codewars/Haskell/calculator.hs)  | `3 kyu` |
+|  |  |  |
 | [Find all possible number combos that sum to a number](./codewars/Haskell/find-all-possible-number-combos-that-sum-to-a-number.hs)  | `4 kyu` |
 | [Range Extraction](./codewars/Haskell/range-extraction.hs)  | `4 kyu` |
 | [Roman Numerals Encoder](./codewars/Haskell/roman-numerals-encoder.hs)  | `4 kyu` |
 | [Twice linear](./codewars/Haskell/twice-linear.hs)  | `4 kyu` |
+| [foldMap all the things!](./codewars/Haskell/foldMap-all-the-things.hs)  | `4 kyu` |
 | [Reverse polish notation calculator](./codewars/Haskell/reverse-polish-notation-calculator.hs)  | `4 kyu` |
-
-| Title | Kyu |
-| ------------- | ------------- |
+|  |  |  |
 | [Find the missing term in an Arithmetic Progression](./codewars/Haskell/find-the-missing-term-in-an-arithmetic-progression.hs)  | `5 kyu` |
 | [The Hashtag Generator](./codewars/Haskell/the-hashtag-generator.hs)  | `5 kyu` |
 | [Gap in Primes](./codewars/Haskell/gap-in-primes.hs)  | `5 kyu` |
 | [Memoized Fibonacci](./codewars/Haskell/memoized-fibonacci.hs)  | `5 kyu` |
 | [Weight for weight](./codewars/Haskell/weight-for-weight.hs)  | `5 kyu` |
 | [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)  | `5 kyu` |
-
-| Title | Kyu |
-| ------------- | ------------- |
+|  |  |  |
 | [Array.diff](./codewars/Haskell/array.diff.hs)  | `6 kyu` |
 | [Reverse words](./codewars/Haskell/reverse-words.hs)  | `6 kyu` |
 | [CamelCase Method](./codewars/Haskell/camelcase-method.hs)  | `6 kyu` |
@@ -383,9 +367,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | [Decode the Morse code](./codewars/Haskell/decode-the-morse-code.hs)  | `6 kyu` |
 | [Which are in?](./codewars/Haskell/which-are-in.hs)  | `6 kyu` |
 | [Find the missing letter](./codewars/Haskell/find-the-missing-letter.hs)  | `6 kyu` |
-
-| Title | Kyu |
-| ------------- | ------------- |
+|  |  |  |
 | [Descending Order](./codewars/Haskell/descending-order.hs)  | `7 kyu` |
 | [Complementary DNA](./codewars/Haskell/complementary-dna.hs)  | `7 kyu` |
 | [The highest profit wins!](./codewars/Haskell/the-highest-profit-wins.hs)  | `7 kyu` |
