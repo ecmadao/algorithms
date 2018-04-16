@@ -359,6 +359,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | [Memoized Fibonacci](./codewars/Haskell/memoized-fibonacci.hs)  | `5 kyu` |
 | [Weight for weight](./codewars/Haskell/weight-for-weight.hs)  | `5 kyu` |
 | [Valid Parentheses](./codewars/Haskell/valid-parentheses.hs)  | `5 kyu` |
+| [Can you get the loop ?](./codewars/Haskell/can-you-get-the-loop.hs)  | `5 kyu` |
 |  |  |  |
 | [Array.diff](./codewars/Haskell/array.diff.hs)  | `6 kyu` |
 | [Reverse words](./codewars/Haskell/reverse-words.hs)  | `6 kyu` |
