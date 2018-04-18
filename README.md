@@ -49,6 +49,7 @@ Algorithms notes & code & leetcode solution by Node.js.
   - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
   - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
 - [排列组合](./permutation-and-combination)
+- [图](./graph)
 
 ### [LeetCode](https://leetcode.com/ecmadao/)
 
@@ -195,6 +196,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 275 | [H-Index II](./leetcode/JavaScript/No275.h-index-II.js) | `Medium` |
 | 279 | [Perfect Squares](./leetcode/JavaScript/No279.perfect-squares.js) | `Medium` |
 | 287 | [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
+| 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
