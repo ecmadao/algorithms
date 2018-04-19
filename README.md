@@ -185,6 +185,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 207 | [Course Schedule](./leetcode/JavaScript/No207.course-schedule.js) | `Medium` |
 | 208 | [Implement Trie (Prefix Tree)](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js) | `Medium` |
 | 209 | [Minimum Size Subarray Sum](./leetcode/JavaScript/No209.minimum-size-subarray-sum.js) | `Medium` |
+| 210 | [Course Schedule II](./leetcode/JavaScript/No210.course-schedule-II.js) | `Medium` |
 | 211 | [Add and Search Word - Data structure design](./leetcode/JavaScript/No211.add-and-search-word-data-structure-design.js) | `Medium` |
 | 215 | [Kth Largest Element in an Array](./leetcode/JavaScript/No215.kth-largest-element-in-an-array.js) | `Medium` |
 | 220 | [Contains Duplicate III](./leetcode/JavaScript/No220.contains-duplicate-III.js) | `Medium` |
