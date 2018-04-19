@@ -317,7 +317,7 @@ class CC {
 #### 构建有向图
 
 ```javascript
-class Graph {
+class Digraph {
   constructor(datas) {
     this.adj = []; // 邻接表数组
     this.edges = 0; // 边的数目
@@ -362,3 +362,69 @@ class Graph {
   }
 }
 ```
+
+#### 有向图的应用
+
+- 垃圾清除
+
+当内存中的对象没有被引用时，可以被清除。因此，需要利用有向图的可达性，遍历图中可以被访问到的对象并对其进行标记，然后清除没有被标记的对象。
+
+- 寻路问题
+
+寻找有向图中是否存在给定两点之间的路径，且找出最短路径。
+
+- 任务调度
+
+给定一组有优先级顺序的任务，各个任务可以映射为图中的各个顶点，而有向边则对应优先级顺序。利用拓扑排序可以使所有顶点安装优先级从高到低的顺序排列。当且仅当有向图是无环图时，才能进行拓扑排序。
+
+在这些应用中，要求有向图必须是无环有向图，否则，任务优先级无解（没有起始点），垃圾无法释放（循环引用）。因此，可以利用有向图的数据结构，构建有向环检测
+
+##### 有向环检测
+
+```javascript
+class DirectedCycle {
+  constructor(digraph) {
+    this.marked = {};
+    this.edgeTo = {};
+    this.stack = []; // 递归调用栈上的所有顶点
+    this.cycle = []; // 如果有环，则储存环上的所有顶点
+
+    for (const point of digraph.points) {
+      if (!this.marked[point]) {
+        this.dfs(digraph, point);
+      }
+    }
+  }
+
+  dfs(digraph, point) {
+    this.marked[point] = true;
+    this.stack[point] = true;
+
+    for (const p of digraph.adj[point]) {
+      if (this.cycle.length) {
+        return;
+      } else if (!this.marked[p]) {
+        this.edgeTo[p] = point;
+        this.dfs(digraph, p);
+      } else if (this.stack[p]) {
+        // 当前顶点出现在已经遍历过的顶点上，则证明有环
+        for (let x = point; x !== p; x = this.edgeTo[x]) {
+          this.cycle.push(x);
+        }
+        this.cycle.push(p);
+      }
+    }
+    this.stack[point] = false;
+  }
+
+  get hasCycle() { return this.cycle.length > 0; }
+
+  get cycle() { return this.cycle; }
+}
+```
+
+##### 树顶点的排序
+
+##### 拓扑排序
+
+> 一个有向无环图的拓扑排序，即为所有顶点的逆后序排序
