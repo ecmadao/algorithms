@@ -74,7 +74,24 @@
 注意如下概念：
 
 - **无向图的连通性**
+
+如果在无向图中有一条路径连接了两个顶点，则称这两个顶点是**连通**的（两顶点相互可达）
+
 - **有向图的可达性**
+
+当在有向图中，从顶点 W 到顶点 V 有路径时，则称从顶点 W 到顶点 V 是**可达**的。
+
+- 有向图的强连通性
+
+如果有向图中的两个顶点是相互可达的，则称这两个顶点是**强连通**的。如果有向图中的任意两个顶点都是强连通的，则这幅图也是强连通的。
+
+*有向环是强连通的有向图*
+
+有向图的强连通有如下性质：
+
+1. 自反性：任意顶点和它自己都是强连通的
+2. 对称性：如果 V 和 W 是强连通的，则 W 和 V 也是强连通的
+3. 传递性：如果 V 和 W 是强连通的，且 W 和 X 也是强连通的，则 V 和 X 也是强连通的
 
 ### 无向图
 
@@ -97,7 +114,7 @@ class Graph {
   constructor(datas) {
     this.adj = []; // 邻接表数组
     this.edges = 0; // 边的数目
-    this.points = new Set([]); // 储存所有的点
+    this._points = new Set([]); // 储存所有的点
 
     this.init(datas);
   }
@@ -110,8 +127,8 @@ class Graph {
 
   // 构建顶点的连接
   addEdge(p1, p2) {
-    this.points.add(p1);
-    this.points.add(p2);
+    this._points.add(p1);
+    this._points.add(p2);
 
     if (!this.adj[p1]) this.adj[p1] = [];
     if (!this.adj[p2]) this.adj[p2] = [];
@@ -121,7 +138,7 @@ class Graph {
   }
 
   get points() {
-    return this.points.values();
+    return this._points.values();
   }
 }
 ```
@@ -180,11 +197,6 @@ class DepthFirstPath {
         this.dfs(graph, p);
       }
     }
-  }
-
-  // 初始化顶点所连接到的所有顶点的数目
-  get count() {
-    return this.count;
   }
 
   // 是否存在 p 点和初始化顶点之间的连接？
@@ -296,10 +308,6 @@ class CC {
   id(p) {
     return this.id[p];
   }
-
-  get count() {
-    return this.count;
-  }
 }
 ```
 
@@ -321,7 +329,7 @@ class Digraph {
   constructor(datas) {
     this.adj = []; // 邻接表数组
     this.edges = 0; // 边的数目
-    this.points = new Set([]); // 储存所有的点
+    this._points = new Set([]); // 储存所有的点
 
     this.init(datas);
   }
@@ -337,28 +345,28 @@ class Digraph {
     if (!this.adj[p1]) this.adj[p1] = [];
     this.adj[p1].push(p2);
 
-    this.points.add(p1);
-    this.points.add(p2);
+    this._points.add(p1);
+    this._points.add(p2);
 
     this.edges += 1;
   }
 
   get points() {
-    return this.points.values();
+    return this._points.values();
   }
 
   // 将一个有向图的所有连接都反转，得到一个新的有向图
   reverse() {
-    const graph = new Graph([]);
+    const digraph = new Digraph([]);
 
     for (let i = 0; i < this.adj.length; i += 1) {
       const points = this.adj[i] || [];
 
       for (const point of points) {
-        graph.addEdge(point, i);
+        digraph.addEdge(point, i);
       }
     }
-    return graph;
+    return digraph;
   }
 }
 ```
@@ -418,15 +426,92 @@ class DirectedCycle {
   }
 
   get hasCycle() { return this.cycle.length > 0; }
-
-  get cycle() { return this.cycle; }
 }
 ```
 
 ##### 树顶点的排序
 
-##### 拓扑排序
+- 前序排列`preorder`：在递归调用之前将顶点加入队列
+- 后序排列`postorder`：在递归调用之后将顶点加入队列
+- 逆后序排列`reversePost`：在递归调用之后将顶点压入栈
+
+```javascript
+// 深度优先搜索有向图，并在搜索过程中保存顶点的排序
+class DepthFirstOrder {
+  constructor(digraph) {
+    this.pre = [];
+    this.post = [];
+    this.reversePost = [];
+    this.marked = {};
+
+    for (const point of digraph.points) {
+      if (!this.marked[point]) {
+        this.dfs(digraph, point);
+      }
+    }
+  }
+
+  dfs(digraph, point) {
+    this.pre.push(point);
+    this.marked[point] = true;
+
+    for (const p of digraph.adj[point]) {
+      if (!this.marked[p]) {
+        this.dfs(digraph, p);
+      }
+    }
+
+    this.post.push(point);
+    this.reversePost.unshift(point);
+  }
+}
+```
+
+###### 拓扑排序
+
+给定一幅有向图，将所有的顶点排序，使得所有的有向边均从排在前面的元素指向排在后面的元素
 
 > 一个有向无环图的拓扑排序，即为所有顶点的逆后序排序。
 >
 > 任何一个子节点必位于其所有父节点之后。任一个节点必须在它的所有父节点都被记录后才可以被记录。
+
+##### 寻找强连通分量（`Kosaraju`算法）
+
+`Kosaraju`算法的核心思想：
+
+1. 给定一个有向图 G，将其反转获得反向图 G'
+2. 获取 G' 所有顶点的逆后序排列
+3. 依次遍历逆后序排列中的各个顶点，每次利用该顶点在 G 中进行深度优先搜索。则在同一个递归的`dfs`调用中，被访问到的顶点都在同一个强连通分量中
+
+```javascript
+class KosarajuSCC {
+  constructor(digraph) {
+    this.marked = {};
+    this.id = [];
+    this.count = 0; // 储存强连通分量的数量
+
+    const order = new DepthFirstOrder(digraph.reverse());
+    for (const p of order.reversePost) {
+      if (!this.marked[p]) {
+        this.dfs(digraph, p);
+      }
+    }
+  }
+
+  dfs(digraph, point) {
+    this.marked[point] = false;
+    this.id[point] = count;
+
+    for (const p of digraph.adj[point]) {
+      if (!this.marked[p]) {
+        this.dfs(digraph, p);
+      }
+    }
+  }
+
+  // 判断两点是否是强连通的
+  isStrongConnected(p1, p2) {
+    return this.id[p1] === this.id[p2];
+  }
+}
+```
