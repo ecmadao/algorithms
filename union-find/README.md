@@ -136,7 +136,7 @@ const union = (val, target) => {
 相对于的，在查找时，只要比较两个值的根节点是否相同即可：
 
 ```javascript
-const find = (val, target) => root(val) === root(target);
+const find = (val, target) => findRoot(val) === findRoot(target);
 ```
 
 这种算法的优势就在于并集操作比较简单。因为是树状结构，我们往往不需要遍历太多次；而它的缺点则在于，如果树状结构是瘦长的，即我们先将 `1` 链接到 `2`， 再将 `2` 链接 `3` 这样依次下去，则每个节点只有一个子节点，最终成为一个线状结构。在这种情况下，进行链接或判断时，在糟糕的情况下我们还是需要遍历 N - 1 次以便找到根节点。

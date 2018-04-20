@@ -212,6 +212,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
+| 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 |  |  |  |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
