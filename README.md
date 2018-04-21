@@ -214,6 +214,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
+| 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 |  |  |  |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
 | 007 | [Reverse Integer](./leetcode/JavaScript/No07.reverse-integer.js)  | `Easy` |

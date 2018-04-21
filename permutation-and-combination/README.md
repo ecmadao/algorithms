@@ -4,7 +4,6 @@
 
 - [排列组合](#%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88)
   - [全排列](#%E5%85%A8%E6%8E%92%E5%88%97)
-    - [Solution 1](#solution-1)
   - [组合](#%E7%BB%84%E5%90%88)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->

@@ -1,4 +1,32 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [图](#%E5%9B%BE)
+  - [基本概念](#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
+  - [图的数据结构](#%E5%9B%BE%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
+  - [无向图](#%E6%97%A0%E5%90%91%E5%9B%BE)
+    - [构建无向图](#%E6%9E%84%E5%BB%BA%E6%97%A0%E5%90%91%E5%9B%BE)
+    - [无向图的搜索](#%E6%97%A0%E5%90%91%E5%9B%BE%E7%9A%84%E6%90%9C%E7%B4%A2)
+      - [深度优先搜索 DFS](#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-dfs)
+      - [用 DFS 查找图中的路径](#%E7%94%A8-dfs-%E6%9F%A5%E6%89%BE%E5%9B%BE%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84)
+      - [广度优先搜索 BFS](#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-bfs)
+      - [连通分量](#%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F)
+  - [有向图](#%E6%9C%89%E5%90%91%E5%9B%BE)
+    - [构建有向图](#%E6%9E%84%E5%BB%BA%E6%9C%89%E5%90%91%E5%9B%BE)
+    - [有向图的应用](#%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E5%BA%94%E7%94%A8)
+      - [有向环检测](#%E6%9C%89%E5%90%91%E7%8E%AF%E6%A3%80%E6%B5%8B)
+      - [树顶点的排序](#%E6%A0%91%E9%A1%B6%E7%82%B9%E7%9A%84%E6%8E%92%E5%BA%8F)
+        - [拓扑排序](#%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F)
+      - [寻找强连通分量（`Kosaraju`算法）](#%E5%AF%BB%E6%89%BE%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8Fkosaraju%E7%AE%97%E6%B3%95)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 图
+
+- [无向图和有向图](./README.md)
+- [最小生成树](./MST.md)
+- [最短路径](./PATH.md)
 
 简而言之，图是由一组顶点和一组能够将两个顶点连接的边组成的。
 
@@ -236,6 +264,7 @@ class BreadthFirstPaths {
 
   bfs(graph, point) {
     const queue = [];
+    this.marked[point] = true;
     queue.push(point);
 
     while (queue.length) {
