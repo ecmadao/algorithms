@@ -92,6 +92,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 212 | [Word Search II](./leetcode/JavaScript/No212.word-search-II.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
+| 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 |  |  |  |
 | 002 | [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)  | `Medium` |
 | 003 | [Longest Substring Without Repeating Characters](./leetcode/JavaScript/No03.longest-substring-without-repeating-characters.js)  | `Medium` |
