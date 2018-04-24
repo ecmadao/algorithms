@@ -59,6 +59,7 @@ var searchInsert = function(nums, target) {
     }
   }
 
+  console.log(index)
   return index;
 };
 
@@ -67,3 +68,16 @@ searchInsert([1,3,5,6], 2);
 searchInsert([1,3,5,6], 7);
 searchInsert([1,3,5,6], 0);
 searchInsert([1], 0);
+
+const insert = (arr, val) => {
+  const index = searchInsert(arr, val);
+  const r = arr.slice(0, index);
+  r.push(val);
+  return r.concat(arr.slice(index));
+};
+
+console.log(insert([1,3,5,6], 5));
+console.log(insert([1,3,5,6], 2));
+console.log(insert([1,3,5,6], 7));
+console.log(insert([1,3,5,6], 0));
+console.log(insert([1], 0));

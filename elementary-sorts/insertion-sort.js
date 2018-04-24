@@ -27,3 +27,22 @@ console.log(array); // [1, 2, 3, 5, 7, 8, 9]
 
 const loopCount = sort([11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
 console.log(`Loop count is ${loopCount}`); // 65
+
+const insertSort = (array) => {
+  let i = 1;
+  while (i < array.length) {
+    const base = array[i];
+
+    let j = i;
+    while (j > 0 && array[j - 1] > base) {
+      array[j] = array[j - 1];
+      j -= 1;
+    }
+    array[j] = base;
+    i += 1;
+  }
+  return array;
+};
+
+const result = insertSort([11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+console.log(`insertSort result ${result}`); // 65
