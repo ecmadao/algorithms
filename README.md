@@ -218,6 +218,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
+| 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
 |  |  |  |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
 | 007 | [Reverse Integer](./leetcode/JavaScript/No07.reverse-integer.js)  | `Easy` |
