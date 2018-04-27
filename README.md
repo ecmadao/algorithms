@@ -18,7 +18,9 @@
 
 ## Algorithms
 
-Algorithms notes & code & leetcode solution by Node.js.
+> 在设计算法时，面对的第一个任务是精准地定义问题。
+
+Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 ### 预储备
 
@@ -216,6 +218,7 @@ Algorithms notes & code & leetcode solution by Node.js.
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
+| 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |

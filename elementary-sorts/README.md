@@ -5,9 +5,11 @@
 - [基本排序](#%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F)
   - [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
   - [插入排序](#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
+    - [插入排序的优化版本](#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%9A%84%E4%BC%98%E5%8C%96%E7%89%88%E6%9C%AC)
   - [希尔排序](#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F)
   - [洗牌](#%E6%B4%97%E7%89%8C)
   - [桶排序 Bucket sort](#%E6%A1%B6%E6%8E%92%E5%BA%8F-bucket-sort)
+  - [二分排序](#%E4%BA%8C%E5%88%86%E6%8E%92%E5%BA%8F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
