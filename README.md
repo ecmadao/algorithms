@@ -185,6 +185,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 173 | [Binary Search Tree Iterator](./leetcode/JavaScript/No173.binary-search-tree-iterator.js) | `Medium` |
 | 179 | [Largest Number](./leetcode/JavaScript/No179.largest-number.js) | `Medium` |
 | 187 | [Repeated DNA Sequences](./leetcode/JavaScript/No187.repeated-dna-sequences.js) | `Medium` |
+| 200 | [Number of Islands](./leetcode/JavaScript/No200.number-of-islands.js) | `Medium` |
 | 207 | [Course Schedule](./leetcode/JavaScript/No207.course-schedule.js) | `Medium` |
 | 208 | [Implement Trie (Prefix Tree)](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js) | `Medium` |
 | 209 | [Minimum Size Subarray Sum](./leetcode/JavaScript/No209.minimum-size-subarray-sum.js) | `Medium` |
