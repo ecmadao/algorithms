@@ -191,6 +191,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 209 | [Minimum Size Subarray Sum](./leetcode/JavaScript/No209.minimum-size-subarray-sum.js) | `Medium` |
 | 210 | [Course Schedule II](./leetcode/JavaScript/No210.course-schedule-II.js) | `Medium` |
 | 211 | [Add and Search Word - Data structure design](./leetcode/JavaScript/No211.add-and-search-word-data-structure-design.js) | `Medium` |
+| 213 | [House Robber II](./leetcode/JavaScript/No213.house-robber-II.js) | `Medium` |
 | 215 | [Kth Largest Element in an Array](./leetcode/JavaScript/No215.kth-largest-element-in-an-array.js) | `Medium` |
 | 220 | [Contains Duplicate III](./leetcode/JavaScript/No220.contains-duplicate-III.js) | `Medium` |
 | 229 | [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js) | `Medium` |
@@ -204,6 +205,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 287 | [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
+| 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
 | 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
@@ -269,6 +271,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 172 | [Factorial Trailing Zeroes](./leetcode/JavaScript/No172.factorial-trailing-zeroes.js)  | `Easy` |
 | 175 | [Combine Two Tables](./leetcode/JavaScript/No175.combine-two-tables.sql)  | `Easy` |
 | 189 | [Rotate Array](./leetcode/JavaScript/No189.rotate-array.js)  | `Easy` |
+| 198 | [House Robber](./leetcode/JavaScript/No198.house-robber.js)  | `Easy` |
 | 203 | [Remove Linked List Elements](./leetcode/JavaScript/No203.remove-linked-list-elements.js)  | `Easy` |
 | 204 | [Count Primes](./leetcode/JavaScript/No204.count-primes.js)  | `Easy` |
 | 206 | [Reverse Linked List](./leetcode/JavaScript/No206.reverse-linked-list.js)  | `Easy` |
