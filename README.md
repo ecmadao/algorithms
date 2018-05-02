@@ -185,6 +185,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 173 | [Binary Search Tree Iterator](./leetcode/JavaScript/No173.binary-search-tree-iterator.js) | `Medium` |
 | 179 | [Largest Number](./leetcode/JavaScript/No179.largest-number.js) | `Medium` |
 | 187 | [Repeated DNA Sequences](./leetcode/JavaScript/No187.repeated-dna-sequences.js) | `Medium` |
+| 199 | [Binary Tree Right Side View](./leetcode/JavaScript/No199.binary-tree-right-side-view.js) | `Medium` |
 | 200 | [Number of Islands](./leetcode/JavaScript/No200.number-of-islands.js) | `Medium` |
 | 207 | [Course Schedule](./leetcode/JavaScript/No207.course-schedule.js) | `Medium` |
 | 208 | [Implement Trie (Prefix Tree)](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js) | `Medium` |
@@ -223,6 +224,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
+| 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
