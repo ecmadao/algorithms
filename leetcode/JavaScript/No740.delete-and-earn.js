@@ -26,6 +26,9 @@
  * Note:
  * The length of nums is at most 20000.
  * Each element nums[i] is an integer in the range [1, 10000].
+ *
+ * 思路：
+ * 类似 House Robber 系列题目
  */
 
 /**
@@ -33,39 +36,24 @@
  * @return {number}
  */
 var deleteAndEarn = function(nums) {
-  const tmp = {};
-  const maxTmp = {};
+  const map = new Map();
   for (const num of nums) {
-    tmp[num] = tmp[num] ? tmp[num] + 1 : 1;
+    map.set(num, (map.get(num) || 0) + 1);
   }
 
-  const earn = (remain) => {
-    const keys = Object.keys(remain);
-    if (!keys.length) return 0;
-    const num = parseInt(keys[0], 10);
-    if (maxTmp[num]) return maxTmp[num];
-    const count = remain[num];
-
-    // earn current num
-    delete remain[num];
-    const tmp1 = remain[num + 1];
-    const tmp2 = remain[num - 1];
-    delete remain[num + 1];
-    delete remain[num - 1];
-    const earned = num * count + earn(remain);
-
-    if (tmp2) remain[num - 1] = tmp2;
-    if (tmp1) remain[num + 1] = tmp1;
-    const unearned = earn(remain);
-
-    if (tmp2) remain[num - 1] = tmp2;
-    if (tmp1) remain[num + 1] = tmp1;
-    remain[num] = count;
-
-    const max = Math.max(earned, unearned);
-    maxTmp[num] = max;
-    return max;
-  };
-
-  return earn(tmp);
+  let pre;
+  let earned = 0;
+  let unearned = 0;
+  for (const num of [...map.keys()].sort((a, b) => a - b)) {
+    const t = earned;
+    if (num - 1 !== pre) {
+      earned = Math.max(unearned, earned) + num * map.get(num);
+    } else {
+      earned = num * map.get(num) + unearned;
+    }
+    unearned = Math.max(t, unearned);
+    pre = num;
+  }
+  return Math.max(earned, unearned);
 };
+
