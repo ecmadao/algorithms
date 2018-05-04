@@ -274,8 +274,10 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 175 | [Combine Two Tables](./leetcode/JavaScript/No175.combine-two-tables.sql)  | `Easy` |
 | 189 | [Rotate Array](./leetcode/JavaScript/No189.rotate-array.js)  | `Easy` |
 | 198 | [House Robber](./leetcode/JavaScript/No198.house-robber.js)  | `Easy` |
+| 202 | [Happy Number](./leetcode/JavaScript/No202.happy-number.js)  | `Easy` |
 | 203 | [Remove Linked List Elements](./leetcode/JavaScript/No203.remove-linked-list-elements.js)  | `Easy` |
 | 204 | [Count Primes](./leetcode/JavaScript/No204.count-primes.js)  | `Easy` |
+| 205 | [Isomorphic Strings](./leetcode/JavaScript/No205.isomorphic-strings.js)  | `Easy` |
 | 206 | [Reverse Linked List](./leetcode/JavaScript/No206.reverse-linked-list.js)  | `Easy` |
 | 217 | [Contains Duplicate](./leetcode/JavaScript/No217.contains-duplicate.js)  | `Easy` |
 | 219 | [Contains Duplicate II](./leetcode/JavaScript/No219.contains-duplicate-II.js)  | `Easy` |
