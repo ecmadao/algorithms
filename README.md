@@ -50,6 +50,10 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 - 字典树
   - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
   - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
+- 字符串
+  - 字符串匹配的 KMP 算法
+    - [KMP 算法详细解析](https://blog.sengxian.com/algorithms/kmp)
+    - [克努斯-莫里斯-普拉特算法](https://zh.wikipedia.org/wiki/%E5%85%8B%E5%8A%AA%E6%96%AF-%E8%8E%AB%E9%87%8C%E6%96%AF-%E6%99%AE%E6%8B%89%E7%89%B9%E7%AE%97%E6%B3%95)
 - [排列组合](./permutation-and-combination)
 - [图](./graph)
 
@@ -92,6 +96,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 174 | [Dungeon Game](./leetcode/JavaScript/No174.dungeon-game.js) | `Hard` |
 | 188 | [Best Time to Buy and Sell Stock IV](./leetcode/JavaScript/No188.best-time-to-buy-and-sell-stock-iv.js) | `Hard` |
 | 212 | [Word Search II](./leetcode/JavaScript/No212.word-search-II.js) | `Hard` |
+| 214 | [Shortest Palindrome](./leetcode/JavaScript/No214.shortest-palindrome.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
@@ -290,6 +295,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 268 | [Missing Number](./leetcode/JavaScript/No268.missing-number.js)  | `Easy` |
 | 278 | [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)  | `Easy` |
 | 283 | [Move Zeroes](./leetcode/JavaScript/No283.move-zeroes.js)  | `Easy` |
+| 290 | [Word Pattern](./leetcode/JavaScript/No290.word-pattern.js)  | `Easy` |
 | 344 | [Reverse String](./leetcode/JavaScript/No344.reverse-string.js)  | `Easy` |
 | 349 | [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)  | `Easy` |
 | 350 | [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)  | `Easy` |
