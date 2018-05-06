@@ -25,6 +25,10 @@
  */
 
 /**
+ * Solution 1
+ */
+
+/**
  * 思路：
  * 从头开始遍历，以当前数字 num 为基准，算出目标值 target 是其的多少倍（例如 count）。
  * 因此，结果的数组中，当前数字最多就可能出现 count 次。
@@ -69,9 +73,44 @@ var combination = function(candidates) {
 * @param {number} target
 * @return {number[][]}
 */
-var combinationSum = function(candidates, target) {
+var combinationSum_ = function(candidates, target) {
   var findTarget = combination(candidates);
   var results = findTarget([], target, 0);
+  return results;
+};
+
+/* ============================================================= */
+
+/**
+ * Solution 2
+ */
+
+/**
+ * @param {number[]} candidates
+ * @param {number} target
+ * @return {number[][]}
+ */
+var combinationSum = function(candidates, target) {
+  candidates.sort((a, b) => a - b);
+  const results = [];
+
+  const find = (min, remain, arr) => {
+    if (remain === 0) {
+      results.push([...arr]);
+      return;
+    }
+
+    for (const num of candidates) {
+      if (num > remain) return;
+      if (num < min) continue;
+
+      arr.push(num);
+      find(num, remain - num, arr);
+      arr.pop();
+    }
+  };
+
+  find(candidates[0], target, []);
   return results;
 };
 

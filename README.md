@@ -199,6 +199,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 211 | [Add and Search Word - Data structure design](./leetcode/JavaScript/No211.add-and-search-word-data-structure-design.js) | `Medium` |
 | 213 | [House Robber II](./leetcode/JavaScript/No213.house-robber-II.js) | `Medium` |
 | 215 | [Kth Largest Element in an Array](./leetcode/JavaScript/No215.kth-largest-element-in-an-array.js) | `Medium` |
+| 216 | [Combination Sum III](./leetcode/JavaScript/No216.combination-sum-III.js) | `Medium` |
 | 220 | [Contains Duplicate III](./leetcode/JavaScript/No220.contains-duplicate-III.js) | `Medium` |
 | 229 | [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js) | `Medium` |
 | 230 | [Kth Smallest Element in a BST](./leetcode/JavaScript/No230.kth-smallest-element-in-a-bst.js) | `Medium` |
