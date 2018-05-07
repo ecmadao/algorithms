@@ -215,6 +215,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
 | 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
+| 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
