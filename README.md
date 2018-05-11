@@ -206,6 +206,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 222 | [Count Complete Tree Nodes](./leetcode/JavaScript/No222.count-complete-tree-nodes.js) | `Medium` |
 | 223 | [Rectangle Area](./leetcode/JavaScript/No223.rectangle-area.js) | `Medium` |
 | 227 | [Basic Calculator II](./leetcode/JavaScript/No227.basic-calculator-II.js) | `Medium` |
+| 228 | [Summary Ranges](./leetcode/JavaScript/No228.summary-ranges.js) | `Medium` |
 | 229 | [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js) | `Medium` |
 | 230 | [Kth Smallest Element in a BST](./leetcode/JavaScript/No230.kth-smallest-element-in-a-bst.js) | `Medium` |
 | 240 | [Search a 2D Matrix II](./leetcode/JavaScript/No240.search-a-2d-matrix-II.js) | `Medium` |
@@ -296,6 +297,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 217 | [Contains Duplicate](./leetcode/JavaScript/No217.contains-duplicate.js)  | `Easy` |
 | 219 | [Contains Duplicate II](./leetcode/JavaScript/No219.contains-duplicate-II.js)  | `Easy` |
 | 225 | [Implement Stack using Queues](./leetcode/JavaScript/No225.implement-stack-using-queues.js)  | `Easy` |
+| 226 | [Invert Binary Tree](./leetcode/JavaScript/No226.invert-binary-tree.js)  | `Easy` |
 | 231 | [Power of Two](./leetcode/JavaScript/No231.power-of-two.js)  | `Easy` |
 | 232 | [Implement Queue using Stacks](./leetcode/JavaScript/No232.implement-queue-using-stacks.js)  | `Easy` |
 | 234 | [Palindrome Linked List](./leetcode/JavaScript/No234.palindrome-linked-list.js)  | `Easy` |
