@@ -88,3 +88,14 @@ var calculate = function(s) {
   if (queue.length > 1) cal();
   return queue[0];
 };
+
+
+// Test case
+console.log(calculate("(1+(4+5+2)-3)+(6+8)")) // 23
+console.log(calculate(" 2-1 + 2 ")) // 3
+console.log(calculate(" 2-1 - 2 ")) // -1
+console.log(calculate("1 + 1")) // 2
+console.log(calculate("(1+(4+5+2)-(3-1))+(6+8)")) // 24
+console.log(calculate("123")) // 123
+console.log(calculate("1-11")) // -10
+console.log(calculate("12-11")) // 1

@@ -205,6 +205,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 221 | [Maximal Square](./leetcode/JavaScript/No221.maximal-square.js) | `Medium` |
 | 222 | [Count Complete Tree Nodes](./leetcode/JavaScript/No222.count-complete-tree-nodes.js) | `Medium` |
 | 223 | [Rectangle Area](./leetcode/JavaScript/No223.rectangle-area.js) | `Medium` |
+| 227 | [Basic Calculator II](./leetcode/JavaScript/No227.basic-calculator-II.js) | `Medium` |
 | 229 | [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js) | `Medium` |
 | 230 | [Kth Smallest Element in a BST](./leetcode/JavaScript/No230.kth-smallest-element-in-a-bst.js) | `Medium` |
 | 240 | [Search a 2D Matrix II](./leetcode/JavaScript/No240.search-a-2d-matrix-II.js) | `Medium` |
