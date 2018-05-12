@@ -210,6 +210,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 229 | [Majority Element II](./leetcode/JavaScript/No229.majority-element-II.js) | `Medium` |
 | 230 | [Kth Smallest Element in a BST](./leetcode/JavaScript/No230.kth-smallest-element-in-a-bst.js) | `Medium` |
 | 236 | [Lowest Common Ancestor of a Binary Tree](./leetcode/JavaScript/No236.lowest-common-ancestor-of-a-binary-tree.js) | `Medium` |
+| 238 | [Product of Array Except Self](./leetcode/JavaScript/No238.product-of-array-except-self.js) | `Medium` |
 | 240 | [Search a 2D Matrix II](./leetcode/JavaScript/No240.search-a-2d-matrix-II.js) | `Medium` |
 | 260 | [Single Number III](./leetcode/JavaScript/No260.single-number-III.js) | `Medium` |
 | 264 | [Ugly Number II](./leetcode/JavaScript/No264.ugly-number-II.js) | `Medium` |
@@ -326,6 +327,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
 | 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
 | 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
+| 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
 | 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
