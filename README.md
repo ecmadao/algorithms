@@ -212,6 +212,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 236 | [Lowest Common Ancestor of a Binary Tree](./leetcode/JavaScript/No236.lowest-common-ancestor-of-a-binary-tree.js) | `Medium` |
 | 238 | [Product of Array Except Self](./leetcode/JavaScript/No238.product-of-array-except-self.js) | `Medium` |
 | 240 | [Search a 2D Matrix II](./leetcode/JavaScript/No240.search-a-2d-matrix-II.js) | `Medium` |
+| 241 | [Different Ways to Add Parentheses](./leetcode/JavaScript/No241.different-ways-to-add-parentheses.js) | `Medium` |
 | 260 | [Single Number III](./leetcode/JavaScript/No260.single-number-III.js) | `Medium` |
 | 264 | [Ugly Number II](./leetcode/JavaScript/No264.ugly-number-II.js) | `Medium` |
 | 274 | [H-Index](./leetcode/JavaScript/No274.h-index.js) | `Medium` |
@@ -305,6 +306,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 234 | [Palindrome Linked List](./leetcode/JavaScript/No234.palindrome-linked-list.js)  | `Easy` |
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](./leetcode/JavaScript/No235.lowest-common-ancestor-of-a-binary-search-tree.js)  | `Easy` |
 | 237 | [Delete Node in a Linked List](./leetcode/JavaScript/No237.delete-node-in-a-linked-list.js)  | `Easy` |
+| 242 | [Valid Anagram](./leetcode/JavaScript/No242.valid-anagram.js)  | `Easy` |
 | 263 | [Ugly Number](./leetcode/JavaScript/No263.ugly-number.js)  | `Easy` |
 | 268 | [Missing Number](./leetcode/JavaScript/No268.missing-number.js)  | `Easy` |
 | 278 | [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)  | `Easy` |
