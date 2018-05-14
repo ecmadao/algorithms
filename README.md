@@ -232,6 +232,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
+| 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
 | 523 | [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js) | `Medium` |
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
 | 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
@@ -241,6 +242,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
+| 698 | [Partition to K Equal Sum Subsets](./leetcode/JavaScript/No698.partition-to-k-equal-sum-subsets.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
