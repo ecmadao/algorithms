@@ -103,6 +103,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 |  |  |  |
+| No  | Title | Difficulty |
 | 002 | [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)  | `Medium` |
 | 003 | [Longest Substring Without Repeating Characters](./leetcode/JavaScript/No03.longest-substring-without-repeating-characters.js)  | `Medium` |
 | 005 | [Longest Palindromic Substring](./leetcode/JavaScript/No05.longest-palindromic-substring.js)  | `Medium` |
@@ -228,6 +229,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
+| 416 | [Partition Equal Subset Sum](./leetcode/JavaScript/No416.partition-equal-subset-sum.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
@@ -250,6 +252,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
 |  |  |  |
+| No  | Title | Difficulty |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
 | 007 | [Reverse Integer](./leetcode/JavaScript/No07.reverse-integer.js)  | `Easy` |
 | 009 | [Palindrome Number](./leetcode/JavaScript/No09.palindrome-number.js)  | `Easy` |
