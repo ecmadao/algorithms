@@ -31,9 +31,9 @@ var canPartition = function(nums) {
   if (total % 2 !== 0) return false;
   const target = total / 2;
 
-  const search = (from, cur, k) => {
+  const search = (from, cur) => {
     const tmp2 = {};
-    if (k === 2 || cur === target) return total === target;
+    if (cur === target) return total === target;
 
     for (let i = from; i < nums.length; i += 1) {
       const num = nums[i];
@@ -43,7 +43,7 @@ var canPartition = function(nums) {
 
       tmp[i] = true;
       total -= num;
-      const result = search(i + 1, cur + num, k);
+      const result = search(i + 1, cur + num);
       if (result) {
         return true;
       } else {
@@ -56,7 +56,7 @@ var canPartition = function(nums) {
     return false;
   };
 
-  return search(0, 0, 1);
+  return search(0, 0);
 };
 
 // Test case

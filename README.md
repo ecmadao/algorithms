@@ -325,6 +325,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 387 | [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)  | `Easy` |
 | 389 | [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)  | `Easy` |
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
+| 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
 | 500 | [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)  | `Easy` |
@@ -337,6 +338,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
 | 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
 | 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
+| 687 | [Longest Univalue Path](./leetcode/JavaScript/No687.longest-univalue-path.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
 
