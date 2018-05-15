@@ -240,6 +240,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
 | 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
 | 565 | [Array Nesting](./leetcode/JavaScript/No565.array-nesting.js) | `Medium` |
+| 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
