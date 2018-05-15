@@ -98,6 +98,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 212 | [Word Search II](./leetcode/JavaScript/No212.word-search-II.js) | `Hard` |
 | 214 | [Shortest Palindrome](./leetcode/JavaScript/No214.shortest-palindrome.js) | `Hard` |
 | 224 | [Basic Calculator](./leetcode/JavaScript/No224.basic-calculator.js) | `Hard` |
+| 239 | [Sliding Window Maximum](./leetcode/JavaScript/No239.sliding-window-maximum.js) | `Hard` |
 | 282 | [Expression Add Operators](./leetcode/JavaScript/No282.expression-add-operators.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
