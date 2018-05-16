@@ -103,6 +103,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
+| 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
 |  |  |  |
 | No  | Title | Difficulty |
 | 002 | [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)  | `Medium` |
@@ -243,6 +244,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 655 | [Print Binary Tree](./leetcode/JavaScript/No655.print-binary-tree.js) | `Medium` |
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
