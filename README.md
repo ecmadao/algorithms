@@ -197,6 +197,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 187 | [Repeated DNA Sequences](./leetcode/JavaScript/No187.repeated-dna-sequences.js) | `Medium` |
 | 199 | [Binary Tree Right Side View](./leetcode/JavaScript/No199.binary-tree-right-side-view.js) | `Medium` |
 | 200 | [Number of Islands](./leetcode/JavaScript/No200.number-of-islands.js) | `Medium` |
+| 201 | [Bitwise AND of Numbers Range](./leetcode/JavaScript/No201.bitwise-AND-of-numbers-range.js) | `Medium` |
 | 207 | [Course Schedule](./leetcode/JavaScript/No207.course-schedule.js) | `Medium` |
 | 208 | [Implement Trie (Prefix Tree)](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js) | `Medium` |
 | 209 | [Minimum Size Subarray Sum](./leetcode/JavaScript/No209.minimum-size-subarray-sum.js) | `Medium` |
@@ -244,6 +245,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 654 | [Maximum Binary Tree](./leetcode/JavaScript/No654.maximum-binary-tree.js) | `Medium` |
 | 655 | [Print Binary Tree](./leetcode/JavaScript/No655.print-binary-tree.js) | `Medium` |
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
