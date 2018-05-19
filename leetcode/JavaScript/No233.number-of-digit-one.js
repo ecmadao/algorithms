@@ -31,3 +31,10 @@ var countDigitOne = function(n) {
     return base + countDigitOne(n % base) + (num) * countDigitOne(base - 1);
   }
 };
+
+// Test case
+console.log(countDigitOne(10)); // 2
+console.log(countDigitOne(99)); // 20
+console.log(countDigitOne(100)); // 21
+console.log(countDigitOne(161)); // 99
+console.log(countDigitOne(999)); // 300

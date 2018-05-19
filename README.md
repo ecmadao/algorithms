@@ -102,6 +102,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 239 | [Sliding Window Maximum](./leetcode/JavaScript/No239.sliding-window-maximum.js) | `Hard` |
 | 282 | [Expression Add Operators](./leetcode/JavaScript/No282.expression-add-operators.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
+| 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 | 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
@@ -320,6 +321,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](./leetcode/JavaScript/No235.lowest-common-ancestor-of-a-binary-search-tree.js)  | `Easy` |
 | 237 | [Delete Node in a Linked List](./leetcode/JavaScript/No237.delete-node-in-a-linked-list.js)  | `Easy` |
 | 242 | [Valid Anagram](./leetcode/JavaScript/No242.valid-anagram.js)  | `Easy` |
+| 257 | [Binary Tree Paths](./leetcode/JavaScript/No257.binary-tree-paths.js)  | `Easy` |
 | 263 | [Ugly Number](./leetcode/JavaScript/No263.ugly-number.js)  | `Easy` |
 | 268 | [Missing Number](./leetcode/JavaScript/No268.missing-number.js)  | `Easy` |
 | 278 | [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)  | `Easy` |
@@ -334,6 +336,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
+| 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
 | 500 | [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)  | `Easy` |
 | 520 | [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)  | `Easy` |
