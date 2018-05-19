@@ -226,6 +226,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 275 | [H-Index II](./leetcode/JavaScript/No275.h-index-II.js) | `Medium` |
 | 279 | [Perfect Squares](./leetcode/JavaScript/No279.perfect-squares.js) | `Medium` |
 | 287 | [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
+| 289 | [Game of Life](./leetcode/JavaScript/No289.game-of-life.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
@@ -322,6 +323,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 237 | [Delete Node in a Linked List](./leetcode/JavaScript/No237.delete-node-in-a-linked-list.js)  | `Easy` |
 | 242 | [Valid Anagram](./leetcode/JavaScript/No242.valid-anagram.js)  | `Easy` |
 | 257 | [Binary Tree Paths](./leetcode/JavaScript/No257.binary-tree-paths.js)  | `Easy` |
+| 258 | [Add Digits](./leetcode/JavaScript/No258.add-digits.js)  | `Easy` |
 | 263 | [Ugly Number](./leetcode/JavaScript/No263.ugly-number.js)  | `Easy` |
 | 268 | [Missing Number](./leetcode/JavaScript/No268.missing-number.js)  | `Easy` |
 | 278 | [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)  | `Easy` |
