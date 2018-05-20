@@ -350,9 +350,11 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
 | 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
 | 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
+| 665 | [Non-decreasing Array](./leetcode/JavaScript/No665.non-decreasing-array.js)  | `Easy` |
 | 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
 | 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
 | 687 | [Longest Univalue Path](./leetcode/JavaScript/No687.longest-univalue-path.js)  | `Easy` |
+| 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
 
