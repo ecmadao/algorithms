@@ -329,6 +329,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 278 | [First Bad Version](./leetcode/JavaScript/No278.first-bad-version.js)  | `Easy` |
 | 283 | [Move Zeroes](./leetcode/JavaScript/No283.move-zeroes.js)  | `Easy` |
 | 290 | [Word Pattern](./leetcode/JavaScript/No290.word-pattern.js)  | `Easy` |
+| 292 | [Nim Game](./leetcode/JavaScript/No292.nim-game.js)  | `Easy` |
 | 344 | [Reverse String](./leetcode/JavaScript/No344.reverse-string.js)  | `Easy` |
 | 349 | [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)  | `Easy` |
 | 350 | [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)  | `Easy` |
@@ -336,6 +337,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 387 | [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)  | `Easy` |
 | 389 | [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)  | `Easy` |
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
+| 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
 | 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
