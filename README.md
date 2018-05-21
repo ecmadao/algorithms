@@ -235,6 +235,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
+| 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
 | 416 | [Partition Equal Subset Sum](./leetcode/JavaScript/No416.partition-equal-subset-sum.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
@@ -354,6 +355,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
 | 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
 | 687 | [Longest Univalue Path](./leetcode/JavaScript/No687.longest-univalue-path.js)  | `Easy` |
+| 697 | [Degree of an Array](./leetcode/JavaScript/No697.degree-of-an-array.js)  | `Easy` |
 | 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
