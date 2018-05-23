@@ -104,6 +104,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
+| 446 | [Arithmetic Slices II - Subsequence](./leetcode/JavaScript/No446.arithmetic-slices-II-subsequence.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 | 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
 |  |  |  |
@@ -347,6 +348,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 520 | [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)  | `Easy` |
 | 530 | [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)  | `Easy` |
 | 541 | [Reverse String II](./leetcode/JavaScript/No541.reverse-string-II.js)  | `Easy` |
+| 561 | [Array Partition I](./leetcode/JavaScript/No561.array-partition-I.js)  | `Easy` |
 | 594 | [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)  | `Easy` |
 | 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
 | 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
