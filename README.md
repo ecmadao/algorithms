@@ -228,6 +228,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 279 | [Perfect Squares](./leetcode/JavaScript/No279.perfect-squares.js) | `Medium` |
 | 287 | [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
 | 289 | [Game of Life](./leetcode/JavaScript/No289.game-of-life.js) | `Medium` |
+| 299 | [Bulls and Cows](./leetcode/JavaScript/No299.bulls-and-cows.js) | `Medium` |
+| 300 | [Longest Increasing Subsequence](./leetcode/JavaScript/No300.longest-increasing-subsequence.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
