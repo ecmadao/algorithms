@@ -55,3 +55,9 @@ var getHint = function(secret, guess) {
   }
   return `${a}A${b}B`;
 };
+
+// Test case
+console.log(getHint('1123', '0111')) // 1A1B
+console.log(getHint('1807', '7810')) // 1A2B
+console.log(getHint('1122', '1222')) // 3A0B
+console.log(getHint('6244988279', '3819888600')) // 2A2B
