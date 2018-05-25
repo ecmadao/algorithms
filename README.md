@@ -101,6 +101,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 233 | [Number of Digit One](./leetcode/JavaScript/No233.number-of-digit-one.js) | `Hard` |
 | 239 | [Sliding Window Maximum](./leetcode/JavaScript/No239.sliding-window-maximum.js) | `Hard` |
 | 282 | [Expression Add Operators](./leetcode/JavaScript/No282.expression-add-operators.js) | `Hard` |
+| 297 | [Serialize and Deserialize Binary Tree](./leetcode/JavaScript/No297.serialize-and-deserialize-binary-tree.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
