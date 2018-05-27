@@ -247,6 +247,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
 | 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
+| 513 | [Find Bottom Left Tree Value](./leetcode/JavaScript/No513.find-bottom-left-tree-value.js) | `Medium` |
 | 523 | [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js) | `Medium` |
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
 | 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
@@ -337,6 +338,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 283 | [Move Zeroes](./leetcode/JavaScript/No283.move-zeroes.js)  | `Easy` |
 | 290 | [Word Pattern](./leetcode/JavaScript/No290.word-pattern.js)  | `Easy` |
 | 292 | [Nim Game](./leetcode/JavaScript/No292.nim-game.js)  | `Easy` |
+| 303 | [Range Sum Query - Immutable](./leetcode/JavaScript/No303.range-sum-query-immutable.js)  | `Easy` |
 | 344 | [Reverse String](./leetcode/JavaScript/No344.reverse-string.js)  | `Easy` |
 | 349 | [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)  | `Easy` |
 | 350 | [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)  | `Easy` |
