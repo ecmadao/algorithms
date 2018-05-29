@@ -232,6 +232,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 289 | [Game of Life](./leetcode/JavaScript/No289.game-of-life.js) | `Medium` |
 | 299 | [Bulls and Cows](./leetcode/JavaScript/No299.bulls-and-cows.js) | `Medium` |
 | 300 | [Longest Increasing Subsequence](./leetcode/JavaScript/No300.longest-increasing-subsequence.js) | `Medium` |
+| 304 | [Range Sum Query 2D - Immutable](./leetcode/JavaScript/No304.norange-sum-query-2D-immutable.js) | `Medium` |
+| 307 | [Range Sum Query - Mutable](./leetcode/JavaScript/No307.range-sum-query-mutable.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
