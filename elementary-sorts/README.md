@@ -230,3 +230,39 @@ const shuffing = (array) => {
 
 ### [二分排序]()
 
+```javascript
+// 二分搜索
+const search = (nums, target) => {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+    const mid = Math.ceil((right + left) / 2);
+    const num = nums[mid];
+    if (num === target) return mid;
+    if (num > target) right = mid - 1;
+    if (num < target) left = mid + 1;
+  }
+
+  if (right === 0) {
+    if (target < nums[right]) return 0;
+    return right + 1;
+  }
+  if (left === nums.length - 1) {
+    if (target > nums[left]) return nums.length;
+    return left;
+  }
+  return nums[left] < target ? left + 1 : left;
+};
+
+console.log(search([1,3,7,9], 4));
+console.log(search([1,3,5,7,9], 4));
+console.log(search([1,3,5,7,9], 6));
+console.log(search([1,3,5,7,9], 10));
+console.log(search([1,3,5,7,9], 0));
+console.log(search([1], 3));
+console.log(search([1], 0));
+console.log(search([], 0));
+console.log(search([0, 9], 3));
+console.log(search([0, 1, 3, 9], 5));
+```

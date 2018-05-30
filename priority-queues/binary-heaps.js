@@ -112,7 +112,7 @@ class Heap {
   dequeue() {
     // 首先，根部元素和底部最后一位元素交换位置
     exchange(this.heaps, 0, this.heaps.length - 1);
-    // 然后，取出并从树种删除此时的最后一位元素，即原二叉堆的根元素
+    // 然后，取出并从树中删除此时的最后一位元素，即原二叉堆的根元素
     const result = this.heaps.pop();
     // 最后，从根部开始排序
     this.sortWithChild(1);
