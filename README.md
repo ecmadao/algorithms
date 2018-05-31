@@ -234,6 +234,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 299 | [Bulls and Cows](./leetcode/JavaScript/No299.bulls-and-cows.js) | `Medium` |
 | 300 | [Longest Increasing Subsequence](./leetcode/JavaScript/No300.longest-increasing-subsequence.js) | `Medium` |
 | 304 | [Range Sum Query 2D - Immutable](./leetcode/JavaScript/No304.norange-sum-query-2D-immutable.js) | `Medium` |
+| 306 | [Additive Number](./leetcode/JavaScript/No306.additive-number.js) | `Medium` |
 | 307 | [Range Sum Query - Mutable](./leetcode/JavaScript/No307.range-sum-query-mutable.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
@@ -271,6 +272,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
+| 842 | [Split Array into Fibonacci Sequence](./leetcode/JavaScript/No842.split-array-into-fibonacci-sequence.js) | `Medium` |
 |  |  |  |
 | No  | Title | Difficulty |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
