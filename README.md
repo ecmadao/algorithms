@@ -261,6 +261,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 650 | [2 Keys Keyboard](./leetcode/JavaScript/No650.2-keys-keyboard.js) | `Medium` |
 | 652 | [Find Duplicate Subtrees](./leetcode/JavaScript/No652.find-duplicate-subtrees.js) | `Medium` |
 | 654 | [Maximum Binary Tree](./leetcode/JavaScript/No654.maximum-binary-tree.js) | `Medium` |
 | 655 | [Print Binary Tree](./leetcode/JavaScript/No655.print-binary-tree.js) | `Medium` |
