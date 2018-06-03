@@ -103,6 +103,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 282 | [Expression Add Operators](./leetcode/JavaScript/No282.expression-add-operators.js) | `Hard` |
 | 295 | [Find Median from Data Stream](./leetcode/JavaScript/No295.find-median-from-data-stream.js) | `Hard` |
 | 297 | [Serialize and Deserialize Binary Tree](./leetcode/JavaScript/No297.serialize-and-deserialize-binary-tree.js) | `Hard` |
+| 301 | [Remove Invalid Parentheses](./leetcode/JavaScript/No301.remove-invalid-parentheses.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
@@ -236,6 +237,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 304 | [Range Sum Query 2D - Immutable](./leetcode/JavaScript/No304.norange-sum-query-2D-immutable.js) | `Medium` |
 | 306 | [Additive Number](./leetcode/JavaScript/No306.additive-number.js) | `Medium` |
 | 307 | [Range Sum Query - Mutable](./leetcode/JavaScript/No307.range-sum-query-mutable.js) | `Medium` |
+| 309 | [Best Time to Buy and Sell Stock with Cooldown](./leetcode/JavaScript/No309.best-time-to-buy-and-sell-stock-with-cooldown.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
