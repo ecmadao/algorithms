@@ -239,6 +239,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 307 | [Range Sum Query - Mutable](./leetcode/JavaScript/No307.range-sum-query-mutable.js) | `Medium` |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](./leetcode/JavaScript/No309.best-time-to-buy-and-sell-stock-with-cooldown.js) | `Medium` |
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
+| 313 | [Super Ugly Number](./leetcode/JavaScript/No313.super-ugly-number.js) | `Medium` |
+| 322 | [Coin Change](./leetcode/JavaScript/No322.coin-change.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
 | 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
