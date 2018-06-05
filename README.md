@@ -253,6 +253,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
+| 467 | [Unique Substrings in Wraparound String](./leetcode/JavaScript/No467.unique-substrings-in-wraparound-string.js) | `Medium` |
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
 | 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
 | 513 | [Find Bottom Left Tree Value](./leetcode/JavaScript/No513.find-bottom-left-tree-value.js) | `Medium` |
@@ -276,6 +277,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
+| 801 | [Minimum Swaps To Make Sequences Increasing](./leetcode/JavaScript/No801.minimum-swaps-to-make-sequences-increasing.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
 | 842 | [Split Array into Fibonacci Sequence](./leetcode/JavaScript/No842.split-array-into-fibonacci-sequence.js) | `Medium` |
 |  |  |  |
