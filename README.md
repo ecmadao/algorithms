@@ -278,6 +278,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
+| 787 | [Cheapest Flights Within K Stops](./leetcode/JavaScript/No787.cheapest-flights-within-k-stops.js) | `Medium` |
 | 801 | [Minimum Swaps To Make Sequences Increasing](./leetcode/JavaScript/No801.minimum-swaps-to-make-sequences-increasing.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
 | 842 | [Split Array into Fibonacci Sequence](./leetcode/JavaScript/No842.split-array-into-fibonacci-sequence.js) | `Medium` |
