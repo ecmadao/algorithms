@@ -277,6 +277,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 698 | [Partition to K Equal Sum Subsets](./leetcode/JavaScript/No698.partition-to-k-equal-sum-subsets.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
+| 738 | [Monotone Increasing Digits](./leetcode/JavaScript/No738.monotone-increasing-digits.js) | `Medium` |
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
@@ -330,6 +331,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 172 | [Factorial Trailing Zeroes](./leetcode/JavaScript/No172.factorial-trailing-zeroes.js)  | `Easy` |
 | 175 | [Combine Two Tables](./leetcode/JavaScript/No175.combine-two-tables.sql)  | `Easy` |
 | 189 | [Rotate Array](./leetcode/JavaScript/No189.rotate-array.js)  | `Easy` |
+| 191 | [Number of 1 Bits](./leetcode/JavaScript/No191.number-of-1-bits.js)  | `Easy` |
 | 198 | [House Robber](./leetcode/JavaScript/No198.house-robber.js)  | `Easy` |
 | 202 | [Happy Number](./leetcode/JavaScript/No202.happy-number.js)  | `Easy` |
 | 203 | [Remove Linked List Elements](./leetcode/JavaScript/No203.remove-linked-list-elements.js)  | `Easy` |
@@ -361,6 +363,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 367 | [Valid Perfect Square](./leetcode/JavaScript/No367.valid-perfect-square.js)  | `Easy` |
 | 387 | [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)  | `Easy` |
 | 389 | [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)  | `Easy` |
+| 401 | [Binary Watch](./leetcode/JavaScript/No401.binary-watch.js)  | `Easy` |
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
 | 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
