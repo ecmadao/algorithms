@@ -331,6 +331,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 172 | [Factorial Trailing Zeroes](./leetcode/JavaScript/No172.factorial-trailing-zeroes.js)  | `Easy` |
 | 175 | [Combine Two Tables](./leetcode/JavaScript/No175.combine-two-tables.sql)  | `Easy` |
 | 189 | [Rotate Array](./leetcode/JavaScript/No189.rotate-array.js)  | `Easy` |
+| 190 | [Reverse Bits](./leetcode/JavaScript/No190.reverse-bits.js)  | `Easy` |
 | 191 | [Number of 1 Bits](./leetcode/JavaScript/No191.number-of-1-bits.js)  | `Easy` |
 | 198 | [House Robber](./leetcode/JavaScript/No198.house-robber.js)  | `Easy` |
 | 202 | [Happy Number](./leetcode/JavaScript/No202.happy-number.js)  | `Easy` |
@@ -357,6 +358,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 290 | [Word Pattern](./leetcode/JavaScript/No290.word-pattern.js)  | `Easy` |
 | 292 | [Nim Game](./leetcode/JavaScript/No292.nim-game.js)  | `Easy` |
 | 303 | [Range Sum Query - Immutable](./leetcode/JavaScript/No303.range-sum-query-immutable.js)  | `Easy` |
+| 326 | [Power of Three](./leetcode/JavaScript/No326.power-of-three.js)  | `Easy` |
+| 342 | [Power of Four](./leetcode/JavaScript/No342.power-of-four.js)  | `Easy` |
 | 344 | [Reverse String](./leetcode/JavaScript/No344.reverse-string.js)  | `Easy` |
 | 349 | [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)  | `Easy` |
 | 350 | [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)  | `Easy` |
@@ -368,8 +371,10 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
-| 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
+| 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
+| 461 | [Hamming Distance](./leetcode/JavaScript/No461.hamming-distance.js)  | `Easy` |
+| 477 | [Total Hamming Distance](./leetcode/JavaScript/No477.total-hamming-distance.js)  | `Easy` |
 | 500 | [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)  | `Easy` |
 | 520 | [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)  | `Easy` |
 | 530 | [Minimum Absolute Difference in BST](./leetcode/JavaScript/No530.minimum-absolute-difference-in-BST.js)  | `Easy` |
