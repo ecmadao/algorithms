@@ -388,8 +388,10 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
 | 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
 | 687 | [Longest Univalue Path](./leetcode/JavaScript/No687.longest-univalue-path.js)  | `Easy` |
+| 693 | [Binary Number with Alternating Bits](./leetcode/JavaScript/No693.binary-number-with-alternating-bits.js)  | `Easy` |
 | 697 | [Degree of an Array](./leetcode/JavaScript/No697.degree-of-an-array.js)  | `Easy` |
 | 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
+| 762 | [Prime Number of Set Bits in Binary Representation](./leetcode/JavaScript/No762.prime-number-of-set-bits-in-binary-representation.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
 
