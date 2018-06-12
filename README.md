@@ -267,6 +267,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 648 | [Replace Words](./leetcode/JavaScript/No648.replace-words.js) | `Medium` |
 | 650 | [2 Keys Keyboard](./leetcode/JavaScript/No650.2-keys-keyboard.js) | `Medium` |
 | 652 | [Find Duplicate Subtrees](./leetcode/JavaScript/No652.find-duplicate-subtrees.js) | `Medium` |
 | 654 | [Maximum Binary Tree](./leetcode/JavaScript/No654.maximum-binary-tree.js) | `Medium` |
@@ -391,6 +392,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 687 | [Longest Univalue Path](./leetcode/JavaScript/No687.longest-univalue-path.js)  | `Easy` |
 | 693 | [Binary Number with Alternating Bits](./leetcode/JavaScript/No693.binary-number-with-alternating-bits.js)  | `Easy` |
 | 697 | [Degree of an Array](./leetcode/JavaScript/No697.degree-of-an-array.js)  | `Easy` |
+| 720 | [Longest Word in Dictionary](./leetcode/JavaScript/No720.longest-word-in-dictionary.js)  | `Easy` |
 | 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
 | 762 | [Prime Number of Set Bits in Binary Representation](./leetcode/JavaScript/No762.prime-number-of-set-bits-in-binary-representation.js)  | `Easy` |
 | 784 | [Letter Case Permutation](./leetcode/JavaScript/No784.letter-case-permutation.js)  | `Easy` |
