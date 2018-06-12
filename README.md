@@ -252,6 +252,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 402 | [Remove K Digits](./leetcode/JavaScript/No402.remove-k-digits.js) | `Medium` |
 | 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
 | 416 | [Partition Equal Subset Sum](./leetcode/JavaScript/No416.partition-equal-subset-sum.js) | `Medium` |
+| 421 | [Maximum XOR of Two Numbers in an Array](./leetcode/JavaScript/No421.maximum-XOR-of-two-numbers-in-an-array.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
@@ -392,6 +393,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 697 | [Degree of an Array](./leetcode/JavaScript/No697.degree-of-an-array.js)  | `Easy` |
 | 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
 | 762 | [Prime Number of Set Bits in Binary Representation](./leetcode/JavaScript/No762.prime-number-of-set-bits-in-binary-representation.js)  | `Easy` |
+| 784 | [Letter Case Permutation](./leetcode/JavaScript/No784.letter-case-permutation.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
 
