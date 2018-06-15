@@ -250,6 +250,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
 | 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
+| 396 | [Rotate Function](./leetcode/JavaScript/No396.rotate-function.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
 | 402 | [Remove K Digits](./leetcode/JavaScript/No402.remove-k-digits.js) | `Medium` |
 | 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
