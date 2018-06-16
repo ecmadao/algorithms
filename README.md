@@ -111,6 +111,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 446 | [Arithmetic Slices II - Subsequence](./leetcode/JavaScript/No446.arithmetic-slices-II-subsequence.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 | 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
+| 741 | [Cherry Pickup](./leetcode/JavaScript/No741.cherry-pickup.js) | `Hard` |
 |  |  |  |
 | No  | Title | Difficulty |
 | 002 | [Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)  | `Medium` |
@@ -288,6 +289,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 738 | [Monotone Increasing Digits](./leetcode/JavaScript/No738.monotone-increasing-digits.js) | `Medium` |
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
+| 775 | [Global and Local Inversions](./leetcode/JavaScript/No775.global-and-local-inversions.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
 | 787 | [Cheapest Flights Within K Stops](./leetcode/JavaScript/No787.cheapest-flights-within-k-stops.js) | `Medium` |
 | 801 | [Minimum Swaps To Make Sequences Increasing](./leetcode/JavaScript/No801.minimum-swaps-to-make-sequences-increasing.js) | `Medium` |
