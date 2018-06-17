@@ -76,6 +76,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 051 | [N-Queens](./leetcode/JavaScript/No51.n-queens.js) | `Hard` |
 | 052 | [N-Queens II](./leetcode/JavaScript/No52.n-queens-II.js) | `Hard` |
 | 057 | [Insert Interval](./leetcode/JavaScript/No57.insert-interval.js) | `Hard` |
+| 072 | [Edit Distance](./leetcode/JavaScript/No72.edit-distance.js) | `Hard` |
 | 076 | [Minimum Window Substring](./leetcode/JavaScript/No76.minimum-window-substring.js) | `Hard` |
 | 084 | [Largest Rectangle in Histogram](./leetcode/JavaScript/No84.largest-rectangle-in-histogram.js) | `Hard` |
 | 085 | [Maximal Rectangle](./leetcode/JavaScript/No85.maximal-rectangle.js) | `Hard` |
@@ -251,6 +252,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
 | 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
+| 392 | [Is Subsequence](./leetcode/JavaScript/No392.is-subsequence.js) | `Medium` |
 | 396 | [Rotate Function](./leetcode/JavaScript/No396.rotate-function.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
 | 402 | [Remove K Digits](./leetcode/JavaScript/No402.remove-k-digits.js) | `Medium` |
