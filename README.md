@@ -284,6 +284,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
 | 692 | [Top K Frequent Words](./leetcode/JavaScript/No692.top-k-frequent-words.js) | `Medium` |
 | 698 | [Partition to K Equal Sum Subsets](./leetcode/JavaScript/No698.partition-to-k-equal-sum-subsets.js) | `Medium` |
+| 712 | [Minimum ASCII Delete Sum for Two Strings](./leetcode/JavaScript/No712.minimum-ASCII-delete-sum-for-two-strings.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
 | 738 | [Monotone Increasing Digits](./leetcode/JavaScript/No738.monotone-increasing-digits.js) | `Medium` |
