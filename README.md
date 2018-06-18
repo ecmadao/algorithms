@@ -377,9 +377,12 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 349 | [Intersection of Two Arrays](./leetcode/JavaScript/No349.intersection-of-two-arrays.js)  | `Easy` |
 | 350 | [Intersection of Two Arrays II](./leetcode/JavaScript/No350.intersection-of-two-arrays-II.js)  | `Easy` |
 | 367 | [Valid Perfect Square](./leetcode/JavaScript/No367.valid-perfect-square.js)  | `Easy` |
+| 371 | [Sum of Two Integers](./leetcode/JavaScript/No371.sum-of-two-integers.js)  | `Easy` |
+| 383 | [Ransom Note](./leetcode/JavaScript/No383.ransom-note.js)  | `Easy` |
 | 387 | [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)  | `Easy` |
 | 389 | [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)  | `Easy` |
 | 401 | [Binary Watch](./leetcode/JavaScript/No401.binary-watch.js)  | `Easy` |
+| 405 | [Convert a Number to Hexadecimal](./leetcode/JavaScript/No405.convert-a-number-to-hexadecimal.js)  | `Easy` |
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
 | 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |

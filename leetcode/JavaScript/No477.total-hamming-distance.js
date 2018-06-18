@@ -64,7 +64,7 @@ var totalHammingDistance = function(nums) {
   for (let i = 0; i < 32; i += 1) {
     let bits = 0;
     for (const num of nums) {
-      bits += (num >> i) & 1
+      bits += (num >> i) & 1;
     }
     result += bits * (nums.length - bits);
   }
