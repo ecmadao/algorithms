@@ -266,6 +266,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
 | 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
 | 513 | [Find Bottom Left Tree Value](./leetcode/JavaScript/No513.find-bottom-left-tree-value.js) | `Medium` |
+| 516 | [Longest Palindromic Subsequence](./leetcode/JavaScript/No516.longest-palindromic-subsequence.js) | `Medium` |
 | 523 | [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js) | `Medium` |
 | 524 | [Longest Word in Dictionary through Deleting](./leetcode/JavaScript/No524.longest-word-in-dictionary-through-deleting.js) | `Medium` |
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
@@ -274,6 +275,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 647 | [Palindromic Substrings](./leetcode/JavaScript/No647.palindromic-substrings.js) | `Medium` |
 | 648 | [Replace Words](./leetcode/JavaScript/No648.replace-words.js) | `Medium` |
 | 650 | [2 Keys Keyboard](./leetcode/JavaScript/No650.2-keys-keyboard.js) | `Medium` |
 | 652 | [Find Duplicate Subtrees](./leetcode/JavaScript/No652.find-duplicate-subtrees.js) | `Medium` |
@@ -390,6 +392,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
 | 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
 | 461 | [Hamming Distance](./leetcode/JavaScript/No461.hamming-distance.js)  | `Easy` |
+| 476 | [Number Complement](./leetcode/JavaScript/No476.number-complement.js)  | `Easy` |
 | 477 | [Total Hamming Distance](./leetcode/JavaScript/No477.total-hamming-distance.js)  | `Easy` |
 | 500 | [Keyboard Row](./leetcode/JavaScript/No500.keyboard-row.js)  | `Easy` |
 | 520 | [Detect Capital](./leetcode/JavaScript/No520.detect-capital.js)  | `Easy` |
