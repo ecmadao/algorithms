@@ -247,6 +247,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
 | 338 | [Counting Bits](./leetcode/JavaScript/No338.counting-bits.js) | `Medium` |
+| 343 | [Integer Break](./leetcode/JavaScript/No343.integer-break.js) | `Medium` |
 | 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
 | 368 | [Largest Divisible Subset](./leetcode/JavaScript/No368.largest-divisible-subset.js) | `Medium` |
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
@@ -254,6 +255,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
 | 392 | [Is Subsequence](./leetcode/JavaScript/No392.is-subsequence.js) | `Medium` |
 | 396 | [Rotate Function](./leetcode/JavaScript/No396.rotate-function.js) | `Medium` |
+| 397 | [Integer Replacement](./leetcode/JavaScript/No397.integer-replacement.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
 | 402 | [Remove K Digits](./leetcode/JavaScript/No402.remove-k-digits.js) | `Medium` |
 | 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
