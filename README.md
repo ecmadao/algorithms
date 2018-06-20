@@ -288,6 +288,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 670 | [Maximum Swap](./leetcode/JavaScript/No670.maximum-swap.js) | `Medium` |
 | 676 | [Implement Magic Dictionary](./leetcode/JavaScript/No676.implement-magic-dictionary.js) | `Medium` |
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
+| 688 | [Knight Probability in Chessboard](./leetcode/JavaScript/No688.knight-probability-in-chessboard.js) | `Medium` |
 | 692 | [Top K Frequent Words](./leetcode/JavaScript/No692.top-k-frequent-words.js) | `Medium` |
 | 698 | [Partition to K Equal Sum Subsets](./leetcode/JavaScript/No698.partition-to-k-equal-sum-subsets.js) | `Medium` |
 | 712 | [Minimum ASCII Delete Sum for Two Strings](./leetcode/JavaScript/No712.minimum-ASCII-delete-sum-for-two-strings.js) | `Medium` |
@@ -404,6 +405,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 594 | [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)  | `Easy` |
 | 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
 | 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
+| 645 | [Set Mismatch](./leetcode/JavaScript/No645.set-mismatch.js)  | `Easy` |
 | 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
 | 665 | [Non-decreasing Array](./leetcode/JavaScript/No665.non-decreasing-array.js)  | `Easy` |
 | 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
