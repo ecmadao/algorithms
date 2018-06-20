@@ -249,6 +249,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 338 | [Counting Bits](./leetcode/JavaScript/No338.counting-bits.js) | `Medium` |
 | 343 | [Integer Break](./leetcode/JavaScript/No343.integer-break.js) | `Medium` |
 | 347 | [Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js) | `Medium` |
+| 357 | [Count Numbers with Unique Digits](./leetcode/JavaScript/No357.count-numbers-with-unique-digits.js) | `Medium` |
 | 368 | [Largest Divisible Subset](./leetcode/JavaScript/No368.largest-divisible-subset.js) | `Medium` |
 | 376 | [Wiggle Subsequence](./leetcode/JavaScript/No376.wiggle-subsequence.js) | `Medium` |
 | 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
@@ -277,6 +278,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
+| 638 | [Shopping Offers](./leetcode/JavaScript/No638.shopping-offers.js) | `Medium` |
 | 647 | [Palindromic Substrings](./leetcode/JavaScript/No647.palindromic-substrings.js) | `Medium` |
 | 648 | [Replace Words](./leetcode/JavaScript/No648.replace-words.js) | `Medium` |
 | 650 | [2 Keys Keyboard](./leetcode/JavaScript/No650.2-keys-keyboard.js) | `Medium` |
