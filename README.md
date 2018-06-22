@@ -302,6 +302,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 775 | [Global and Local Inversions](./leetcode/JavaScript/No775.global-and-local-inversions.js) | `Medium` |
 | 785 | [Is Graph Bipartite?](./leetcode/JavaScript/No785.is-graph-bipartite?.js) | `Medium` |
 | 787 | [Cheapest Flights Within K Stops](./leetcode/JavaScript/No787.cheapest-flights-within-k-stops.js) | `Medium` |
+| 792 | [Number of Matching Subsequences](./leetcode/JavaScript/No792.number-of-matching-subsequences.js) | `Medium` |
 | 801 | [Minimum Swaps To Make Sequences Increasing](./leetcode/JavaScript/No801.minimum-swaps-to-make-sequences-increasing.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
 | 842 | [Split Array into Fibonacci Sequence](./leetcode/JavaScript/No842.split-array-into-fibonacci-sequence.js) | `Medium` |
@@ -411,6 +412,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
 | 665 | [Non-decreasing Array](./leetcode/JavaScript/No665.non-decreasing-array.js)  | `Easy` |
 | 669 | [Trim a Binary Search Tree](./leetcode/JavaScript/No669.trim-a-binary-search-tree.js)  | `Easy` |
+| 674 | [Longest Continuous Increasing Subsequence](./leetcode/JavaScript/No674.longest-continuous-increasing-subsequence.js)  | `Easy` |
 | 680 | [Valid Palindrome II](./leetcode/JavaScript/No680.valid-palindrome-II.js)  | `Easy` |
 | 687 | [Longest Univalue Path](./leetcode/JavaScript/No687.longest-univalue-path.js)  | `Easy` |
 | 693 | [Binary Number with Alternating Bits](./leetcode/JavaScript/No693.binary-number-with-alternating-bits.js)  | `Easy` |
