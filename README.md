@@ -105,6 +105,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 295 | [Find Median from Data Stream](./leetcode/JavaScript/No295.find-median-from-data-stream.js) | `Hard` |
 | 297 | [Serialize and Deserialize Binary Tree](./leetcode/JavaScript/No297.serialize-and-deserialize-binary-tree.js) | `Hard` |
 | 301 | [Remove Invalid Parentheses](./leetcode/JavaScript/No301.remove-invalid-parentheses.js) | `Hard` |
+| 312 | [Burst Balloons](./leetcode/JavaScript/No312.burst-balloons.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 403 | [Frog Jump](./leetcode/JavaScript/No403.frog-jump.js) | `Hard` |
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
@@ -288,12 +289,14 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 658 | [Find K Closest Elements](./leetcode/JavaScript/No658.find-k-closest-elements.js) | `Medium` |
 | 659 | [Split Array into Consecutive Subsequences](./leetcode/JavaScript/No659.split-array-into-consecutive-subsequences.js) | `Medium` |
 | 670 | [Maximum Swap](./leetcode/JavaScript/No670.maximum-swap.js) | `Medium` |
+| 673 | [Number of Longest Increasing Subsequence](./leetcode/JavaScript/No673.number-of-longest-increasing-subsequence.js) | `Medium` |
 | 676 | [Implement Magic Dictionary](./leetcode/JavaScript/No676.implement-magic-dictionary.js) | `Medium` |
 | 684 | [Redundant Connection](./leetcode/JavaScript/No684.redundant-connection.js) | `Medium` |
 | 688 | [Knight Probability in Chessboard](./leetcode/JavaScript/No688.knight-probability-in-chessboard.js) | `Medium` |
 | 692 | [Top K Frequent Words](./leetcode/JavaScript/No692.top-k-frequent-words.js) | `Medium` |
 | 698 | [Partition to K Equal Sum Subsets](./leetcode/JavaScript/No698.partition-to-k-equal-sum-subsets.js) | `Medium` |
 | 712 | [Minimum ASCII Delete Sum for Two Strings](./leetcode/JavaScript/No712.minimum-ASCII-delete-sum-for-two-strings.js) | `Medium` |
+| 713 | [Subarray Product Less Than K](./leetcode/JavaScript/No713.subarray-product-less-than-k.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
 | 738 | [Monotone Increasing Digits](./leetcode/JavaScript/No738.monotone-increasing-digits.js) | `Medium` |
@@ -421,6 +424,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
 | 762 | [Prime Number of Set Bits in Binary Representation](./leetcode/JavaScript/No762.prime-number-of-set-bits-in-binary-representation.js)  | `Easy` |
 | 784 | [Letter Case Permutation](./leetcode/JavaScript/No784.letter-case-permutation.js)  | `Easy` |
+| 849 | [Maximize Distance to Closest Person](./leetcode/JavaScript/No849.maximize-distance-to-closest-person.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
 
