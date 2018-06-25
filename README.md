@@ -113,6 +113,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 446 | [Arithmetic Slices II - Subsequence](./leetcode/JavaScript/No446.arithmetic-slices-II-subsequence.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 | 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
+| 730 | [Count Different Palindromic Subsequences](./leetcode/JavaScript/No730.count-different-palindromic-subsequences.js) | `Hard` |
 | 741 | [Cherry Pickup](./leetcode/JavaScript/No741.cherry-pickup.js) | `Hard` |
 |  |  |  |
 | No  | Title | Difficulty |
@@ -308,6 +309,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 792 | [Number of Matching Subsequences](./leetcode/JavaScript/No792.number-of-matching-subsequences.js) | `Medium` |
 | 801 | [Minimum Swaps To Make Sequences Increasing](./leetcode/JavaScript/No801.minimum-swaps-to-make-sequences-increasing.js) | `Medium` |
 | 802 | [Find Eventual Safe States](./leetcode/JavaScript/No802.find-eventual-safe-states.js) | `Medium` |
+| 831 | [Masking Personal Information](./leetcode/JavaScript/No831.masking-personal-information.js) | `Medium` |
 | 842 | [Split Array into Fibonacci Sequence](./leetcode/JavaScript/No842.split-array-into-fibonacci-sequence.js) | `Medium` |
 | 846 | [Hand of Straights](./leetcode/JavaScript/No846.hand-of-straights.js) | `Medium` |
 | 855 | [Exam Room](./leetcode/JavaScript/No855.exam-room.js) | `Medium` |
