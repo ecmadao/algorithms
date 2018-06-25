@@ -106,6 +106,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 297 | [Serialize and Deserialize Binary Tree](./leetcode/JavaScript/No297.serialize-and-deserialize-binary-tree.js) | `Hard` |
 | 301 | [Remove Invalid Parentheses](./leetcode/JavaScript/No301.remove-invalid-parentheses.js) | `Hard` |
 | 312 | [Burst Balloons](./leetcode/JavaScript/No312.burst-balloons.js) | `Hard` |
+| 315 | [Count of Smaller Numbers After Self](./leetcode/JavaScript/No315.count-of-smaller-numbers-after-self.js) | `Hard` |
 | 363 | [Max Sum of Rectangle No Larger Than K](./leetcode/JavaScript/No363.max-sum-of-rectangle-no-larger-than-k.js) | `Hard` |
 | 403 | [Frog Jump](./leetcode/JavaScript/No403.frog-jump.js) | `Hard` |
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
