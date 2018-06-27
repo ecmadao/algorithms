@@ -32,6 +32,10 @@
  * 因此，寻找 sum(0) 到 sum(i - 1) 内符合条件的 sum 即可。同样，对于 sum(i - 1) 类推
  */
 
+/**
+ * ====================== Solution 1 - BST ======================
+ */
+
 function Node(val) {
   this.val = val;
   this.count = 1;
@@ -93,7 +97,7 @@ const countRangeCount = (root, min, max) => {
  * @param {number} upper
  * @return {number}
  */
-const countRangeSum = (nums, lower, upper) => {
+const countRangeSum_BST = (nums, lower, upper) => {
   let count = 0;
   const sums = [];
   const root = new Node(0);
@@ -109,7 +113,81 @@ const countRangeSum = (nums, lower, upper) => {
   return count;
 };
 
-console.log(countRangeSum([-2, 5, -1], -2, 2)); // 3
-console.log(countRangeSum([-2, 5, 99, -1], -2, 2)); // 2
-console.log(countRangeSum([-3, 1, -2, 5, 99, -1], -2, 2)); // 6
+/**
+ * ====================== Solution 2 - BIT ======================
+ * https://leetcode.com/problems/count-of-range-sum/discuss/77986/O(NlogN)-Python-solution-binary-indexed-tree-268-ms
+ */
+
+const update = (tree, index) => {
+  while (index < tree.length) {
+    tree[index] = (tree[index] || 0) + 1;
+    index += (index & -index);
+  }
+};
+
+const count = (tree, index) => {
+  let result = 0;
+  while (index > 0) {
+    result += (tree[index] || 0);
+    index -= (index & -index);
+  }
+  return result;
+};
+
+const searchFromLeft = (list, target) => {
+  for (let i = 0; i < list.length; i += 1) {
+    const num = list[i];
+    if (num >= target) return i - 1;
+  }
+  return list.length - 1;
+};
+
+const searchFromRight = (list, target) => {
+  for (let i = list.length - 1; i >= 0; i -= 1) {
+    const num = list[i];
+    if (target >= num) return i;
+  }
+  return -1;
+};
+
+/**
+ * @param {number[]} nums
+ * @param {number} lower
+ * @param {number} upper
+ * @return {number}
+ */
+const countRangeSum_BIT = (nums, lower, upper) => {
+  const sums = [0];
+  for (const num of nums) {
+    sums.push(sums.slice(-1)[0] + num);
+  }
+
+  const sortedSums = [...sums].sort((a, b) => a - b);
+  const sortedSumsWithIndex = sortedSums
+    .reduce((result, sum, index) => {
+      result[sum] = index;
+      return result;
+    }, {});
+
+  console.log(sums);
+  console.log(sortedSums);
+  const tree = new Array(sortedSums.length + 2).fill(0);
+  let result = 0;
+  for (const sum of sums) {
+    const min = sum - upper;
+    const max = sum - lower;
+
+    const minIndex = searchFromLeft(sortedSums, min);
+    const maxIndex = searchFromRight(sortedSums, max);
+    // console.log(`min: ${min}, minIndex: ${minIndex}, max: ${max}, maxIndex: ${maxIndex}`);
+    result += (count(tree, maxIndex + 1) - count(tree, minIndex + 1));
+    update(tree, sortedSumsWithIndex[sum] + 1);
+  }
+  return result;
+};
+
+console.log(countRangeSum_BIT([-2, 5, -1], -2, 2)); // 3
+console.log(countRangeSum_BIT([-2, 5, 99, -1], -2, 2)); // 2
+console.log(countRangeSum_BIT([-3, 1, -2, 5, 99, -1], -2, 2)); // 6
+console.log(countRangeSum_BIT([0, -1, -2, -3, 0, 2], 3, 5)); // 0
 
