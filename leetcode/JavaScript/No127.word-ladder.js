@@ -44,7 +44,7 @@
  * @param {string[]} wordList
  * @return {number}
  */
-var ladderLength = function(beginWord, endWord, wordList) {
+var ladderLength_1 = function(beginWord, endWord, wordList) {
   if (!beginWord || !endWord || !wordList.length) return 0;
   let set = new Set(wordList);
   let minLen = 2;
@@ -73,6 +73,53 @@ var ladderLength = function(beginWord, endWord, wordList) {
     }
     queue = arr;
     minLen += 1;
+  }
+  return 0;
+};
+
+
+/**
+ * @param {string} beginWord
+ * @param {string} endWord
+ * @param {string[]} wordList
+ * @return {number}
+ */
+var ladderLength_2 = function(beginWord, endWord, wordList) {
+  if (!beginWord || !endWord || !wordList.length) return 0;
+  if (beginWord.length !== endWord.length) return 0;
+
+  const set = new Set(wordList);
+  const queue = [{
+    word: beginWord,
+    count: 0
+  }];
+
+  while (queue.length) {
+    const {
+      word,
+      count
+    } = queue.shift();
+
+    if (word === endWord) return count + 1;
+
+    for (let i = 0; i < word.length; i += 1) {
+      const letter = word[i];
+
+      for (let j = 97; j <= 122; j += 1) {
+        const newLetter = String.fromCharCode(j);
+        if (newLetter === letter) continue;
+        const w = `${word.slice(0, i)}${newLetter}${word.slice(i + 1)}`;
+
+        if (set.has(w)) {
+          if (w === endWord) return count + 2;
+          queue.push({
+            word: w,
+            count: count + 1
+          });
+          set.delete(w);
+        }
+      }
+    }
   }
   return 0;
 };

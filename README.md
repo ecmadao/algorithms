@@ -266,6 +266,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
 | 416 | [Partition Equal Subset Sum](./leetcode/JavaScript/No416.partition-equal-subset-sum.js) | `Medium` |
 | 421 | [Maximum XOR of Two Numbers in an Array](./leetcode/JavaScript/No421.maximum-XOR-of-two-numbers-in-an-array.js) | `Medium` |
+| 433 | [Minimum Genetic Mutation](./leetcode/JavaScript/No433.minimum-genetic-mutation.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
