@@ -259,6 +259,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 377 | [Combination Sum IV](./leetcode/JavaScript/No377.combination-sum-IV.js) | `Medium` |
 | 380 | [Insert Delete GetRandom O(1)](./leetcode/JavaScript/No380.insert-delete-getRandom-o1.js) | `Medium` |
 | 392 | [Is Subsequence](./leetcode/JavaScript/No392.is-subsequence.js) | `Medium` |
+| 394 | [Decode String](./leetcode/JavaScript/No394.decode-string.js) | `Medium` |
 | 396 | [Rotate Function](./leetcode/JavaScript/No396.rotate-function.js) | `Medium` |
 | 397 | [Integer Replacement](./leetcode/JavaScript/No397.integer-replacement.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
@@ -277,6 +278,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 516 | [Longest Palindromic Subsequence](./leetcode/JavaScript/No516.longest-palindromic-subsequence.js) | `Medium` |
 | 523 | [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js) | `Medium` |
 | 524 | [Longest Word in Dictionary through Deleting](./leetcode/JavaScript/No524.longest-word-in-dictionary-through-deleting.js) | `Medium` |
+| 542 | [01 Matrix](./leetcode/JavaScript/No542.01-matrix.js) | `Medium` |
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
 | 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
 | 565 | [Array Nesting](./leetcode/JavaScript/No565.array-nesting.js) | `Medium` |
