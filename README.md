@@ -264,6 +264,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 397 | [Integer Replacement](./leetcode/JavaScript/No397.integer-replacement.js) | `Medium` |
 | 399 | [Evaluate Division](./leetcode/JavaScript/No399.evaluate-division.js) | `Medium` |
 | 402 | [Remove K Digits](./leetcode/JavaScript/No402.remove-k-digits.js) | `Medium` |
+| 406 | [Queue Reconstruction by Height](./leetcode/JavaScript/No406.queue-reconstruction-by-height.js) | `Medium` |
 | 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
 | 416 | [Partition Equal Subset Sum](./leetcode/JavaScript/No416.partition-equal-subset-sum.js) | `Medium` |
 | 421 | [Maximum XOR of Two Numbers in an Array](./leetcode/JavaScript/No421.maximum-XOR-of-two-numbers-in-an-array.js) | `Medium` |
