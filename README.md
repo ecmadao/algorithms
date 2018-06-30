@@ -403,6 +403,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 387 | [First Unique Character in a String](./leetcode/JavaScript/No387.first-unique-character-in-a-string.js)  | `Easy` |
 | 389 | [Find the Difference](./leetcode/JavaScript/No389.find-the-difference.js)  | `Easy` |
 | 401 | [Binary Watch](./leetcode/JavaScript/No401.binary-watch.js)  | `Easy` |
+| 404 | [Sum of Left Leaves](./leetcode/JavaScript/No404.sum-of-left-leaves.js)  | `Easy` |
 | 405 | [Convert a Number to Hexadecimal](./leetcode/JavaScript/No405.convert-a-number-to-hexadecimal.js)  | `Easy` |
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
 | 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
@@ -410,6 +411,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
 | 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
+| 455 | [Assign Cookies](./leetcode/JavaScript/No455.assign-cookies.js)  | `Easy` |
 | 461 | [Hamming Distance](./leetcode/JavaScript/No461.hamming-distance.js)  | `Easy` |
 | 476 | [Number Complement](./leetcode/JavaScript/No476.number-complement.js)  | `Easy` |
 | 477 | [Total Hamming Distance](./leetcode/JavaScript/No477.total-hamming-distance.js)  | `Easy` |
