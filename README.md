@@ -276,6 +276,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
 | 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
 | 513 | [Find Bottom Left Tree Value](./leetcode/JavaScript/No513.find-bottom-left-tree-value.js) | `Medium` |
+| 515 | [Find Largest Value in Each Tree Row](./leetcode/JavaScript/No515.find-largest-value-in-each-tree-row.js) | `Medium` |
 | 516 | [Longest Palindromic Subsequence](./leetcode/JavaScript/No516.longest-palindromic-subsequence.js) | `Medium` |
 | 523 | [Continuous Subarray Sum](./leetcode/JavaScript/No523.continuous-subarray-sum.js) | `Medium` |
 | 524 | [Longest Word in Dictionary through Deleting](./leetcode/JavaScript/No524.longest-word-in-dictionary-through-deleting.js) | `Medium` |
