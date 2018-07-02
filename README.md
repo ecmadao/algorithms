@@ -267,6 +267,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 406 | [Queue Reconstruction by Height](./leetcode/JavaScript/No406.queue-reconstruction-by-height.js) | `Medium` |
 | 413 | [Arithmetic Slices](./leetcode/JavaScript/No413.arithmetic-slices.js) | `Medium` |
 | 416 | [Partition Equal Subset Sum](./leetcode/JavaScript/No416.partition-equal-subset-sum.js) | `Medium` |
+| 417 | [Pacific Atlantic Water Flow](./leetcode/JavaScript/No417.pacific-atlantic-water-flow.js) | `Medium` |
 | 421 | [Maximum XOR of Two Numbers in an Array](./leetcode/JavaScript/No421.maximum-XOR-of-two-numbers-in-an-array.js) | `Medium` |
 | 433 | [Minimum Genetic Mutation](./leetcode/JavaScript/No433.minimum-genetic-mutation.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
@@ -408,6 +409,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 405 | [Convert a Number to Hexadecimal](./leetcode/JavaScript/No405.convert-a-number-to-hexadecimal.js)  | `Easy` |
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
 | 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
+| 415 | [Add Strings](./leetcode/JavaScript/No415.add-strings.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
