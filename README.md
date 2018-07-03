@@ -113,6 +113,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
 | 446 | [Arithmetic Slices II - Subsequence](./leetcode/JavaScript/No446.arithmetic-slices-II-subsequence.js) | `Hard` |
+| 546 | [Remove Boxes](./leetcode/JavaScript/No546.remove-boxes.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 | 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
 | 730 | [Count Different Palindromic Subsequences](./leetcode/JavaScript/No730.count-different-palindromic-subsequences.js) | `Hard` |
