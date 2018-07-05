@@ -113,6 +113,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 410 | [Split Array Largest Sum](./leetcode/JavaScript/No410.split-array-largest-sum.js) | `Hard` |
 | 460 | [LFU Cache](./leetcode/JavaScript/No460.lfu-cache.js) | `Hard` |
 | 446 | [Arithmetic Slices II - Subsequence](./leetcode/JavaScript/No446.arithmetic-slices-II-subsequence.js) | `Hard` |
+| 517 | [Super Washing Machines](./leetcode/JavaScript/No517.super-washing-machines.js) | `Hard` |
 | 546 | [Remove Boxes](./leetcode/JavaScript/No546.remove-boxes.js) | `Hard` |
 | 685 | [Redundant Connection II](./leetcode/JavaScript/No685.redundant-connection-II.js) | `Hard` |
 | 726 | [Number of Atoms](./leetcode/JavaScript/No726.number-of-atoms.js) | `Hard` |
@@ -286,6 +287,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
 | 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
 | 565 | [Array Nesting](./leetcode/JavaScript/No565.array-nesting.js) | `Medium` |
+| 567 | [Permutation in String](./leetcode/JavaScript/No567.permutation-in-string.js) | `Medium` |
 | 576 | [Out of Boundary Paths](./leetcode/JavaScript/No576.out-of-boundary-paths.js) | `Medium` |
 | 611 | [Valid Triangle Number](./leetcode/JavaScript/No611.valid-triangle-number.js) | `Medium` |
 | 621 | [Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js) | `Medium` |
