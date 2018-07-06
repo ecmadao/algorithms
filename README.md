@@ -443,6 +443,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 746 | [Min Cost Climbing Stairs](./leetcode/JavaScript/No746.min-cost-climbing-stairs.js)  | `Easy` |
 | 762 | [Prime Number of Set Bits in Binary Representation](./leetcode/JavaScript/No762.prime-number-of-set-bits-in-binary-representation.js)  | `Easy` |
 | 784 | [Letter Case Permutation](./leetcode/JavaScript/No784.letter-case-permutation.js)  | `Easy` |
+| 844 | [Backspace String Compare](./leetcode/JavaScript/No844.backspace-string-compare.js)  | `Easy` |
 | 849 | [Maximize Distance to Closest Person](./leetcode/JavaScript/No849.maximize-distance-to-closest-person.js)  | `Easy` |
 
 #### [Swift4 Solution](./leetcode/Swift)
