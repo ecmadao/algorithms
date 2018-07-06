@@ -272,6 +272,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 417 | [Pacific Atlantic Water Flow](./leetcode/JavaScript/No417.pacific-atlantic-water-flow.js) | `Medium` |
 | 421 | [Maximum XOR of Two Numbers in an Array](./leetcode/JavaScript/No421.maximum-XOR-of-two-numbers-in-an-array.js) | `Medium` |
 | 433 | [Minimum Genetic Mutation](./leetcode/JavaScript/No433.minimum-genetic-mutation.js) | `Medium` |
+| 436 | [Find Right Interval](./leetcode/JavaScript/No436.find-right-interval.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
