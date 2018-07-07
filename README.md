@@ -312,6 +312,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 713 | [Subarray Product Less Than K](./leetcode/JavaScript/No713.subarray-product-less-than-k.js) | `Medium` |
 | 718 | [Maximum Length of Repeated Subarray](./leetcode/JavaScript/No718.maximum-length-of-repeated-subarray.js) | `Medium` |
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
+| 735 | [Asteroid Collision](./leetcode/JavaScript/No735.asteroid-collision.js) | `Medium` |
 | 738 | [Monotone Increasing Digits](./leetcode/JavaScript/No738.monotone-increasing-digits.js) | `Medium` |
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
@@ -430,6 +431,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 561 | [Array Partition I](./leetcode/JavaScript/No561.array-partition-I.js)  | `Easy` |
 | 594 | [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)  | `Easy` |
 | 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
+| 605 | [Can Place Flowers](./leetcode/JavaScript/No605.can-place-flowers.js)  | `Easy` |
 | 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
 | 645 | [Set Mismatch](./leetcode/JavaScript/No645.set-mismatch.js)  | `Easy` |
 | 653 | [Two Sum IV - Input is a BST](./leetcode/JavaScript/No653.two-sum-IV-input-is-a-BST.js)  | `Easy` |
