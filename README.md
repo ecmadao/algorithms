@@ -415,9 +415,11 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 409 | [Longest Palindrome](./leetcode/JavaScript/No409.longest-palindrome.js)  | `Easy` |
 | 414 | [Third Maximum Number](./leetcode/JavaScript/No414.third-maximum-number.js)  | `Easy` |
 | 415 | [Add Strings](./leetcode/JavaScript/No415.add-strings.js)  | `Easy` |
+| 434 | [Number of Segments in a String](./leetcode/JavaScript/No434.number-of-segments-in-a-string.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 438 | [Find All Anagrams in a String](./leetcode/JavaScript/No438.find-all-anagrams-in-a-string.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
+| 443 | [String Compression](./leetcode/JavaScript/No443.string-compression.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
 | 453 | [Minimum Moves to Equal Array Elements](./leetcode/JavaScript/No453.minimum-moves-to-equal-array-elements.js)  | `Easy` |
 | 455 | [Assign Cookies](./leetcode/JavaScript/No455.assign-cookies.js)  | `Easy` |
