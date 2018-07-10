@@ -274,6 +274,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 433 | [Minimum Genetic Mutation](./leetcode/JavaScript/No433.minimum-genetic-mutation.js) | `Medium` |
 | 436 | [Find Right Interval](./leetcode/JavaScript/No436.find-right-interval.js) | `Medium` |
 | 445 | [Add Two Numbers II](./leetcode/JavaScript/No445.add-two-numbers-II.js) | `Medium` |
+| 450 | [Delete Node in a BST](./leetcode/JavaScript/No450.delete-node-in-a-BST.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
 | 467 | [Unique Substrings in Wraparound String](./leetcode/JavaScript/No467.unique-substrings-in-wraparound-string.js) | `Medium` |
@@ -418,6 +419,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 434 | [Number of Segments in a String](./leetcode/JavaScript/No434.number-of-segments-in-a-string.js)  | `Easy` |
 | 437 | [Path Sum III](./leetcode/JavaScript/No437.path-sum-III.js)  | `Easy` |
 | 438 | [Find All Anagrams in a String](./leetcode/JavaScript/No438.find-all-anagrams-in-a-string.js)  | `Easy` |
+| 441 | [Arranging Coins](./leetcode/JavaScript/No441.arranging-coins.js)  | `Easy` |
 | 442 | [Find All Duplicates in an Array](./leetcode/JavaScript/No442.find-all-duplicates-in-an-array.js)  | `Easy` |
 | 443 | [String Compression](./leetcode/JavaScript/No443.string-compression.js)  | `Easy` |
 | 448 | [Find All Numbers Disappeared in an Array](./leetcode/JavaScript/No448.find-all-numbers-disappeared-in-an-array.js)  | `Easy` |
