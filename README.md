@@ -250,6 +250,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 310 | [Minimum Height Trees](./leetcode/JavaScript/No310.minimum-height-trees.js) | `Medium` |
 | 313 | [Super Ugly Number](./leetcode/JavaScript/No313.super-ugly-number.js) | `Medium` |
 | 322 | [Coin Change](./leetcode/JavaScript/No322.coin-change.js) | `Medium` |
+| 331 | [Verify Preorder Serialization of a Binary Tree](./leetcode/JavaScript/No331.verify-preorder-serialization-of-a-binary-tree.js) | `Medium` |
 | 332 | [Reconstruct Itinerary](./leetcode/JavaScript/No332.reconstruct-itinerary.js) | `Medium` |
 | 337 | [House Robber III](./leetcode/JavaScript/No337.house-robber-III.js) | `Medium` |
 | 338 | [Counting Bits](./leetcode/JavaScript/No338.counting-bits.js) | `Medium` |
@@ -277,6 +278,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 450 | [Delete Node in a BST](./leetcode/JavaScript/No450.delete-node-in-a-BST.js) | `Medium` |
 | 451 | [Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js) | `Medium` |
 | 454 | [4Sum II](./leetcode/JavaScript/No454.4sum-II.js) | `Medium` |
+| 456 | [132 Pattern](./leetcode/JavaScript/No456.132-pattern.js) | `Medium` |
 | 467 | [Unique Substrings in Wraparound String](./leetcode/JavaScript/No467.unique-substrings-in-wraparound-string.js) | `Medium` |
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
 | 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
