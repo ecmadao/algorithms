@@ -282,6 +282,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 467 | [Unique Substrings in Wraparound String](./leetcode/JavaScript/No467.unique-substrings-in-wraparound-string.js) | `Medium` |
 | 486 | [Predict the Winner](./leetcode/JavaScript/No486.predict-the-winner.js) | `Medium` |
 | 494 | [Target Sum](./leetcode/JavaScript/No494.target-sum.js) | `Medium` |
+| 503 | [Next Greater Element II](./leetcode/JavaScript/No503.next-greater-element-II.js) | `Medium` |
 | 513 | [Find Bottom Left Tree Value](./leetcode/JavaScript/No513.find-bottom-left-tree-value.js) | `Medium` |
 | 515 | [Find Largest Value in Each Tree Row](./leetcode/JavaScript/No515.find-largest-value-in-each-tree-row.js) | `Medium` |
 | 516 | [Longest Palindromic Subsequence](./leetcode/JavaScript/No516.longest-palindromic-subsequence.js) | `Medium` |
@@ -317,6 +318,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 721 | [Accounts Merge](./leetcode/JavaScript/No721.accounts-merge.js) | `Medium` |
 | 735 | [Asteroid Collision](./leetcode/JavaScript/No735.asteroid-collision.js) | `Medium` |
 | 738 | [Monotone Increasing Digits](./leetcode/JavaScript/No738.monotone-increasing-digits.js) | `Medium` |
+| 739 | [Daily Temperatures](./leetcode/JavaScript/No739.daily-temperatures.js) | `Medium` |
 | 740 | [Delete and Earn](./leetcode/JavaScript/No740.delete-and-earn.js) | `Medium` |
 | 743 | [Network Delay Time](./leetcode/JavaScript/No743.network-delay-time.js) | `Medium` |
 | 775 | [Global and Local Inversions](./leetcode/JavaScript/No775.global-and-local-inversions.js) | `Medium` |
