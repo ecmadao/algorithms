@@ -290,6 +290,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 524 | [Longest Word in Dictionary through Deleting](./leetcode/JavaScript/No524.longest-word-in-dictionary-through-deleting.js) | `Medium` |
 | 542 | [01 Matrix](./leetcode/JavaScript/No542.01-matrix.js) | `Medium` |
 | 547 | [Friend Circles](./leetcode/JavaScript/No547.friend-circles.js) | `Medium` |
+| 556 | [Next Greater Element III](./leetcode/JavaScript/No556.next-greater-element-III.js) | `Medium` |
 | 560 | [Subarray Sum Equals K](./leetcode/JavaScript/No560.subarray-sum-equals-k.js) | `Medium` |
 | 565 | [Array Nesting](./leetcode/JavaScript/No565.array-nesting.js) | `Medium` |
 | 567 | [Permutation in String](./leetcode/JavaScript/No567.permutation-in-string.js) | `Medium` |
