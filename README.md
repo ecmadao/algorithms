@@ -332,6 +332,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 842 | [Split Array into Fibonacci Sequence](./leetcode/JavaScript/No842.split-array-into-fibonacci-sequence.js) | `Medium` |
 | 846 | [Hand of Straights](./leetcode/JavaScript/No846.hand-of-straights.js) | `Medium` |
 | 855 | [Exam Room](./leetcode/JavaScript/No855.exam-room.js) | `Medium` |
+| 856 | [Score of Parentheses](./leetcode/JavaScript/No856.score-of-parentheses.js) | `Medium` |
 |  |  |  |
 | No  | Title | Difficulty |
 | 001 | [Two Sum](./leetcode/JavaScript/No01.two-sum.js)  | `Easy` |
