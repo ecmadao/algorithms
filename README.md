@@ -508,6 +508,13 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 012 | [Integer to Roman](./leetcode/Haskell/No12.integer-to-roman.hs)  | `Medium` |
 | 069 | [Sqrt(x)](./leetcode/Haskell/No69.sqrt-x.hs)  | `Easy` |
 
+#### [Ruby Solution](./leetcode/Ruby)
+
+| No  | Title | Difficulty |
+| ------------- | ------------- | ------------- |
+| 001 | [Two Sum](./leetcode/Ruby/No1.two_sum.rb)  | `Easy` |
+| 002 | [Add Two Numbers](./leetcode/Ruby/No2.add_two_numbers.rb)  | `Medium` |
+
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
 ![codewars-badges](https://www.codewars.com/users/ecmadao/badges/micro)
