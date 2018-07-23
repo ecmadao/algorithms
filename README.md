@@ -518,6 +518,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
 ![codewars-badges](https://www.codewars.com/users/ecmadao/badges/micro)
+
 #### [Haskell Solution](./codewars/Haskell)
 
 | Title | Kyu |
@@ -563,19 +564,33 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | [Twice linear](./codewars/JavaScript/twice-linear.js)  | `4 kyu` |
 | [Find all possible number combos that sum to a number](./codewars/JavaScript/find-all-possible-number-combos-that-sum-to-a-number.js)  | `4 kyu` |
 
+#### [Ruby Solution](./codewars/Ruby)
+
+| Title | Kyu |
+| ------------- | ------------- |
+| [Persistent Bugger](./codewars/Ruby/persistent_bugger.rb)  | `6 kyu` |
+| [Find The Parity Outlier](./codewars/Ruby/find_the_parity_outlier.rb)  | `6 kyu` |
+| [Eureka](./codewars/Ruby/eureka.rb)  | `6 kyu` |
+| [Consecutive Strings](./codewars/Ruby/consecutive_strings.rb)  | `6 kyu` |
+
 ### Run demo
 
 JavaScript：
 
-- 环境要求：>= Node.js v7
+- Version >= 7.0.0
 - 如果 Node 版本较低，则可以自行选择使用 Babel 进行转换
 - Leetcode 题解代码直接在浏览器中即可运行（ES5/ES6 语法）
 - 直接运行各个文件夹下的 `js` 文件即可查看算法运行的结果，例如在项目根目录下 `node ./priority-queues/binary-heaps.js`
 
 Swift：
 
-- Swift 版本 >= 4.0
+- Version >= 4.0
 
 Haskell:
 
+- Version >= 8.4.3
 - Using GHCi and load `.hs` files
+
+Ruby:
+
+- Version >= 2.4.1
