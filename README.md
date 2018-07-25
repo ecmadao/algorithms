@@ -568,10 +568,12 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 | Title | Kyu |
 | ------------- | ------------- |
-| [Persistent Bugger](./codewars/Ruby/persistent_bugger.rb)  | `6 kyu` |
-| [Find The Parity Outlier](./codewars/Ruby/find_the_parity_outlier.rb)  | `6 kyu` |
+| [Calculating with Functions](./codewars/Ruby/calculating_with_functions.rb)  | `5 kyu` |
+| [Persistent bugger](./codewars/Ruby/persistent_bugger.rb)  | `6 kyu` |
+| [Find the parity outlier](./codewars/Ruby/find_the_parity_outlier.rb)  | `6 kyu` |
 | [Eureka](./codewars/Ruby/eureka.rb)  | `6 kyu` |
-| [Consecutive Strings](./codewars/Ruby/consecutive_strings.rb)  | `6 kyu` |
+| [Consecutive strings](./codewars/Ruby/consecutive_strings.rb)  | `6 kyu` |
+| [Format a string of names](./codewars/Ruby/format_a_string_of_names.rb)  | `6 kyu` |
 
 ### Run demo
 
