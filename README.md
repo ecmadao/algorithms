@@ -568,12 +568,14 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 | Title | Kyu |
 | ------------- | ------------- |
+| [Sum of Pairs](./codewars/Ruby/sum_of_pairs.rb)  | `5 kyu` |
 | [Calculating with Functions](./codewars/Ruby/calculating_with_functions.rb)  | `5 kyu` |
 | [Persistent bugger](./codewars/Ruby/persistent_bugger.rb)  | `6 kyu` |
 | [Find the parity outlier](./codewars/Ruby/find_the_parity_outlier.rb)  | `6 kyu` |
 | [Eureka](./codewars/Ruby/eureka.rb)  | `6 kyu` |
 | [Consecutive strings](./codewars/Ruby/consecutive_strings.rb)  | `6 kyu` |
 | [Format a string of names](./codewars/Ruby/format_a_string_of_names.rb)  | `6 kyu` |
+| [Length of missing array](./codewars/Ruby/length_of_missing_array.rb)  | `6 kyu` |
 
 ### Run demo
 
