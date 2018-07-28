@@ -568,6 +568,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 | Title | Kyu |
 | ------------- | ------------- |
+| [A Chain adding function](./codewars/Ruby/a_chain_adding_function.rb)  | `5 kyu` |
+| [Number of trailing zeros of N!](./codewars/Ruby/number_of_trailing_zeros_of_n!.rb)  | `5 kyu` |
 | [Sum of Pairs](./codewars/Ruby/sum_of_pairs.rb)  | `5 kyu` |
 | [Calculating with Functions](./codewars/Ruby/calculating_with_functions.rb)  | `5 kyu` |
 | [Persistent bugger](./codewars/Ruby/persistent_bugger.rb)  | `6 kyu` |
@@ -576,6 +578,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | [Consecutive strings](./codewars/Ruby/consecutive_strings.rb)  | `6 kyu` |
 | [Format a string of names](./codewars/Ruby/format_a_string_of_names.rb)  | `6 kyu` |
 | [Length of missing array](./codewars/Ruby/length_of_missing_array.rb)  | `6 kyu` |
+| [Build Tower](./codewars/Ruby/build_tower.rb)  | `6 kyu` |
 
 ### Run demo
 
