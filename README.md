@@ -568,12 +568,15 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 | Title | Kyu |
 | ------------- | ------------- |
+| [Directions Reduction](./codewars/Ruby/directions_reduction.rb)  | `5 kyu` |
+| [Best travel](./codewars/Ruby/best_travel.rb)  | `5 kyu` |
 | [Last digit of a large number](./codewars/Ruby/last_digit_of_a_large_number.rb)  | `5 kyu` |
 | [Maximum subarray sum](./codewars/Ruby/maximum_subarray_sum.rb)  | `5 kyu` |
 | [A Chain adding function](./codewars/Ruby/a_chain_adding_function.rb)  | `5 kyu` |
 | [Number of trailing zeros of N!](./codewars/Ruby/number_of_trailing_zeros_of_n!.rb)  | `5 kyu` |
 | [Sum of Pairs](./codewars/Ruby/sum_of_pairs.rb)  | `5 kyu` |
 | [Calculating with Functions](./codewars/Ruby/calculating_with_functions.rb)  | `5 kyu` |
+|  |  |  |
 | [Persistent bugger](./codewars/Ruby/persistent_bugger.rb)  | `6 kyu` |
 | [Find the parity outlier](./codewars/Ruby/find_the_parity_outlier.rb)  | `6 kyu` |
 | [Eureka](./codewars/Ruby/eureka.rb)  | `6 kyu` |
