@@ -568,6 +568,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 | Title | Kyu |
 | ------------- | ------------- |
+| [Last digit of a large number](./codewars/Ruby/last_digit_of_a_large_number.rb)  | `5 kyu` |
+| [Maximum subarray sum](./codewars/Ruby/maximum_subarray_sum.rb)  | `5 kyu` |
 | [A Chain adding function](./codewars/Ruby/a_chain_adding_function.rb)  | `5 kyu` |
 | [Number of trailing zeros of N!](./codewars/Ruby/number_of_trailing_zeros_of_n!.rb)  | `5 kyu` |
 | [Sum of Pairs](./codewars/Ruby/sum_of_pairs.rb)  | `5 kyu` |
