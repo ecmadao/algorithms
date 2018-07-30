@@ -514,6 +514,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | ------------- | ------------- | ------------- |
 | 001 | [Two Sum](./leetcode/Ruby/No1.two_sum.rb)  | `Easy` |
 | 002 | [Add Two Numbers](./leetcode/Ruby/No2.add_two_numbers.rb)  | `Medium` |
+| 003 | [Longest Substring Without Repeating Characters](./leetcode/Ruby/No3.longest_substring_without_repeating_characters.rb)  | `Medium` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
@@ -568,6 +569,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 | Title | Kyu |
 | ------------- | ------------- |
+| [Pick peaks](./codewars/Ruby/pick_peaks.rb)  | `5 kyu` |
 | [Directions Reduction](./codewars/Ruby/directions_reduction.rb)  | `5 kyu` |
 | [Best travel](./codewars/Ruby/best_travel.rb)  | `5 kyu` |
 | [Last digit of a large number](./codewars/Ruby/last_digit_of_a_large_number.rb)  | `5 kyu` |
