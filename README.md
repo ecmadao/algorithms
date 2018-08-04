@@ -516,6 +516,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 002 | [Add Two Numbers](./leetcode/Ruby/No2.add_two_numbers.rb)  | `Medium` |
 | 003 | [Longest Substring Without Repeating Characters](./leetcode/Ruby/No3.longest_substring_without_repeating_characters.rb)  | `Medium` |
 | 004 | [Median of Two Sorted Arrays](./leetcode/Ruby/No4.median_of_two_sorted_arrays.rb)  | `Medium` |
+| 005 | [Longest Palindromic Substring](./leetcode/Ruby/No5.longest_palindromic_substring.rb)  | `Medium` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
