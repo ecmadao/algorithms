@@ -101,5 +101,31 @@ findMedianSortedArrays([], [3, 4]);
 /**
  * 思路二：
  * 并归排序
- * 解略。可查看 Swift 解法
  */
+
+const findMedianSortedArrays2 = (nums1, nums2) => {
+  let i1 = 0;
+  let i2 = 0;
+  const list = [];
+
+  while (i1 < nums1.length && i2 < nums2.length) {
+    const num1 = nums1[i1];
+    const num2 = nums2[i2];
+
+    if (num1 < num2) {
+      list.push(num1);
+      i1 += 1;
+    } else {
+      list.push(num2);
+      i2 += 1;
+    }
+  }
+
+  if (i1 < nums1.length) {
+    list.push(...nums1.slice(i1));
+  } else if (i2 < nums2.length) {
+    list.push(...nums2.slice(i1));
+  }
+  const mid = Math.floor(list.length / 2);
+  return list.length % 2 === 0 ? (list[mid] + list[mid - 1]) / 2 : list[mid];
+};
