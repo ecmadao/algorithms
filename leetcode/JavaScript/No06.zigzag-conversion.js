@@ -19,7 +19,7 @@
 var getNumberIndex = function(i, numRows) {
   var base = numRows - 1 - i;
   return function(j) {
-      return i + Math.ceil(j / 2) * 2 * base + Math.floor(j / 2) * 2 * i;
+    return i + Math.ceil(j / 2) * 2 * base + Math.floor(j / 2) * 2 * i;
   };
 };
 
@@ -49,4 +49,27 @@ var convert = function(s, numRows) {
     }
   }
   return result;
+};
+
+const convert2 = (s, numRows) => {
+  if (numRows === 1) return s;
+  if (s.length <= numRows) return s;
+
+  const lists = [];
+  let index = 0;
+  while (index < s.length) {
+    const tmpIndex = index % (numRows - 1);
+    const listIndex = tmpIndex === 0
+      ? (index / (numRows - 1) % 2 === 0 ? 0 : (numRows - 1))
+      : (Math.floor(index / (numRows - 1)) % 2 === 0 ? tmpIndex : (numRows - 1) - tmpIndex);
+
+    if (!lists[listIndex]) lists[listIndex] = [];
+    lists[listIndex].push(s[index]);
+    index += 1;
+  }
+
+  return lists.reduce((r, list) => {
+    r.push(...list);
+    return r;
+  }, []).join('');
 };
