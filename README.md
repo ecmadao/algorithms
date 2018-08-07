@@ -519,6 +519,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 005 | [Longest Palindromic Substring](./leetcode/Ruby/No5.longest_palindromic_substring.rb)  | `Medium` |
 | 006 | [ZigZag Conversion](./leetcode/Ruby/No6.zigzag_conversion.rb)  | `Medium` |
 | 007 | [Reverse Integer](./leetcode/Ruby/No7.reverse_integer.rb)  | `Easy` |
+| 008 | [String to Integer (atoi)](./leetcode/Ruby/No8.string_to_integer_atoi.rb)  | `Medium` |
+| 009 | [Palindrome Number](./leetcode/Ruby/No9.palindrome_number.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
