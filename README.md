@@ -521,6 +521,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 007 | [Reverse Integer](./leetcode/Ruby/No7.reverse_integer.rb)  | `Easy` |
 | 008 | [String to Integer (atoi)](./leetcode/Ruby/No8.string_to_integer_atoi.rb)  | `Medium` |
 | 009 | [Palindrome Number](./leetcode/Ruby/No9.palindrome_number.rb)  | `Easy` |
+| 010 | [Regular Expression Matching](./leetcode/Ruby/No10.regular_expression_matching.rb)  | `Hard` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 

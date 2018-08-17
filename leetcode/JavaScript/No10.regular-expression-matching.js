@@ -39,7 +39,7 @@
  *
  * 投机取巧解法
  */
-var isMatch_easy = function(s, p) {
+var isMatch_trick = function(s, p) {
   var matchResult = s.match(new RegExp(p, 'g'));
   var result = matchResult ? matchResult[0] === s : false;
   return result;
@@ -49,11 +49,49 @@ var isMatch_easy = function(s, p) {
  * @param {string} s
  * @param {string} p
  * @return {boolean}
- *
- * 实现正则匹配解法
  */
 const isMatch = (s, p) => {
-  // TODO:
-  // Already on the way.
-  // can also check ./leetcode/Swift/No10.regular-expression-matching.swift
+  const couldBeEmpty = (j) => {
+    const count = p.length - j;
+    if (count % 2 !== 0) return false;
+
+    while (j < p.length) {
+      if (p[j + 1] !== '*') return false;
+      j += 2;
+    }
+    return true;
+  };
+
+  const match = (i, j) => {
+    if (i >= s.length && j >= p.length) return true;
+    if (i < s.length && j >= p.length) return false;
+    if (i >= s.length) return couldBeEmpty(j);
+
+    const s1 = s[i];
+    const s2 = p[j];
+
+    if (s1 === s2 || s2 === '.') {
+      if (j < p.length - 1 && p[j + 1] === '*') {
+        const r = match(i, j + 2);
+        if (r) return true;
+
+        i += 1;
+        while (i < s.length && (
+          (s2 !== '.' && s[i] === p[j]) ||
+          (s2 === '.')
+        )) {
+          const result = match(i, j + 2);
+          if (result) return true;
+          i += 1;
+        }
+        return match(i, j + 2);
+      } else {
+        return match(i + 1, j + 1);
+      }
+    } else {
+      if (j < p.length - 1 && p[j + 1] === '*') return match(i, j + 2);
+      return false;
+    }
+  };
+  return match(0, 0);
 };
