@@ -522,6 +522,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 008 | [String to Integer (atoi)](./leetcode/Ruby/No8.string_to_integer_atoi.rb)  | `Medium` |
 | 009 | [Palindrome Number](./leetcode/Ruby/No9.palindrome_number.rb)  | `Easy` |
 | 010 | [Regular Expression Matching](./leetcode/Ruby/No10.regular_expression_matching.rb)  | `Hard` |
+| 011 | [Container With Most Water](./leetcode/Ruby/No11.container_with_most_water.rb)  | `Medium` |
+| 012 | [Integer to Roman](./leetcode/Ruby/No12.integer_to_roman.rb)  | `Medium` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
