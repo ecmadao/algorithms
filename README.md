@@ -524,6 +524,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 010 | [Regular Expression Matching](./leetcode/Ruby/No10.regular_expression_matching.rb)  | `Hard` |
 | 011 | [Container With Most Water](./leetcode/Ruby/No11.container_with_most_water.rb)  | `Medium` |
 | 012 | [Integer to Roman](./leetcode/Ruby/No12.integer_to_roman.rb)  | `Medium` |
+| 013 | [Roman to Integer](./leetcode/Ruby/No13.roman_to_integer.rb)  | `Easy` |
+| 014 | [Longest Common Prefix](./leetcode/Ruby/No14.longest_common_prefix.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
