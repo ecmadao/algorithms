@@ -526,6 +526,9 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 012 | [Integer to Roman](./leetcode/Ruby/No12.integer_to_roman.rb)  | `Medium` |
 | 013 | [Roman to Integer](./leetcode/Ruby/No13.roman_to_integer.rb)  | `Easy` |
 | 014 | [Longest Common Prefix](./leetcode/Ruby/No14.longest_common_prefix.rb)  | `Easy` |
+| 015 | [3Sum](./leetcode/Ruby/No15.3sum.rb)  | `Medium` |
+| 016 | [3Sum Closest](./leetcode/Ruby/No16.3sum_closest.rb)  | `Medium` |
+| 017 | [Letter Combinations of a Phone Number](./leetcode/Ruby/No17.letter_combinations_of_a_phone_number.rb)  | `Medium` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
