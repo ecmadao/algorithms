@@ -531,6 +531,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 017 | [Letter Combinations of a Phone Number](./leetcode/Ruby/No17.letter_combinations_of_a_phone_number.rb)  | `Medium` |
 | 018 | [4Sum](./leetcode/Ruby/No18.4sum.rb)  | `Medium` |
 | 019 | [Remove Nth Node From End of List](./leetcode/Ruby/No19.remove_nth_node_from_end_of_list.rb)  | `Medium` |
+| 020 | [Valid Parentheses](./leetcode/Ruby/No20.valid_parentheses.rb)  | `Medium` |
+| 021 | [Merge Two Sorted Lists](./leetcode/Ruby/No21.merge_two_sorted_lists.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
