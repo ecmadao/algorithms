@@ -529,6 +529,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 015 | [3Sum](./leetcode/Ruby/No15.3sum.rb)  | `Medium` |
 | 016 | [3Sum Closest](./leetcode/Ruby/No16.3sum_closest.rb)  | `Medium` |
 | 017 | [Letter Combinations of a Phone Number](./leetcode/Ruby/No17.letter_combinations_of_a_phone_number.rb)  | `Medium` |
+| 018 | [4Sum](./leetcode/Ruby/No18.4sum.rb)  | `Medium` |
+| 019 | [Remove Nth Node From End of List](./leetcode/Ruby/No19.remove_nth_node_from_end_of_list.rb)  | `Medium` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
