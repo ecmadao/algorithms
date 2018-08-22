@@ -533,6 +533,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 019 | [Remove Nth Node From End of List](./leetcode/Ruby/No19.remove_nth_node_from_end_of_list.rb)  | `Medium` |
 | 020 | [Valid Parentheses](./leetcode/Ruby/No20.valid_parentheses.rb)  | `Medium` |
 | 021 | [Merge Two Sorted Lists](./leetcode/Ruby/No21.merge_two_sorted_lists.rb)  | `Easy` |
+| 022 | [Generate Parentheses](./leetcode/Ruby/No22.generate_parentheses.rb)  | `Medium` |
+| 023 | [Generate Parentheses](./leetcode/Ruby/No23.merge_k_sorted_lists.rb)  | `Hard` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
