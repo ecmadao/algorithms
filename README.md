@@ -534,7 +534,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 020 | [Valid Parentheses](./leetcode/Ruby/No20.valid_parentheses.rb)  | `Medium` |
 | 021 | [Merge Two Sorted Lists](./leetcode/Ruby/No21.merge_two_sorted_lists.rb)  | `Easy` |
 | 022 | [Generate Parentheses](./leetcode/Ruby/No22.generate_parentheses.rb)  | `Medium` |
-| 023 | [Generate Parentheses](./leetcode/Ruby/No23.merge_k_sorted_lists.rb)  | `Hard` |
+| 023 | [Merge k Sorted Lists](./leetcode/Ruby/No23.merge_k_sorted_lists.rb)  | `Hard` |
+| 024 | [Swap Nodes in Pairs](./leetcode/Ruby/No25.swap_nodes_in_pairs.rb)  | `Hard` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
