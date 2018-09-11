@@ -537,6 +537,9 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 023 | [Merge k Sorted Lists](./leetcode/Ruby/No23.merge_k_sorted_lists.rb)  | `Hard` |
 | 024 | [Swap Nodes in Pairs](./leetcode/Ruby/No25.swap_nodes_in_pairs.rb)  | `Medium` |
 | 025 | [Reverse Nodes in k-Group](./leetcode/Ruby/No25.reverse_nodes_in_k-group.rb)  | `Hard` |
+| 026 | [Remove Duplicates from Sorted Array](./leetcode/Ruby/No26.remove_duplicates_from_sorted_array.rb)  | `Easy` |
+| 027 | [Remove Element](./leetcode/Ruby/No27.remove_element.rb)  | `Easy` |
+| 028 | [Implement strStr()](./leetcode/Ruby/No28.implement_strStr.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
