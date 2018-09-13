@@ -440,6 +440,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 541 | [Reverse String II](./leetcode/JavaScript/No541.reverse-string-II.js)  | `Easy` |
 | 561 | [Array Partition I](./leetcode/JavaScript/No561.array-partition-I.js)  | `Easy` |
 | 594 | [Longest Harmonious Subsequence](./leetcode/JavaScript/No594.longest-harmonious-subsequence.js)  | `Easy` |
+| 598 | [Range Addition II](./leetcode/JavaScript/No598.range_addition_II.js)  | `Easy` |
 | 599 | [Minimum Index Sum of Two Lists](./leetcode/JavaScript/No599.minimum-index-sum-of-two-lists.js)  | `Easy` |
 | 605 | [Can Place Flowers](./leetcode/JavaScript/No605.can-place-flowers.js)  | `Easy` |
 | 633 | [Sum of Square Numbers](./leetcode/JavaScript/No633.sum-of-square-numbers.js)  | `Easy` |
@@ -542,6 +543,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 028 | [Implement strStr()](./leetcode/Ruby/No28.implement_strStr.rb)  | `Easy` |
 | 029 | [Divide Two Integers](./leetcode/Ruby/No29.divide_two_integers.rb)  | `Medium` |
 | 031 | [Next Permutation](./leetcode/Ruby/No31.next_permutation.rb)  | `Medium` |
+| 598 | [Range Addition II](./leetcode/Ruby/No598.range_addition_II.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
