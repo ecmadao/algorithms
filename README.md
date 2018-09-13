@@ -541,6 +541,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 027 | [Remove Element](./leetcode/Ruby/No27.remove_element.rb)  | `Easy` |
 | 028 | [Implement strStr()](./leetcode/Ruby/No28.implement_strStr.rb)  | `Easy` |
 | 029 | [Divide Two Integers](./leetcode/Ruby/No29.divide_two_integers.rb)  | `Medium` |
+| 031 | [Next Permutation](./leetcode/Ruby/No31.next_permutation.rb)  | `Medium` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
 
