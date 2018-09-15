@@ -544,6 +544,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 029 | [Divide Two Integers](./leetcode/Ruby/No29.divide_two_integers.rb)  | `Medium` |
 | 031 | [Next Permutation](./leetcode/Ruby/No31.next_permutation.rb)  | `Medium` |
 | 032 | [Longest Valid Parentheses](./leetcode/Ruby/No32.longest_valid_parentheses.rb)  | `Hard` |
+| 198 | [House Robber](./leetcode/Ruby/No198.house_robber.rb)  | `Easy` |
+| 213 | [House Robber II](./leetcode/Ruby/No213.house_robber_II.rb)  | `Medium` |
 | 598 | [Range Addition II](./leetcode/Ruby/No598.range_addition_II.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
