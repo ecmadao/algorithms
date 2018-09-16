@@ -37,18 +37,15 @@
  * @return {number}
  */
 var rob = function(root) {
-  const _dfs = (node) => {
-    return node ? dfs(node.left) + dfs(node.right) : 0;
-  };
-
   const dfs = (node) => {
-    if (!node) return 0;
-    if (!node.left && !node.right) return node.val;
+    if (!node) return [0, 0]; // [robbed, unrobbed]
+    if (!node.left && !node.right) return [node.val, 0];
 
-    const unRobRoot = dfs(node.left) + dfs(node.right); // unrob root
-    const robRoot = node.val + _dfs(node.left) + _dfs(node.right); // rob root
-    return Math.max(unRobRoot, robRoot);
+    const tmp1 = dfs(node.left);
+    const tmp2 = dfs(node.right);
+
+    return [node.val + tmp1[1] + tmp2[1], Math.max(...tmp1) + Math.max(...tmp2)]
   };
 
-  return dfs(root);
+  return Math.max(...dfs(root));
 };

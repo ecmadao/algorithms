@@ -546,6 +546,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 032 | [Longest Valid Parentheses](./leetcode/Ruby/No32.longest_valid_parentheses.rb)  | `Hard` |
 | 198 | [House Robber](./leetcode/Ruby/No198.house_robber.rb)  | `Easy` |
 | 213 | [House Robber II](./leetcode/Ruby/No213.house_robber_II.rb)  | `Medium` |
+| 337 | [House Robber III](./leetcode/Ruby/No337.house_robber_III.rb)  | `Medium` |
 | 598 | [Range Addition II](./leetcode/Ruby/No598.range_addition_II.rb)  | `Easy` |
 
 ### [Codewars](https://www.codewars.com/users/ecmadao)
