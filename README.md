@@ -547,6 +547,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 033 | [Search in Rotated Sorted Array](./leetcode/Ruby/No33.search_in_rotated_sorted_array.rb)  | `Medium` |
 | 034 | [Find First and Last Position of Element in Sorted Array](./leetcode/Ruby/No34.find_first_and_last_position_of_element_in_sorted_array.rb)  | `Medium` |
 | 035 | [Search Insert Position](./leetcode/Ruby/No35.search_insert_position.rb)  | `Easy` |
+| 036 | [Valid Sudoku](./leetcode/Ruby/No36.valid_sudoku.rb)  | `Medium` |
+| 037 | [Sudoku Solver](./leetcode/Ruby/No37.sudoku_solver.rb)  | `Hard` |
 | 198 | [House Robber](./leetcode/Ruby/No198.house_robber.rb)  | `Easy` |
 | 213 | [House Robber II](./leetcode/Ruby/No213.house_robber_II.rb)  | `Medium` |
 | 337 | [House Robber III](./leetcode/Ruby/No337.house_robber_III.rb)  | `Medium` |
