@@ -552,6 +552,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 038 | [Count and Say](./leetcode/Ruby/No38.count_and_say.rb)  | `Easy` |
 | 039 | [Combination Sum](./leetcode/Ruby/No39.combination_sum.rb)  | `Medium` |
 | 040 | [Combination Sum II](./leetcode/Ruby/No40.combination_sum_II.rb)  | `Medium` |
+| 041 | [First Missing Positive](./leetcode/Ruby/No41.first_missing_positive.rb)  | `Hard` |
+| 042 | [Trapping Rain Water](./leetcode/Ruby/No42.trapping_rain_water.rb)  | `Hard` |
 | 198 | [House Robber](./leetcode/Ruby/No198.house_robber.rb)  | `Easy` |
 | 213 | [House Robber II](./leetcode/Ruby/No213.house_robber_II.rb)  | `Medium` |
 | 337 | [House Robber III](./leetcode/Ruby/No337.house_robber_III.rb)  | `Medium` |
