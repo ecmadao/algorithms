@@ -555,6 +555,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 041 | [First Missing Positive](./leetcode/Ruby/No41.first_missing_positive.rb)  | `Hard` |
 | 042 | [Trapping Rain Water](./leetcode/Ruby/No42.trapping_rain_water.rb)  | `Hard` |
 | 043 | [Multiply Strings](./leetcode/Ruby/No43.multiply_strings.rb)  | `Medium` |
+| 045 | [Jump Game II](./leetcode/Ruby/No45.jump_game_II.rb)  | `Hard` |
+| 055 | [Jump Game](./leetcode/Ruby/No55.jump_game.rb)  | `Medium` |
 | 198 | [House Robber](./leetcode/Ruby/No198.house_robber.rb)  | `Easy` |
 | 213 | [House Robber II](./leetcode/Ruby/No213.house_robber_II.rb)  | `Medium` |
 | 337 | [House Robber III](./leetcode/Ruby/No337.house_robber_III.rb)  | `Medium` |
