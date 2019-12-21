@@ -15,6 +15,8 @@
 
 ## AVL 树
 
+> AVL 树是最早被发明的自平衡二叉查找树，得名于它的发明者 G. M. Adelson-Velsky 和 Evgenii Landis
+
 一般的二叉查找树的查询复杂度是跟目标结点到树根的距离（即深度）有关，因此当结点的深度普遍较大时，查询的均摊复杂度会上升，为了更高效的查询，平衡树应运而生了。
 
 在这里，平衡指所有叶子的深度趋于平衡，更广义的是指在树上所有可能查找的均摊复杂度偏低。
@@ -75,8 +77,8 @@ AVL 树的查找过程和[二叉搜索树](../binary-search-trees)一致
  * 5. aChildRight 的左子节点还是其左子节点
 */
 const rightRotate = (node) => {
-// 获取 a 的右子节点 aChildLeft
-const targetNode = node.leftChild;
+  // 获取 a 的右子节点 aChildLeft
+  const targetNode = node.leftChild;
 
   // 如果 a 还有父节点，则把 aChildLeft 作为 a 父节点的左子节点
   // 同时，把 aChildLeft 的父节点设置为了 a 的父节点

@@ -27,8 +27,7 @@ const bucketSort = function(nums) {
   const interval = (max - min) / nums.length;
   const tmp = {};
 
-  for (let i = 0; i < nums.length; i += 1) {
-    const num = nums[i];
+  for (const num of nums) {
     const section = Math.floor((num - min) / interval);
     if (tmp[section] === undefined) {
       tmp[section] = [num];
@@ -38,9 +37,7 @@ const bucketSort = function(nums) {
   }
 
   let result = [];
-  const sections = Object.keys(tmp);
-  for (let i = 0; i < sections.length; i += 1) {
-    const section = sections[i];
+  for (const section of Object.keys(tmp)) {
     const arr = tmp[section];
     result = result.concat(arr);
   }
@@ -49,6 +46,5 @@ const bucketSort = function(nums) {
 
 
 const arr = [29, 25, 3, 49, 9, 37, 21, 43];
-console.log(`bucket sort for ${[29, 25, 3, 49, 9, 37, 21, 43]}`);
-const result = bucketSort([29, 25, 3, 49, 9, 37, 21, 43]);
-console.log(`result is ${result}`);
+console.log(`bucket sort for ${arr}`);
+console.log(`result is ${bucketSort(arr)}`);

@@ -9,9 +9,11 @@
     - [JavaScript Solution](#javascript-solution)
     - [Swift4 Solution](#swift4-solution)
     - [Haskell Solution](#haskell-solution)
+    - [Ruby Solution](#ruby-solution)
   - [Codewars](#codewars)
     - [Haskell Solution](#haskell-solution-1)
     - [JavaScript Solution](#javascript-solution-1)
+    - [Ruby Solution](#ruby-solution-1)
   - [Run demo](#run-demo)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -35,18 +37,18 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 ### Topic
 
-- [并查集](./union-find)
-- [基本排序](./elementary-sorts)
-- [归并排序](./mergesort)
-- [快速排序](./quicksort)
-- [优先队列](./priority-queues)
-- [二叉搜索树](./binary-search-trees)
+- [并查集](./union-find/README.md)
+- [基本排序](./elementary-sorts/README.md)
+- [归并排序](./mergesort/README.md)
+- [快速排序](./quicksort/README.md)
+- [优先队列](./priority-queues/README.md)
+- [二叉搜索树](./binary-search-trees/README.md)
 - 平衡二叉搜索树
-  - [AVL 二叉搜索树](./balanced-search-trees)
-  - [2-3 二叉搜索树](./2-3-search-trees)
-  - [红黑二叉搜索树](./red-black-bsts)
-  - [区间二叉搜索树](./interval-search-trees)
-- [k-d 树](./k-d-trees)
+  - [AVL 二叉搜索树](./balanced-search-trees/README.md)
+  - [2-3 二叉搜索树](./2-3-search-trees/README.md)
+  - [红黑二叉搜索树](./red-black-bsts/README.md)
+  - [区间二叉搜索树](./interval-search-trees/README.md)
+- [k-d 树](./k-d-trees/README.md)
 - 字典树
   - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
   - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
@@ -54,8 +56,8 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
   - 字符串匹配的 KMP 算法
     - [KMP 算法详细解析](https://blog.sengxian.com/algorithms/kmp)
     - [克努斯-莫里斯-普拉特算法](https://zh.wikipedia.org/wiki/%E5%85%8B%E5%8A%AA%E6%96%AF-%E8%8E%AB%E9%87%8C%E6%96%AF-%E6%99%AE%E6%8B%89%E7%89%B9%E7%AE%97%E6%B3%95)
-- [排列组合](./permutation-and-combination)
-- [图](./graph)
+- [排列组合](./permutation-and-combination/README.md)
+- [图](./graph/README.md)
 
 ### [LeetCode](https://leetcode.com/ecmadao/)
 
