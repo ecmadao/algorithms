@@ -23,7 +23,7 @@
  * @param {string} s
  * @return {number}
  */
-var countSubstrings = function(s) {
+var countSubstrings_1 = function(s) {
   let base = 0;
 
   const checkPalindromic = (start, end) => {
@@ -42,3 +42,42 @@ var countSubstrings = function(s) {
   }
   return base;
 };
+
+/**
+ * @param {string} s
+ * @return {number}
+ * 动态规划法
+ */
+var countSubstrings_2 = function(s) {
+  let result = s.length
+  const tmp = []
+
+  for (let i = 1; i < s.length; i += 1) {
+    if (!tmp[i]) tmp[i] = []
+    tmp[i][i] = true
+
+    let j = i - 1
+    while (j >= 0 && i + (i - j) - 1 <= s.length - 1) {
+      if (!tmp[j]) tmp[j] = []
+      tmp[j][j] = true
+
+      const l1 = i + (i - j)
+      if (l1 <= s.length - 1) {
+        tmp[j][l1] = s[j] === s[l1] && (tmp[j + 1][l1 - 1] === undefined ? true : tmp[j + 1][l1 - 1])
+      }
+
+      const l2 = i + (i - j) - 1
+      tmp[j][l2] = s[j] === s[l2] && (tmp[j + 1][l2 - 1] === undefined ? true : tmp[j + 1][l2 - 1])
+
+      if (tmp[j][l1]) {
+          result += 1
+      }
+      if (tmp[j][l2]) {
+          result += 1
+      }
+      j -= 1
+    }
+  }
+
+  return result
+}

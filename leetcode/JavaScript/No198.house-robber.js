@@ -11,7 +11,11 @@
  * Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
  */
 
-
+/**
+ * 盗贼在每一步，都有两个选择：
+ * 1. 抢。则上一步一定不能抢
+ * 2. 不抢。则最大利益是上一步的最大利益
+ * /
 
 /**
  * @param {number[]} nums

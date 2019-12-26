@@ -72,6 +72,8 @@ LeetCode 上相关题目：
 LeetCode 上相关题目：
 
 1. [No.621 Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js)
+1. [No.622 Design Circular Queue](./leetcode/JavaScript/No622.design-circular-queue.js)
+1. [No.641 Design Circular Deque](./leetcode/JavaScript/No641.design-circular-deque.js)
 
 ### 链表
 
@@ -96,7 +98,7 @@ LeetCode 上相关题目：
 LeetCode 上相关题目：
 
 1. [No.2 Add Two Numbers](./leetcode/JavaScript/No02.add-two-numbers.js)
-2. [No.19 Remove Nth Node From End of List](./leetcode/JavaScript/No19.remove-nth-node-from-end-of-list.js)
+2. [No.19 Remove Nth Node From End of List](./leetcode/JavaScript/No19.remove-nth-node-from-end-of-list.js) - Two pointers
 3. [No.21 Merge Two Sorted Lists](./leetcode/JavaScript/No21.merge-two-sorted-lists.js)
 4. [No.23 Merge k Sorted Lists](./leetcode/JavaScript/No23.merge-k-sorted-lists.js)
 5. [No.24 Swap Nodes in Pairs](./leetcode/JavaScript/No24.swap-nodes-in-pairs.js)
@@ -416,3 +418,9 @@ const flatArray = (arg) => {
 - [What is a plain English explanation of “Big O” notation?](http://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation)
 - [算法复杂度分析](http://www.cnblogs.com/gaochundong/p/complexity_of_algorithms.html)
 - [算法时间复杂度的表示法O(n²)、O(n)、O(1)、O(nlogn)等是什么意思？](https://www.zhihu.com/question/21387264)
+
+#### 动态规划
+
+- [Dynamic Programming Patterns](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)
+
+#### [字符串问题]('./string/README.md')

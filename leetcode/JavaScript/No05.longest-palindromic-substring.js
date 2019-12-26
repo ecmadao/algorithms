@@ -24,7 +24,7 @@
  * 该方法的核心思想是，从左侧开始向右遍历，每个点都当做是回文的中心点，以此向左右扩张，直到边界
  * 当点的右侧的字符串长度 * 2 小于已知回文的长度时，则没有必要继续遍历，直接中断即可
  */
-var longestPalindrome = function(s) {
+var longestPalindrome_1 = function(s) {
   var length = s.length;
   var longest = '';
 
@@ -52,6 +52,44 @@ var longestPalindrome = function(s) {
 
   return longest;
 };
+
+/**
+ * @param {string} s
+ * @return {string}
+ * 动态规划法
+ */
+var longestPalindrome_2 = function(s) {
+  if (!s.length) return ''
+  let result = s[0]
+  const tmp = []
+
+  for (let i = 1; i < s.length; i += 1) {
+    if (!tmp[i]) tmp[i] = []
+    tmp[i][i] = true
+
+    let j = i - 1
+    while (j >= 0 && i + (i - j) - 1 <= s.length - 1) {
+      if (!tmp[j]) tmp[j] = []
+      tmp[j][j] = true
+
+      const l1 = i + (i - j)
+      if (l1 <= s.length - 1) tmp[j][l1] = s[j] === s[l1] && (tmp[j + 1][l1 - 1] === undefined ? true : tmp[j + 1][l1 - 1])
+
+      const l2 = i + (i - j) - 1
+      tmp[j][l2] = s[j] === s[l2] && (tmp[j + 1][l2 - 1] === undefined ? true : tmp[j + 1][l2 - 1])
+
+      if (tmp[j][l1] && l1 + 1 - j > result.length) {
+          result = s.slice(j, l1 + 1)
+      }
+      if (tmp[j][l2] && l2 + 1 - j > result.length) {
+          result = s.slice(j, l2 + 1)
+      }
+      j -= 1
+    }
+  }
+
+  return result
+}
 
 /*
  * 除了上面的方法以外，还有一种更加优化的方式，叫做 Manacher 算法

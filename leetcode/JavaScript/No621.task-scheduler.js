@@ -42,23 +42,25 @@
  * @return {number}
  */
 var leastInterval = function(tasks, n) {
-  const tmp = {};
-  const set = new Set(tasks);
-  for (let i = 0; i < tasks.length; i += 1) {
-    const task = tasks[i];
-    if (tmp[task] === undefined) tmp[task] = 0;
-    tmp[task] += 1;
-  }
+  let maxCount = 0
+  let taskCount = 0
 
-  let max = 0;
-  const numTmp = {};
-  const keys = Object.keys(tmp);
-  for (let i = 0; i < keys.length; i += 1) {
-    const num = tmp[keys[i]];
-    if (num > max) max = num;
-    if (!numTmp[num]) numTmp[num] = 0;
-    numTmp[num] += 1;
-  }
-  const count = (max - 1) * (n + 1) + numTmp[max];
-  return Math.max(count, tasks.length);
+  tasks.reduce((dict, task) => {
+    dict[task] = (dict[task] || 0) + 1
+
+    const count = dict[task]
+    if (maxCount < count) {
+      maxCount = count
+      taskCount = 1
+    } else if (maxCount === count) {
+      taskCount += 1
+    }
+
+    return dict
+  }, {})
+
+  return Math.max(
+    (maxCount - 1) * (n + 1) + taskCount,
+    tasks.length
+  )
 };
