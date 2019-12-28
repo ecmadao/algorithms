@@ -17,40 +17,30 @@
  */
 
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var rob = function(nums) {
-  if (nums.length <= 1) return nums[0] || 0;
-  let index = nums.length - 1;
+var houseRob = function(nums) {
+  if (!nums.length) return 0
+  let rob = 0
+  let unrob = 0
 
-  const from2 = {
-    rob: nums[index],
-    unrob: 0
-  };
-  index -= 1;
-
-  const from1 = {
-    rob: nums[index],
-    unrob: 0
-  };
-
-  while (index >= 0) {
-    const num = nums[index];
-
-    if (index < nums.length - 2) {
-      const tmp1 = from1.rob;
-      from1.rob = num + from1.unrob;
-      from1.unrob = Math.max(tmp1, from1.unrob);
-    }
-    if (index >= 1) {
-      const tmp2 = from2.rob;
-      from2.rob = num + from2.unrob;
-      from2.unrob = Math.max(tmp2, from2.unrob);
-    }
-    index -= 1;
+  for (const num of nums) {
+      const tmp = rob
+      rob = num + unrob
+      unrob = Math.max(
+          tmp, unrob
+      )
   }
+  return Math.max(rob, unrob)
+}
 
-  return Math.max(from1.rob, from1.unrob, from2.rob, from2.unrob);
-};
+/**
+* @param {number[]} nums
+* @return {number}
+*/
+var rob = function(nums) {
+  if (nums.length === 1) return nums[0]
+
+  return Math.max(
+    houseRob(nums.slice(0, -1)),
+    houseRob(nums.slice(1))
+  )
+}

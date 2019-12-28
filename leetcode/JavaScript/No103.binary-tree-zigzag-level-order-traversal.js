@@ -55,3 +55,38 @@ var zigzagLevelOrder = function(root) {
   getLayerValues([root]);
   return results;
 };
+
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var zigzagLevelOrder_2 = function(root, leftToRight = true) {
+  let queue = [root]
+  const result = []
+
+  while (true) {
+    const data = []
+    const q = []
+
+    while (queue.length) {
+      let node = leftToRight ? queue.shift() : queue.pop()
+      if (!node) continue
+      data.push(node.val)
+
+      if (leftToRight) {
+        if (node.left) q.push(node.left)
+        if (node.right) q.push(node.right)
+      } else {
+        if (node.right) q.unshift(node.right)
+        if (node.left) q.unshift(node.left)
+      }
+    }
+
+    queue = q
+    leftToRight = !leftToRight
+    data.length && result.push(data)
+    if (!q.length) break
+  }
+
+  return result
+}

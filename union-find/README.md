@@ -38,14 +38,14 @@ check(1, 7) # 检查 1 7 是否联通
  * 输出化时，每个位置上的值都是它本身，代表仅联通自己
 */
 const init = (count = 7) => {
-  const data = [];
+  const data = []
   for (let i = 0; i < count + 1; i += 1) {
-    data[i] = i;
+    data[i] = i
   }
-  return data;
-};
+  return data
+}
 
-init();
+init()
 ```
 
 这样一来我们就得到如下的数据结构：
@@ -79,17 +79,17 @@ init();
 */
 const union = (val, target) => {
   if (data[val] !== val) {
-    const origin = data[val];
-    union(origin, target);
+    const origin = data[val]
+    union(origin, target)
   }
-  data[val] = target;
-};
+  data[val] = target
+}
 ```
 
 在查找的时候，只要简单的比较两个位置上对应的值是否相等即可：
 
 ```javascript
-const find = (val, target) => data[val] === data[target];
+const find = (val, target) => data[val] === data[target]
 ```
 
 **这种算法的优势在于查询速度非常快，但缺点也很明显：在 union 操作的时候需要循环或者递归多次，在最糟糕的情况下，每次 union 时我们都会对 N - 1 个元素进行遍历。**
@@ -119,25 +119,25 @@ value: 0 1 4 3 4 7 6 4
 ```javascript
 // 查找给定 val 的根节点
 const findRoot = (val) => {
-  let root = val;
+  let root = val
   while(data[root] !== root) {
-    root = data[root];
+    root = data[root]
   }
-  return root;
-};
+  return root
+}
 
 // 将两个指定值的 root 节点链接起来
 const union = (val, target) => {
-  const valRoot = findRoot(val);
-  const targetRoot = findRoot(target);
-  data[valRoot] = targetRoot;
-};
+  const valRoot = findRoot(val)
+  const targetRoot = findRoot(target)
+  data[valRoot] = targetRoot
+}
 ```
 
 相对于的，在查找时，只要比较两个值的根节点是否相同即可：
 
 ```javascript
-const find = (val, target) => findRoot(val) === findRoot(target);
+const find = (val, target) => findRoot(val) === findRoot(target)
 ```
 
 这种算法的优势就在于并集操作比较简单。因为是树状结构，我们往往不需要遍历太多次；而它的缺点则在于，如果树状结构是瘦长的，即我们先将 `1` 链接到 `2`， 再将 `2` 链接 `3` 这样依次下去，则每个节点只有一个子节点，最终成为一个线状结构。在这种情况下，进行链接或判断时，在糟糕的情况下我们还是需要遍历 N - 1 次以便找到根节点。

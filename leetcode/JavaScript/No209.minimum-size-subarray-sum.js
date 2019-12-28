@@ -22,7 +22,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var minSubArrayLen = function(s, nums) {
+var minSubArrayLen_1 = function(s, nums) {
   let sum;
   let length = 0;
   let result = Infinity;
@@ -44,22 +44,29 @@ var minSubArrayLen = function(s, nums) {
 };
 
 /* ==================== solution 2 ==================== */
-const minSubArrayLen = (s, nums) => {
-  let i = 0;
-  let j = 1;
-  let sum = nums[i];
-  if (sum >= s) return 1;
-  sum += nums[j]
-  let result = Infinity;
-  while (i < nums.length && j < nums.length) {
+/**
+ * @param {number} s
+ * @param {number[]} nums
+ * @return {number}
+ */
+var minSubArrayLen_2 = function(s, nums) {
+  if (!nums.length) return 0
+  let i = 0
+  let j = 1
+  let sum = nums[i]
+  let result = Infinity
+
+  while (i < nums.length && j <= nums.length) {
     if (sum < s) {
-      j += 1;
-      sum += nums[j];
+      if (j === nums.length) break
+      sum += nums[j]
+      j += 1
     } else {
-      result = Math.min(result, j - i + 1);
-      sum -= nums[i];
-      i += 1;
+      result = Math.min(result, j - i)
+      sum -= nums[i]
+      i += 1
     }
   }
-  return result === Infinity ? 0 : result;
-};
+
+  return result === Infinity ? 0 : result
+}

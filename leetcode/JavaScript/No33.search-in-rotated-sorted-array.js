@@ -35,29 +35,71 @@
  * @return {number}
  */
 var search = function(nums, target) {
-  var index = -1;
-  var left = 0;
-  var right = nums.length - 1;
+  let index = -1
+  let i = 0
+  let j = nums.length - 1
 
-  while(left <= right) {
-    var midIndex = Math.floor((left + right) / 2);
-    var mid = nums[midIndex];
-    if (mid === target) {
-      index = midIndex;
-      break;
-    } else if (mid < nums[right]) {
-      if (target > mid && target <= nums[right]) {
-        left += 1;
+  while (i <= j) {
+    const mid = Math.ceil((i + j) / 2)
+    const num = nums[mid]
+
+    if (num === target) {
+      index = mid
+      break
+    } else if (num > target) {
+      // 中间数 > target
+      if (num < nums[j]) {
+        // 且中间数小于最右侧数，则从中间数开始往右，全部都是升序
+        // 那么应该只看左边
+        j = mid - 1
       } else {
-        right -= 1;
+        // 且中间数大于最右侧数
+        // 那么先看最左侧数，如果小于 target，则只取左侧。否则只取右侧
+        if (nums[i] <= target) {
+          j = mid - 1
+        } else {
+          i = mid + 1
+        }
       }
     } else {
-      if (target < mid && target >= nums[left]) {
-        right -= 1;
+      // 中间数 < target
+      if (num > nums[j]) {
+        // 且中间数大于最右侧数，则左侧全部舍弃
+        // 因为左侧的数全部 < 中间数
+        i = mid + 1
       } else {
-        left += 1;
+        // 且中间数小于最右侧数，那么从中间数开始全部是升序的
+        // 先看最右侧数，如果大于 target，则目标位置在右侧区间内
+        if (nums[j] >= target) {
+          i = mid + 1
+        } else {
+          j = mid - 1
+        }
       }
     }
   }
-  return index;
-};
+
+  return index
+}
+
+console.log(
+  search([4,5,6,7,0,1,2], 0)
+)
+console.log(
+  search([4,5,6,7,0,1,2], 3)
+)
+console.log(
+  search([4,5,6,7,0,1], 3)
+)
+console.log(
+  search([4,5,6,7,0,1], 6)
+)
+console.log(
+  search([4,5,6,7,0,1], 4)
+)
+console.log(
+  search([4,5,6,7,0,1], 1)
+)
+console.log(
+  search([4,5,6,7,8,9,1,2,3], 1)
+)

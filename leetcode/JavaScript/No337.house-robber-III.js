@@ -38,14 +38,24 @@
  */
 var rob = function(root) {
   const dfs = (node) => {
-    if (!node) return [0, 0]; // [robbed, unrobbed]
-    if (!node.left && !node.right) return [node.val, 0];
+    if (!node) return [0, 0] // [robbed, unrobbed]
+    if (!node.left && !node.right) return [node.val, 0]
 
-    const tmp1 = dfs(node.left);
-    const tmp2 = dfs(node.right);
+    const tmp1 = dfs(node.left)
+    const tmp2 = dfs(node.right)
 
     return [node.val + tmp1[1] + tmp2[1], Math.max(...tmp1) + Math.max(...tmp2)]
-  };
+  }
 
-  return Math.max(...dfs(root));
-};
+  return Math.max(...dfs(root))
+}
+
+var rob_2 = function(root, pass) {
+  if (!root) return 0
+  if (pass) return rob_2(root.left) + rob_2(root.right)
+
+  return Math.max(
+    rob_2(root.left) + rob_2(root.right),
+    root.val + rob_2(root.left, true) + rob_2(root.right, true)
+  )
+}
