@@ -51,3 +51,31 @@ var maxArea = function(height) {
   }
   return result;
 };
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var maxArea_2 = function(height) {
+  let i = 0
+  let j = height.length - 1
+  let result = 0
+
+  while (i < j) {
+    const left = height[i]
+    const right = height[j]
+    result = Math.max(result, Math.min(left, right) * (j - i))
+
+    if (left <= right) {
+      while (i < j && height[i] <= left) {
+          i += 1
+      }
+    } else {
+      while (i < j && height[j] <= right) {
+          j -= 1
+      }
+    }
+  }
+
+  return result
+};

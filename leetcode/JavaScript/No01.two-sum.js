@@ -42,18 +42,23 @@ var twoSumFunc1 = function(nums, target) {
 
 /* =================== 目前最快的方法 =================== */
 // 不再利用 Set 进行 “数字是否存在” 的检查，而是使用 value 做键，index 做值
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 var twoSum = function(nums, target) {
-  var data = {};
-  for (var i = 0; i < nums.length; i += 1) {
-    var num = nums[i];
-    if (data[target - num] !== undefined) {
-      return [data[target - num], i];
+  const tmp = {}
+
+  for (let i = 0; i < nums.length; i += 1) {
+    const data = target - nums[i]
+    if (tmp[data] === undefined) {
+      tmp[nums[i]] = i
     } else {
-      data[num] = i;
+      return [tmp[data], i]
     }
   }
-  return [];
-};
+}
 
 /* =================== 两端向中央收缩法 =================== */
 // 如果是要求求出具体的数字使得两者之和 = target，则可以使用两端向中央收缩法

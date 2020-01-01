@@ -112,3 +112,55 @@ LRUCache.prototype.put = function(key, value) {
 * var param_1 = obj.get(key)
 * obj.put(key,value)
 */
+
+
+/**
+ * ======================= solution 2 =======================
+ * 利用 Map 特性:
+ * 1. 会维持插入顺序
+ * 2. 遍历时是迭代器
+ * /
+/**
+ * @param {number} capacity
+ */
+var LRUCache = function(capacity) {
+  this.size = capacity
+  this.cache = new Map()
+};
+
+/**
+* @param {number} key
+* @return {number}
+*/
+LRUCache.prototype.get = function(key) {
+  const val = this.cache.get(key)
+  if (!val) return -1
+  this.cache.delete(key)
+  this.cache.set(key, val)
+  return val
+};
+
+/**
+* @param {number} key
+* @param {number} value
+* @return {void}
+*/
+LRUCache.prototype.put = function(key, value) {
+  if (this.cache.has(key)) {
+    this.cache.delete(key)
+  } else if (this.cache.size >= this.size) {
+    for (const k of this.cache.keys()) {
+      this.cache.delete(k)
+      break
+    }
+  }
+
+  this.cache.set(key, value)
+};
+
+/**
+* Your LRUCache object will be instantiated and called as such:
+* var obj = new LRUCache(capacity)
+* var param_1 = obj.get(key)
+* obj.put(key,value)
+*/

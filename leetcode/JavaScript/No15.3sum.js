@@ -30,71 +30,70 @@
  * 2. 从头开始遍历，并记录下已遍历过的值，避免重复后无效遍历
  * 3. 从剩下的数组中（[i + 1, length)）寻找两者之和为 -nums[i] 的元素
  *
- * 但要注意的是，我之前在 2Sum 的时候写的算法销量并不高，勉强适合 2Sum 的遍历，而在 3Sum 的时候则会 timeout。因此，针对 2Sum 需要使用更快的算法：
+ * 但要注意的是，我之前在 2Sum 的时候写的算法效率并不高，勉强适合 2Sum 的遍历，而在 3Sum 的时候则会 timeout。因此，针对 2Sum 需要使用更快的算法：
  * 1. 取数组头尾（i = 0; j = length - 1）
- * 2. 两端向中央收缩（注：数组已经安装从小到大排序）
+ * 2. 两端向中央收缩（注：数组已经按照从小到大排序）
  *    1. 如果三个数之和大于 0，则过大，右侧应该向左收缩
  *    2. 如果三个数之和小于 0，则过小，左侧应该向右收缩
  *    3. 正好相等时，查看数字是否已存在，如果是则继续遍历，否则记录当前的数字
  */
 
+// =========== 解法一 ===========
 /**
  * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+ * @return {number[][]}
  */
-var threeEqualZero = function(nums, third, results) {
-  var mapped = new Set();
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var threeSum = function(nums) {
+  const result = []
+  if (nums.length < 3) return result
 
-  var i = 0;
-  var j = nums.length - 1;
+  nums.sort((a, b) => a - b)
 
-  while(i < j) {
-    var first = nums[i];
-    var second = nums[j];
+  var twoSum = function(target, start) {
+    let i = start
+    let j = nums.length - 1
+    const set = new Set()
 
-    if (first + second + third < 0) {
-      i += 1;
-    } else if (first + second + third > 0) {
-      j -= 1;
-    } else {
-      if (!mapped.has(first)) {
-        mapped.add(first);
-        results.push([
-          first,
-          second,
-          third
-        ]);
+    while (i < j) {
+      const sum = nums[i] + nums[j]
+      if (sum === target) {
+        if (!set.has(nums[i])) {
+          set.add(nums[i])
+          result.push(
+            [0 - target, nums[i], nums[j]]
+          )
+        }
+        i += 1
+      } else if (sum < target) {
+        i += 1
+      } else {
+        j -= 1
       }
-      i += 1;
     }
   }
-};
 
-/**
- * @param {number[]} nums
- * @return {number[][]}
- * =========== 解法一 ===========
- */
-var threeSum_1 = function(nums) {
-  var mapped = new Set();
-  var results = [];
-  nums.sort((a, b) => a - b);
-  for (var i = 0; i < nums.length; i += 1) {
-    var third = nums[i];
-    if (mapped.has(third)) continue;
-    mapped.add(third);
-    threeEqualZero(nums.slice(i + 1), third, results);
+  let i = 0
+  const set = new Set()
+  while (i <= nums.length - 3) {
+    if (!set.has(nums[i])) {
+      set.add(nums[i])
+      twoSum(0 - nums[i], i + 1)
+    }
+
+    i += 1
   }
-  console.log('threeSum result');
-  console.log(results);
-  return results;
-};
 
+  return result
+}
+
+// =========== 解法二 ===========
 /**
  * @param {number[]} nums
  * @return {number[][]}
- * =========== 解法二 ===========
  */
 var threeSum_2 = function(nums) {
   const sortedNums = nums.sort((a, b) => a - b);
