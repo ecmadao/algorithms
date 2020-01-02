@@ -18,7 +18,6 @@
 * 思路：运用栈
 */
 var isValid = function(s) {
-  let validate = true;
   const stack = [];
   const BracketsMap = {
     ')': '(',

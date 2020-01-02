@@ -112,3 +112,27 @@ var generateParenthesis_solution_2 = function(n) {
   buildParenthesis("", 1, 1, 0);
   return result;
 };
+
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var generateParenthesis = function(n) {
+  const result = []
+
+  const buildParenthesisStr = (prefix, leftCount, rightCount) => {
+    if (leftCount === n) {
+      result.push(
+        `${prefix}${Array.from({ length: n - rightCount }).fill(')').join('')}`
+      )
+      return
+    }
+    buildParenthesisStr(prefix + '(', leftCount + 1, rightCount)
+    if (rightCount < leftCount) {
+      buildParenthesisStr(prefix + ')', leftCount, rightCount + 1)
+    }
+  }
+
+  buildParenthesisStr('', 0, 0)
+  return result
+}
