@@ -114,3 +114,59 @@ var nextPermutation = function(nums) {
     }
   }
 };
+
+// ===================================== SOLUTION 2 =====================================
+// 利用字典序的全排列方法
+
+const reverse = (nums, index) => {
+  let start = index
+  let end = nums.length - 1
+  while (start < end) {
+      const tmp = nums[start]
+      nums[start] = nums[end]
+      nums[end] = tmp
+      start += 1
+      end -= 1
+  }
+}
+
+var permuteUnique = function(nums) {
+  while (true) {
+    let i = nums.length - 1
+    // 此处和 No46 处理不一致，为了解决重复元素的问题
+    while (i >= 1 && nums[i] <= nums[i - 1]) {
+      i -= 1
+    }
+    if (i === 0) return false
+
+    const index = i - 1
+    const tmp = nums[index]
+
+    // 此处和 No46 处理不一致，为了解决重复元素的问题
+    let k = i
+    let min = Infinity
+    for (let j = i; j < nums.length; j += 1) {
+      if (nums[j] > tmp && nums[j] <= min) {
+        k = j
+        min = nums[j]
+      }
+    }
+
+    nums[index] = nums[k]
+    nums[k] = tmp
+    reverse(nums, index + 1)
+
+    return true
+  }
+}
+
+/**
+* @param {number[]} nums
+* @return {void} Do not return anything, modify nums in-place instead.
+*/
+var nextPermutation = function(nums) {
+  const result = permuteUnique(nums)
+  if (!result) {
+    nums.sort((a, b) => a - b)
+  }
+}
