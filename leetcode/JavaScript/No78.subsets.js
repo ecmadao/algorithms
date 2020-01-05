@@ -65,16 +65,17 @@ var subsets = function(nums) {
  * 然后把这组子集加入到要返回的结果中去
  */
 
-const subsets = (nums) => {
-  const results = [[]];
-  for (let i = 0; i < nums.length; i += 1) {
-    const arr = results.map((item) => {
-      return [
-        ...item,
-        nums[i]
-      ];
-    });
-    results.push(...arr);
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsets_2 = function(nums) {
+  const results = [[]]
+
+  for (const num of nums) {
+    results.push(
+      ...results.map(result => [num, ...result])
+    )
   }
-  return results;
-};
+  return results
+}

@@ -54,3 +54,24 @@ const subsetsWithDup = (nums) => {
   }
   return results;
 };
+
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsetsWithDup_2 = function(nums) {
+  nums = nums.sort((a, b) => a - b)
+  const results = [[]]
+  let pre = []
+
+  for (let i = 0; i < nums.length; i += 1) {
+    if (i > 0 && nums[i] === nums[i - 1]) {
+      pre = pre.map(result => [...result, nums[i]])
+    } else {
+      pre = results.map(result => [...result, nums[i]])
+    }
+    results.push(...pre)
+  }
+  return results
+}

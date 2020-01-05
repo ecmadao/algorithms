@@ -49,3 +49,33 @@ var letterCombinations = function(digits) {
   }
   return combines;
 };
+
+/**
+ * @param {string} digits
+ * @return {string[]}
+ */
+var letterCombinations = function(digits, index = 0, results = []) {
+  if (!digits.length || index >= digits.length) return results
+  const digit = digits[index]
+
+  if (digit === '0' || digit === '1') {
+    return letterCombinations(digits, index + 1, results)
+  }
+
+  const chars = NUMBER_MAP[digit]
+
+  return letterCombinations(
+    digits,
+    index + 1,
+    chars.reduce((list, char) => {
+      if (results.length) {
+        list.push(
+          ...results.map(result => `${result}${char}`)
+        )
+      } else {
+        list.push(char)
+      }
+      return list
+    }, [])
+  )
+};

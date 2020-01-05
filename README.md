@@ -204,7 +204,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 148 | [Sort List](./leetcode/JavaScript/No148.sort-list.js) | `Medium` |
 | 150 | [Evaluate Reverse Polish Notation](./leetcode/JavaScript/No150.evaluate-reverse-polish-notation.js) | `Medium` |
 | 151 | [Reverse Words in a String](./leetcode/JavaScript/No151.reverse-words-in-a-string.js) | `Medium` |
-| 152 | [Maximum Product Subarray](./leetcode/JavaScript/No152.maximum-product-subarray.js) | `Medium` |
+| 152 | [**Maximum Product Subarray**](./leetcode/JavaScript/No152.maximum-product-subarray.js) | `Medium` |
 | 153 | [Find Minimum in Rotated Sorted Array](./leetcode/JavaScript/No153.find-minimum-in-rotated-sorted-array.js) | `Medium` |
 | 162 | [Find Peak Element](./leetcode/JavaScript/No162.find-peak-element.js) | `Medium` |
 | 165 | [Compare Version Numbers](./leetcode/JavaScript/No165.compare-version-numbers.js) | `Medium` |
@@ -241,7 +241,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 | 274 | [H-Index](./leetcode/JavaScript/No274.h-index.js) | `Medium` |
 | 275 | [H-Index II](./leetcode/JavaScript/No275.h-index-II.js) | `Medium` |
 | 279 | [Perfect Squares](./leetcode/JavaScript/No279.perfect-squares.js) | `Medium` |
-| 287 | [Find the Duplicate Number](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
+| 287 | [**Find the Duplicate Number**](./leetcode/JavaScript/No287.find-the-duplicate-number.js) | `Medium` |
 | 289 | [Game of Life](./leetcode/JavaScript/No289.game-of-life.js) | `Medium` |
 | 299 | [Bulls and Cows](./leetcode/JavaScript/No299.bulls-and-cows.js) | `Medium` |
 | 300 | [Longest Increasing Subsequence](./leetcode/JavaScript/No300.longest-increasing-subsequence.js) | `Medium` |

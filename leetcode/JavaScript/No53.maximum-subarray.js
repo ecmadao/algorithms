@@ -36,3 +36,22 @@ var maxSubArray = function(nums) {
   }
   return max;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+  let sum = 0
+  let result = -Infinity
+
+  for (const num of nums) {
+    if (sum < 0) {
+      sum = num
+    } else {
+      sum += num
+    }
+    result = Math.max(result, sum)
+  }
+  return result
+}

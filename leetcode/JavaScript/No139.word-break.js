@@ -20,23 +20,51 @@
  * @param {string} s
  * @param {string[]} wordDict
  * @return {boolean}
+ *
+ * DFS
  */
 var wordBreak = function(s, wordDict) {
-  const set = new Set(wordDict);
-  const tmp = {};
+  const set = new Set(wordDict)
+  const tmp = {}
 
   const check = (index) => {
-    if (tmp[index] !== undefined) return tmp[index];
-    if (index >= s.length) return true;
+    if (tmp[index] !== undefined) return tmp[index]
+    if (index >= s.length) return true
+
     for (let i = index; i < s.length; i += 1) {
       if (set.has(s.slice(index, i + 1))) {
-        tmp[i + 1] = check(i + 1);
+        tmp[i + 1] = check(i + 1)
         if (tmp[i + 1]) {
-          return true;
+          return true
         }
       }
     }
-    return false;
-  };
-  return check(0);
-};
+    tmp[index] = false
+    return false
+  }
+
+  return check(0)
+}
+
+/**
+ * @param {string} s
+ * @param {string[]} wordDict
+ * @return {boolean}
+ *
+ * Dynamic Programming
+ */
+const wordBreak_2 = (s, wordDict) => {
+  const set = new Set(wordDict)
+  const tmp = [true]
+
+  for (let i = 1; i <= s.length; i += 1) {
+    for (let j = 0; j < i; j += 1) {
+      if (tmp[j] && set.has(s.slice(j, i))) {
+        tmp[i] = true
+        break
+      }
+    }
+  }
+
+  return tmp[s.length] === true
+}

@@ -64,27 +64,28 @@ var subarraySum_Time_Limit_Exceeded = function(nums, k) {
  * 当前对象内保存的和有 1, 1 + 2 = 3, 1 + 2 + 3 = 6
  * 因此，存在 3 使得连续的子数组之和为 target = 7
  * 其实也就是相当于，从头开始截取一个较大的子数组 a, 并存在子数组 b，使得 a - b 后剩下的子数组之和为 target
+ *
+ * 各种关于 subarray sum 小于/等于 K 的问题: https://www.acwing.com/blog/content/49/
  */
 
- /**
+/**
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
  */
 var subarraySum = function(nums, k) {
-  var temp = {
-    0: 1
-  };
-  var sum = 0;
-  var count = 0;
+  let sum = 0
+  let count = 0
+  const tmp = { 0: 1 }
 
-  for (var i = 0; i < nums.length; i += 1) {
-    var num = nums[i];
-    sum += num;
-    count += temp[sum - k] === undefined ? 0 : temp[sum - k];
-    temp[sum] = temp[sum] === undefined ? 1 : temp[sum] + 1;
+  for (const num of nums) {
+      sum += num
+      const pre = sum - k
+      if (tmp[pre]) {
+        count += tmp[pre]
+      }
+      tmp[sum] = (tmp[sum] || 0) + 1
   }
 
-  return count;
-};
-
+  return count
+}

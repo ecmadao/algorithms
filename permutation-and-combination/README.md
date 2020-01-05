@@ -80,6 +80,14 @@ results.push([...nums])
 
 5. 从 2 开始重复
 
+#### LeetCode 相关问题
+
+- [No31.Next permutation](../leetcode/JavaScript/No31.next-permutation.js)
+- [No46.Permutations](../leetcode/JavaScript/No46.permutations.js)
+- [No47.Permutations II](../leetcode/JavaScript/No47.permutations-II.js)
+- [No60.Permutation sequence](../leetcode/JavaScript/No60.permutation-sequence.js)
+
+
 ### 组合
 
 > Reference:
@@ -90,9 +98,7 @@ results.push([...nums])
 - 解法一，递归：将给定列表中的每一个元素，都放入到由剩下元素组成的各个组合的列表的头部
 - 解法二，位操作：假设元素原本有：`[a, b, c]`三个，则`1`表示取该元素，`0`表示不取。故取`a`则是`001`，取`ab`则是`011`。所以一共三位，每个位上有两个选择：`0`或`1`。而`000`没有意义，所以是`2n−1`个结果
 
-### LeetCode 相关问题
+#### LeetCode 相关问题
 
-- [No31.Next permutation](../leetcode/JavaScript/No31.next-permutation.js)
-- [No46.Permutations](../leetcode/JavaScript/No46.permutations.js)
-- [No47.Permutations II](../leetcode/JavaScript/No47.permutations-II.js)
-- [No60.Permutation sequence](../leetcode/JavaScript/No60.permutation-sequence.js)
+- [No78.Subsets](../leetcode/JavaScript/No78.subsets.js)
+- [No90.Subsets II](../leetcode/JavaScript/No90.subsets-II.js)
