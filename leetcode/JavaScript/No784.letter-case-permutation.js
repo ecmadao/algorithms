@@ -21,31 +21,50 @@
  * - S will consist only of letters or digits.
  */
 
-
-const isLetter = str => /[A-Za-z]/.test(str);
-
 /**
  * @param {string} S
  * @return {string[]}
  */
 var letterCasePermutation = function(S) {
-  const build = (index, availables) => {
-    const s = S[index];
-    if (!s) return availables;
+  const result = []
 
-    let newAvailables = [];
-    if (isLetter(s)) {
-      const lower = s.toLowerCase();
-      const upper = s.toUpperCase();
-      newAvailables = availables.reduce((pre, cur) => {
-        pre.push(`${lower}${cur}`, `${upper}${cur}`);
-        return pre;
-      }, []);
-    } else {
-      newAvailables = availables.map(available => `${s}${available}`);
+  const permutation = (s, index) => {
+    if (index >= s.length) {
+      result.push(s)
+      return
     }
-    if (index === 0) return newAvailables;
-    return build(index - 1, newAvailables);
-  };
-  return build(S.length - 1, ['']);
-};
+    for (let i = index; i < s.length; i += 1) {
+      if (/[0-9]/.test(s[i])) return permutation(s, i + 1)
+      permutation(s, i + 1)
+      permutation(`${s.slice(0, i)}${s[index].toUpperCase()}${s.slice(i + 1)}`, i + 1)
+      break
+    }
+  }
+
+  permutation(S.toLowerCase(), 0)
+  return result
+}
+
+/**
+ * @param {string} S
+ * @return {string[]}
+ */
+var letterCasePermutation_2 = function(S) {
+  let result = ['']
+
+  for (const s of S) {
+    const tmp = []
+    if (/[a-zA-Z]/.test(s)) {
+      for (const r of result) {
+        tmp.push(`${r}${s.toLowerCase()}`)
+        tmp.push(`${r}${s.toUpperCase()}`)
+      }
+    } else {
+      for (const r of result) {
+        tmp.push(`${r}${s}`)
+      }
+    }
+    result = tmp
+  }
+  return result
+}

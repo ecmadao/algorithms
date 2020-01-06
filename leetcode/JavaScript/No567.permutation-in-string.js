@@ -25,44 +25,43 @@
  * @return {boolean}
  */
 var checkInclusion = function(s1, s2) {
-  const set = new Set(s1.split(''));
-  const tmp = {};
-  for (const letter of s1) {
-    tmp[letter] = (tmp[letter] || 0) + 1;
-  }
+  if (s1.length > s2.length) return false
 
-  let start = 0;
-  let end = 0;
-  let cache = Object.assign({}, tmp);
+  const base = s1.split('').reduce((dict, s) => {
+    dict[s] = (dict[s] || 0) + 1
+    return dict
+  }, {})
+  let tmp = Object.assign({}, base)
 
-  while (end < s2.length) {
-    const letter = s2[end];
-    if (!set.has(letter)) {
-      start = end + 1;
-      end += 1;
-      start = end;
-      cache = Object.assign({}, tmp);
-      continue;
-    }
+  let count = s1.length
+  let j = 0
 
-    if (!cache[letter]) {
-      const index = s2.indexOf(letter, start);
-      let tmpIndex = start;
-      while (tmpIndex < index) {
-        cache[s2[tmpIndex]] = (cache[s2[tmpIndex]] || 0) + 1;
-        tmpIndex += 1;
+  while (j < s2.length) {
+    if (tmp[s2[j]] === undefined) {
+      j += 1
+      count = s1.length
+      tmp = Object.assign({}, base)
+      continue
+    } else if (tmp[s2[j]] === 0) {
+      tmp = Object.assign({}, base)
+
+      count = s1.length - 1
+      tmp[s2[j]] -= 1
+      let i = j - 1
+      while (i >= 0 && tmp[s2[i]]) {
+        tmp[s2[i]] -= 1
+        count -= 1
+        i -= 1
       }
-      start = index + 1;
-      end += 1;
+      j += 1
+      continue
     } else {
-      cache[letter] -= 1;
-      if (!cache[letter]) delete cache[letter];
-      end += 1;
-    }
-
-    if (Object.keys(cache).length === 0) {
-      return true;
+      tmp[s2[j]] -= 1
+      count -= 1
+      if (count === 0) return true
+      j += 1
     }
   }
-  return false;
-};
+
+  return count === 0
+}

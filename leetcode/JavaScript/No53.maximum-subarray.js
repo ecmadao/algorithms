@@ -40,6 +40,8 @@ var maxSubArray = function(nums) {
 /**
  * @param {number[]} nums
  * @return {number}
+ *
+ * 滑动窗口解法
  */
 var maxSubArray = function(nums) {
   let sum = 0
@@ -52,6 +54,25 @@ var maxSubArray = function(nums) {
       sum += num
     }
     result = Math.max(result, sum)
+  }
+  return result
+}
+
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * DP 解法
+ */
+var maxSubArray = function(nums) {
+  let result = nums[0]
+
+  for (let i = 1; i < nums.length; i += 1) {
+    if (nums[i - 1] > 0) {
+      nums[i] += nums[i - 1]
+    }
+    result = Math.max(result, nums[i])
   }
   return result
 }

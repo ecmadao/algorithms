@@ -2,6 +2,8 @@
 ## 总结 & 反思
 
 > [北美算法面试的题目分类，按类型和规律刷题，事半功倍](https://zhuanlan.zhihu.com/p/89392459)
+>
+> [Leetcode 分类顺序表](https://cspiration.com/leetcodeClassification)
 
 ### Two pointers
 
@@ -10,6 +12,12 @@
 ### Dynamic programming
 
 > https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+
+### 滑动窗口问题
+
+> 字符串匹配：[KMP 算法详细解析](https://blog.sengxian.com/algorithms/kmp)
+
+- [No76.Minimum Window Substring](../leetcode/JavaScript/No76.minimum-window-substring.js)
 
 ### 排列组合问题
 
@@ -38,5 +46,7 @@
 > [Leetcode 复习小结: Sliding Window](https://segmentfault.com/a/1190000019615321)
 
 
+- [No53.Maximum Subarray](../leetcode/JavaScript/No53.maximum-subarray.js)
 - [**No152.Maximum Product Subarray**](../leetcode/JavaScript/No152.maximum-product-subarray.js)
-- [560.Subarray Sum Equals K](../leetcode/JavaScript/No560.subarray-sum-equals-k.js)
+- [No560.Subarray Sum Equals K](../leetcode/JavaScript/No560.subarray-sum-equals-k.js)
+- [No209.Minimum Size Subarray Sum](../leetcode/JavaScript/No209.minimum-size-subarray-sum.js)

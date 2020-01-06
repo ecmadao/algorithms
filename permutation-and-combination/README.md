@@ -80,6 +80,11 @@ results.push([...nums])
 
 5. 从 2 开始重复
 
+#### 邻位对换法
+
+- [Wiki: 全排列生成算法 - 邻位对换法](https://zh.wikipedia.org/wiki/%E5%85%A8%E6%8E%92%E5%88%97%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95#%E9%82%BB%E4%BD%8D%E5%AF%B9%E6%8D%A2%E6%B3%95)
+- [**全排列及相关扩展算法（六）——全排列最蛋疼的算法：邻位对换法**](https://blog.csdn.net/sm9sun/article/details/77373258)
+
 #### LeetCode 相关问题
 
 - [No31.Next permutation](../leetcode/JavaScript/No31.next-permutation.js)

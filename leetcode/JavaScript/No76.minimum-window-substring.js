@@ -43,7 +43,6 @@ var minWindow = function(s, t) {
   var count = t.length;
   var start = 0;
   var end = -1;
-  var indexs = [];
   var result = '';
 
   while (end < s.length && start <= (s.length - t.length)) {
@@ -67,3 +66,57 @@ var minWindow = function(s, t) {
 
   return result;
 };
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {string}
+ */
+var minWindow = function(s, t) {
+  if (!t || !s) return ''
+  if (s.match(t)) return t
+  let result = null
+
+  const tmp = t.split('').reduce((dict, str) => {
+    dict[str] = (dict[str] || 0) + 1
+    return dict
+  }, {})
+  let count = t.length
+
+  let i = -1
+  let j = -1
+  while (j < s.length && i <= (s.length - t.length)) {
+    if (tmp[s[j]] !== undefined && i === -1) {
+      i = j
+    }
+
+    if (count <= 0) {
+      if (!result || j + 1 - i < result.length) {
+        result = s.slice(i, j + 1)
+      }
+      if (tmp[s[i]] !== undefined) tmp[s[i]] += 1
+      if (tmp[s[i]] > 0) count += 1
+      i += 1
+    } else {
+      j += 1
+      if (tmp[s[j]] !== undefined) {
+        tmp[s[j]] -= 1
+        if (tmp[s[j]] >= 0) count -= 1
+      }
+    }
+  }
+
+  return result === null ? (!count ? s : '') : result
+}
+
+console.log(
+  minWindow('ADOBECODEBANC', 'ABC')
+)
+
+console.log(
+  minWindow('AA', 'AA')
+)
+
+console.log(
+  minWindow('ABQCDEFGAMBNCDEFG', 'ABCA')
+)
