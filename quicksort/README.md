@@ -130,42 +130,42 @@
 
 ```javascript
 const quicksort = (array, start = null, end = null) => {
-  if (start === null) start = 0;
-  if (end === null) end = array.length - 1;
-  if (start >= end) return;
+  if (start === null) start = 0
+  if (end === null) end = array.length - 1
+  if (start >= end) return
 
   // 基准值为起始值
-  const base = array[start];
-  let i = start;
-  let j = end;
+  const base = array[start]
+  let i = start
+  let j = end
 
   while (true) {
     // 如果右侧 j 对应的值大于基准值，则继续前进
     while (less(base, array[j])) {
-      if (j - 1 < start) break;
-      j -= 1;
+      if (j - 1 < start) break
+      j -= 1
     }
 
     // 如果左侧 i 对应的值小于基准值，则继续前进
     while (less(array[i], base)) {
-      if (i + 1 > end) break;
-      i += 1;
+      if (i + 1 > end) break
+      i += 1
     }
 
     if (j <= i) {
-      break;
+      break
     }
 
-    const temp = array[j];
-    array[j] = array[i];
-    array[i] = temp;
+    const temp = array[j]
+    array[j] = array[i]
+    array[i] = temp
   }
 
-  array[start] = array[j];
-  array[j] = base;
-  quicksort(array, start, j - 1);
-  quicksort(array, j + 1, end);
-};
+  array[start] = array[j]
+  array[j] = base
+  quicksort(array, start, j - 1)
+  quicksort(array, j + 1, end)
+}
 ```
 
 该算法存在的问题：

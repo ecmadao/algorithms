@@ -40,17 +40,17 @@
 // less 方法用于判断是否是更小的值
 const sort = (array, less) => {
   for (let i = 0; i < array.length; i += 1) {
-    let min = i;
+    let min = i
     for (let j = i + 1; j < array.length; j += 1) {
       if (less(array[j], array[min])) {
-        min = j;
+        min = j
       }
     }
-    const temp = array[i];
-    array[i] = array[min];
-    array[min] = temp;
+    const temp = array[i]
+    array[i] = array[min]
+    array[min] = temp
   }
-};
+}
 ```
 
 - 优点：简单易懂
@@ -86,21 +86,21 @@ const sort = (array, less) => {
 ```javascript
 // 这里用递归来依次检查 i 和 i 的前一位元素是否顺序；如果不是，则替换位置
 const reverse = (array, i) => {
-  if (i === 0) return;
+  if (i === 0) return
   if (less(array[i], array[i - 1])) {
-    const temp = array[i];
-    array[i] = array[i - 1];
-    array[i - 1] = temp;
-    reverse(array, i - 1);
+    const temp = array[i]
+    array[i] = array[i - 1]
+    array[i - 1] = temp
+    reverse(array, i - 1)
   }
-};
+}
 
 const sort = (array) => {
   for (let i = 0; i < array.length; i += 1) {
-    if (i === 0) continue;
-    reverse(array, i);
+    if (i === 0) continue
+    reverse(array, i)
   }
-};
+}
 ```
 
 - 优点：相比于选择排序，插入排序速度更快。
@@ -116,22 +116,22 @@ const sort = (array) => {
 ```javascript
 // 来源：编程珠玑（第二版）
 const insertSort = (array) => {
-  let i = 1;
+  let i = 1
   // 以 1 为起始向后递增，假设前面的数组都已经排好序
   // 如果前一位大于后一位，则向后挪动一位，最终给 base 提供出一个位置
   while (i < array.length) {
-    const base = array[i];
+    const base = array[i]
 
-    let j = i;
+    let j = i
     while (j > 0 && array[j - 1] > base) {
-      array[j] = array[j - 1];
-      j -= 1;
+      array[j] = array[j - 1]
+      j -= 1
     }
-    array[j] = base;
-    i += 1;
+    array[j] = base
+    i += 1
   }
-  return array;
-};
+  return array
+}
 ```
 
 ### [希尔排序](./shellsort.js)
@@ -216,13 +216,13 @@ const insertSort = (array) => {
 ```javascript
 const shuffing = (array) => {
   for (let i = 0; i < array.length; i += 1) {
-    if (i === 0) continue;
-    const randomIndex = random(0, i);
-    const temp = array[randomIndex];
-    array[randomIndex] = array[i];
-    array[i] = temp;
+    if (i === 0) continue
+    const randomIndex = random(0, i)
+    const temp = array[randomIndex]
+    array[randomIndex] = array[i]
+    array[i] = temp
   }
-};
+}
 ```
 
 ### [桶排序 Bucket sort](./bucket-sort.js)
@@ -241,36 +241,36 @@ const shuffing = (array) => {
 // 二分搜索
 // 查找目标值，如果不存在，则在最后的索引两侧查找可以插入的位置
 const search = (nums, target) => {
-  let left = 0;
-  let right = nums.length - 1;
+  let left = 0
+  let right = nums.length - 1
 
   while (left < right) {
-    const mid = Math.ceil((right + left) / 2);
-    const num = nums[mid];
-    if (num === target) return mid;
-    if (num > target) right = mid - 1;
-    if (num < target) left = mid + 1;
+    const mid = Math.ceil((right + left) / 2)
+    const num = nums[mid]
+    if (num === target) return mid
+    if (num > target) right = mid - 1
+    if (num < target) left = mid + 1
   }
 
   if (right === 0) {
-    if (target < nums[right]) return 0;
-    return right + 1;
+    if (target < nums[right]) return 0
+    return right + 1
   }
   if (left === nums.length - 1) {
-    if (target > nums[left]) return nums.length;
-    return left;
+    if (target > nums[left]) return nums.length
+    return left
   }
-  return nums[left] < target ? left + 1 : left;
-};
+  return nums[left] < target ? left + 1 : left
+}
 
-console.log(search([1,3,7,9], 4));
-console.log(search([1,3,5,7,9], 4));
-console.log(search([1,3,5,7,9], 6));
-console.log(search([1,3,5,7,9], 10));
-console.log(search([1,3,5,7,9], 0));
-console.log(search([1], 3));
-console.log(search([1], 0));
-console.log(search([], 0));
-console.log(search([0, 9], 3));
-console.log(search([0, 1, 3, 9], 5));
+console.log(search([1,3,7,9], 4))
+console.log(search([1,3,5,7,9], 4))
+console.log(search([1,3,5,7,9], 6))
+console.log(search([1,3,5,7,9], 10))
+console.log(search([1,3,5,7,9], 0))
+console.log(search([1], 3))
+console.log(search([1], 0))
+console.log(search([], 0))
+console.log(search([0, 9], 3))
+console.log(search([0, 1, 3, 9], 5))
 ```

@@ -32,48 +32,44 @@
  * @return {number[]}
  */
 var findAnagrams = function(s, p) {
-  const set = new Set(p.split(''));
-  const tmp = {};
-  for (const letter of p) {
-    tmp[letter] = (tmp[letter] || 0) + 1;
-  }
+  const dict = p.split('').reduce((obj, str) => {
+    obj[str] = (obj[str] || 0) + 1
+    return obj
+  }, {})
+  const result = []
+  let count = p.length
+  let tmp = Object.assign({}, dict)
 
-  const result = [];
-  let start = 0;
-  let end = 0;
-  let cache = Object.assign({}, tmp);
+  for (let i = 0; i < s.length; i += 1) {
+    if (tmp[s[i]] === undefined) {
+      count = p.length
+      tmp = Object.assign({}, dict)
+    } else if (tmp[s[i]] === 0) {
+      count = p.length
+      tmp = Object.assign({}, dict)
 
-  while (end < s.length) {
-    const letter = s[end];
-    if (!set.has(letter)) {
-      start = end + 1;
-      end += 1;
-      start = end;
-      cache = Object.assign({}, tmp);
-      continue;
-    }
-
-    if (!cache[letter]) {
-      const index = s.indexOf(letter, start);
-      let tmpIndex = start;
-      while (tmpIndex < index) {
-        cache[s[tmpIndex]] = (cache[s[tmpIndex]] || 0) + 1;
-        tmpIndex += 1;
+      let index = i
+      while (index >= 0 && tmp[s[index]]) {
+        tmp[s[index]] -= 1
+        count -= 1
+        index -= 1
       }
-      start = index + 1;
-      end += 1;
-    } else {
-      cache[letter] -= 1;
-      if (!cache[letter]) delete cache[letter];
-      end += 1;
-    }
 
-    if (Object.keys(cache).length === 0) {
-      result.push(end - p.length);
+      if (count === 0) {
+        result.push(i - p.length + 1)
+      }
+    } else {
+      tmp[s[i]] -= 1
+      count -=1
+
+      if (count === 0) {
+        result.push(i - p.length + 1)
+      }
     }
   }
-  return result;
-};
+
+  return result
+}
 
 // Test case
 console.log(findAnagrams("cbaebabacd", "abc")); // [0, 6]

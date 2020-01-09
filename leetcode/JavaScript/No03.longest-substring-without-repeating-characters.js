@@ -45,7 +45,6 @@ var lengthOfLongestSubstring_1 = function(s) {
 lengthOfLongestSubstring('abcabcbb'); // abc, 3
 
 /* ================= 优化版本 ================= */
-
 /**
  * @param {string} s
  * @return {number}
@@ -54,26 +53,22 @@ lengthOfLongestSubstring('abcabcbb'); // abc, 3
  * 取最长，并更新 start
  */
 var lengthOfLongestSubstring_2 = function(s) {
-  var temp = {};
-  var tempLength = 0;
-  var max = 0;
-  var start = 0;
-
-  for (var i = 0; i < s.length; i += 1) {
-    var str = s[i];
-    if (temp[str] === undefined || temp[str] < start) {
-      tempLength += 1;
+  const tmp = {}
+  let length = 0
+  let max = 0
+  let start = 0
+  for (let i = 0; i < s.length; i += 1) {
+    if (tmp[s[i]] === undefined || tmp[s[i]] < start) {
+      length += 1
     } else {
-      var index = temp[str];
-      max = Math.max(max, index - start, i - index, i - start);
-      start = index + 1;
-      tempLength = i - index;
+      max = Math.max(i - tmp[s[i]], length, tmp[s[i]] - start, max)
+      start = tmp[s[i]] + 1
+      length = i - tmp[s[i]]
     }
-    temp[str] = i;
+    tmp[s[i]] = i
   }
-  max = Math.max(max, tempLength);
-  return max;
-};
+  return Math.max(max, length)
+}
 
 /**
  * @param {string} s
