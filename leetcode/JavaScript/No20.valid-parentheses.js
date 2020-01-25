@@ -18,22 +18,22 @@
 * 思路：运用栈
 */
 var isValid = function(s) {
-  const stack = [];
+  const stack = []
   const BracketsMap = {
     ')': '(',
     ']': '[',
     '}': '{'
-  };
+  }
 
   for (var i = 0; i < s.length; i += 1) {
-    var str = s[i];
+    var str = s[i]
     if (BracketsMap[str]) {
       if (stack.pop() !== BracketsMap[str]) {
-        return false;
+        return false
       }
     } else {
-      stack.push(str);
+      stack.push(str)
     }
   }
-  return stack.length === 0;
-};
+  return stack.length === 0
+}

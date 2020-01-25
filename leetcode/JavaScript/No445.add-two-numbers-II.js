@@ -28,45 +28,36 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-  var nums1 = [];
-  var nums2 = [];
+  const nums1 = []
+  const nums2 = []
 
-  while(l1 || l2) {
+  while (l1 || l2) {
     if (l1) {
-      nums1.unshift(l1.val);
-      l1 = l1.next;
+      nums1.push(l1.val)
+      l1 = l1.next
     }
     if (l2) {
-      nums2.unshift(l2.val);
-      l2 = l2.next;
+      nums2.push(l2.val)
+      l2 = l2.next
     }
   }
 
-  var head = null;
-  var remainder = 0;
+  let remain = 0
+  let head = null
   while (nums1.length || nums2.length) {
-    var number1 = nums1.length ? nums1.shift() : 0;
-    var number2 = nums2.length ? nums2.shift() : 0;
-    var number = remainder + number1 + number2;
-    if (number >= 10) {
-      remainder = 1;
-      number -= 10;
-    } else {
-      remainder = 0;
-    }
-    var node = new ListNode(number);
-    if (!head) {
-      head = node;
-    } else {
-      node.next = head;
-      head = node;
-    }
-  }
-  if (remainder) {
-    var result = new ListNode(remainder);
-    result.next = head;
-    head = result;
+    const sum = (nums1.length ? nums1.pop() : 0) + (nums2.length ? nums2.pop() : 0) + remain
+    const val = sum % 10
+    remain = sum >= 10 ? 1 : 0
+
+    const node = new ListNode(val)
+    node.next = head
+    head = node
   }
 
-  return head;
-};
+  if (remain) {
+    const node = new ListNode(remain)
+    node.next = head
+    head = node
+  }
+  return head
+}

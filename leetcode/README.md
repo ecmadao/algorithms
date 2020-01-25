@@ -24,7 +24,7 @@
 
 #### 全排列问题
 
-> [字典序解法]('../permutation-and-combination/README.md')
+> [字典序解法](../permutation-and-combination/README.md)
 
 - [**No31.Next permutation**](../leetcode/JavaScript/No31.next-permutation.js)
 - [**No46.Permutations**](../leetcode/JavaScript/No46.permutations.js)

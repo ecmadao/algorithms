@@ -29,30 +29,23 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-  var l = new ListNode(-999);
-  var nextList = l;
-  var upper = 0;
+  const result = new ListNode()
+  let head = result
+  let remain = 0
 
-  while(l1 || l2) {
-      var value1 = l1 ? l1.val : 0;
-      var value2 = l2 ? l2.val : 0;
+  while (l1 || l2) {
+    const sum = (l1 ? l1.val : 0) + (l2 ? l2.val : 0) + remain
+    const val = sum % 10
+    remain = sum >= 10 ? 1 : 0
 
-      var sum = value1 + value2 + upper;
-      var val = sum % 10;
-      upper = Math.floor(sum / 10);
+    head.next = new ListNode(val)
+    head = head.next
 
-      nextList.next = new ListNode(val);
-      nextList = nextList.next;
-
-      l1 = l1 ? l1.next : null;
-      l2 = l2 ? l2.next : null;
+    l1 = l1 ? l1.next : null
+    l2 = l2 ? l2.next : null
   }
 
-  // 注意考虑最后进位的情况
-  // 如果是 [5], [5]，则和为 10，即 0 -> 1
-  if (upper > 0) {
-      nextList.next = new ListNode(upper);
-  }
+  if (remain) head.next = new ListNode(remain)
 
-  return l.next;
-};
+  return result.next
+}

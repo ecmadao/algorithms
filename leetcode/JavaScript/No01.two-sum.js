@@ -51,15 +51,16 @@ var twoSum = function(nums, target) {
   const tmp = {}
 
   for (let i = 0; i < nums.length; i += 1) {
-    const data = target - nums[i]
-    if (tmp[data] === undefined) {
-      tmp[nums[i]] = i
-    } else {
-      return [tmp[data], i]
+    const last = target - nums[i]
+    if (tmp[last] !== undefined) {
+      return [tmp[last], i]
     }
+    tmp[nums[i]] = i
   }
 }
 
+
+/* =================== 扩展 =================== */
 /* =================== 两端向中央收缩法 =================== */
 // 如果是要求求出具体的数字使得两者之和 = target，则可以使用两端向中央收缩法
 // 这样的方法要求数据事先拍好了序，因此如果我们自己排序的话，则会打乱其原有索引，故不适合当前题目的要求

@@ -70,6 +70,50 @@ var copyRandomList_1 = function(head) {
  * 但是，原节点和拷贝节点的 random 都指向了同一个原节点，例如拷贝前 1.random 指向 3，
  * 加入拷贝之后 1'.random 也指向 3
  * 下一步，遍历该链表的拷贝节点，获取每个拷贝节点的 random 节点，然后将其改变为 random 节点的下一个节点（一定是拷贝节点）
- * 并提取出所有的拷贝节点
+ * 并提取出所有的拷贝节点。注意题目要求原链表不能变动，因此还需要回复原链表
  * 深度拷贝完毕
  */
+
+/**
+ * // Definition for a Node.
+ * function Node(val, next, random) {
+ *    this.val = val;
+ *    this.next = next;
+ *    this.random = random;
+ * };
+ */
+/**
+ * @param {Node} head
+ * @return {Node}
+ */
+var copyRandomList = function(head) {
+  if (!head) return null
+
+  let node = head
+  while (node) {
+    const copy = new Node(node.val)
+    const next = node.next
+    node.next = copy
+    copy.next = next
+
+    node = next
+  }
+
+  node = head
+  while (node && node.next) {
+    if (node.random) {
+      node.next.random = node.random.next
+    }
+    node = node.next.next
+  }
+
+  node = head
+  const resultHead = node.next
+  while (node && node.next) {
+    const tmp = node.next
+    node.next = node.next.next
+    node = tmp
+  }
+
+  return resultHead
+}

@@ -18,13 +18,14 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  if (!head || !head.next) return head;
-  var node = null;
+  let node = null
+
   while (head) {
-    var tmp = new ListNode(head.val);
-    tmp.next = node;
-    node = tmp;
-    head = head.next;
+    const tmp = new ListNode(head.val)
+
+    tmp.next = node
+    node = tmp
+    head = head.next
   }
-  return node;
-};
+  return node
+}

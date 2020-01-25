@@ -26,31 +26,31 @@
  */
 
 var getArea = function(height, i, j) {
-  return Math.abs(i - j) * Math.min(height[i], height[j]);
-};
+  return Math.abs(i - j) * Math.min(height[i], height[j])
+}
 
 /**
 * @param {number[]} height
 * @return {number}
 */
 var maxArea = function(height) {
-  var i = 0;
-  var j = height.length - 1;
-  var result = 0;
+  var i = 0
+  var j = height.length - 1
+  var result = 0
 
   while(i < j) {
-    var area = getArea(height, i, j);
-    if (area > result) {
-      result = area;
-    }
+    result = Math.max(
+      result,
+      Math.min(height[i], height[j]) * (j - i)
+    )
     if (height[i] < height[j]) {
-      i += 1;
+      i += 1
     } else {
-      j -= 1;
+      j -= 1
     }
   }
-  return result;
-};
+  return result
+}
 
 /**
  * @param {number[]} height

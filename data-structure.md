@@ -225,7 +225,7 @@ LeetCode 上相关题目：
 
 - 中序遍历（inorder）
 
-按照从最小到最大的顺序访问二叉树中的各节点。即对于每个节点，先遍历左子节点，然后根节点，最后右子节点。LeetCode 中相关题目：
+按照**从最小到最大的顺序访问二叉树中的各节点**。即对于每个节点，先遍历左子节点，然后根节点，最后右子节点。LeetCode 中相关题目：
 
 1. [No.94 Binary Tree Inorder Traversal](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
 2. [No.99 Recover Binary Search Tree](./leetcode/JavaScript/No99.recover-binary-search-tree.js)

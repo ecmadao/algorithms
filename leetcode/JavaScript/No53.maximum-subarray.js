@@ -27,15 +27,15 @@
  * @return {number}
  */
 var maxSubArray = function(nums) {
-  var max = nums[0];
-  var sum = nums[0];
+  var max = nums[0]
+  var sum = nums[0]
 
   for (var i = 1; i < nums.length; i += 1) {
-    sum = sum < 0 ? nums[i] : sum + nums[i];
-    if (max < sum) max = sum;
+    sum = sum < 0 ? nums[i] : sum + nums[i]
+    if (max < sum) max = sum
   }
-  return max;
-};
+  return max
+}
 
 /**
  * @param {number[]} nums

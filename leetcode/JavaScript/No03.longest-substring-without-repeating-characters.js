@@ -54,20 +54,21 @@ lengthOfLongestSubstring('abcabcbb'); // abc, 3
  */
 var lengthOfLongestSubstring_2 = function(s) {
   const tmp = {}
-  let length = 0
-  let max = 0
   let start = 0
+  let len = 0
+  let max = 0
+
   for (let i = 0; i < s.length; i += 1) {
     if (tmp[s[i]] === undefined || tmp[s[i]] < start) {
-      length += 1
+      len += 1
     } else {
-      max = Math.max(i - tmp[s[i]], length, tmp[s[i]] - start, max)
+      max = Math.max(max, i - start)
       start = tmp[s[i]] + 1
-      length = i - tmp[s[i]]
+      len = i - start + 1
     }
     tmp[s[i]] = i
   }
-  return Math.max(max, length)
+  return Math.max(len, max)
 }
 
 /**

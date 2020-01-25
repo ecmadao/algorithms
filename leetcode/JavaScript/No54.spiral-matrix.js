@@ -31,51 +31,34 @@
  * @return {number[]}
  */
 var spiralOrder = function(matrix) {
-  var m = matrix.length;
-  if (!m) return [];
-  var n = matrix[0].length;
-  if (!n) return [];
+  const result = []
+  const ROW = matrix.length
+  if (!ROW) return result
+  const COLUMN = matrix[0].length
 
-  var results = [];
-  var used = {};
-  var indexM = 0;
-  var indexN = 0;
-  var loopCount = 1;
+  const getNexts = [
+      (i, j) => [i, j + 1],
+      (i, j) => [i + 1, j],
+      (i, j) => [i, j - 1],
+      (i, j) => [i - 1, j]
+  ]
 
-  while(results.length < m * n) {
-    results.push(matrix[indexM][indexN]);
-    used[`${indexM}${indexN}`] = true;
+  let i = 0
+  let j = 0
+  let index = 0
+  while (i >= 0 && i < ROW && j >= 0 && j < COLUMN) {
+      if (matrix[i][j] === null) break
+      result.push(matrix[i][j])
+      matrix[i][j] = null
 
-    var loopIndex = loopCount % 4;
-    if (loopIndex === 1) {
-      if (indexN === n - 1 || used[`${indexM}${indexN + 1}`]) {
-        loopCount += 1;
-        indexM += 1;
-      } else {
-        indexN += 1;
+      let next = getNexts[index % 4](i, j)
+      if (next[0] < 0 || next[0] >= ROW || next[1] < 0 || next[1] >= COLUMN || matrix[next[0]][next[1]] === null) {
+          index += 1
+          next = getNexts[index % 4](i, j)
       }
-    } else if (loopIndex === 2) {
-      if (indexM === m -1 || used[`${indexM + 1}${indexN}`]) {
-        loopCount += 1;
-        indexN -= 1;
-      } else {
-        indexM += 1;
-      }
-    } else if (loopIndex === 3) {
-      if (indexN === 0 || used[`${indexM}${indexN - 1}`]) {
-        loopCount += 1;
-        indexM -= 1;
-      } else {
-        indexN -= 1;
-      }
-    } else {
-      if (indexM === 0 || used[`${indexM - 1}${indexN}`]) {
-        loopCount += 1;
-        indexN += 1;
-      } else {
-        indexM -= 1;
-      }
-    }
+      i = next[0]
+      j = next[1]
   }
-  return results;
-};
+
+  return result
+}
