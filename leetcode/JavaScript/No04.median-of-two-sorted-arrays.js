@@ -19,91 +19,15 @@
  * 已知两个排好序的数组，求两数组顺序合并之后的中位数。要求时间复杂度为 O(log (m+n))
  */
 
-/*
- * 思路：
- * 将两个数组转换为链表
- */
-
-var insert = function(node, val, parent) {
-  if (!node) {
-    node = new Node(val);
-    return node;
-  }
-  if (val >= node.val) {
-    if (node.next) {
-      insert(node.next, val, node);
-    } else {
-      node.next = new Node(val);
-    }
-  } else {
-    if (parent) {
-      var newNode = new Node(val);
-      parent.next = newNode;
-      newNode.next = node;
-    } else {
-      parent = new Node(val);
-      parent.next = node;
-      return parent;
-    }
-  }
-};
-
-var Node = function(val) {
-  this.val = val;
-  this.next = null;
-};
 
 /**
-* @param {number[]} nums1
-* @param {number[]} nums2
-* @return {number}
-*/
-var findMedianSortedArrays = function(nums1, nums2) {
-  var node = null;
-  var nextNode = null;
-  for (let i = 0; i < nums1.length; i += 1) {
-    var num = nums1[i];
-    var newNode = new Node(num);
-    if (!node) {
-      node = newNode;
-      nextNode = node;
-    } else {
-      nextNode.next = newNode;
-      nextNode = newNode;
-    }
-  }
-
-  for (let i = 0; i < nums2.length; i += 1) {
-    var insertResult = insert(node, nums2[i]);
-    node = insertResult || node;
-  }
-
-  var total = nums1.length + nums2.length;
-  var index = 0;
-  var count = (total % 2) === 0 ? 2 : 1;
-  var mid = Math.floor(total / 2);
-  var sum = 0;
-
-  while(index <= mid) {
-    if (index === mid || (count === 2 && index === mid - 1)) {
-      sum += node.val;
-    }
-    index += 1;
-    node = node.next;
-  }
-
-  return sum / count;
-};
-
-findMedianSortedArrays([1, 2], [3, 4]);
-findMedianSortedArrays([], [3, 4]);
-
-/**
- * 思路二：
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ * Solution 1:
  * 并归排序
  */
-
-const findMedianSortedArrays2 = (nums1, nums2) => {
+const findMedianSortedArrays1 = (nums1, nums2) => {
   let i1 = 0;
   let i2 = 0;
   const list = [];
@@ -129,3 +53,85 @@ const findMedianSortedArrays2 = (nums1, nums2) => {
   const mid = Math.floor(list.length / 2);
   return list.length % 2 === 0 ? (list[mid] + list[mid - 1]) / 2 : list[mid];
 };
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ * Solution 2
+ */
+var findMedianSortedArrays2 = function(nums1, nums2) {
+  let i = 0
+  let j = 0
+  let mid = Math.ceil((nums1.length + nums2.length) / 2)
+
+  while ((i + j + 1) < mid) {
+    if (j >= nums2.length || nums1[i] <= nums2[j]) {
+      i += 1
+    } else if (i >= nums1.length || nums1[i] >= nums2[j]) {
+      j += 1
+    }
+  }
+
+  if ((nums1.length + nums2.length) % 2 === 1) {
+    if (i < nums1.length && j < nums2.length) {
+      return nums1[i] < nums2[j] ? nums1[i] : nums2[j]
+    } else if (i < nums1.length) {
+      return nums1[i]
+    } else {
+      return nums2[j]
+    }
+  }
+  let n1
+  let n2
+  if (i < nums1.length && j < nums2.length) {
+    if (nums1[i] < nums2[j]) {
+      n1 = nums1[i]
+      n2 = i < nums1.length - 1 ? Math.min(nums1[i + 1], nums2[j]) : nums2[j]
+    } else {
+      n1 = nums2[j]
+      n2 = j < nums2.length - 1 ? Math.min(nums2[j + 1], nums1[i]) : nums1[i]
+    }
+  } else if (i < nums1.length) {
+    n1 = nums1[i]
+    n2 = nums1[i + 1]
+  } else {
+    n1 = nums2[j]
+    n2 = nums2[j + 1]
+  }
+  return (n1 + n2) / 2
+}
+
+console.log(
+  findMedianSortedArrays([], [1]) // 1
+)
+console.log(
+  findMedianSortedArrays([3], [-2,-1]) // -1
+)
+console.log(
+  findMedianSortedArrays([], [1,2]) // 1.5
+)
+console.log(
+  findMedianSortedArrays([1,3], [2]) // 2
+)
+console.log(
+  findMedianSortedArrays([1,3], [2,4]) // 2.5
+)
+console.log(
+  findMedianSortedArrays([1,2,3,4,5,6,7], [8]) // 4.5
+)
+console.log(
+  findMedianSortedArrays([0,0], [0,0]) // 0
+)
+console.log(
+  findMedianSortedArrays([1,3,4,5,6,7,8], [2]) // 4.5
+)
+console.log(
+  findMedianSortedArrays([1,3,4,5,6,7,8,9], [2]) // 5
+)
+console.log(
+  findMedianSortedArrays([1,3,4,5,7,8,9], [6]) // 5.5
+)
+console.log(
+  findMedianSortedArrays([1,3,5,7,8,9], [6]) // 6
+)

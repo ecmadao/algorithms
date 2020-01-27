@@ -76,34 +76,28 @@ var lengthOfLongestSubstring_2 = function(s) {
  * @return {number}
  */
 var lengthOfLongestSubstring_3 = function(s) {
-  if (!s.length) return 0
-  let i = 0
-  let j = 1
+  let result = 0
+  let start = 0
+  let tmpResult = 0
+  const tmp = {}
 
-  const tmp = {
-    [s[i]]: i
-  }
-  let result = 1
-
-  while (i < s.length && j < s.length && s.length - i > result) {
-    const str = s[j]
-    if (tmp[str] !== undefined) {
-      result = Math.max(result, j - i)
-      const tmpIndex = i
-      i = tmp[str] + 1
-      let index = tmp[str]
-
-      while (index >= tmpIndex) {
-        tmp[s[index]] = undefined
-        index -= 1
+  for (let i = 0; i < s.length; i += 1) {
+    if (tmp[s[i]] !== undefined) {
+      let index = start
+      start = tmp[s[i]] + 1
+      while (index < start) {
+        delete tmp[s[index]]
+        index += 1
       }
+      tmpResult = i + 1 - start
     } else {
-      result = Math.max(result, j + 1 - i)
+      tmpResult += 1
     }
-    tmp[str] = j
-    j += 1
-  }
 
+    if (result < tmpResult) result = tmpResult
+
+    tmp[s[i]] = i
+  }
   return result
 }
 

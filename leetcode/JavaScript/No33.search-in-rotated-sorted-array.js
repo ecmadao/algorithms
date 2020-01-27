@@ -35,51 +35,50 @@
  * @return {number}
  */
 var search = function(nums, target) {
-  let index = -1
   let i = 0
   let j = nums.length - 1
 
   while (i <= j) {
-    const mid = Math.ceil((i + j) / 2)
-    const num = nums[mid]
+      const mid = Math.ceil((j + i) / 2)
+      if (nums[mid] === target) return mid
 
-    if (num === target) {
-      index = mid
-      break
-    } else if (num > target) {
-      // 中间数 > target
-      if (num < nums[j]) {
-        // 且中间数小于最右侧数，则从中间数开始往右，全部都是升序
-        // 那么应该只看左边
-        j = mid - 1
-      } else {
-        // 且中间数大于最右侧数
-        // 那么先看最左侧数，如果小于 target，则只取左侧。否则只取右侧
-        if (nums[i] <= target) {
-          j = mid - 1
+      // 检查中间值是否大于目标值
+      if (nums[mid] > target) {
+        // 中间值 > 目标值，则检查中间值左侧是否递增
+        if (nums[mid] >= nums[i]) {
+          // 左侧是递增，则检查最左是否 <= 目标值
+          if (nums[i] <= target) {
+            // 如果左侧最小值小于目标值，则目标值值可能位于区间 [i, mid - 1] 内
+            j = mid - 1
+          } else {
+            // 否则只能在右侧区间 [mid + 1, j] 内
+            i = mid + 1
+          }
         } else {
+          // 左侧不是递增，那么右侧一定是递增，则右侧的值一定大于目标值，不需要检查。
+          // 因此目标值只能在区间 [i, mid - 1] 内
+          j = mid - 1
+        }
+      } else {
+        // 中间值 < 目标值，检查右侧是否是递增
+        if (nums[mid] <= nums[j]) {
+          // 右侧是递增，则检查最右是否 >= 目标值
+          if (nums[j] >= target) {
+            // 如果符合要求，则目标值只能在区间 [mid + 1, j] 内
+            i = mid + 1
+          } else {
+            // 否则就在 [i, mid - 1] 内
+            j = mid - 1
+          }
+        } else {
+          // 右侧不是递增，则左侧一定是递增，那么左侧的值一定都小于目标值，不需要检查
+          // 因此目标值只能在区间 [mid + 1, j] 内
           i = mid + 1
         }
       }
-    } else {
-      // 中间数 < target
-      if (num > nums[j]) {
-        // 且中间数大于最右侧数，则左侧全部舍弃
-        // 因为左侧的数全部 < 中间数
-        i = mid + 1
-      } else {
-        // 且中间数小于最右侧数，那么从中间数开始全部是升序的
-        // 先看最右侧数，如果大于 target，则目标位置在右侧区间内
-        if (nums[j] >= target) {
-          i = mid + 1
-        } else {
-          j = mid - 1
-        }
-      }
-    }
   }
 
-  return index
+  return -1
 }
 
 console.log(

@@ -27,3 +27,32 @@ var maxProfit = function(prices) {
   }
   return maxP;
 };
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+  let profit = 0
+  if (!prices.length) return profit
+
+  const tmp = [{
+    buy: -prices[0],
+    sell: 0
+  }]
+  for (let i = 1; i < prices.length; i += 1) {
+    const price = prices[i]
+    tmp[i] = {
+      buy: Math.max(
+        tmp[i - 1].sell - price,
+        tmp[i - 1].buy
+      ),
+      sell: Math.max(
+        tmp[i - 1].buy + price,
+        tmp[i - 1].sell
+      )
+    }
+    profit = Math.max(profit, tmp[i].sell)
+  }
+  return profit
+}

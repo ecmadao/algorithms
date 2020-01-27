@@ -27,15 +27,15 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-  if (!prices.length) return 0;
-  let minP = prices[0];
-  let maxP = 0;
+  if (!prices.length) return 0
+  let minP = prices[0]
+  let maxP = 0
   for (let i = 1; i < prices.length; i += 1) {
-    let p = prices[i];
-    if (minP < p && maxP < p - minP) {
-      maxP = p - minP;
+    let p = prices[i]
+    if (maxP < p - minP) {
+      maxP = p - minP
     }
-    if (minP > p) minP = p;
+    if (minP > p) minP = p
   }
-  return maxP;
-};
+  return maxP
+}
