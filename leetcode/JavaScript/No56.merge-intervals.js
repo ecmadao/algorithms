@@ -49,43 +49,19 @@ var merge = function(intervals) {
  * @return {number[][]}
  */
 var merge = function(intervals) {
-  intervals = intervals.sort((i1, i2) => i1[0] - i2[0])
-
-  const mergeIntervals = (interval1, interval2) => {
-    const left1 = interval1[0]
-    const right1 = interval1[1]
-    const left2 = interval2[0]
-    const right2 = interval2[1]
-
-    if (left1 <= left2 && right1 >= right2) {
-      return [interval1]
-    }
-    if (left2 <= left1 && right2 >= right1) {
-      return [interval2]
-    }
-    if (left2 <= right1 && left2 >= left1 && right1 <= right2) {
-      return [[left1, right2]]
-    }
-    if (left1 <= right2 && left1 >= left2 && right2 <= right1) {
-      return [[left2, right1]]
-    }
-
-    return [interval1, interval2]
-  }
+  intervals.sort((i1, i2) => i1[0] - i2[0])
 
   return intervals.reduce((list, interval, index) => {
-    list.push(interval)
-    while (true && list.length >= 2) {
-      const target = list.pop()
+    if (index > 0) {
       const pre = list.pop()
-      const merged = mergeIntervals(pre, target)
-      list.push(...merged)
-
-      if (merged.length === 2) {
-        break
+      if (pre[1] >= interval[0]) {
+        list.push([pre[0], Math.max(interval[1], pre[1])])
+      } else {
+        list.push(pre, interval)
       }
+    } else {
+      list.push(interval)
     }
-
     return list
   }, [])
 }

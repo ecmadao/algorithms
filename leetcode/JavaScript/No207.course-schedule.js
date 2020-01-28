@@ -20,56 +20,32 @@
  * 有向图，关于任务调度的应用。即基本要求，有向图中不能有环
  */
 
-class Digraph {
-  constructor(n, datas) {
-    this.adj = {};
-    this.init(datas);
+class Graph {
+  constructor(edges) {
+    this.adj = []
+    this.init(edges)
   }
 
-  init(datas) {
-    for (const data of datas) {
-      const p1 = data[1];
-      const p2 = data[0];
+  init(edges) {
+    for (const edge of edges) {
+      if (!this.adj[edge[0]]) this.adj[edge[0]] = []
+      if (!this.adj[edge[1]]) this.adj[edge[1]] = []
 
-      if (!this.adj[p1]) this.adj[p1] = [];
-      if (!this.adj[p2]) this.adj[p2] = [];
-      this.adj[p1].push(p2);
-    }
-  }
-}
-
-class CycleDigraph {
-  constructor(digraph) {
-    this.marked = {};
-    this.stack = {};
-    this.hasCycle = false;
-
-    const points = Object.keys(digraph.adj);
-    for (const p of points) {
-      if (this.hasCycle) break;
-      if (!this.marked[p]) {
-        this.dfs(digraph, p);
-      }
+      this.adj[edge[0]].push(edge[1])
     }
   }
 
-  dfs(digraph, point) {
-    if (this.hasCycle) return;
-    this.marked[point] = true;
-    this.stack[point] = true;
+  hasCircle(point, tmp = {}) {
+    if (!this.adj[point]) return false
+    if (tmp[point]) return true
 
-    for (const p of digraph.adj[point]) {
-      if (this.stack[p]) {
-        this.hasCycle = true;
-        break;
-      } else if (this.hasCycle) {
-        break;
-      } else if (!this.marked[p]) {
-        this.dfs(digraph, p);
-      }
+    tmp[point] = true
+    for (const p of this.adj[point]) {
+      const check = this.hasCircle(p, tmp)
+      if (check) return true
     }
-
-    this.stack[point] = false;
+    tmp[point] = false
+    return false
   }
 }
 
@@ -79,8 +55,18 @@ class CycleDigraph {
 * @return {boolean}
 */
 var canFinish = function(numCourses, prerequisites) {
-  if (!prerequisites.length) return true;
-  const digraph = new Digraph(numCourses, prerequisites);
-  const cycleDigraph = new CycleDigraph(digraph);
-  return !cycleDigraph.hasCycle;
-};
+  const graph = new Graph(prerequisites)
+
+  for (let i = 0; i < numCourses; i += 1) {
+    const hasCircle = graph.hasCircle(i)
+    if (hasCircle) return false
+  }
+  return true
+}
+
+console.log(
+  canFinish(2, [[1,0],[0,1]]) // false
+)
+console.log(
+  canFinish(3, [[0,1],[0,2],[1,2]]) // true
+)

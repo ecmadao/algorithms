@@ -36,34 +36,16 @@
 /**
  * @param {TreeNode} root
  * @return {boolean}
+ * 注：对于合法的二叉搜索树树，要求：
+ * 1. 节点左子树的所有元素都小于节点值
+ * 2. 节点右子树的所有元素都大于节点值
  */
-const isValidBST = (root) => {
-  if (!root) return true;
-  const isNodeValidate = (options) => {
-    const {
-      node,
-      lessThan = null,
-      greatThan = null
-    } = options;
-    if (!node) return true;
-    if (lessThan !== null && node.val >= lessThan) return false;
-    if (greatThan !== null && node.val <= greatThan) return false;
-
-    return isNodeValidate({
-      node: node.left,
-      lessThan: node.val,
-      greatThan
-    }) && isNodeValidate({
-      node: node.right,
-      greatThan: node.val,
-      lessThan
-    });
-  };
-  return isNodeValidate({
-    node: root.left,
-    lessThan: root.val,
-  }) && isNodeValidate({
-    node: root.right,
-    greatThan: root.val
-  });
-};
+var isValidBST = function(root) {
+  const check = (node, min, max) => {
+      if (!node) return true
+      if (node.val <= min || node.val >= max) return false
+      return check(node.left, min, Math.min(node.val, max)) && check(node.right, Math.max(min, node.val), max)
+  }
+  if (!root) return true
+  return check(root.left, -Infinity, root.val) && check(root.right, root.val, Infinity)
+}

@@ -40,54 +40,43 @@
  */
 
 class Graph {
-  constructor(n, edges) {
-    this.count = n;
-    this.adj = [];
-
-    this.init(edges);
+  constructor(edges) {
+    this.adj = []
+    this.init(edges)
   }
 
   init(edges) {
     for (const edge of edges) {
-      const p1 = edge[0];
-      const p2 = edge[1];
+      if (!this.adj[edge[0]]) this.adj[edge[0]] = []
+      if (!this.adj[edge[1]]) this.adj[edge[1]] = []
 
-      if (!this.adj[p1]) this.adj[p1] = [];
-      if (!this.adj[p2]) this.adj[p2] = [];
-
-      this.adj[p1].push(p2);
-      this.adj[p2].push(p1);
+      this.adj[edge[0]].push(edge[1])
+      this.adj[edge[1]].push(edge[0])
     }
   }
 }
 
 class DFS {
-  constructor(graph, point) {
-    this.marked = {};
-    this.paths = [];
-    this.tmpPaths = [];
-
-    this.dfs(graph, point);
+  constructor(graph, val) {
+    this.marked = {}
+    this.pathes = []
+    this.tmp = []
+    this.dfs(graph, val)
   }
 
-  dfs(graph, point) {
-    this.marked[point] = true;
-    this.tmpPaths.push(point);
-
-    for (const p of graph.adj[point]) {
-      if (!this.marked[p]) {
-        if (graph.adj[p].length === 1) {
-          this.marked[p] = true;
-          if (this.tmpPaths.length + 1 > this.paths.length) {
-            this.paths = [...this.tmpPaths, p];
-          }
-        } else {
-          this.dfs(graph, p);
-        }
-      }
+  dfs(graph, val) {
+    if (this.marked[val]) {
+      if (this.tmp.length > this.pathes.length) this.pathes = [...this.tmp]
+      return
     }
 
-    this.tmpPaths.pop();
+    this.marked[val] = true
+    this.tmp.push(val)
+
+    for (const point of graph.adj[val]) {
+      this.dfs(graph, point)
+    }
+    this.tmp.pop()
   }
 }
 
@@ -97,27 +86,22 @@ class DFS {
 * @return {number[]}
 */
 var findMinHeightTrees = function(n, edges) {
-  if (!edges.length) return [0];
-  const graph = new Graph(n, edges);
-  const result = [];
-  let paths = [];
+  if (!edges.length) return [0]
 
-  for (let i = 0; i < graph.count; i += 1) {
-    // get any foot node, dfs it to find all foot2foot path
+  const graph = new Graph(edges)
+  let pathes = []
+
+  for (let i = 0; i < n; i += 1) {
     if (graph.adj[i].length === 1) {
-      // DFS
-      const dfs = new DFS(graph, i);
-      if (dfs.paths.length > paths.length) {
-        paths = dfs.paths;
-      }
+      const dfs = new DFS(graph, i)
+      if (dfs.pathes.length > pathes.length) pathes = dfs.pathes
     }
   }
-
-  const mid = Math.floor(paths.length / 2);
-  if (mid * 2 === paths.length) {
-    result.push(paths[mid - 1]);
-  }
-  result.push(paths[mid]);
-
-  return result;
-};
+  const results = [
+    pathes[Math.floor(pathes.length / 2)]
+  ]
+  if (pathes.length % 2 === 0) results.push(
+    pathes[pathes.length / 2 - 1]
+  )
+  return results
+}

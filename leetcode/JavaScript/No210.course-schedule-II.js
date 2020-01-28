@@ -29,64 +29,50 @@
  * 主要最后的结果里要加入独立的节点，即没有跟其他节点连接的节点
  */
 
-class Digraph {
-  constructor(full, datas) {
-    this.adj = {};
-    this.independents = new Set(full);
-    this.init(datas);
+class Graph {
+  constructor(edges, full) {
+    this.adj = {}
+    this.full = new Set(full)
+    this.init(edges)
   }
 
-  init(datas) {
-    for (const data of datas) {
-      const p1 = data[1];
-      const p2 = data[0];
+  init(edges) {
+    for (const edge of edges) {
+      if (!this.adj[edge[0]]) this.adj[edge[0]] = []
+      if (!this.adj[edge[1]]) this.adj[edge[1]] = []
 
-      this.independents.delete(p1);
-      this.independents.delete(p2);
+      this.full.delete(edge[0])
+      this.full.delete(edge[1])
 
-      if (!this.adj[p1]) this.adj[p1] = [];
-      if (!this.adj[p2]) this.adj[p2] = [];
-      this.adj[p1].push(p2);
+      this.adj[edge[1]].push(edge[0])
     }
   }
 }
 
-class CycleDigraph {
-  constructor(digraph) {
-    this.marked = {};
-    this.stack = {};
-    this.hasCycle = false;
-    this.paths = [];
-
-    const points = Object.keys(digraph.adj);
-    for (const p of points) {
-      if (this.hasCycle) break;
-      if (!this.marked[p]) {
-        this.dfs(digraph, p);
-      }
-    }
+class DFS {
+  constructor() {
+    this.pathes = []
+    this.tmp = {}
+    this.hasCircle = false
   }
 
-  dfs(digraph, point) {
-    if (this.hasCycle) return;
-    this.marked[point] = true;
-    this.stack[point] = true;
+  dfs(graph, point, marked) {
+    if (marked[point]) this.hasCircle = true
+    if (this.hasCircle) return
+    if (this.tmp[point]) return
 
-    for (const p of digraph.adj[point]) {
-      if (this.stack[p]) {
-        this.hasCycle = true;
-        break;
-      } else if (this.hasCycle) {
-        break;
-      } else if (!this.marked[p]) {
-        this.dfs(digraph, p);
-      }
+    this.tmp[point] = true
+    marked[point] = true
+
+    for (const p of graph.adj[point]) {
+      if (marked[p]) this.hasCircle = true
+      if (this.hasCircle) return
+      if (!this.tmp[p]) this.dfs(graph, p, marked)
     }
-    this.paths.unshift(Number(point));
-    this.stack[point] = false;
+    this.pathes.unshift(point)
+    marked[point] = false
   }
 }
-
 
 /**
 * @param {number} numCourses
@@ -95,15 +81,29 @@ class CycleDigraph {
 * 拓扑排序/逆后排序
 */
 var findOrder = function(numCourses, prerequisites) {
-  const full = new Array(numCourses).fill(0).map((_, i) => i);
-  if (!prerequisites.length) {
-    return full;
-  }
-  const digraph = new Digraph(full, prerequisites);
-  const cycleDigraph = new CycleDigraph(digraph);
-  if (cycleDigraph.hasCycle) return [];
+  const full = Array.from({ length: numCourses }, (_, i) => i)
+  if (!prerequisites.length) return full
+  const graph = new Graph(prerequisites, full)
 
-  const result = cycleDigraph.paths;
-  result.push(...digraph.independents);
-  return result;
+  const dfs = new DFS()
+
+  for (const i of Object.keys(graph.adj)) {
+    if (dfs.hasCircle) return []
+    dfs.dfs(graph, i, {})
+  }
+  if (dfs.hasCircle) return []
+  return [...dfs.pathes, ...graph.full]
 };
+
+console.log(
+  findOrder(2, [[0, 1]])
+)
+console.log(
+  findOrder(2, [[1, 0]])
+)
+console.log(
+  findOrder(3, [[1, 0]])
+)
+console.log(
+  findOrder(4, [[1, 0], [2, 0], [3, 1], [3, 2]])
+)

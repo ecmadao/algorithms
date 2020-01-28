@@ -22,32 +22,49 @@
  * @return {number}
  */
 var lengthOfLIS = function(nums) {
-  if (nums.length <= 1) return nums.length;
+  const tmp = {}
+  let result = 0
 
-  const tmp = {
-    0: 1
-  };
-  let result = 1;
-  for (let i = 1; i < nums.length; i += 1) {
-    let j = i - 1;
-    tmp[i] = 1
-    const num = nums[i];
+  for (let i = 0; i < nums.length; i += 1) {
+    tmp[i] = 0
+
+    let j = i - 1
     while (j >= 0) {
-      const J = nums[j];
-      if (num === J) {
-        tmp[i] = tmp[j];
-        break;
+      if (nums[i] > nums[j]) {
+        tmp[i] = Math.max(
+          tmp[i],
+          tmp[j]
+        )
       }
-      if (J < num) {
-        tmp[i] = Math.max(tmp[j] + 1, tmp[i]);
-        result = Math.max(result, tmp[i]);
-        if (num - 1 === J) break;
-      }
-      j -= 1;
+      j -= 1
     }
+    tmp[i] += 1
+    result = Math.max(result, tmp[i])
   }
-  return result;
-};
+
+  return result
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ * 超时
+ */
+var lengthOfLIS_2 = function(nums) {
+  const getLen = (pre, index) => {
+    if (index >= nums.length) return 0
+
+    const num = nums[index]
+    let take = 0
+    if (num > pre) {
+      take = 1 + getLen(num, index + 1)
+    }
+    const untake = getLen(pre, index + 1)
+    return Math.max(take, untake)
+  }
+
+  return getLen(-Infinity, 0)
+}
 
 // Test case
 console.log(lengthOfLIS([10,9,2,5,3,7,101,18])); // 4

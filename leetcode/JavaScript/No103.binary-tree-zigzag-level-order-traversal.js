@@ -28,64 +28,35 @@
  *     this.left = this.right = null;
  * }
  */
+
 /**
  * @param {TreeNode} root
  * @return {number[][]}
  */
 var zigzagLevelOrder = function(root) {
-  const results = [];
-  if (!root) return results;
-  const getLayerValues = (nodes, fromLeftToRight = true) => {
-    const childs = [];
-    const values = [];
-    for (let i = 0; i < nodes.length; i += 1) {
-      const node = nodes[i];
-      values.push(node.val);
-      if (fromLeftToRight) {
-        if (node.left) childs.unshift(node.left);
-        if (node.right) childs.unshift(node.right);
-      } else {
-        if (node.right) childs.unshift(node.right);
-        if (node.left) childs.unshift(node.left);
-      }
-    }
-    results.push(values);
-    if (childs.length) getLayerValues(childs, !fromLeftToRight);
-  };
-  getLayerValues([root]);
-  return results;
-};
-
-/**
- * @param {TreeNode} root
- * @return {number[][]}
- */
-var zigzagLevelOrder_2 = function(root, leftToRight = true) {
-  let queue = [root]
   const result = []
+  if (!root) return result
+  root.index = 0
+  const queue = [root]
 
-  while (true) {
-    const data = []
-    const q = []
-
-    while (queue.length) {
-      let node = leftToRight ? queue.shift() : queue.pop()
-      if (!node) continue
-      data.push(node.val)
-
-      if (leftToRight) {
-        if (node.left) q.push(node.left)
-        if (node.right) q.push(node.right)
-      } else {
-        if (node.right) q.unshift(node.right)
-        if (node.left) q.unshift(node.left)
-      }
+  while (queue.length) {
+    const node = queue.shift()
+    if (!result[node.index]) result[node.index] = []
+    if (node.index % 2 === 0) {
+      result[node.index].push(node.val)
+    } else {
+      result[node.index].unshift(node.val)
     }
 
-    queue = q
-    leftToRight = !leftToRight
-    data.length && result.push(data)
-    if (!q.length) break
+    const nextIndex = node.index + 1
+    if (node.left) {
+      node.left.index = nextIndex
+      queue.push(node.left)
+    }
+    if (node.right) {
+      node.right.index = nextIndex
+      queue.push(node.right)
+    }
   }
 
   return result

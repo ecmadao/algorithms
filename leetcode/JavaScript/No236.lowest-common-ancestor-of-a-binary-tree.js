@@ -92,13 +92,60 @@ var lowestCommonAncestor_1 = function(root, p, q) {
  * @return {TreeNode}
  */
 var lowestCommonAncestor_2 = function(root, p, q) {
-  if (!root) return root;
-  if (root === p || root === q) return root;
+  if (!root) return root
+  if (root === p || root === q) return root
 
-  const left = lowestCommonAncestor_2(root.left, p, q);
-  if (left && left !== p && left !== q) return left;
+  const left = lowestCommonAncestor_2(root.left, p, q)
+  const right = lowestCommonAncestor_2(root.right, p, q)
 
-  const right = lowestCommonAncestor_2(root.right, p, q);
-  if (!left) return right;
-  return !right ? left : root;
-};
+  if (left && right) return root
+  return left || right
+}
+
+/* ============== Solution 3 ============== */
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {TreeNode}
+ * 非递归深度优先遍历，记录遍历的节点路径。
+ * 如果 p、q 的路径都找到了，则寻找两者的最近节点
+ */
+var lowestCommonAncestor = function(root, p, q) {
+  if (!root) return null
+
+  let q1 = []
+  let q2 = []
+  const queue = [root]
+  while (queue.length) {
+    const node = queue.pop()
+    if (node.val === p.val || node.val === q.val) {
+      if (q1.length) {
+        q2.push(node)
+        let index = 0
+        while (index < Math.min(q1.length, q2.length) && q1[index] === q2[index]) index += 1
+        return q1[index - 1]
+      } else {
+        q1 = [...q2, node]
+      }
+    }
+
+    if (!node.left && !node.right) {
+      // 回退
+      let child = node
+      while (q2.length > 1) {
+        const last = q2.pop()
+        if (last.left && child.val === last.left.val && last.right) {
+          q2.push(last)
+          break
+        }
+        child = last
+      }
+      if (!q2.length) return root
+    } else {
+      if (node.right) queue.push(node.right)
+      if (node.left) queue.push(node.left)
+      q2.push(node)
+    }
+  }
+}
