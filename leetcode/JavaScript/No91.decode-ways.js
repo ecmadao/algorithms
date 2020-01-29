@@ -26,55 +26,32 @@
  * 但是有额外的条件限制，只有当确实可以解码时上式才能成立
  */
 
-var DIC = {
-  1: 'A',
-  2: 'B',
-  3: 'C',
-  4: 'D',
-  5: 'E',
-  6: 'F',
-  7: 'G',
-  8: 'H',
-  9: 'I',
-  10: 'J',
-  11: 'K',
-  12: 'L',
-  13: 'M',
-  14: 'N',
-  15: 'O',
-  16: 'P',
-  17: 'Q',
-  18: 'R',
-  19: 'S',
-  20: 'T',
-  21: 'U',
-  22: 'V',
-  23: 'W',
-  24: 'X',
-  25: 'Y',
-  26: 'Z',
-};
-
-// 缓存
-var temp = {};
-
-var decode = function(s) {
-  var directDecode = DIC[s] ? 1 : 0;
-  if (s.length <= 1) return directDecode;
-  var splitDecode = decode(s[0]) + decode(s[1]);
-  return directDecode + (splitDecode === 2 ? 1 : 0);
-};
-
 /**
-* @param {string} s
-* @return {number}
-*/
+ * @param {string} s
+ * @return {number}
+ */
 var numDecodings = function(s) {
-  if (temp[s] !== undefined) return temp[s];
-  if (s.length <= 2) return decode(s);
-  var numA = DIC[s.slice(-1)] ? numDecodings(s.slice(0, -1)) : 0;
-  var numB = DIC[s.slice(-2)] ? numDecodings(s.slice(0, -2)) : 0;
-  var num = numA + numB;
-  temp[s] = num;
-  return num;
-};
+  const tmp = {}
+
+  const dfs = (i) => {
+    if (tmp[i] !== undefined) return tmp[i]
+    if (i >= s.length) {
+      return 1
+    }
+
+    let count = 0
+    let j = i + 1
+    while (j <= s.length) {
+      const num = Number(s.slice(i, j))
+      if (num > 26 || num < 1) break
+
+      const result = dfs(j)
+      count += result
+      j += 1
+    }
+    tmp[i] = count
+    return count
+  }
+
+  return dfs(0)
+}

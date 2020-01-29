@@ -28,40 +28,23 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
-  var left = 0;
-  var right = nums.length - 1;
-  var index = null;
+  let i = 0
+  let j = nums.length - 1
 
-  while (left <= right) {
-    var midIndex = Math.floor((left + right) / 2);
-    var mid = nums[midIndex];
-    if (mid === target) {
-      index = midIndex;
-      break;
-    } else if (mid > target) {
-      right = midIndex - 1;
+  while (i < j) {
+    const mid = Math.floor((i + j) / 2)
+    if (nums[mid] === target) return mid
+
+    if (nums[mid] < target) {
+      i = mid + 1
     } else {
-      left = midIndex + 1;
+      j = mid - 1
     }
   }
 
-  if (index === null) {
-    left -= 1;
-    var num = nums[left];
-    if (num > target) {
-      if (left - 1 < 0 || nums[left - 1] < target) {
-        index = left;
-      }
-    } else {
-      if (left + 1 > nums.length -1 || nums[left + 1] > target) {
-        index = left + 1;
-      }
-    }
-  }
-
-  console.log(index)
-  return index;
-};
+  const mid = Math.floor((i + j) / 2)
+  return nums[mid] < target ? mid + 1 : Math.max(0, mid)
+}
 
 searchInsert([1,3,5,6], 5);
 searchInsert([1,3,5,6], 2);
