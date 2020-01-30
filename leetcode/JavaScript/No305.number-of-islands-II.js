@@ -52,11 +52,8 @@
  * @param {number[][]} positions
  * @return {number[]}
  */
-var numIslands2 = function(m, n, positions) {
-  const board = Array.from(
-    { length: m },
-    (_, i) => Array.from({ length: n }, (v, index) => 0)
-  )
+var numIslands2_1 = function(m, n, positions) {
+  const board = []
   let results = []
   let result = 0
 
@@ -64,7 +61,7 @@ var numIslands2 = function(m, n, positions) {
     if (i < 0 || i >= m) return
     if (j < 0 || j >= n) return
 
-    if (board[i][j] === 0) return
+    if (!board[i] || !board[i][j]) return
     if (board[i][j] === target) return
 
     const num = board[i][j]
@@ -79,16 +76,67 @@ var numIslands2 = function(m, n, positions) {
   }
 
   for (let index = 0; index < positions.length; index += 1) {
+    const position = positions[index]
+    const i = position[0]
+    const j = position[1]
+    if (!board[i]) board[i] = []
+
+    if (board[i][j]) {
+      results.push(result)
+      continue
+    }
+
+    board[i][j] = '0'
+    result += 2
+    check(i, j, index + 1, index + 1)
+    results.push(result)
+  }
+  return results
+}
+
+/**
+ * @param {number} m
+ * @param {number} n
+ * @param {number[][]} positions
+ * @return {number[]}
+ * faster
+ */
+var numIslands2 = function(m, n, positions) {
+  const tmp = {}
+  let result = 0
+  const results = []
+
+  const findF = (i, j) => {
+    let key = `${i}-${j}`
+    while (tmp[key] !== key) key = tmp[key]
+    return tmp[key]
+  }
+
+  const uf = (i, j, i1, j1) => {
+    if (i < 0 || i >= m) return null
+    if (j < 0 || j >= n) return null
+
+    let key = `${i}-${j}`
+    if (!tmp[key]) return
+
+    const f1 = findF(i, j)
+    const f2 = findF(i1, j1)
+    if (f1 !== f2) {
+      tmp[f2] = f1
+      result -= 1
+    }
+  }
+
+  for (let index = 0; index < positions.length; index += 1) {
     const [i, j] = positions[index]
-
-    if (board[i][j] === 0) {
-      board[i][j] = index + 1
+    const key = `${i}-${j}`
+    if (!tmp[key]) {
       result += 1
-
-      check(i, j + 1, index + 1, index + 1)
-      check(i, j - 1, index + 1, index + 1)
-      check(i - 1, j, index + 1, index + 1)
-      check(i + 1, j, index + 1, index + 1)
+      tmp[key] = key
+      uf(i - 1, j, i, j)
+      uf(i + 1, j, i, j)
+      uf(i, j + 1, i, j)
+      uf(i, j - 1, i, j)
     }
     results.push(result)
   }
@@ -96,8 +144,11 @@ var numIslands2 = function(m, n, positions) {
 }
 
 console.log(
-  numIslands2(3, 3, [[0,1],[1,2],[0,2],[1,1],[2,0]])
+  numIslands2(3, 3, [[0,1],[1,2],[0,2],[1,1],[2,0]]) // [1,2,1,1,2]
 )
 console.log(
-  numIslands2(3, 3, [[0,1],[1,2],[0,2],[1,1],[1,1]])
+  numIslands2(3, 3, [[0,1],[1,2],[0,2],[1,1],[1,1]]) // [1,2,1,1,1]
+)
+console.log(
+  numIslands2(3, 3, [[0,0],[0,1],[1,2],[2,1]]) // [1,1,2,3]
 )
