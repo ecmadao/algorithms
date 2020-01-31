@@ -49,9 +49,6 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
   - [红黑二叉搜索树](./red-black-bsts/README.md)
   - [区间二叉搜索树](./interval-search-trees/README.md)
 - [k-d 树](./k-d-trees/README.md)
-- 字典树
-  - [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
-  - [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
 - 字符串
   - 字符串匹配的 KMP 算法
     - [KMP 算法详细解析](https://blog.sengxian.com/algorithms/kmp)

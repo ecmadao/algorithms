@@ -232,6 +232,7 @@ LeetCode 上相关题目：
 3. [No.173 Binary Search Tree Iterator](./leetcode/JavaScript/No173.binary-search-tree-iterator.js)
 4. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/JavaScript/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 5. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/JavaScript/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
+6. [No285. Inorder Successor in BST.js](./leetcode/JavaScript/No285.inorder-successor-in-bst.js)
 
 - 后序遍历（postorder）
 
@@ -255,6 +256,17 @@ LeetCode 上相关题目：
 1. [No.102 Binary Tree Level-Order Traversal](./leetcode/JavaScript/No102.binary-tree-level-order-traversal.js)
 2. [No.107 Binary Tree Level-Order Traversal II.js](./leetcode/JavaScript/No107.binary-tree-level-order-traversal-II.js)
 3. [No.103 Binary Tree Zigzag Level-Order Traversal.js](./leetcode/JavaScript/No103.binary-tree-zigzag-level-order-traversal.js)
+
+### 字典树
+
+- [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
+- [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
+
+LeetCode 上相关题目：
+
+1. [No208 Implement Trie Prefix Tree](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js)
+2. [No212 Word Search II](./leetcode/JavaScript/No212.word-search-II.js)
+3. [No676 Implement Magic Dictionary](./leetcode/JavaScript/No676.implement-magic-dictionary.js)
 
 ### 图
 

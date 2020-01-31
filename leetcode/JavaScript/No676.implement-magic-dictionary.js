@@ -66,13 +66,12 @@ MagicDictionary.prototype._search = function(node, word, index, modityCount) {
 };
 
 /**
- * Returns if there is any word in the trie that equals to the given word after modifying exactly one character 
+ * Returns if there is any word in the trie that equals to the given word after modifying exactly one character
  * @param {string} word
  * @return {boolean}
  */
 MagicDictionary.prototype.search = function(word) {
-  let node = this.root;
-  return this._search(node, word, 0, 0);
+  return this._search(this.root, word, 0, 0);
 };
 
 // Test case
@@ -94,3 +93,12 @@ console.log(dict.search('bb'));
 console.log(dict.search('aa'));
 console.log(dict.search('bbc'));
 console.log(dict.search('abcd'));
+
+
+["MagicDictionary", "buildDict", "search", "search", "search", "search"]
+[[], [["hello","leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
+// [null,null,false,true,false,false]
+
+["MagicDictionary", "buildDict", "search", "search", "search", "search"]
+[[], [["hello","hallo","leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
+// [null,null,true,true,false,false]

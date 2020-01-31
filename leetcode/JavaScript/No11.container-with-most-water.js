@@ -62,20 +62,16 @@ var maxArea_2 = function(height) {
   let result = 0
 
   while (i < j) {
-    const left = height[i]
-    const right = height[j]
-    result = Math.max(result, Math.min(left, right) * (j - i))
-
-    if (left <= right) {
-      while (i < j && height[i] <= left) {
-          i += 1
-      }
+    result = Math.max(
+      result,
+      Math.min(height[i], height[j]) * (j - i)
+    )
+    if (height[i] < height[j]) {
+      i += 1
     } else {
-      while (i < j && height[j] <= right) {
-          j -= 1
-      }
+      j -= 1
     }
   }
 
   return result
-};
+}

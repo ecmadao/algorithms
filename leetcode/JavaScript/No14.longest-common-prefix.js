@@ -16,34 +16,19 @@
  */
 
 /**
- * @param {*} strs 字符串组成的数组
- * @param {*} i 获取各个字符串指定索引上的元素
- *
- * 首先根据 i 获取各个字符串指定索引上的元素，组成 Array
- * 然后检查其和原数组长度是否相等，如果不等，则说明索引已经超出某些字符串的长度
- * 之后将元素转为 Set，如果各个字符串在 i 上的字母一样，则 set 长度应该为 1
- */
-var checkStrs = function(strs, i) {
-  var targetStrs = strs.map(str => str[i]).filter(str => str);
-  if (targetStrs.length !== strs.length) return false;
-  var set = new Set(targetStrs);
-  return set.size === 1;
-};
-
-/**
 * @param {string[]} strs
 * @return {string}
 */
 var longestCommonPrefix = function(strs) {
-  var result = '';
-  if (!strs.length) return result;
-  var start = strs[0];
-  var i = 0;
+  if (!strs.length) return ''
 
-  while(checkStrs(strs, i)) {
-    result += start[i];
-    i += 1;
+  let i = 0
+  while (true) {
+    const next = strs.map(str => str[i])
+    if (new Set(next).size !== 1) break
+    if (next[0] === undefined) break
+    i += 1
   }
 
-  return result;
-};
+  return strs[0].slice(0, i)
+}

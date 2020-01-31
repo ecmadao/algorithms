@@ -89,3 +89,72 @@ var isValidSudoku = function(board) {
 
   return validate;
 };
+
+
+/**
+ * @param {character[][]} board
+ * @return {boolean}
+ */
+var isValidSudoku = function(board) {
+  let bi = 0
+  let bj = 0
+
+  const map = {
+    row: {},
+    column: {}
+  }
+
+  const checkValidate = (i, j) => {
+    const set = new Set()
+    for (let row = i; row < i + 3; row += 1) {
+      if (map.row[row] === undefined) {
+        const nums = board[row].filter(n => n !== '.')
+        map.row[row] = new Set(nums).size === nums.length
+      }
+      if (!map.row[row]) return false
+
+      for (let column = j; column < j + 3; column += 1) {
+        if (board[row][column] !== '.') {
+          if (!map.column[column]) map.column[column] = []
+          map.column[column].push(board[row][column])
+          if (set.has(board[row][column])) return false
+          set.add(board[row][column])
+        }
+      }
+    }
+    return true
+  }
+
+  while (bi <= 2 && bj <= 2) {
+    const check = checkValidate(bi * 3, bj * 3)
+    if (!check) return false
+
+    if (bj === 2) {
+      bi += 1
+      bj = 0
+    } else {
+      bj += 1
+    }
+  }
+
+  return Object.values(map.column).every(column => new Set(column).size === column.length)
+}
+
+// Test case
+
+console.log(
+  // false
+  isValidSudoku(
+    [
+      [".",".","4",".",".",".","6","3","."],
+      [".",".",".",".",".",".",".",".","."],
+      ["5",".",".",".",".",".",".","9","."],
+      [".",".",".","5","6",".",".",".","."],
+      ["4",".","3",".",".",".",".",".","1"],
+      [".",".",".","7",".",".",".",".","."],
+      [".",".",".","5",".",".",".",".","."],
+      [".",".",".",".",".",".",".",".","."],
+      [".",".",".",".",".",".",".",".","."]
+    ]
+  )
+)
