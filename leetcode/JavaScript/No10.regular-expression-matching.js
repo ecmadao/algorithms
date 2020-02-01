@@ -20,8 +20,52 @@
  * isMatch("aa", ".*") → true
  * isMatch("ab", ".*") → true
  * isMatch("aab", "c*a*b") → true
+ * 
+ * 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
+ * '.' 匹配任意单个字符
+ * '*' 匹配零个或多个前面的那一个元素
+ * 所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。
+ * 
+ * 说明:
+ * s 可能为空，且只包含从 a-z 的小写字母。
+ * p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
+ * 
+ * Example1:
+ * Input:
+ * s = "aa"
+ * p = "a"
+ * Output: false
+ * Explain: "a" 无法匹配 "aa" 整个字符串。
+ * 
+ * Example2:
+ * Input:
+ * s = "aa"
+ * p = "a*"
+ * Output: true
+ * Explain:
+ * 因为 '*' 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 'a'。因此，字符串 "aa" 可被视为 'a' 重复了一次。
+ * 
+ * Example3:
+ * Input:
+ * s = "ab"
+ * p = ".*"
+ * Output: true
+ * Explain: ".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。
+ * 
+ * Example4:
+ * Input:
+ * s = "aab"
+ * p = "c*a*b"
+ * Output: true
+ * Explain: 因为 '*' 表示零个或多个，这里 'c' 为 0 个, 'a' 被重复一次。因此可以匹配字符串 "aab"。
+ * 
+ * Example5:
+ * Input:
+ * s = "mississippi"
+ * p = "mis*is*p*."
+ * Output: false
  *
- * 从实现的技术上讲，这道题应该是 Easy 难度，唯一坑人的是要考虑清楚需求：要实现的 match 必须全量匹配才算 true
+ * 注：要实现的 match 必须全量匹配才算 true
  * 比如，'abcd' match  'd*'，用正则可以 match 到 d，但是 d !== abcd，故返回 false
  */
 

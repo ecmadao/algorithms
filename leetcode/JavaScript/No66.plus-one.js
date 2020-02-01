@@ -15,16 +15,16 @@
  * @return {number[]}
  */
 var plusOne = function(digits) {
-  var remainder = 1;
-  var result = [];
-  for (var i = digits.length - 1; i >= 0; i -= 1) {
-    var sum = digits[i] + remainder;
-    var num = sum % 10;
-    var remainder = sum >= 10 ? 1 : 0;
-    result.unshift(num);
+  let num = 1
+  let index = digits.length - 1
+
+  while (num && index >= 0) {
+    const sum = digits[index] + num
+    digits[index] = sum % 10
+    num = sum >= 10 ? 1 : 0
+    index -= 1
   }
-  if (remainder) {
-    result.unshift(remainder);
-  }
-  return result;
-};
+
+  if (num) digits.unshift(num)
+  return digits
+}
