@@ -99,3 +99,33 @@ var frequencySort = function(s) {
   }
   return results.join('');
 };
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var frequencySort_2 = function(s) {
+  const tmp = {}
+  const cache = {}
+
+  for (let i = 0; i < s.length; i += 1) {
+    const pre = tmp[s[i]]
+    const cur = (pre || 0) + 1
+
+    if (pre && cache[pre]) {
+      cache[pre].delete(s[i])
+      if (!cache[pre].size) delete cache[pre]
+    }
+    if (!cache[cur]) cache[cur] = new Set()
+    cache[cur].add(s[i])
+
+    tmp[s[i]] = cur
+  }
+
+  return Object.keys(cache).sort((a, b) => b - a).map((key) => {
+    return [...cache[key]].reduce((list, str) => {
+      list.push(Array.from({ length: key }, (_, i) => str).join(''))
+      return list
+    }, []).join('')
+  }).join('')
+}

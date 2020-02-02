@@ -33,7 +33,7 @@
 
 ```javascript
 let nums = [5, 3, 1, 2, 4]
-nums.sort((a, b) => a - b)
+nums.sort((a, b) => a - b) // [1, 2, 3, 4, 5]
 
 // 获取到第一个全排列，即升序后获得的最小值 12345
 const results = [[...nums]]
@@ -50,17 +50,18 @@ while (i >= 1 && nums[i] < nums[i - 1]) {
 // 对于第一次遍历，当 i = nums.length - 1，即 4 时，nums[i - 1] = 4，小于 nums[i] = 5
 
 // 记录此时的 i - 1 和 nums[i - 1]
-const index = i - 1
-const tmp = nums[index]
+const index = i - 1 // i = 4, index = 3
+const tmp = nums[index] // tmp = 4
 ```
 
 3. 再次从`j = nums.length - 1`开始向左遍历，直到遇见第一个`nums[j] > nums[index]`
 
 ```javascript
-let j = nums.length - 1
+let j = nums.length - 1 // 4
 while (j > index && nums[j] < tmp) {
   j -= 1
 }
+// 得到 j = 4, nums[j] = 5
 ```
 
 4. 此时交换`index`和`j`上元素的位置，并将`index`之后的元素排序，即可得到下一个全排列

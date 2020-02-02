@@ -25,27 +25,35 @@
  * @return {void} Do not return anything, modify head in-place instead.
  */
 var reorderList = function(head) {
-  if (head && head.next && head.next.next) {
-    var arr = [];
-    var node = head;
+  if (!head || !head.next || !head.next.next) return
 
-    while (node) {
-      arr.push(node);
-      node = node.next;
-    }
-    var length = arr.length;
-    var index = length - 1;
-    var center = Math.ceil(length / 2);
+  const queue = []
+  let slow = head
+  let fast = head
 
-    node = head;
-    while (index >= center) {
-      var n = arr[index];
-      var next = node.next;
-      node.next = n;
-      n.next = next;
-      node = next;
-      index -= 1;
-    }
-    node.next = null;
+  // 寻找中间点，同时把前半段链表入队列
+  while (fast && fast.next && fast.next.next) {
+    fast = fast.next.next
+    queue.push(slow)
+    slow = slow.next
   }
-};
+
+  let point = slow.next
+  let pre = slow.next
+  if (fast.next) {
+    queue.push(slow)
+  } else {
+    pre = slow
+  }
+
+  while (queue.length) {
+    const node = queue.pop()
+    const next = point.next
+
+    point.next = node.next
+    node.next = point
+    pre.next = next
+
+    point = next
+  }
+}

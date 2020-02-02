@@ -19,17 +19,19 @@
 /**
  * @param {ListNode} head
  * @return {boolean}
+ * 快慢双指针
  */
 var hasCycle = function(head) {
-  var set = new Set();
-  var result = false;
-  while(head && head.next) {
-    if (set.has(head)) {
-      result = true;
-      break;
-    }
-    set.add(head);
-    head = head.next;
+  if (!head) return false
+
+  let fast = head
+  let slow = head
+  while (fast && slow) {
+    fast = fast.next
+    if (!fast) return false
+    fast = fast.next
+    slow = slow.next
+    if (fast === slow) return true
   }
-  return result;
-};
+  return false
+}

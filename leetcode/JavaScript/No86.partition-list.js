@@ -21,45 +21,34 @@
 * }
 */
 /**
-* @param {ListNode} head
-* @param {number} x
-* @return {ListNode}
-*/
+ * @param {ListNode} head
+ * @param {number} x
+ * @return {ListNode}
+ */
 var partition = function(head, x) {
-  var lastSmall = null;
-  var lastBig = null;
-  var encounterSeparator = false;
-  var node = head;
-  while(node) {
-    if (node.val < x) {
-      if (!encounterSeparator) {
-        lastSmall = node;
-        node = node.next;
-      } else {
-        var next = node.next;
-        var firstBig;
-        if (lastSmall) {
-          firstBig = lastSmall.next;
-          lastSmall.next = node;
-          node.next = firstBig;
-          lastBig.next = next;
-          lastSmall = node;
-        } else {
-          firstBig = head;
-          head = node;
-          head.next = firstBig;
-          lastBig.next = next;
-          lastSmall = head;
-        }
-        node = next;
-      }
+  if (!head || !head.next) return head
+
+  const result = new ListNode(null)
+  result.next = head
+  let p1 = result
+  let previous = p1
+  let p2 = p1.next
+
+  while (p2) {
+    const next = p2.next
+
+    if (p2.val < x) {
+      previous.next = next
+      p2.next = p1.next
+      p1.next = p2
+      p1 = p1.next
+
+      if (previous.val === null || previous.val < x) previous = p1
     } else {
-      if (!encounterSeparator) {
-        encounterSeparator = true;
-      }
-      lastBig = node;
-      node = node.next;
+      previous = p2
     }
+    p2 = next
   }
-  return head;
-};
+
+  return result.next
+}

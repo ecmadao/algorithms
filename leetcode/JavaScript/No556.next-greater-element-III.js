@@ -40,6 +40,38 @@ var nextGreaterElement = function(n) {
   return -1;
 };
 
+const MAX = Math.pow(2,31) - 1
+
+/**
+ * @param {number} n
+ * @return {number}
+ *
+ * 字典序方法（全排列
+ */
+var nextGreaterElement_2 = function(n) {
+  const s = `${n}`.split('')
+  let i = s.length - 1
+
+  while (i - 1 >= 0 && s[i - 1] >= s[i]) i -= 1
+  if (i === 0) return -1
+
+  const index = i - 1
+  const num = s[index]
+
+  let j = s.length - 1
+  while (j > index && s[j] <= num) j -= 1
+  if (j <= index) return -1
+
+  s[index] = s[j]
+  s[j] = num
+
+  const result = Number([
+    ...s.slice(0, index + 1),
+    ...s.slice(index + 1).sort((a, b) => a - b)
+  ].join(''))
+  return result > MAX ? -1 : result
+}
+
 // Test case
 console.log(nextGreaterElement(12))
 console.log(nextGreaterElement(123))

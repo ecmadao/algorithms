@@ -17,6 +17,8 @@
  *
  * Note:
  * You may assume that you have an infinite number of each kind of coin.
+ *
+ * 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1
  */
 
 /**
@@ -57,20 +59,28 @@ var coinChange = function(coins, amount) {
   return find(coins.length - 1, amount);
 };
 
+/**
+ * @param {number[]} coins
+ * @param {number} amount
+ * @return {number}
+ *
+ * DP
+ */
 const coinChange_2 = (coins, amount) => {
-  const tmp = [0];
+  const tmp = [0]
+  coins.sort((c1, c2) => c1 - c2)
 
   for (let i = 1; i <= amount; i += 1) {
-    if (!tmp[i]) tmp[i] = amount + 1;
+    tmp[i] = amount + 1
+
     for (let j = 0; j < coins.length; j += 1) {
-      const coin = coins[j];
-      if (coin <= i) {
-        tmp[i] = Math.min(tmp[i], tmp[i - coin] + 1);
-      }
+      const coin = coins[j]
+      if (coin > i) break
+      tmp[i] = Math.min(tmp[i], tmp[i - coin] + 1)
     }
   }
-  return tmp[amount] > amount ? -1 : tmp[amount];
-};
+  return tmp[amount] > amount ? -1 : tmp[amount]
+}
 
 
 // Test case

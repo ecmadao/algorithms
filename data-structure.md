@@ -295,6 +295,8 @@ LeetCode 上相关题目：
 
 1. [No.133 Clone Graph](./leetcode/JavaScript/No133.clone-graph.js)
 
+### 并查集 Union Find
+
 ### 深度优先搜索 DFS/Depth-First-Search
 
 深度优先搜索：**栈的形式储存待访问顶点，元素后入先出**。

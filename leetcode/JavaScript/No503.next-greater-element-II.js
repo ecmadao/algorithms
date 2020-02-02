@@ -50,6 +50,58 @@ const nextGreaterElements = (nums) => {
   return results;
 };
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var nextGreaterElements_2 = function(nums) {
+  const result = []
+
+  for (let i = 0; i < nums.length; i += 1) {
+    let index = i + 1 === nums.length ? 0 : i + 1
+    let num = -1
+
+    while (
+      (index > i && index < nums.length) ||
+      (index >= 0 && index < i)
+    ) {
+      if (nums[index] > nums[i]) {
+        num = nums[index]
+        break
+      }
+      index += 1
+      if (index === nums.length) index = 0
+    }
+    result.push(num)
+  }
+  return result
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ * 单调递增栈
+ * https://leetcode-cn.com/problems/next-greater-element-ii/solution/xia-yi-ge-geng-da-yuan-su-ii-by-leetcode/
+ */
+var nextGreaterElements_3 = function(nums) {
+  const result = []
+  const queue = []
+
+  for (let i = nums.length * 2 - 1; i >= 0; i -= 1) {
+    const index = i % nums.length
+    while (queue.length) {
+      const num = queue.shift()
+      if (num > nums[index]) {
+        queue.unshift(num)
+        break
+      }
+    }
+    result[index] = queue.length ? queue[0] : -1
+    queue.unshift(nums[index])
+  }
+  return result
+}
+
 // Test case
 console.log(nextGreaterElements([3, 8, 4, 1, 2])); // [8, -1, 8, 2, 3]
 console.log(nextGreaterElements([1, 2, 1])); // [2, -1, 2]
