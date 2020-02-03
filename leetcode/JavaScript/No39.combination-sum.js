@@ -24,9 +24,8 @@
  * 提示：数组中全部都是正数；可以重复使用数字
  */
 
-/**
- * Solution 1
- */
+
+/* ================================= Solution 1 ================================= */
 
 /**
  * 思路：
@@ -73,17 +72,13 @@ var combination = function(candidates) {
 * @param {number} target
 * @return {number[][]}
 */
-var combinationSum_ = function(candidates, target) {
+var combinationSum_1 = function(candidates, target) {
   var findTarget = combination(candidates);
   var results = findTarget([], target, 0);
   return results;
 };
 
-/* ============================================================= */
-
-/**
- * Solution 2
- */
+/* ================================= Solution 2 ================================= */
 
 /**
  * @param {number[]} candidates
@@ -113,6 +108,35 @@ var combinationSum = function(candidates, target) {
   find(candidates[0], target, []);
   return results;
 };
+
+/* ================================= Solution 3 ================================= */
+
+/**
+ * @param {number[]} candidates
+ * @param {number} target
+ * @return {number[][]}
+ */
+var combinationSum_3 = function(candidates, target) {
+  candidates.sort((n1, n2) => n1 - n2)
+  const result = []
+
+  const combine = (index, remain, arr) => {
+    if (remain === 0) {
+      result.push(arr)
+      return
+    }
+    if (index >= candidates.length) return
+    if (candidates[index] > remain) return
+
+    for (let i = index; i < candidates.length; i += 1) {
+      if (candidates[i] > remain) break
+      combine(i, remain - candidates[i], [...arr, candidates[i]])
+    }
+  }
+
+  combine(0, target, [])
+  return result
+}
 
 // test case
 var results;

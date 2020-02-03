@@ -26,13 +26,21 @@
  * randomSet.insert(2);
  * // Since 2 is the only number in the set, getRandom always return 2.
  * randomSet.getRandom();
+ * 
+ * 设计一个支持在平均 时间复杂度 O(1) 下，执行以下操作的数据结构。
+ * 1. insert(val)：当元素 val 不存在时，向集合中插入该项。
+ * 2. remove(val)：元素 val 存在时，从集合中移除该项。
+ * 3. getRandom：随机返回现有集合中的一项。每个元素应该有相同的概率被返回
+ * 
+ * 注意时间复杂度是要 O(1)
  */
 
 /**
  * Initialize your data structure here.
  */
 var RandomizedSet = function() {
-  this.set = new Set();
+  this.map = new Map()
+  this.list = []
 };
 
 /**
@@ -41,9 +49,10 @@ var RandomizedSet = function() {
 * @return {boolean}
 */
 RandomizedSet.prototype.insert = function(val) {
-  if (this.set.has(val)) return false;
-  this.set.add(val);
-  return true;
+  if (this.map.has(val)) return false
+  this.list.push(val)
+  this.map.set(val, this.list.length - 1)
+  return true
 };
 
 /**
@@ -52,9 +61,16 @@ RandomizedSet.prototype.insert = function(val) {
 * @return {boolean}
 */
 RandomizedSet.prototype.remove = function(val) {
-  if (!this.set.has(val)) return false;
-  this.set.delete(val);
-  return true;
+  if (!this.map.has(val)) return false
+
+  const index = this.map.get(val)
+  const lastVal = this.list[this.list.length - 1]
+  this.map.set(lastVal, index)
+  this.list[index] = lastVal
+
+  this.map.delete(val)
+  this.list.pop()
+  return true
 };
 
 /**
@@ -62,14 +78,14 @@ RandomizedSet.prototype.remove = function(val) {
 * @return {number}
 */
 RandomizedSet.prototype.getRandom = function() {
-  const arr = [...this.set.values()];
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  return arr[randomIndex];
+  return this.list[
+    Math.floor(Math.random() * this.list.length)
+  ]
 };
 
-/**
+/** 
 * Your RandomizedSet object will be instantiated and called as such:
-* var obj = Object.create(RandomizedSet).createNew()
+* var obj = new RandomizedSet()
 * var param_1 = obj.insert(val)
 * var param_2 = obj.remove(val)
 * var param_3 = obj.getRandom()

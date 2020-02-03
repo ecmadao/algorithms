@@ -75,7 +75,7 @@ var quickSort = function(array, start, end) {
 * @param {number[]} nums
 * @return {void} Do not return anything, modify nums in-place instead.
 */
-var nextPermutation = function(nums) {
+var nextPermutation_1 = function(nums) {
   if (nums.length > 1) {
     var end = nums.length - 1;
     var max = nums[end];
@@ -164,9 +164,52 @@ var permuteUnique = function(nums) {
 * @param {number[]} nums
 * @return {void} Do not return anything, modify nums in-place instead.
 */
-var nextPermutation = function(nums) {
+var nextPermutation_2 = function(nums) {
   const result = permuteUnique(nums)
   if (!result) {
     nums.sort((a, b) => a - b)
   }
 }
+
+// ===================================== SOLUTION 3 =====================================
+// 利用字典序的全排列方法
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ *
+ * 字典序全排列
+ */
+var nextPermutation_3 = function(nums) {
+  let i = nums.length - 1
+  while (i > 0 && nums[i - 1] >= nums[i]) i -= 1
+  if (i === 0) {
+    nums.sort((n1, n2) => n1 - n2)
+    return
+  }
+
+  let num = nums[i - 1]
+  let j = nums.length - 1
+  while (j >= i && nums[j] <= num) j -= 1
+
+  nums[i - 1] = nums[j]
+  nums[j] = num
+  nums.splice(i, nums.length - i, ...nums.slice(i).sort((n1, n2) => n1 - n2))
+}
+
+
+[[2,1,1],[2,3,1],[3,4,1]]
+4
+2
+
+[[1,2,1],[2,3,2],[1,3,2]]
+3
+1
+
+[[2,1,1],[2,3,1],[3,4,1]]
+4
+2
+
+[[1,2,1],[2,3,2],[1,3,4]]
+3
+1

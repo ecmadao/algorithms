@@ -31,36 +31,28 @@
  * @return {number[][]}
  */
 var combinationSum2 = function(candidates, target) {
-  candidates.sort((a, b) => a - b);
-  var results = [];
-  var pre = null;
+  candidates.sort((c1, c2) => c1 - c2)
+  const result = []
 
-  for (var i = 0; i < candidates.length; i += 1) {
-    var num = candidates[i];
-    if (pre === num) continue;
-    pre = num;
-    if (num === target) {
-      results.push([num]);
-      continue;
+  const combine = (index, remain, arr) => {
+    if (!remain) {
+      result.push(arr)
+      return
     }
+    if (index >= candidates.length) return
 
-    var remainder = target - num;
-
-    if (remainder < 0) continue;
-
-    var nums = combinationSum2(candidates.slice(i + 1), remainder);
-
-    if (nums.length) {
-      results.push(
-        ...nums.map((array) => {
-          array.unshift(num);
-          return array;
-        })
-      );
+    for (let i = index; i < candidates.length; i += 1) {
+      if (candidates[i] > remain) break
+      if (i > index && candidates[i] === candidates[i - 1]) continue
+      combine(i + 1, remain - candidates[i], [...arr, candidates[i]])
     }
   }
-  return results;
-};
 
-var result = combinationSum2([10, 1, 2, 7, 6, 1, 5], 8);
-console.log(result);
+  combine(0, target, [])
+  return result
+}
+
+// Test case
+console.log(
+  combinationSum2([10, 1, 2, 7, 6, 1, 5], 8)
+)

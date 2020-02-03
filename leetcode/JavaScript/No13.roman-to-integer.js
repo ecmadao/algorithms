@@ -26,27 +26,25 @@ var ROMAN = {
 };
 
 /**
-* @param {string} s
-* @return {number}
-*/
+ * @param {string} s
+ * @return {number}
+ */
 var romanToInt = function(s) {
-  var result = 0;
-  var i = s.length - 1;
-  while (i >= 0) {
-    var string = s[i];
-    var num = ROMAN[string];
-    result += num;
+  let result = 0
+  let i = s.length - 1
 
-    var j = i - 1;
-    while(j >= 0 && ROMAN[s[j]] < num) {
-      result -= ROMAN[s[j]]
-      j -= 1;
+  while (i >= 0) {
+    result += MAP[s[i]]
+
+    let index = i - 1
+    while (index >= 0 && MAP[s[index]] < MAP[s[i]]) {
+      result -= MAP[s[index]]
+      index -= 1
     }
-    i -= i - j;
+    i = index
   }
-  console.log(`${s}: ${result}`);
-  return result;
-};
+  return result
+}
 
 romanToInt('MDCCC');
 romanToInt('MCDXXXVII');
