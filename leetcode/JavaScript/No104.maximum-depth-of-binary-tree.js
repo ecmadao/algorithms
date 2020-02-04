@@ -20,7 +20,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
+var maxDepth_1 = function(root) {
   const walk = (node, deep) => {
     if (!node) return deep - 1;
     if (!node.left && !node.right) return deep;
@@ -30,3 +30,28 @@ var maxDepth = function(root) {
   };
   return walk(root, 1);
 };
+
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth_2 = function(root) {
+  let depth = 0
+  if (!root) return depth
+
+  root.depth = 1
+  const queue = [root]
+  while (queue.length) {
+    const node = queue.pop()
+    if (!node.left && !node.right) depth = Math.max(depth, node.depth)
+    if (node.left) {
+      node.left.depth = node.depth + 1
+      queue.push(node.left)
+    }
+    if (node.right) {
+      node.right.depth = node.depth + 1
+      queue.push(node.right)
+    }
+  }
+  return depth
+}

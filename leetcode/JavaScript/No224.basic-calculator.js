@@ -21,73 +21,59 @@
  * - You may assume that the given expression is always valid.
  * - Do not use the eval built-in library function.
  *
- * 求 String 类型计算表达式的值。式中只有 (, ), +, - 和正数，可能有空白字符
+ * 实现一个基本的计算器来计算一个简单的字符串表达式的值。
+ * 字符串表达式可以包含左括号 ( ，右括号 )，加号 + ，减号 -，非负整数和空格  
+ * 注意多位数字，例如 11-12
+ * 可以假设所给定的表达式都是有效的
  */
 
-/**
- * @param {string} s
- * @return {number}
- */
-var calculate = function(s) {
-  const chars = s.split('');
-  const queue = [];
+const cal = (s, start) => {
+  let i = start
+  const queue = []
 
-  const getNumber = () => {
-    let result = queue.pop();
-    let i = 1;
-    while (queue.length) {
-      const pre = queue.pop();
-      if (!isNaN(pre)) {
-        result = pre * Math.pow(10, i) + result;
-        i += 1;
-        continue;
-      } else {
-        queue.push(pre);
-        break;
-      }
+  let preOP = '+'
+
+  while (i < s.length) {
+    if (!s[i] || s[i] === ' ') {
+      i += 1
+      continue
     }
-    return result;
-  };
-
-  const isNum = char => char !== '+' && char !== '-' && char !== '(';
-
-  const cal = () => {
-    let result = getNumber();
-    let op = queue.pop();
-
-    while (op !== '(' && queue.length) {
-      let num1 = result;
-      if (op === '-') num1 *= -1;
-      let num2 = getNumber();
-
-      let preOp = queue.length ? queue.pop() : null;
-      if (preOp !== null) {
-        if (preOp === '-') {
-          num2 *= -1;
-          preOp = '+';
-        }
-        queue.push(preOp);
-      }
-      result = num1 + num2;
-      op = queue.pop();
+    if (s[i] === '(') {
+      const { num, index } = cal(s, i + 1)
+      queue.push(preOP === '-' ? -num : num)
+      i = index
+      continue
     }
-    queue.push(result);
-  };
-
-  for (const char of chars) {
-    if (!char || char === ' ') continue;
-    if (char !== ')') {
-      queue.push(
-        isNum(char) ? parseInt(char, 10) : char
-      );
-      continue;
+    if (s[i] === ')') {
+      i += 1
+      break
     }
-    cal();
+    if (Number.isNaN(parseInt(s[i]))) {
+      preOP = s[i]
+      i += 1
+      continue
+    }
+    let index = i + 1
+    while (!Number.isNaN(parseInt(s[index]))) index += 1
+    const num = parseInt(s.slice(i, index))
+    queue.push(preOP === '-' ? -num : num)
+    i = index
   }
 
-  if (queue.length > 1) cal();
-  return queue[0];
-};
+  return {
+    index: i,
+    num: queue.reduce((n, q) => n + q, 0)
+  }
+}
+
+/**
+* @param {string} s
+* @return {number}
+*/
+var calculate = function(s) {
+  const result = cal(s, 0)
+  return result.num
+}
 
 
 // Test case

@@ -196,20 +196,3 @@ var nextPermutation_3 = function(nums) {
   nums[j] = num
   nums.splice(i, nums.length - i, ...nums.slice(i).sort((n1, n2) => n1 - n2))
 }
-
-
-[[2,1,1],[2,3,1],[3,4,1]]
-4
-2
-
-[[1,2,1],[2,3,2],[1,3,2]]
-3
-1
-
-[[2,1,1],[2,3,1],[3,4,1]]
-4
-2
-
-[[1,2,1],[2,3,2],[1,3,4]]
-3
-1

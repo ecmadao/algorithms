@@ -49,10 +49,6 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
   - [红黑二叉搜索树](./red-black-bsts/README.md)
   - [区间二叉搜索树](./interval-search-trees/README.md)
 - [k-d 树](./k-d-trees/README.md)
-- 字符串
-  - 字符串匹配的 KMP 算法
-    - [KMP 算法详细解析](https://blog.sengxian.com/algorithms/kmp)
-    - [克努斯-莫里斯-普拉特算法](https://zh.wikipedia.org/wiki/%E5%85%8B%E5%8A%AA%E6%96%AF-%E8%8E%AB%E9%87%8C%E6%96%AF-%E6%99%AE%E6%8B%89%E7%89%B9%E7%AE%97%E6%B3%95)
 - [排列组合](./permutation-and-combination/README.md)
 - [图](./graph/README.md)
 

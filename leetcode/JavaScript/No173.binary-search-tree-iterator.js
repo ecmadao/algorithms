@@ -51,7 +51,7 @@ BSTIterator.prototype.next = function() {
     tmp = tmp.left
   }
   return node.val
-};
+}
 
 /**
 * @return whether we have a next smallest number
