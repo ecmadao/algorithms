@@ -51,23 +51,22 @@ const inorderTraversal_recursive = (root) => {
 
 /* ============================ Iteratively Solution ============================ */
 const inorderTraversal_iteratively = (root) => {
-  const result = [];
-  if (!root) return result;
+  const queue = []
+  const result = []
 
-  const nodes = [];
-  let node = root;
-  while (node || nodes.length) {
+  let node = root
+  while (node || queue.length) {
     if (node) {
-      nodes.push(node);
-      node = node.left;
+      queue.push(node)
+      node = node.left
     } else {
-      const tmp = nodes.pop();
-      result.push(tmp.val);
-      node = tmp.right;
+      node = queue.pop()
+      result.push(node.val)
+      node = node.right
     }
   }
-  return result;
-};
+  return result
+}
 
 /* ============================ Morris Solution ============================ */
 const inorderTraversal_morris = (root) => {

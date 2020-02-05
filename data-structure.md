@@ -241,13 +241,17 @@ LeetCode 上相关题目：
 1. [No.145 Binary Tree Postorder Traversal](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
 2. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/JavaScript/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
-对于前/中/后序三种遍历，都可以通过三种形式实现：
+**对于前/中/后序三种遍历，都可以通过三种形式实现：**
 
 1. 递归：实现方式最简单，O(n) 空间复杂度
 2. 循环：实现方式较递归稍复杂，利用堆/队列，O(n) 空间复杂度
 3. Morris 算法：最优，O(1) 空间复杂度：[Morris Traversal方法遍历二叉树（非递归，不用栈，O(1)空间）](https://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html)
 
-查看[中序遍历的递归/循环/Morris 实现](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
+查看
+
+- [前序遍历的递归/循环](./leetcode/JavaScript/No144.binary-tree-preorder-traversal.js)
+- [中序遍历的递归/循环/Morris 实现](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
+- [后序遍历的递归/循环](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
 
 - 层序遍历（level-order）
 

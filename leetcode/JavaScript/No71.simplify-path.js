@@ -20,38 +20,25 @@
 
 /**
  * 思路：
- * 构建一个树的结构，每个节点保留其当前目录名称和父节点
- * 遍历输入的路径，获取到最后的结果节点，然后向上遍历，最后得到合法的最简洁的路径
+ * 逐步深入的 folder 栈
  */
 
-var Node = function(folder, father) {
-  this.folder = folder;
-  this.father = father;
-};
-
 /**
-* @param {string} path
-* @return {string}
-*/
+ * @param {string} path
+ * @return {string}
+ */
 var simplifyPath = function(path) {
-  var node = new Node('', null);
-  var paths = path.split('/');
+  const folders = []
+  const pathes = path.split('/')
 
-  for (var i = 0; i < paths.length; i += 1) {
-    var p = paths[i];
-    if (!p || p === '.') continue;
+  for (const p of pathes) {
+    if (p === '.' || p === '') continue
     if (p === '..') {
-      if (!node.father) continue;
-      node = node.father;
+      folders.length && folders.pop()
     } else {
-      node = new Node(p, node);
+      folders.push(p)
     }
   }
 
-  var result = '';
-  while(node.father) {
-    result = result ? node.folder + '/' + result : node.folder;
-    node = node.father;
-  }
-  return '/' + result;
-};
+  return '/' + folders.join('/')
+}

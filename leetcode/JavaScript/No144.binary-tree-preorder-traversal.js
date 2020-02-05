@@ -36,10 +36,10 @@
 var preorderTraversal_recursive = function(root) {
   const result = [];
   const preorder = (node) => {
-      if (!node) return;
-      result.push(node.val);
-      preorder(node.left);
-      preorder(node.right);
+    if (!node) return;
+    result.push(node.val);
+    preorder(node.left);
+    preorder(node.right);
   };
   preorder(root);
   return result;
@@ -50,53 +50,41 @@ var preorderTraversal_recursive = function(root) {
  * @param {TreeNode} root
  * @return {number[]}
  */
-const preorderTraversal_iteratively_1 = (root) => {
-  if (!root) return [];
-  const leftNodes = [root.left];
-  const rightNodes = [root.right];
-  const result = [root.val];
+const preorderTraversal_iteratively = (root) => {
+  if (!root) return []
+  const queue = [root]
+  const result = []
 
-  while (leftNodes.length || rightNodes.length) {
-    let node;
-    if (leftNodes.length) {
-      node = leftNodes.shift();
-      if (node) {
-        result.push(node.val);
-        leftNodes.push(node.left);
-        rightNodes.push(node.right);
-        continue;
-      }
-    }
-    if (rightNodes.length) {
-      node = rightNodes.pop();
-      if (node) {
-        result.push(node.val);
-        leftNodes.push(node.left);
-        rightNodes.push(node.right);
-      }
-    }
+  while (queue.length) {
+    const node = queue.pop()
+    result.push(node.val)
+    if (node.right) queue.push(node.right)
+    if (node.left) queue.push(node.left)
   }
-  return result;
-};
+  return result
+}
 
-/* ============================ Iteratively Solution ============================ */
 /**
  * @param {TreeNode} root
  * @return {number[]}
  */
 const preorderTraversal_iteratively_2 = (root) => {
-  const result = [];
-  let node = root;
-  const nodes = [];
-  while (node || nodes.length) {
+  const queue = []
+  const result = []
+
+  let node = root
+  while (node || queue.length) {
     if (node) {
-      result.push(node.val);
-      nodes.push(node);
-      node = node.left;
+      result.push(node.val)
+      queue.push(node)
+      node = node.left
     } else {
-      node = nodes.pop();
-      node = node.right;
+      node = queue.pop()
+      node = node.right
     }
   }
-  return result;
-};
+  return result
+}
+
+/* ============================ Morris Solution ============================ */
+// TODO:

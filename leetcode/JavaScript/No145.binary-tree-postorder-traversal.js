@@ -37,76 +37,48 @@
 var postorderTraversal_recursive = function(root) {
   const result = [];
   const loop = (node) => {
-      if (node) {
-          loop(node.left);
-          loop(node.right);
-          result.push(node.val);
-      }
+    if (node) {
+      loop(node.left);
+      loop(node.right);
+      result.push(node.val);
+    }
   };
   loop(root);
   return result;
 };
 
-/* ============================ Iteratively Solution 1 ============================ */
-const noneAvailableLeft = (node) => !node.left || (node.left && node.left.visited);
-const noneAvailableRight = (node) => !node.right || (node.right && node.right.visited);
-/**
- * @param {TreeNode} root
- * @return {number[]}
- */
-const postorderTraversal = (root) => {
-  const result = [];
-  let parentNode = null;
-  while (root && !root.visited) {
-    if (!root.parent) root.parent = parentNode;
-    if (noneAvailableRight(root) && noneAvailableLeft(root)) {
-      result.push(root.val);
-      root.visited = true;
-      root = root.parent;
+/* ============================ Iteratively Solution ============================ */
+const postorderTraversal_iteratively = (root) => {
+  const result = []
+  if (!root) return result
+
+  const queue = [root]
+  while (queue.length) {
+    const node = queue.pop()
+    result.push(node.val)
+    if (node.left) queue.push(node.left)
+    if (node.right) queue.push(node.right)
+  }
+  return result.reverse()
+}
+
+const postorderTraversal_iteratively_2 = (root) => {
+  const queue = []
+  const result = []
+
+  let node = root
+  while (node || queue.length) {
+    if (node) {
+      result.push(node.val)
+      queue.push(node)
+      node = node.right
     } else {
-      if (root.left && !root.left.visited) {
-        parentNode = root;
-        root = root.left;
-      } else if (root.right && !root.right.visited) {
-        parentNode = root;
-        root = root.right;
-      }
+      node = queue.pop()
+      node = node.left
     }
   }
-  return result;
-};
+  return result.reverse()
+}
 
-/* ============================ Iteratively Solution 2 ============================ */
-
-const postorderTraversal = (root) => {
-  const result = [];
-  let node = root;
-  const nodes = [];
-  const childNodeDone = (treeNode) => {
-    if (!treeNode.left && !treeNode.right) return true;
-    if (treeNode.left) {
-      if (treeNode.left.done && (!treeNode.right || treeNode.right.done)) return true;
-    }
-    if (treeNode.right) {
-      if (treeNode.right.done && (!treeNode.left || treeNode.left.done)) return true;
-    }
-    return false;
-  };
-  while (node || nodes.length) {
-    if (node && !node.done) {
-      nodes.push(node);
-      node = node.left;
-    } else {
-      node = nodes.pop();
-      if (childNodeDone(node)) {
-        result.push(node.val);
-        node.done = true;
-        node = null;
-      } else {
-        nodes.push(node);
-        node = node.right;
-      }
-    }
-  }
-  return result;
-};
+/* ============================ Morris Solution ============================ */
+// TODO:

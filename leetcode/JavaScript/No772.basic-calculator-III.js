@@ -6,17 +6,17 @@
  * Implement a basic calculator to evaluate a simple expression string.
  * The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces .
  * The expression string contains only non-negative integers, +, -, *, / operators , open ( and closing parentheses ) and empty spaces . The integer division should truncate toward zero.
- * 
+ *
  * You may assume that the given expression is always valid. All intermediate results will be in the range of [-2147483648, 2147483647].
- * 
+ *
  * Examples:
  * "1 + 1" = 2
  * " 6-4 / 2 " = 4
  * "2*(5+5*2)/3+(6/2+8)" = 21
  * "(2+6* 3+5- (3*14/7+2)*5)+3"=-12
- * 
+ *
  * Note: Do not use the eval built-in library function
- * 
+ *
  * 实现一个基本的计算器来计算简单的表达式字符串。
  * 表达式字符串可以包含左括号 ( 和右括号 )，加号 + 和减号 -，非负 整数和空格 。
  * 表达式字符串只包含非负整数， +, -, *, / 操作符，左括号 ( ，右括号 )和空格 。整数除法需要向下截断。

@@ -34,65 +34,71 @@
  * 3. 左减时不可跨越一个位值。比如，99不可以用 IC（100-1）表示，而是用 XCIX（[100-10]+[10-1]）表示（等同于阿拉伯数字每位数字分别表示）
  */
 
-var ROMAN = [
-  {
-    text: 'M',
-    val: 1000
-  },
-  {
-    text: 'C',
-    val: 100,
-    sub: 'D'
-  },
-  {
-    text: 'X',
-    val: 10,
-    sub: 'L'
-  },
-  {
-    text: 'I',
-    val: 1,
-    sub: 'V'
-  }
-];
-
-var loopNum = function(num, text) {
-  var result = '';
-  while(num) {
-    result += text;
-    num -= 1;
-  }
-  return result;
-};
+const ROMAS = 'IVXLCDM'.split('')
+const NUMS = ROMAS.reduce((dict, str, i) => {
+  // count for * 2 -> Math.floor(i / 2)
+  // count for * 5 -> Math.ceil(i / 2)
+  dict[
+    Math.pow(2, Math.floor(i / 2)) * Math.pow(5, Math.ceil(i / 2))
+  ] = str
+  return dict
+}, {})
 
 /**
-* @param {number} num
-* @return {string}
-*/
-var intToRoman = function(num) {
-  var result = '';
-  var number = num;
-  for (var i = 0; i < ROMAN.length; i += 1) {
-    var roman = ROMAN[i];
-    var count = Math.floor(number / roman.val);
-    number = number % roman.val;
-    if (!roman.sub || count < 4) {
-      result += loopNum(count, roman.text);
-      continue;
+ * @param {number} num
+ * @return {string}
+ */
+var intToRoman = function(input) {
+  const result = []
+
+  let base = 10
+  let romaIndex = 0
+  let num = input
+  while (num) {
+    const remainder = num % base
+    // console.log(`num: ${num}, base: ${base}, remainder: ${remainder}`)
+    let section = NUMS[remainder]
+    if (!section) {
+      section = handleSection(
+        remainder / (base / 10),
+        ROMAS.slice(romaIndex, romaIndex + 3)
+      )
     }
-    if (count < 9) {
-      if (count === 4) {
-        result = result + roman.text + roman.sub;
-      } else {
-        result = result + roman.sub + loopNum(count - 5, roman.text);
-      }
-    } else {
-      result = result + roman.text + ROMAN[i - 1].text;
-    }
+
+    result.unshift(section)
+    num = num - remainder
+    base *= 10
+    romaIndex += 2
   }
-  console.log(`${num}: ${result}`);
-  return result;
+
+  return result.join('')
 };
+
+const duplicate = (str, count) =>
+  Array.from({ length: count }, (v, i) => str).join('')
+
+/**
+ * @param {number} num, num = 2, 3, 4, 6, 7, 8, 9
+ * @param {string[]} units, for example, [I, V, X]
+ * @return {string}
+ */
+const handleSection = (num, units) => {
+  if (num <= 0) return ''
+  if (!units.length) return ''
+  if (units.length === 1) {
+    return duplicate(units[0], num)
+  }
+  if (num <= 3) {
+    return duplicate(units[0], num)
+  }
+  if (num === 4) {
+    return units[0] + units[1]
+  }
+  if (num <= 8) {
+    return units[1] + duplicate(units[0], num - 5)
+  }
+  return units[0] + units[2]
+}
 
 intToRoman(1800);
 intToRoman(1437);

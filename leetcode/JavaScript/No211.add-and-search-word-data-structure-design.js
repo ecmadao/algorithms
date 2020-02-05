@@ -26,17 +26,18 @@
  * 构建一个单词搜索树，类似于 No.208 Implement Trie (Prefix Tree)，但不同的是支持通配符 .
  */
 
-var TrieNode = function(val, childs, stop) {
-  this.childs = childs || [];
-  this.val = val || null;
-  this.stop = stop || false;
-};
+
+const TreeNode = function(val) {
+  this.val = val
+  this.children = {}
+  this.stop = false
+}
 
 /**
 * Initialize your data structure here.
 */
 var WordDictionary = function() {
-  this.treeNode = new TrieNode();
+  this.tree = new TreeNode()
 };
 
 /**
@@ -45,48 +46,32 @@ var WordDictionary = function() {
 * @return {void}
 */
 WordDictionary.prototype.addWord = function(word) {
-  var node = this.treeNode;
-  for (var i = 0; i < word.length; i += 1) {
-    var find = node.childs.find(child => child.val === word[i]);
-    if (!find) {
-      var root = null;
-      var tmp = null;
-      for (var j = word.length - 1; j >= i; j -= 1) {
-        root = new TrieNode(
-          word[j],
-          tmp ? [tmp] : [],
-          j === word.length - 1
-        );
-        tmp = root;
+  let node = this.tree
+  for (let i = 0; i < word.length; i += 1) {
+    const str = word[i]
+    if (!node.children[str]) node.children[str] = new TreeNode(str)
+    node = node.children[str]
+  }
+  node.stop = true
+};
+
+WordDictionary.prototype._search = function (word, index, tree) {
+  let node = tree
+  for (let i = index; i < word.length; i += 1) {
+    const str = word[i]
+    if (str === '.') {
+      for (const child of Object.values(node.children)) {
+        const searched = this._search(word, i + 1, child)
+        if (searched) return true
       }
-      node.childs.push(root);
-      return;
+      return false
     } else {
-      node = find;
+      if (!node.children[str]) return false
+      node = node.children[str]
     }
   }
-  node.stop = true;
-};
-
-var search = function(node, word, index) {
-  if (index > word.length - 1) {
-    if (node.stop || !node.childs.length) return true;
-    return false;
-  }
-
-  if (word[index] === '.') {
-    for (var i = 0; i < node.childs.length; i += 1) {
-      var childnode = node.childs[i];
-      var result = search(childnode, word, index + 1);
-      if (result) return true;
-    }
-    return false;
-  } else {
-    var find = node.childs.find(child => child.val === word[index]);
-    if (!find) return false;
-    return search(find, word, index + 1);
-  }
-};
+  return node.stop
+}
 
 /**
 * Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. 
@@ -94,13 +79,12 @@ var search = function(node, word, index) {
 * @return {boolean}
 */
 WordDictionary.prototype.search = function(word) {
-  var node = this.treeNode;
-  return search(node, word, 0);
+  return this._search(word, 0, this.tree)
 };
 
 /**
 * Your WordDictionary object will be instantiated and called as such:
-* var obj = Object.create(WordDictionary).createNew()
+* var obj = new WordDictionary()
 * obj.addWord(word)
 * var param_2 = obj.search(word)
 */
