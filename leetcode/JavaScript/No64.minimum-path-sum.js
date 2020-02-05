@@ -25,13 +25,13 @@ var pathSum = function(temp, grid, x, y) {
   if (temp[key] ) return temp[key];
   var result;
   if (x === 0 && y === 0) {
-      result = grid[0][0];
+    result = grid[0][0];
   } else if (x === 0) {
-      result = grid[0][y] + pathSum(temp, grid, x, y - 1);
+    result = grid[0][y] + pathSum(temp, grid, x, y - 1);
   } else if (y === 0) {
-      result = grid[x][0] + pathSum(temp, grid, x - 1, y);
+    result = grid[x][0] + pathSum(temp, grid, x - 1, y);
   } else {
-      result = grid[x][y] + Math.min(pathSum(temp, grid, x, y - 1), pathSum(temp, grid, x - 1, y));
+    result = grid[x][y] + Math.min(pathSum(temp, grid, x, y - 1), pathSum(temp, grid, x - 1, y));
   }
   temp[key] = result;
   return result;

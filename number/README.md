@@ -17,40 +17,40 @@
 
 #### 阿拉伯数字 -> 罗马数字
 
+罗马数字每三组字母是一个权位范围，例如，`I, V, X`可代表`[1, 10]`内数字，`X, L, C`可代表`[10, 100]`内数字，`C, D, M`可代表`[100, 1000]`范围数字。对于`1000`以上，暂且只增加`M`个数。由此可得规律。
+
+以`1994`为例：
+
+0. 设置`num = 1994`，基准数`base = 10`
+1. 获取余数`remainder = num % base = 1994 % 10 = 4`，即一个小节，转换该小节：
+  - 因为`4 < 5 && 4 > 3`，因此返回`IV`
+2. 更新`num = num - remainder = 1994 - 4 = 1990`，更新`base = base * 10 = 100`
+3. 获取余数`remainder = num % base = 1990 % 100 = 90`，即一个小节，转换该小节：
+  - 因为`90 > 50 && 90 < 100`，因此返回`XC`
+4. 更新`num = num - remainder = 1990 - 90 = 1900`，更新`base = base * 10 = 1000`
+5. 获取余数`remainder = num % base = 1900 % 1000 = 900`，即一个小节，转换该小节：
+  - 因为`900 > 500 && 900 < 1000`，因此返回`CM`
+6. 更新`num = num - remainder = 1900 - 900 = 1000`，更新`base = base * 10 = 10000`
+7. 获取余数`remainder = num % base = 1000 % 10000 = 1000`，即一个小节，转换该小节：
+  - 因为`1000 >= 1000`，因此返回`M`
+8. 更新`num = num - remainder = 1000 - 1000 = 0`，结束遍历
+9. 合并小节的返回值得到结果`MCMXCIV`
+
 #### 罗马数字 -> 阿拉伯数字
 
-从右到左依次遍历罗马字符。根据规则 4，如果当前字符代表的数字，小于右侧字符代表的数字，则应做减法；否则做加法
+从右到左依次遍历罗马字符。根据规则 4，如果当前字符代表的数字，小于右侧字符代表的数字，则应做减法；否则做加法。
 
-```javascript
-const ROMAN = {
-  M: 1000,
-  D: 500,
-  C: 100,
-  L: 50,
-  X: 10,
-  V: 5,
-  I: 1
-}
+以`MCMXCIV`为例：
 
-const roman2Number = (roma) => {
-  let result = 0
-
-  let i = roma.length - 1
-  while (i >= 0) {
-    const str = roma[i]
-    if (ROMAN[str] < ROMAN[roma[i + 1]]) {
-      // 小的数位于大的数左边，则减
-      // 另外根据规则 4，连续的左侧小数不会超过一个，因此只需要和右侧第一个数字比较即可
-      result -= ROMAN[str]
-    } else {
-      // 否则加
-      result += ROMAN[str]
-    }
-    i -= 1
-  }
-  return result
-}
-```
+0. 设置`roma = MCMXCIV`，`result = 0`，从最后一位`i = roma.length - 1`开始遍历
+1. `i = 0`时，`roma[i] === V`，数字 5 大于右侧数字（超范围），累加`result += 5`
+2. `i = 1`时，`roma[i] === I`，数字 1 小于右侧数字 5，累减`result -= 1`
+3. `i = 2`时，`roma[i] === C`，数字 100 大于右侧数字 1，累加`result += 100`
+4. `i = 3`时，`roma[i] === X`，数字 10 小于右侧数字 100，累减`result -= 10`
+5. `i = 4`时，`roma[i] === M`，数字 1000 大于右侧数字 10，累加`result += 1000`
+6. `i = 5`时，`roma[i] === C`，数字 100 小于右侧数字 1000，累减`result -= 100`
+7. `i = 6`时，`roma[i] === M`，数字 1000 大于右侧数字 100，累加`result += 1000`
+8. 遍历完成，返回结果`1994`
 
 ### 中文数字 - 阿拉伯数字相互转换
 
@@ -70,153 +70,44 @@ const roman2Number = (roma) => {
 
 #### 阿拉伯数字 -> 中文数字
 
-遍历，分割成各个小节进行处理：
+以`20002020202`为例，遍历，分割成各个小节进行处理：
 
-```javascript
-const NUMS = '一二三四五六七八九'.split('')
-NUMS.unshift('')
-
-// 小节的权位
-const SECTION_UNITS = ['', '万', '亿', '万亿']
-
-// const input = 20002020200
-const convert2Chinese = (input) => {
-  let num = input
-  let index = 0
-  const results = []
-
-  // 按照上述规则，一个小节一个小节处理
-  while (num) {
-    // 获取小节，例如 20001010200 的尾部小节为 200
-    let section = `${num % 10000}`
-    // 补全为四位数字，例如 200 补位 0200
-    section = section.length < 4
-      ? `${Array.from({ length: 4 - section.length }, (v, i) => 0).join('')}${section}`
-      : section
-
-    // 处理小节内部
-    const chinese = handleSection(section)
-    if (chinese) {
-      // 如果小节不是 0000，则该小节需要加入小节权位
-      results.unshift(chinese, SECTION_UNITS[index])
-    }
-
-    index += 1
-    num = Math.floor(num / 10000)
-
-    // 根据零的规则 3，当小节的`千`位是 0 时，若本小节的左侧一小节无其他数字，则不用`零`，否则就要用`零`
-    if (section[0] === '0' && chinese && num) {
-      results.unshift('零')
-    }
-  }
-
-  return results.join('')
-}
-```
-
-处理小节内部转换：
-
-```javascript
-// 小节内部的权位
-const UNITS = '千百十'.split('')
-UNITS.push('')
-
-const handleSection = (section) => {
-  let i = 0
-
-  const results = []
-  while (i < section.length) {
-    const str = section[i]
-    // 0 都跳过，同时保证了如果小节结尾即便是`0`，也不使用`零`
-    if (str === '0') {
-      i += 1
-      continue
-    }
-
-    // 根据零的规则 2，小节内部，两个非零数字之间如果有 0，合并时要使用`零`
-    if (i > 1 && section[i - 1] === '0' && results.length) {
-      results.push('零')
-    }
-    results.push(NUMS[str], UNITS[i])
-    i += 1
-  }
-
-  return results.join('')
-}
-```
+0. 设置`num = 20002020202`
+1. 获取第一个小节，为`section = num % 10000 = 202`，补齐为`0202`
+  - 处理小节内部，从左边第一位开始遍历；
+  - `i = 0`时，`section[i] === 0`：跳过
+  - `i = 1`时，`section[i] === 2`：此时为百位，获取到匹配为`二百`
+  - `i = 2`时，`section[i] === 0`：跳过
+  - `i = 3`时，`section[i] === 2`：此时为个位，且根据规则 - 两个非零数字之间如果有 0，合并时要使用`零`，获取到匹配为`零二`
+  - 小节内部处理完成，返回`二百零二`
+  - 获取该小节权位，为空字符串，则值不变，还是`二百零二`
+  - 因为该小节千位是`0`，且下一小节不是空，因此补零为`零二百零二`
+2. 获取第二个小节，为`section = num % 10000 = 200`，补齐为`0202`
+  - 因为值和上一个小节一样，不再解释，返回`二百零二`
+  - 获取该小节权位，为`万`，则为`二百零二万`
+  - 因为该小节千位是`0`，且下一小节不是空，因此补零为`零二百零二万`
+3. 获取第三个小节，为`section = num % 10000 = 200`
+  - 处理小节内部，返回`二百`
+  - 获取该小节权位，为`亿`，则为`二百亿`
+5. 合并前面的处理，得到`二百亿零二百零二万零二百零二`
 
 #### 中文数字 -> 阿拉伯数字
 
-中文数字转阿拉伯数字比较简单。遍历到权位之后进位即可
+中文数字转阿拉伯数字比较简单。遍历到权位之后进位即可。以`二百亿零二百零二万零二百零二`为例：
 
-基本数据准备
-
-```javascript
-// 基本数据准备
-
-// 注意，对于例如 `一万亿` 这样的输入，当遍历到 `万` 时，需要寻找其下一位
-const SECTIONS = {
-  万: 10000,
-  亿: 100000000,
-  万亿: 1000000000000
-}
-
-const MAP = {
-  十: 10,
-  百: 100,
-  千: 1000
-}
-
-const NUMS = '一二三四五六七八九'.split('').reduce((dict, val, index) => {
-  dict[val] = index + 1
-  return dict
-}, {})
-
-const ZERO = '零'
-```
-
-遍历输入。保留一个小节缓存字段，每遍历到权位时，累加权位值并清空小节的缓存
-
-```javascript
-const convert2Number = (chinese) => {
-  let result = 0
-  if (!chinese.length) return result
-  if (chinese === ZERO) return result
-
-  let tmp = [
-    NUMS[chinese[0]]
-  ]
-  let i = 1
-  while (i < chinese.length) {
-    let str = chinese[i]
-
-    // 零可以直接跳过
-    if (str === ZERO) {
-      i += 1
-      continue
-    }
-
-    if (SECTIONS[str]) {
-      // 处理小节权位。之前缓存的值 tmp，需要累加后和权位相乘
-      if (SECTIONS[chinese[i + 1]]) {
-        str = chinese.slice(i, i + 2)
-        i += 1
-      }
-      result += tmp.reduce((n1, n2) => n1 + n2, 0) * SECTIONS[str]
-      tmp = []
-    } else if (MAP[str]) {
-      // 处理小节内部权位，该内部权位仅对前一个数字有效，即 tmp 最后一位
-      tmp.push(
-        tmp.pop() * MAP[str]
-      )
-    } else {
-      // 普通数字，缓存
-      tmp.push(NUMS[str])
-    }
-
-    i += 1
-  }
-
-  return result + tmp.reduce((n1, n2) => n1 + n2, 0)
-}
-```
+0. 设置`chinese = 二百亿零二百零二万零二百零二`，结果`result = 0`，小节值的缓存栈`tmp = []`，然后从左侧`i = 0`开始遍历
+1. `i = 0`，`chinese[i] === 二`，进入缓存栈`tmp.push(2)`，此时`tmp`内为`[2]`
+2. `i = 1`，`chinese[i] === 百`，则从栈中取出顶位数字，进位后入栈`tmp.push(tmp.pop() * 100)`，此时`tmp`内为`[200]`
+3. `i = 2`，`chinese[i] === 亿`，则栈内数字累加后，乘以该小节权位，叠加到`result`：`result += tmp.reduce((n1, n2) => n1 + n2, 0) * 100000000`，栈清空`tmp = []`
+4. `i = 3`，`chinese[i] === 零`，跳过
+5. `i = 4`，`chinese[i] === 二`，进入缓存栈`tmp.push(2)`，此时`tmp`内为`[2]`
+6. `i = 5`，`chinese[i] === 百`，则从栈中取出顶位数字，进位后入栈`tmp.push(tmp.pop() * 100)`，此时`tmp`内为`[200]`
+7. `i = 6`，`chinese[i] === 零`，跳过
+8. `i = 7`，`chinese[i] === 二`，进入缓存栈`tmp.push(2)`，此时`tmp`内为`[200, 2]`
+9. `i = 8`，`chinese[i] === 万`，则栈内数字累加后，乘以该小节权位，叠加到`result`：`result += tmp.reduce((n1, n2) => n1 + n2, 0) * 100000000`，栈清空`tmp = []`
+10. `i = 9`，`chinese[i] === 零`，跳过
+11. `i = 10`，`chinese[i] === 二`，进入缓存栈`tmp.push(2)`，此时`tmp`内为`[2]`
+12. `i = 11`，`chinese[i] === 百`，则从栈中取出顶位数字，进位后入栈`tmp.push(tmp.pop() * 100)`，此时`tmp`内为`[200]`
+13. `i = 12`，`chinese[i] === 零`，跳过
+14. `i = 13`，`chinese[i] === 二`，进入缓存栈`tmp.push(2)`，此时`tmp`内为`[200, 2]`
+15. 遍历完成，返回`result + tmp.reduce((n1, n2) => n1 + n2, 0)`即最终结果`20002020202`

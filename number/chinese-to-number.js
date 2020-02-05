@@ -1,4 +1,6 @@
 
+// 基本数据准备
+// 注意，对于例如 `一万亿` 这样的输入，当遍历到 `万` 时，需要寻找其下一位
 const SECTIONS = {
   万: 10000,
   亿: 100000000,
@@ -29,6 +31,7 @@ const convert2Number = (chinese) => {
   if (!chinese.length) return result
   if (chinese === ZERO) return result
 
+  // 遍历输入。保留一个小节缓存字段，每遍历到权位时，累加权位值并清空小节的缓存
   let tmp = [
     NUMS[chinese[0]]
   ]

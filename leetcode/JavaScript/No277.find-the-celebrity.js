@@ -65,7 +65,6 @@ var solution = function(knows) {
         if (i === candidate) continue
         if (knows(candidate, i)) {
           isCandidate = false
-          candidates.push(i)
         } else {
           if (!knows(i, candidate)) {
             isCandidate = false
@@ -80,4 +79,6 @@ var solution = function(knows) {
   }
 }
 
-// [[1,0,1],[1,1,0],[0,1,1]]
+// Test case
+// Input: [[1,0,1],[1,1,0],[0,1,1]]
+// Output: -1
