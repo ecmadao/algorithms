@@ -31,20 +31,26 @@
  * @param {number} n
  * @param {number} k
  * @return {number[][]}
+ *
+ * 回溯算法
  */
 var combine = function(n, k) {
-  var results = [];
-  var chooseNum = function(result, min, layer) {
-    for (var i = min + 1; i <= n; i += 1) {
-      result.push(i);
-      if (layer === k) {
-        results.push(result.slice(0));
-      } else {
-        chooseNum(result, i, layer + 1);
-      }
-      result.pop();
+  const result = []
+
+  const _combine = (arr, remain, index) => {
+    if (!remain) {
+      result.push([...arr])
+      return
+    }
+    if (index + remain - 1 > n) return
+
+    for (let i = index; i <= n; i += 1) {
+      arr.push(i)
+      _combine(arr, remain - 1, i + 1)
+      arr.pop()
     }
   }
-  chooseNum([], 0, 1);
-  return results;
-};
+
+  _combine([], k, 1)
+  return result
+}

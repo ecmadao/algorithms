@@ -20,8 +20,10 @@
  * @param {number[]} nums
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.
+ *
+ * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数
  */
-var rotate = function(nums, k) {
+var rotate_1 = function(nums, k) {
   const tmp = [];
   for (let i = 0; i < nums.length; i += 1) {
     tmp[(i + k) % nums.length] = nums[i];
@@ -30,3 +32,30 @@ var rotate = function(nums, k) {
     nums[i] = tmp[i];
   }
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var rotate_2 = function(nums, k) {
+  // k 是 nums.length 的整数倍时，数组会回复原状
+  let count = k % nums.length
+
+  while (count) {
+    nums.unshift(nums.pop())
+    count -= 1
+  }
+}
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var rotate_3 = function(nums, k) {
+  // k 是 nums.length 的整数倍时，数组会回复原状
+  let count = k % nums.length
+
+  nums.splice(0, 0, ...nums.splice(nums.length - count, count))
+}

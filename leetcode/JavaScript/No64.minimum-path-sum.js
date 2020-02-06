@@ -41,7 +41,7 @@ var pathSum = function(temp, grid, x, y) {
 * @param {number[][]} grid
 * @return {number}
 */
-var minPathSum = function(grid) {
+var minPathSum_1 = function(grid) {
   var x = grid.length - 1;
   var y = grid[0].length - 1;
   var TEMP = {};
@@ -49,3 +49,26 @@ var minPathSum = function(grid) {
   var sum = pathSum(TEMP, grid, x, y);
   return sum;
 };
+
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var minPathSum_2 = function(grid) {
+  const result = []
+
+  for (let i = 0; i < grid.length; i += 1) {
+    if (!result[i]) result[i] = []
+    for (let j = 0; j < grid[i].length; j += 1) {
+      if (i === 0 && j === 0) {
+        result[i][j] = grid[i][j]
+      } else {
+        result[i][j] = Math.min(
+          j > 0 ? result[i][j - 1] : Infinity,
+          i > 0 ? result[i - 1][j] : Infinity,
+        ) + grid[i][j]
+      }
+    }
+  }
+  return result[grid.length - 1][grid[0].length - 1]
+}

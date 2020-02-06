@@ -11,6 +11,8 @@
  * Note:
  * Each element in the result must be unique.
  * The result can be in any order.
+ *
+ * 给定两个数组，编写一个函数来计算它们的交集。输出结果中的每个元素一定是唯一的
  */
 
 const getIntersection = (s1, s2) => {

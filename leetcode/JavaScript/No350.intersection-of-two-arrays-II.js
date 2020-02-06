@@ -17,6 +17,9 @@
  * What if nums1's size is small compared to nums2's size? Which algorithm is better?
  * What if elements of nums2 are stored on disk,
  * and the memory is limited such that you cannot load all elements into the memory at once?
+ *
+ * 给定两个数组，编写一个函数来计算它们的交集。
+ * 输出结果中每个元素出现的次数，应与元素在两个数组中出现的次数一致
  */
 
 /**

@@ -14,6 +14,9 @@
  *
  * Note:
  * You may assume the string contains only lowercase alphabets.
+ *
+ * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+ * 即构成单词的字母种类和各个字母的数量一样，但字母排序可能不一样
  */
 
 /**

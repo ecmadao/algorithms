@@ -27,7 +27,7 @@
  * [3, 4, -1, 1]，改变位置之后为 [1, -1, 3, 4]，然后只要找到第一个不符合该规则的位置 i 即可
  * i + 1 即是第一个缺失的正整数
  */
-var firstMissingPositive = function(nums) {
+var firstMissingPositive_1 = function(nums) {
   var result = nums.length + 1;
 
   for (var i = 0; i < nums.length; i += 1) {
@@ -56,7 +56,7 @@ var firstMissingPositive = function(nums) {
  * 思路二：
  * 简单粗暴
  */
-const firstMissingPositive2 = (nums) => {
+const firstMissingPositive_2 = (nums) => {
   const set = new Set(nums)
   i = 1
   while (true) {
@@ -64,3 +64,41 @@ const firstMissingPositive2 = (nums) => {
     i += 1
   }
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * 思路三
+ * https://leetcode-cn.com/problems/first-missing-positive/solution/que-shi-de-di-yi-ge-zheng-shu-by-leetcode/
+ */
+var firstMissingPositive_3 = function(nums) {
+  let hasOne = false
+  for (const num of nums) {
+    if (num === 1) {
+      hasOne = true
+      break
+    }
+  }
+  if (!hasOne) return 1
+  if (nums.length === 1) return 2
+
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] <= 0 || nums[i] > nums.length) nums[i] = 1
+  }
+
+  for (let i = 0; i < nums.length; i += 1) {
+    const a = Math.abs(nums[i])
+
+    if (a === nums.length) {
+      nums[0] = -Math.abs(nums[0])
+    } else {
+      nums[a] = -Math.abs(nums[a])
+    }
+  }
+
+  for (let i = 1; i < nums.length; i += 1) {
+    if (nums[i] > 0) return i
+  }
+  return nums.length + (nums[0] > 0 ? 0 : 1)
+}

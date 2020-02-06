@@ -36,7 +36,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var rob = function(root) {
+var rob_1 = function(root) {
   const dfs = (node) => {
     if (!node) return [0, 0] // [robbed, unrobbed]
     if (!node.left && !node.right) return [node.val, 0]
@@ -50,6 +50,10 @@ var rob = function(root) {
   return Math.max(...dfs(root))
 }
 
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
 var rob_2 = function(root, pass) {
   if (!root) return 0
   if (pass) return rob_2(root.left) + rob_2(root.right)

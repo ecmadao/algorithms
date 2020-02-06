@@ -22,50 +22,43 @@
  * 已知矩阵的每一行，每一列都从小到大排列，求在这样的矩阵中搜索一个数字的方法
  */
 
-var search = function(arr, target) {
-  var start = 1;
-  var end = arr.length;
-
-  while (start <= end) {
-    var mid = Math.ceil((start + end) / 2);
-    var num = arr[mid - 1];
-    if (num === target) return true;
-    if (num < target) {
-      start = mid + 1;
-    } else {
-      end = mid - 1;
+/**
+* @param {number[][]} matrix
+* @param {number} target
+* @return {boolean}
+*
+* 暴力法
+*/
+var searchMatrix_1 = function(matrix, target) {
+  let i = 0
+  while (i < matrix.length && matrix[i][0] <= target) {
+    if (matrix[i].slice(-1)[0] >= target) {
+      if (new Set(matrix[i]).has(target)) return true
     }
+    i += 1
   }
-  return false;
-};
+  return false
+}
 
 /**
 * @param {number[][]} matrix
 * @param {number} target
 * @return {boolean}
+*
+* 双指针
 */
-var searchMatrix = function(matrix, target) {
-  if (!matrix.length || !matrix[0]) return false;
-  var maxColumn = matrix[0].length;
-  var result = false;
+var searchMatrix_2 = function(matrix, target) {
+  let i = matrix.length - 1
+  let j = 0
 
-  for (var i = 0; i < matrix.length; i += 1) {
-    var row = matrix[i];
-    var startNum = row[0];
-    var endNum = row[maxColumn - 1];
-
-    if (startNum === target || endNum === target) {
-      result = true;
-      break;
-    }
-    if (startNum < target && endNum > target) {
-      if (search(row, target)) {
-        result = true;
-        break;
-      }
-    } else if (startNum > target) {
-      break;
+  while (i >= 0 && j < matrix[0].length) {
+    if (matrix[i][j] > target) {
+      i -= 1
+    } else if (matrix[i][j] < target) {
+      j += 1
+    } else {
+      return true
     }
   }
-  return result;
-};
+  return false
+}

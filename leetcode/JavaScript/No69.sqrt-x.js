@@ -47,6 +47,11 @@ var mySqrt_2 = function(x) {
  * @return {number}
  * 牛顿法开方
  * 效率比二分法低，更适合寻找无限逼近开方的浮点数
+ *
+ * t * t = x
+ * -> x / t = t
+ * -> x / t + t = 2t
+ * -> t = (x / t + t) / 2
  */
 const mySqrt_2 = (x) => {
   let result = 1

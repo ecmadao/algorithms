@@ -8,12 +8,24 @@
  * a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections.
  * The path must contain at least one node and does not need to go through the root.
  *
- * Example:
- * Given the below binary tree,
+ * Example 1:
+ * Given the below binary tree [1,2,3],
        1
       / \
      2   3
  * Return 6.
+ *
+ * Example 2:
+ * Given the below binary tree [-10,9,20,null,null,15,7],
+      -10
+      / \
+     9  20
+     /  \
+    15   7
+ * Return 42.
+ *
+ * 给定一个非空二叉树，返回其最大路径和。注意，是路径，即从一个节点走到另一个节点，不能走重复路线
+ * 本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点
  */
 
 /**
@@ -28,42 +40,30 @@
  * @return {number}
  */
 var maxPathSum = function(root) {
-  if (!root) return 0;
-  let maxSum = null;
-  const getTreeMaxSum = (tree) => {
-    if (!tree) return null;
-    if (!tree.left && !tree.right) return tree.val;
+  let result = -Infinity
 
-    const leftMax = getTreeMaxSum(tree.left);
-    const rightMax = getTreeMaxSum(tree.right);
-    const leftSum = leftMax === null ? 0 : leftMax;
-    const rightSum = rightMax === null ? 0 : rightMax;
+  const getMaxSum = (node) => {
+    if (!node) return -Infinity
+    if (!node.left && !node.right) return node.val
+    const maxLeft = getMaxSum(node.left)
+    const maxRight = getMaxSum(node.right)
 
-    const sum = Math.max(leftSum + tree.val, rightSum + tree.val, tree.val);
+    const sum = Math.max(
+      node.val,
+      node.val + maxLeft,
+      node.val + maxRight
+    )
 
-    if (maxSum === null || sum > maxSum) maxSum = sum;
-    if (leftSum + rightSum + tree.val > maxSum) maxSum = leftSum + rightSum + tree.val;
-    if (leftMax !== null && maxSum < leftMax) maxSum = leftMax;
-    if (rightMax !== null && maxSum < rightMax) maxSum = rightMax;
-    return sum;
-  };
-  const rootVal = root.val;
-  const rootLeftVal = getTreeMaxSum(root.left);
-  const rootRightVal = getTreeMaxSum(root.right);
-  const rootLeftSum = rootLeftVal === null ? 0 : rootLeftVal;
-  const rootRightSum = rootRightVal === null ? 0 : rootRightVal;
+    result = Math.max(
+      sum,
+      result,
+      maxLeft,
+      maxRight,
+      node.val + maxLeft + maxRight
+    )
 
-  console.log(`maxSum: ${maxSum}`);
-  console.log(`rootVal: ${rootVal}`);
-  console.log(`rootLeftVal: ${rootLeftVal}`);
-  console.log(`rootRightVal: ${rootRightVal}`);
-  console.log(`rootVal + rootLeftSum: ${rootVal + rootLeftSum}`);
-  console.log(`rootVal + rootRightSum: ${rootVal + rootRightSum}`);
-  console.log(`rootVal + rootLeftSum + rootRightSum: ${rootVal + rootLeftSum + rootRightSum}`);
-
-  const results = [rootVal, rootVal + rootLeftSum + rootRightSum];
-  if (maxSum !== null) results.push(maxSum);
-  if (rootLeftVal !== null) results.push(rootLeftVal, rootVal + rootLeftVal);
-  if (rootRightVal !== null) results.push(rootRightVal, rootVal + rootRightVal);
-  return Math.max(...results);
-};
+    return sum
+  }
+  const final = getMaxSum(root)
+  return Math.max(result, final)
+}

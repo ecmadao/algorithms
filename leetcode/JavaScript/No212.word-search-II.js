@@ -198,10 +198,10 @@ var exist = function(board, trie) {
     for (var i = 0; i <= maxRow; i += 1) {
         var row = board[i];
         for (var j = 0; j <= maxColumn; j += 1) {
-        var str = row[j];
-        if (prefixExistTmp[str] === undefined) {
-            prefixExistTmp[str] = trie.startsWith(str);
-        }
+            var str = row[j];
+            if (prefixExistTmp[str] === undefined) {
+                prefixExistTmp[str] = trie.startsWith(str);
+            }
             if (prefixExistTmp[str]) {
                 var key = i + '&' + j;
                 usedTemp[key] = true;

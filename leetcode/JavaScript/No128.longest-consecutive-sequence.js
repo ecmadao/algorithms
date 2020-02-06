@@ -12,6 +12,8 @@
  * Your algorithm should run in O(n) complexity.
  *
  * 找出乱序的数组中可拼成的最长连续值的范围
+ * 给定一个未排序的整数数组，找出最长连续序列的长度。
+ * 要求算法的时间复杂度为 O(n)
  */
 
 /**

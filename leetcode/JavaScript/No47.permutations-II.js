@@ -54,7 +54,7 @@ var treeLayer = function(nums, path, layer, results, usedCacheSet) {
 * @param {number[]} nums
 * @return {number[][]}
 */
-var permuteUnique_tree = function(nums) {
+var permuteUnique_1 = function(nums) {
   nums.sort((a, b) => a - b);
   const results = [];
   treeLayer(nums, [], 0, results);
@@ -70,7 +70,7 @@ var permuteUnique_tree = function(nums) {
  * 3. 利用 set 避免重复遍历
  */
 
-const permuteUnique_insert = (nums) => {
+const permuteUnique_2 = (nums) => {
   const permute = (nums) => {
     if (nums.length === 1) return [[nums[0]]];
     const cache = new Set();
@@ -101,7 +101,7 @@ const permuteUnique_insert = (nums) => {
  * @return {number[][]}
  * 整体思路和 No46 一致，需要注意额外处理重复元素的地方
  */
-var permuteUnique = function(nums) {
+var permuteUnique_3 = function(nums) {
   nums.sort((a, b) => a - b)
   const results = [[...nums]]
 

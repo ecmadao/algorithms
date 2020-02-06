@@ -58,7 +58,7 @@ var treeLayer = function(nums, path, layer, results, usedSet) {
 * @param {number[]} nums
 * @return {number[][]}
 */
-var permute_tree = function(nums) {
+var permute_1 = function(nums) {
   nums.sort((a, b) => a - b);
   const results = [];
   treeLayer(nums, [], 0, results);
@@ -73,7 +73,7 @@ var permute_tree = function(nums) {
  * 2. 给定列表的第一个元素，插入到剩下元素组成的全排列列表的各个位置
  */
 
-const permute_insert = (nums) => {
+const permute_2 = (nums) => {
   // 该方法没有处理列表中含有相同元素时的情况，即 [1,1] 会被全排列为 [1,1]
   if (nums.length === 1) return [[nums[0]]]
 
@@ -81,7 +81,7 @@ const permute_insert = (nums) => {
   for (let i = 0; i < nums.length; i += 1) {
     const num = nums[i]
     const remains = [...nums.slice(0, i), ...nums.slice(i + 1)]
-    const arrays = permute_insert(remains)
+    const arrays = permute_2(remains)
     for (const array of arrays) {
       result.push(
         [num, ...array]
@@ -103,7 +103,7 @@ const permute_insert = (nums) => {
  *
  * 注：没有处理重复元素的情况
  */
-var permute = function(nums) {
+var permute_3 = function(nums) {
   nums.sort((a, b) => a - b)
   const results = [[...nums]]
 
