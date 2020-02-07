@@ -21,7 +21,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var lengthOfLIS = function(nums) {
+var lengthOfLIS_1 = function(nums) {
   const tmp = {}
   let result = 0
 
@@ -66,10 +66,34 @@ var lengthOfLIS_2 = function(nums) {
   return getLen(-Infinity, 0)
 }
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * 动态规划 DP
+ */
+var lengthOfLIS_3 = function(nums) {
+  if (nums.length <= 1) return nums.length
+
+  const dp = []
+  let result = 1
+  for (let i = 0; i < nums.length; i += 1) {
+    dp[i] = 1
+    for (let j = 0; j < i; j += 1) {
+      if (nums[i] > nums[j]) {
+        dp[i] = Math.max(dp[i], (dp[j] || 1) + 1)
+      }
+    }
+    result = Math.max(result, dp[i])
+  }
+  return result
+}
+
+
 // Test case
-console.log(lengthOfLIS([10,9,2,5,3,7,101,18])); // 4
-console.log(lengthOfLIS([1,2,3,4,5,6,7,8])); // 8
-console.log(lengthOfLIS([1, 2, 3, 0, 5,6,7,8])); // 5
-console.log(lengthOfLIS([1, 2])); // 2
-console.log(lengthOfLIS([2, 0])); // 1
-console.log(lengthOfLIS([1,3,6,7,9,4,10,5,6])); // 6
+console.log(lengthOfLIS_3([10,9,2,5,3,7,101,18])); // 4
+console.log(lengthOfLIS_3([1,2,3,4,5,6,7,8])); // 8
+console.log(lengthOfLIS_3([1, 2, 3, 0, 5,6,7,8])); // 5
+console.log(lengthOfLIS_3([1, 2])); // 2
+console.log(lengthOfLIS_3([2, 0])); // 1
+console.log(lengthOfLIS_3([1,3,6,7,9,4,10,5,6])); // 6

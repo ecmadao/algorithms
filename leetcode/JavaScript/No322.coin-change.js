@@ -25,8 +25,10 @@
  * @param {number[]} coins
  * @param {number} amount
  * @return {number}
+ *
+ * DFS 回溯
  */
-var coinChange = function(coins, amount) {
+var coinChange_1 = function(coins, amount) {
   coins.sort((a, b) => a > b);
   const tmp = [];
 
@@ -71,21 +73,20 @@ const coinChange_2 = (coins, amount) => {
   coins.sort((c1, c2) => c1 - c2)
 
   for (let i = 1; i <= amount; i += 1) {
-    tmp[i] = amount + 1
+    tmp[i] = Infinity
 
-    for (let j = 0; j < coins.length; j += 1) {
-      const coin = coins[j]
+    for (const coin of coins) {
       if (coin > i) break
       tmp[i] = Math.min(tmp[i], tmp[i - coin] + 1)
     }
   }
-  return tmp[amount] > amount ? -1 : tmp[amount]
+  return tmp[amount] === Infinity ? -1 : tmp[amount]
 }
 
 
 // Test case
-console.log(coinChange([2], 3)); // -1
-console.log(coinChange([1, 5, 2], 11)); // 3
-console.log(coinChange([1, 5, 2], 12)); // 3
-console.log(coinChange([186, 419, 83, 408], 6249)); // 20
-console.log(coinChange([429, 171, 485, 26, 381, 31, 290], 8440)); // 20
+console.log(coinChange_2([2], 3)); // -1
+console.log(coinChange_2([1, 5, 2], 11)); // 3
+console.log(coinChange_2([1, 5, 2], 12)); // 3
+console.log(coinChange_2([186, 419, 83, 408], 6249)); // 20
+console.log(coinChange_2([429, 171, 485, 26, 381, 31, 290], 8440)); // 20

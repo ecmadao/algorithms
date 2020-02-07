@@ -20,6 +20,11 @@
  * 1. All numbers (including target) will be positive integers.
  * 2. The solution set must not contain duplicate combinations.
  *
+ * 给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
+ * candidates 中的每个数字在每个组合中只能使用一次
+ * 所有数字（包括目标数）都是正整数。
+ * 解集不能包含重复的组合
+ *
  * 跟 39 题基本一样，但有如下区别：
  * 单个元素不能重复，除非原数组中本来就有重复
  * 比如，[1], target: 2，则无解。但如果是 [1, 1]，则解为 [[1, 1]]
@@ -36,7 +41,7 @@ var combinationSum2 = function(candidates, target) {
 
   const combine = (index, remain, arr) => {
     if (!remain) {
-      result.push(arr)
+      result.push([...arr])
       return
     }
     if (index >= candidates.length) return
@@ -44,7 +49,9 @@ var combinationSum2 = function(candidates, target) {
     for (let i = index; i < candidates.length; i += 1) {
       if (candidates[i] > remain) break
       if (i > index && candidates[i] === candidates[i - 1]) continue
-      combine(i + 1, remain - candidates[i], [...arr, candidates[i]])
+      arr.push(candidates[i])
+      combine(i + 1, remain - candidates[i], arr)
+      arr.pop()
     }
   }
 

@@ -28,7 +28,7 @@
  * @param {number} target
  * @return {number}
  */
-var combinationSum4 = function(nums, target) {
+var combinationSum4_1 = function(nums, target) {
   nums.sort((a, b) => a - b);
   const tmp = {};
 
@@ -51,3 +51,24 @@ var combinationSum4 = function(nums, target) {
   const count = find(target);
   return count;
 };
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ *
+ * 动态规划 DP
+ */
+var combinationSum4_2 = function(nums, target) {
+  if (!target) return 0
+  const tmp = { 0: 1 }
+
+  for (let i = 1; i <= target; i += 1) {
+    for (const num of nums) {
+      if (num > i) break
+      tmp[i] = (tmp[i - num] || 0) + (tmp[i] || 0)
+    }
+  }
+  return tmp[target] || 0
+}

@@ -26,7 +26,7 @@ var houseRob = function(nums) {
       const tmp = rob
       rob = num + unrob
       unrob = Math.max(
-          tmp, unrob
+        tmp, unrob
       )
   }
   return Math.max(rob, unrob)

@@ -33,24 +33,20 @@
 /**
  * @param {number} n
  * @return {number}
+ *
+ * 分治递归，超时
  */
-var numSquares_timeout = function(n) {
-  if (n <= 3) return n;
-  var num = Math.sqrt(n);
-  if (num % 1 === 0) return 1;
-  var i = Math.floor(num);
-  var minCount = null;
-  while(i >= 1) {
-    var last = n - Math.pow(i, 2);
-    var c = numSquares(last);
-    if (c) {
-      if (minCount === null || minCount > c + 1) {
-        minCount = c + 1;
-      }
-    }
-    i -= 1;
+var numSquares_1 = function(n) {
+  if (n <= 1) return n
+
+  const end = Math.floor(Math.sqrt(n))
+  let result = Infinity
+
+  for (let i = end; i >= 1; i -= 1) {
+    result = Math.min(result, numSquares(n - i * i) + 1)
   }
-  return minCount;
+
+  return result
 };
 
 
@@ -63,7 +59,7 @@ var numSquares_timeout = function(n) {
  * @param {number} n
  * @return {number}
  */
-var numSquares = function(n) {
+var numSquares_2 = function(n) {
   if (n <= 3) return n;
   var num = Math.sqrt(n);
   if (num % 1 === 0) return 1;
@@ -83,3 +79,24 @@ var numSquares = function(n) {
   }
   return tmp[n];
 };
+
+/**
+ * @param {number} n
+ * @return {number}
+ *
+ * 动态规划 DP
+ */
+var numSquares_3 = function(n) {
+  if (n <= 1) return n
+  const dp = { 0: 0 }
+
+  for (let i = 1; i <= n; i += 1) {
+    dp[i] = i
+    for (let j = 1; j <= i; j += 1) {
+      if (i < j * j) break
+      // 状态转移
+      dp[i] = Math.min(dp[i], (dp[i - j * j]) + 1)
+    }
+  }
+  return dp[n]
+}

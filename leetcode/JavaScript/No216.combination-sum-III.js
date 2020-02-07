@@ -16,38 +16,39 @@
  *
  * Input: k = 3, n = 9
  * Output: [[1,2,6], [1,3,5], [2,3,4]]
+ *
+ * 找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。
+ * 说明：
+ * 1. 所有数字都是正整数。
+ * 2. 解集不能包含重复的组合
  */
-
-
 
 /**
  * @param {number} k
  * @param {number} n
  * @return {number[][]}
+ *
+ * 回溯
  */
 var combinationSum3 = function(k, n) {
-  const results = [];
-  const tmp = new Set([]);
+  const candidates = Array.from({ length: 9 }, (_, i) => i + 1)
+  const result = []
 
-  const find = (pre, count, remain, arr) => {
-    if (count === 1) {
-      if (!tmp.has(remain) && remain >= 1 && remain <= 9) {
-        results.push([...arr, remain]);
-      }
-      return;
+  const combine = (index, remain, count, arr) => {
+    if (!remain && count === k) {
+      result.push([...arr])
+      return
     }
+    if (index >= candidates.length || (count >= k && remain)) return
 
-    let cur = pre + 1;
-    while (remain > 2 * cur && cur <= 9) {
-      tmp.add(cur);
-      arr.push(cur);
-      find(cur, count - 1, remain - cur, arr);
-      arr.pop();
-      tmp.delete(cur);
-      cur += 1;
+    for (let i = index; i < candidates.length; i += 1) {
+      if (candidates[i] > remain) break
+      arr.push(candidates[i])
+      combine(i + 1, remain - candidates[i], count + 1, arr)
+      arr.pop()
     }
   }
 
-  find(0, k, n, []);
-  return results;
-};
+  combine(0, n, 0, [])
+  return result
+}

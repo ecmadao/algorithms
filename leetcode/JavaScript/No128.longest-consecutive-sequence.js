@@ -48,37 +48,27 @@ var longestConsecutive_1 = function(nums) {
  * @return {number}
  */
 var longestConsecutive_2 = function(nums) {
-  const tmp = []
+  // 记录某个值所对应的最大长度
+  const tmp = {}
   let result = 0
-
-  const getLast = (index) => {
-    while (index < tmp.length && tmp[index]) {
-      index += 1
-    }
-    return index - 1
-  }
 
   for (const num of nums) {
     if (tmp[num]) continue
     tmp[num] = 1
 
-    if (!tmp[num - 1] && !tmp[num + 1]) {
-      result = Math.max(result, 1)
-      continue
-    }
-
     if (tmp[num - 1]) {
-      tmp[num] = tmp[num - 1] + tmp[num]
-      result = Math.max(result, tmp[num])
+        tmp[num] += tmp[num - 1]
     }
-
     if (tmp[num + 1]) {
-      const last = getLast(num + 1)
-      tmp[last] = tmp[last] + tmp[num]
-      result = Math.max(result, tmp[last])
+      let index = num + 1
+      while (tmp[index]) index += 1
+      index -= 1
+      tmp[index] += tmp[num]
+      result = Math.max(tmp[index], result)
     }
-  }
 
+    result = Math.max(result, tmp[num])
+  }
   return result
 }
 

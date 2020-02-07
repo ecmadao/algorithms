@@ -27,16 +27,16 @@
  * @return {number}
  */
 var findLength = function(A, B) {
-  const matrix = [];
+  const dp = [];
   let length = 0;
   for (let a = 0; a < A.length; a += 1) {
-    matrix[a] = [];
+    dp[a] = [];
     for (let b = 0; b < B.length; b += 1) {
       if (A[a] === B[b]) {
-        matrix[a][b] = matrix[a - 1] && matrix[a - 1][b - 1]
-          ? matrix[a - 1][b - 1] + 1
+        dp[a][b] = dp[a - 1] && dp[a - 1][b - 1]
+          ? dp[a - 1][b - 1] + 1
           : 1;
-        length = Math.max(length, matrix[a][b]);
+        length = Math.max(length, dp[a][b]);
       }
     }
   }
