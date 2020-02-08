@@ -15,23 +15,17 @@
  * 给定两个数组，编写一个函数来计算它们的交集。输出结果中的每个元素一定是唯一的
  */
 
-const getIntersection = (s1, s2) => {
-  const results = [];
-  for (let num of s1.keys()) {
-    if (s2.has(num)) results.push(num);
-  }
-  return results;
-};
-
 /**
-* @param {number[]} nums1
-* @param {number[]} nums2
-* @return {number[]}
-*/
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
 var intersection = function(nums1, nums2) {
-  const set1 = new Set(nums1);
-  const set2 = new Set(nums2);
+  const set1 = new Set(nums1)
+  const set2 = new Set(nums2)
 
-  if (set1.size > set2.size) return getIntersection(set2, set1);
-  return getIntersection(set1, set2);
-};
+  if (set1.size < set2.size) {
+    return [...set1].filter(n => set2.has(n))
+  }
+  return [...set2].filter(n => set1.has(n))
+}

@@ -22,45 +22,43 @@
  * You may assume that the matrix does not change.
  * There are many calls to sumRegion function.
  * You may assume that row1 ≤ row2 and col1 ≤ col2.
+ *
+ * 给定一个二维矩阵，计算其子矩形范围内元素的总和，该子矩阵的左上角为 (row1, col1) ，右下角为 (row2, col2)
  */
 
 /**
  * @param {number[][]} matrix
  */
 var NumMatrix = function(matrix) {
-  const tmp = [];
-  for (let r = 0; r < matrix.length; r += 1) {
-    const columnLen = matrix[0].length;
-    tmp[r] = [];
-    for (let c = 0; c < columnLen; c += 1) {
-      const num = matrix[r][c];
-      if (c > 0 && r > 0) {
-        tmp[r][c] = num + tmp[r][c - 1] + tmp[r - 1][c] - tmp[r - 1][c - 1];
-      } else if (c === 0 && r > 0) {
-        tmp[r][c] = num + tmp[r - 1][c];
-      } else if (c > 0 && r === 0) {
-        tmp[r][c] = num + tmp[r][c - 1];
-      } else {
-        tmp[r][c] = num;
-      }
+  this.sum = []
+  this.matrix = matrix
+
+  for (let i = 0; i < matrix.length; i += 1) {
+    this.sum[i] = []
+
+    for (let j = 0; j < matrix[i].length; j += 1) {
+      this.sum[i][j] = (this.sum[i][j - 1] || 0) + matrix[i][j]
     }
   }
-  this.tmp = tmp;
-};
+}
 
 /**
- * @param {number} row1
- * @param {number} col1
- * @param {number} row2
- * @param {number} col2
- * @return {number}
- */
+* @param {number} row1
+* @param {number} col1
+* @param {number} row2
+* @param {number} col2
+* @return {number}
+*/
 NumMatrix.prototype.sumRegion = function(row1, col1, row2, col2) {
-  return this.tmp[row2][col2] + (col1 > 0 && row1 > 0 ? this.tmp[row1 - 1][col1 - 1] : 0) - (row1 > 0 ? this.tmp[row1 - 1][col2] : 0) - (col1 > 0 ? this.tmp[row2][col1 - 1] : 0);
-};
+  let result = 0
+  for (let i = row1; i <= row2; i += 1) {
+    result += this.sum[i][col2] - this.sum[i][col1] + this.matrix[i][col1]
+  }
+  return result
+}
 
 /**
- * Your NumMatrix object will be instantiated and called as such:
- * var obj = Object.create(NumMatrix).createNew(matrix)
- * var param_1 = obj.sumRegion(row1,col1,row2,col2)
- */
+* Your NumMatrix object will be instantiated and called as such:
+* var obj = new NumMatrix(matrix)
+* var param_1 = obj.sumRegion(row1,col1,row2,col2)
+*/

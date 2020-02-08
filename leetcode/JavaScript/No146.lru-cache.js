@@ -23,6 +23,7 @@
  * cache.get(3);       // returns 3
  * cache.get(4);       // returns 4
  *
+ * LRU Cache: Last Recent Used, 最近一次最少使用的缓存会被清除
  * 编写一个 LRU Cache 算法：https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU
  * 对于 LRUCache 而言，缓存的数据是按照使用的频繁程度来排序的，内部通过一个链表来存排序后的对象，
  * 以及一个 Map 快速索引：

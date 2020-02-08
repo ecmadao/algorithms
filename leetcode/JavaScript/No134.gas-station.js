@@ -12,10 +12,9 @@
  * Note:
  * The solution is guaranteed to be unique.
  *
- * 已知两个数组：
- * 第一个数组 gas 代表环形赛道上的加油站，各个值则是赛车在该加油站可以填充的油量
- * 第二个数组 cost 则代表赛车到底各站需要消耗的油量，cost[i] 代表从 i 站到 i +1 站消耗的油量
- * 且已知赛车出发时剩余油量为空，且车辆可容纳的油量为无限大。要求求出从哪一站出发，赛车可以成功环绕一圈。
+ * 在一条环路上有 N 个加油站，其中第 i 个加油站有汽油 gas[i] 升。
+ * 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。
+ * 如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1
  */
 
 /**
@@ -24,30 +23,17 @@
  * @return {number}
  */
 var canCompleteCircuit = function(gas, cost) {
-  if (!gas.length || !cost.length) return -1;
-  const tmp = {};
-
-  // 计算赛车在剩余油量为 remained 的时候，从 stationIndex 出发，是否可以成功到达下一站
-  // 需要缓存结果来加速算法
-  const canGoNext = (remained, stationIndex, maxIndex) => {
-    const key = `${stationIndex}-${maxIndex}`;
-    if (tmp[key] !== undefined) {
-      return tmp[key] + remained;
-    }
-    if (stationIndex > maxIndex) return remained;
-    const nextRemain = remained + gas[stationIndex] - cost[stationIndex];
-    if (nextRemain < 0) return nextRemain;
-    const result = canGoNext(nextRemain, stationIndex + 1, maxIndex);
-    tmp[key] = result - remained;
-    return result;
-  };
+  let total = 0
+  let current = 0
+  let index = 0
 
   for (let i = 0; i < gas.length; i += 1) {
-    const goForwardRemained = canGoNext(0, i, gas.length - 1);
-    if (goForwardRemained >= 0) {
-      const finalRemained = canGoNext(goForwardRemained, 0, i);
-      if (finalRemained >= 0) return i;
+    total += (gas[i] - cost[i])
+    current += (gas[i] - cost[i])
+    if (current < 0) {
+      index = i + 1
+      current = 0
     }
   }
-  return -1;
-};
+  return total >= 0 ? index : -1
+}

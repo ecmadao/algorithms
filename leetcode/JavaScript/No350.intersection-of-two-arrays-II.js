@@ -27,7 +27,7 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
-var intersect = function(nums1, nums2) {
+var intersect_1 = function(nums1, nums2) {
   const baseArr = nums1.length > nums2.length ? nums1 : nums2;
   const loopArr = nums1.length > nums2.length ? nums2 : nums1;
   const results = [];
@@ -46,3 +46,32 @@ var intersect = function(nums1, nums2) {
   }
   return results;
 };
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ *
+ * 排序以后双指针
+ */
+var intersect_2 = function(nums1, nums2) {
+  nums1.sort((n1, n2) => n1 - n2)
+  nums2.sort((n1, n2) => n1 - n2)
+
+  const result = []
+
+  let i = 0
+  let j = 0
+  while (i < nums1.length && j < nums2.length) {
+    if (nums1[i] === nums2[j]) {
+      result.push(nums1[i])
+      i += 1
+      j += 1
+    } else if (nums1[i] < nums2[j]) {
+      i += 1
+    } else {
+      j += 1
+    }
+  }
+  return result
+}

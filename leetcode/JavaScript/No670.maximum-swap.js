@@ -16,6 +16,8 @@
  * Explanation: No swap.
  *
  * Note: The given number is in the range [0, 10^8]
+ *
+ * 给定一个非负整数，你至多可以交换一次数字中的任意两位。返回你能得到的最大值
  */
 
 /**
@@ -23,34 +25,33 @@
  * @return {number}
  */
 var maximumSwap = function(num) {
-  const str = String(num);
-  const maxIndex = str.length - 1;
-  const tmp = [];
-  tmp[maxIndex] = {
-    index: maxIndex,
-    num: str[maxIndex]
-  };
-  let result = [];
+  if (num < 10) return num
 
-  for (let i = str.length - 2; i >= 0; i -= 1) {
-    const numStr = str[i];
+  const str = `${num}`.split('')
+  let i = str.length - 1
 
-    if (numStr < tmp[i + 1].num) {
-      result = String(num).split('');
-      result[i] = tmp[i + 1].num;
-      result[tmp[i + 1].index] = numStr;
-      tmp[i] = tmp[i + 1];
-    } else if (numStr > tmp[i + 1].num) {
-      tmp[i] = {
-        num: numStr,
-        index: i,
-      };
+  const tmp = []
+  tmp[i] = [str[i], i]
+  i -= 1
+  // 从后向前遍历，寻找每一位往后最大的值和 index
+  while (i >= 0) {
+    const num = str[i]
+    if (tmp[i + 1][0] >= num) {
+      tmp[i] = [...tmp[i + 1]]
     } else {
-      tmp[i] = tmp[i + 1];
+      tmp[i] = [num, i]
     }
+    i -= 1
   }
-  return result.length ? Number(result.join('')) : num;
-};
+  for (let i = 0; i < tmp.length; i += 1) {
+    if (tmp[i][0] === str[i]) continue
+    const data = str[i]
+    str[i] = str[tmp[i][1]]
+    str[tmp[i][1]] = data
+    return parseInt(str.join(''))
+  }
+  return num
+}
 
 // Test case
 console.log(maximumSwap(9918)); // 9981
