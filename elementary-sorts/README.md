@@ -56,6 +56,59 @@ const sort = (array, less) => {
 - 优点：简单易懂
 - 缺点：遍历次数多，总共遍历 1 + 2 + 3 + ... + N - 1 = (N - 1) * N / 2 次，复杂度为 N^2 / 2
 
+### [冒泡排序](./bubble-sort.js)
+
+重复的遍历数组，依次比较两个相邻的元素。如果他们的顺序错误，则交换位置，直至没有需要交互的元素。名称由来是因为，较小的元素会逐步“浮动”到数组顶部
+
+```bash
+# 从小到大排序
+# 初始 nums
+7 8 3 5 1 9 2
+
+# i = 0, j = 1
+# nums[i] = 7 < nums[j] = 8, 相对位置不动
+7 8 3 5 1 9 2
+
+# i = 0, j = 2
+# nums[i] = 7 > nums[j] = 3, 交替元素
+3 8 7 5 1 9 2
+
+# i = 0, j = 3
+# nums[i] = 3 < nums[j] = 5, 相对位置不动
+3 8 7 5 1 9 2
+
+# i = 0, j = 4
+# nums[i] = 3 > nums[j] = 1, 交替元素
+1 8 7 5 3 9 2
+
+# i = 0, j = 5
+# nums[i] = 1 < nums[j] = 9, 相对位置不动
+1 8 7 5 3 9 2
+
+# i = 0, j = 6
+# nums[i] = 1 < nums[j] = 2, 相对位置不动
+1 8 7 5 3 9 2
+
+# 之后从 i = 2, j = 3 开始重复遍历
+```
+
+用代码表示：
+
+```javascript
+const bubbleSort = (nums) => {
+  for (let i = 0; i < nums.length; i += 1) {
+    for (let j = i + 1; j < nums.length; j += 1) {
+      if (nums[i] > nums[j]) {
+        const tmp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = tmp
+      }
+    }
+  }
+  return nums
+}
+```
+
 ### [插入排序](./insertion-sort.js)
 
 对数组进行遍历，每次遍历都会认为当前元素（i）左侧已经全部排好序，因此不做处理。而如果遍历到的元素与它前一位元素是乱序时，则将其左移，直至到达顺序的位置：
@@ -276,3 +329,10 @@ console.log(search([], 0))
 console.log(search([0, 9], 3))
 console.log(search([0, 1, 3, 9], 5))
 ```
+
+### 排序算法的稳定性
+
+References:
+
+- [常见排序算法的稳定性分析和结论](https://blog.csdn.net/ithomer/article/details/5636226)
+- [Wiki - 排序算法稳定性](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95#%E7%A9%A9%E5%AE%9A%E6%80%A7)

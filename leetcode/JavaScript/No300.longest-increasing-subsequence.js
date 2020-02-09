@@ -66,6 +66,8 @@ var lengthOfLIS_2 = function(nums) {
   return getLen(-Infinity, 0)
 }
 
+/* ===================================== Solution 3 动态规划 ======================================== */
+
 /**
  * @param {number[]} nums
  * @return {number}
@@ -87,6 +89,48 @@ var lengthOfLIS_3 = function(nums) {
     result = Math.max(result, dp[i])
   }
   return result
+}
+
+/* ===================================== Solution 4 动态规划 + 二分搜索 ======================================== */
+
+const binarySearch = (nums, target, start, end) => {
+  if (!nums.length || target < nums[0]) return -1
+
+  let i = start
+  let j = end - 1
+  while (i < j) {
+    const mid = Math.floor((i + j) / 2)
+    if (nums[mid] === target) return mid
+    if (nums[mid] < target) {
+      i = mid + 1
+    } else {
+      j = mid
+    }
+  }
+
+  return nums[i] < target ? i + 1 : i
+}
+
+// binarySearch([0, 2, 3, 5, 7], 4)
+// binarySearch([0, 2, 3, 5, 7], 6)
+// binarySearch([0, 2, 3, 5, 7], 1)
+/**
+* @param {number[]} nums
+* @return {number}
+*/
+var lengthOfLIS_4 = function(nums) {
+  if (nums.length <= 1) return nums.length
+
+  const dp = []
+  let len = 0
+  for (const num of nums) {
+    const index = binarySearch(dp, num, 0, len)
+    dp[Math.max(0, index)] = num
+
+    if (Math.max(0, index) === len) len += 1
+  }
+
+  return len
 }
 
 

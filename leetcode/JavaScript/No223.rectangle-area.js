@@ -14,6 +14,8 @@
  * Assume that the total area is never beyond the maximum possible value of int.
  */
 
+
+const cal = (A, B, C, D) => Math.abs((C - A) * (D - B))
 /**
  * @param {number} A
  * @param {number} B
@@ -26,14 +28,13 @@
  * @return {number}
  */
 var computeArea = function(A, B, C, D, E, F, G, H) {
-  const area1 = (C - A) * (D - B);
-  const area2 = (G - E) * (H - F);
-  let tmpArea = 0;
+    // 矩形 1：(A, B) -> (C, D)
+    // 矩形 2：(E, F) -> (G, H)
 
-  if (C <= E || A >= G || B >= H || D <= F) {
-    tmpArea = 0;
-  } else {
-    tmpArea = (Math.min(C, G) - Math.max(A, E)) * (Math.min(D, H) - Math.max(B, F));
-  }
-  return area1 + area2 - tmpArea;
-};
+  const sum = cal(A, B, C ,D) + cal(E, F, G, H)
+  if (B > H || F > D || C < E || G < A) return sum
+
+  return sum - Math.abs(
+    (Math.min(C, G) - Math.max(A, E)) * (Math.min(D, H) - Math.max(F, B))
+  )
+}

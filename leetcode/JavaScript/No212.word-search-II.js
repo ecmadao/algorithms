@@ -33,186 +33,13 @@
  * 字典树的实现可以参考 No.208 Implement Trie (Prefix Tree)
  */
 
-var TrieNode = function(val, childs, stop, bottom) {
-    this.childs = childs || [];
-    this.val = val || null;
-    this.stop = stop || false;
-    this.bottom = bottom || true;
-};
 
-/**
- * Initialize your data structure here.
- */
-var Trie = function() {
-    this.treeNode = new TrieNode();
-};
-
-/**
- * Inserts a word into the trie.
- * @param {string} word
- * @return {void}
- */
-Trie.prototype.insert = function(word) {
-    var node = this.treeNode;
-    for (var i = 0; i < word.length; i += 1) {
-        var find = node.childs.find(child => child.val === word[i]);
-        if (!find) {
-            if (!node.bottom) node.bottom = false;
-            var root = null;
-            var tmp = null;
-            for (var j = word.length - 1; j >= i; j -= 1) {
-                root = new TrieNode(
-                    word[j],
-                    tmp ? [tmp] : [],
-                    j === word.length - 1,
-                    j === i
-                );
-                tmp = root;
-            }
-            node.childs.push(root);
-            return;
-        } else {
-            node = find;
-        }
-    }
-    node.stop = true;
-};
-
-/**
- * Returns if the word is in the trie.
- * @param {string} word
- * @return {object}
- */
-Trie.prototype.search = function(word) {
-    var node = this.treeNode;
-    for (var i = 0; i < word.length; i += 1) {
-        var find = node.childs.find(child => child.val === word[i]);
-        if (!find) {
-            return null;
-        } else {
-            node = find;
-        }
-    }
-    // 此处和 No.208 Implement Trie (Prefix Tree) 实现的字典树略有不同
-    // 在这里，如果搜索到存在，则还返回其详细信息
-    // 因此如果被搜索的单词已经深入到了字典树的最底部，则矩阵没有必要继续遍历下去
-    var result = node.childs.length === 0 || node.stop;
-    if (!result) return null;
-    return {
-        result,
-        word,
-        isBottom: node.bottom,
-    };
-};
-
-/**
- * Returns if there is any word in the trie that starts with the given prefix.
- * @param {string} prefix
- * @return {object}
- */
-Trie.prototype.startsWith = function(prefix) {
-    var node = this.treeNode;
-    for (var i = 0; i < prefix.length; i += 1) {
-        var find = node.childs.find(child => child.val === prefix[i]);
-        if (!find) {
-            return null;
-        } else {
-            node = find;
-        }
-    }
-    var result = node.childs.length >= 0;
-    if (!result) return null;
-    return {
-        result,
-        prefix,
-        isBottom: node.bottom,
-    };
-};
-
-/**
- * @param {character[][]} board
- * @param {string} word
- * @return {boolean}
- */
-var exist = function(board, trie) {
-    var maxRow = board.length - 1;
-    var maxColumn = board[0].length - 1;
-    var results = {};
-    // 缓存每次 prefix 检查的结果
-    var prefixExistTmp = {};
-
-    var judge = function(str, used, x, y, banned) {
-        var key = x + '&' + y;
-        if (!used[key]) {
-            var target = str + board[x][y];
-            if (prefixExistTmp[target] === undefined) {
-                prefixExistTmp[target] = trie.startsWith(target);
-            }
-            if (prefixExistTmp[target]) {
-                used[key] = true;
-                if (findWord(used, x, y, str + board[x][y], banned)) {
-                    return true;
-                }
-                used[key] = false;
-            }
-        }
-        return false;
-    };
-    var findWord = function(used, x, y, str, bannedPosition) {
-        var positions = [];
-        var key;
-        var findResult = trie.search(str);
-        if (findResult && findResult.result) {
-            if (!results[str]) {
-                results[str] = 1;
-            }
-            if (findResult.bottom) {
-                return true;
-            }
-        }
-
-        if (x > 0 && bannedPosition !== 'top') {
-            if (judge(str, used, x - 1, y, 'bottom')) {
-                return true;
-            }
-        }
-        if (x < maxRow && bannedPosition !== 'bottom') {
-            if (judge(str, used, x + 1, y, 'top')) {
-                return true;
-            }
-        }
-        if (y > 0 && bannedPosition !== 'left') {
-            if (judge(str, used, x, y - 1, 'right')) {
-                return true;
-            }
-        }
-        if (y < maxColumn && bannedPosition !== 'right') {
-            if (judge(str, used, x, y + 1, 'left')) {
-                return true;
-            }
-        }
-        return false;
-    };
-
-    var usedTemp = {};
-    for (var i = 0; i <= maxRow; i += 1) {
-        var row = board[i];
-        for (var j = 0; j <= maxColumn; j += 1) {
-            var str = row[j];
-            if (prefixExistTmp[str] === undefined) {
-                prefixExistTmp[str] = trie.startsWith(str);
-            }
-            if (prefixExistTmp[str]) {
-                var key = i + '&' + j;
-                usedTemp[key] = true;
-                if (!findWord(usedTemp, i, j, row[j], '')) {
-                    usedTemp[key] = false;
-                }
-            }
-        }
-    }
-    return Object.keys(results);
-};
+function TreeNode (val) {
+  this.val = val
+  this.next = {}
+  this.stop = false
+  this.word = null
+}
 
 /**
  * @param {character[][]} board
@@ -220,13 +47,51 @@ var exist = function(board, trie) {
  * @return {string[]}
  */
 var findWords = function(board, words) {
-    if (!board.length) return false;
-
-    var trie = new Trie();
-    for (var i = 0; i < words.length; i += 1) {
-        trie.insert(words[i]);
+    const tree = new TreeNode()
+    for (const word of words) {
+      let node = tree
+      for (const str of word) {
+        if (!node.next[str]) node.next[str] = new TreeNode(str)
+        node = node.next[str]
+      }
+      node.stop = true
+      node.word = word
     }
 
-    var results = exist(board, trie);
-    return results;
-};
+    const result = new Set()
+    const dfs = (i, j, cache, node) => {
+      if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) return
+
+      const str = board[i][j]
+      if (!node.next[str]) return
+
+      node = node.next[str]
+      if (node.stop) result.add(node.word)
+
+      cache[`${i}-${j}`] = true
+
+      for (const [row, col] of [[i - 1, j], [i + 1, j], [i, j - 1], [i, j + 1]]) {
+        if (cache[`${row}-${col}`]) continue
+        dfs(row, col, cache, node)
+      }
+
+      cache[`${i}-${j}`] = false
+    }
+
+    for (let i = 0; i < board.length; i += 1) {
+      for (let j = 0; j < board[i].length; j += 1) {
+        dfs(i, j, {}, tree)
+      }
+    }
+
+    return [...result]
+}
+
+// Test case
+console.log(
+  // ["aabbbbabbaababaaaabababbaaba","abaabbbaaaaababbbaaaaabbbaab","ababaababaaabbabbaabbaabbaba"]
+  findWords(
+    [["b","a","a","b","a","b"],["a","b","a","a","a","a"],["a","b","a","a","a","b"],["a","b","a","b","b","a"],["a","a","b","b","a","b"],["a","a","b","b","b","a"],["a","a","b","a","a","b"]],
+    ["bbaabaabaaaaabaababaaaaababb","aabbaaabaaabaabaaaaaabbaaaba","babaababbbbbbbaabaababaabaaa","bbbaaabaabbaaababababbbbbaaa","babbabbbbaabbabaaaaaabbbaaab","bbbababbbbbbbababbabbbbbabaa","babababbababaabbbbabbbbabbba","abbbbbbaabaaabaaababaabbabba","aabaabababbbbbbababbbababbaa","aabbbbabbaababaaaabababbaaba","ababaababaaabbabbaabbaabbaba","abaabbbaaaaababbbaaaaabbbaab","aabbabaabaabbabababaaabbbaab","baaabaaaabbabaaabaabababaaaa","aaabbabaaaababbabbaabbaabbaa","aaabaaaaabaabbabaabbbbaabaaa","abbaabbaaaabbaababababbaabbb","baabaababbbbaaaabaaabbababbb","aabaababbaababbaaabaabababab","abbaaabbaabaabaabbbbaabbbbbb","aaababaabbaaabbbaaabbabbabab","bbababbbabbbbabbbbabbbbbabaa","abbbaabbbaaababbbababbababba","bbbbbbbabbbababbabaabababaab","aaaababaabbbbabaaaaabaaaaabb","bbaaabbbbabbaaabbaabbabbaaba","aabaabbbbaabaabbabaabababaaa","abbababbbaababaabbababababbb","aabbbabbaaaababbbbabbababbbb","babbbaabababbbbbbbbbaabbabaa"]
+  )
+)

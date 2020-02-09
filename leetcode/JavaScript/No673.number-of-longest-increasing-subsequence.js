@@ -23,7 +23,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findNumberOfLIS = function(nums) {
+var findNumberOfLIS_1 = function(nums) {
   const tmp = [];
   let count = 0;
   let max = 0;
@@ -60,12 +60,42 @@ var findNumberOfLIS = function(nums) {
   return count;
 };
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumberOfLIS_2 = function(nums) {
+  const tmp = []
+  let maxLen = 1
+
+  for (let i = 0; i < nums.length; i += 1) {
+    tmp[i] = {
+      count: 1,
+      length: 1
+    }
+
+    for (let j = 0; j < i; j += 1) {
+      if (nums[j] < nums[i]) {
+        if (tmp[j].length === tmp[i].length) {
+          tmp[i].length = tmp[j].length + 1
+          tmp[i].count = tmp[j].count
+        } else if (tmp[j].length + 1 === tmp[i].length) {
+          tmp[i].count += tmp[j].count
+        }
+        maxLen = Math.max(tmp[i].length, maxLen)
+      }
+    }
+  }
+
+  return tmp.filter(item => item.length === maxLen).reduce((num, item) => num + item.count, 0)
+}
+
 // Test case
-console.log(findNumberOfLIS([1,3,5,4,7])); // 2
-console.log(findNumberOfLIS([2,2,2,2,2])); // 5
-console.log(findNumberOfLIS([3, 2, 1])); // 3
-console.log(findNumberOfLIS([2, 2, 3, 3, 3])); // 6
-console.log(findNumberOfLIS([2, 3, 2, 3])); // 3
-console.log(findNumberOfLIS([2, 3, 2, 3, 2, 3])); // 6
-console.log(findNumberOfLIS([1, 1, 1, 2, 2, 2, 3, 3, 3])); // 27
-console.log(findNumberOfLIS([1,2,3,1,2,3,1,2,3])); // 10
+console.log(findNumberOfLIS_2([1,3,5,4,7])); // 2
+console.log(findNumberOfLIS_2([2,2,2,2,2])); // 5
+console.log(findNumberOfLIS_2([3, 2, 1])); // 3
+console.log(findNumberOfLIS_2([2, 2, 3, 3, 3])); // 6
+console.log(findNumberOfLIS_2([2, 3, 2, 3])); // 3
+console.log(findNumberOfLIS_2([2, 3, 2, 3, 2, 3])); // 6
+console.log(findNumberOfLIS_2([1, 1, 1, 2, 2, 2, 3, 3, 3])); // 27
+console.log(findNumberOfLIS_2([1,2,3,1,2,3,1,2,3])); // 10
