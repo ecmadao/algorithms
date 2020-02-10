@@ -31,60 +31,32 @@
  * @return {boolean}
  */
 var exist = function(board, word) {
-  if (!board.length) return false;
-  var maxRow = board.length - 1;
-  var maxColumn = board[0].length - 1;
+  if (!word) return false
+  if (!board.length || !board[0].length) return false
 
-  var findWord = function(used, x, y, wordIndex, bannedPosition) {
-      if (wordIndex >= word.length) return true;
-      var success = false;
+  const search = (i, row, col) => {
+    if (i >= word.length) return true
+    if (board[row][col] !== word[i]) return false
+    if (i === word.length - 1) return true
 
-      var positions = [];
-      if (x > 0 && bannedPosition !== 'top') {
-        positions.push([x - 1, y, 'bottom']);
-      }
-      if (x < maxRow && bannedPosition !== 'bottom') {
-        positions.push([x + 1, y, 'top']);
-      }
-      if (y > 0 && bannedPosition !== 'left') {
-        positions.push([x, y - 1, 'right']);
-      }
-      if (y < maxColumn && bannedPosition !== 'right') {
-        positions.push([x, y + 1, 'left']);
-      }
-      for (var i = 0; i < positions.length; i += 1) {
-        var r = positions[i][0];
-        var c = positions[i][1];
-        var b = positions[i][2];
-        var key = r + '&' + c;
-        if (board[r][c] === word[wordIndex] && !used[key]) {
-          used[key] = true;
-          success = findWord(used, r, c, wordIndex + 1, b);
-          if (success) {
-            return success;
-          }
-          used[key] = false;
-        }
-      }
-      return success;
-  };
+    board[row][col] = 0
+    for (const [r, c] of [[row - 1, col], [row + 1, col], [row, col - 1], [row, col + 1]]) {
+      if (r < 0 || c < 0 || r >= board.length || c >= board[0].length) continue
+      const result = search(i + 1, r, c)
+      if (result) return true
+    }
+    board[row][col] = word[i]
+    return false
+  }
 
-  var usedTemp = {};
-  for (var i = 0; i <= maxRow; i += 1) {
-    var row = board[i];
-    for (var j = 0; j <= maxColumn; j += 1) {
-      if (row[j] === word[0]) {
-        var key = i + '&' + j;
-        usedTemp[key] = true;
-        if (findWord(usedTemp, i, j, 1, '')) {
-          return true;
-        }
-        usedTemp[key] = false;
-      }
+  for (let i = 0; i < board.length; i += 1) {
+    for (let j = 0; j < board[i].length; j += 1) {
+      const result = search(0, i, j)
+      if (result) return true
     }
   }
-  return false;
-};
+  return false
+}
 
 // Test case
 console.log(exist(
@@ -94,8 +66,8 @@ console.log(exist(
     ['A','D','E','E']
   ],
   'ABCB'
-));
+))
 console.log(exist(
   ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaab"],
   "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-));
+))

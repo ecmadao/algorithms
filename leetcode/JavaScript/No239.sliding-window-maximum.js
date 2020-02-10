@@ -27,14 +27,16 @@
  * Could you solve it in linear time?
  */
 
-// =============================================== 滑动窗口解法 ===============================================
+// =============================================== Solution 1 ===============================================
 
 /**
-* @param {number[]} nums
-* @param {number} k
-* @return {number[]}
-*/
-var maxSlidingWindow = function(nums, k) {
+  * @param {number[]} nums
+  * @param {number} k
+  * @return {number[]}
+  *
+  * 滑动窗口解法
+  */
+var maxSlidingWindow_1 = function(nums, k) {
   if (k <= 1) return nums
 
   const findMaxIndex = (start, end) => {
@@ -69,123 +71,151 @@ var maxSlidingWindow = function(nums, k) {
   return result
 }
 
-// =============================================== 最大堆解法 ===============================================
+// =============================================== Solution 2 ===============================================
 
 // 最大堆
+
 class Heap {
   constructor() {
     this.queue = []
   }
 
-  remove() {
-    if (!this.queue.length) return null
-    const head = this.queue.shift()
-
-    if (this.queue.length) {
-      const tail = this.queue.pop()
-      this.queue.unshift(tail)
-      this.requeue(0)
-    }
-    return head
+  insert(val) {
+    this.queue.push(val)
+    this.sortWithFather(this.queue.length)
   }
 
-  get() {
+  sortWithFather(index) {
+    if (index < 2) return
+    const fIndex = Math.floor(index / 2) - 1
+    const tmp = this.queue[fIndex]
+    if (tmp < this.queue[index - 1]) {
+      this.queue[fIndex] = this.queue[index - 1]
+      this.queue[index - 1] = tmp
+    }
+    this.sortWithFather(fIndex + 1)
+  }
+
+  peak() {
     if (!this.queue.length) return null
     return this.queue[0]
   }
 
-  set(val) {
-    this.queue.push(val)
-    this.sort(this.queue.length - 1)
+  shift() {
+    if (!this.queue.length) return null
+
+    const result = this.queue.shift()
+    if (!this.queue.length) return result
+    const last = this.queue.pop()
+    this.queue.unshift(last)
+    this.sortWithChild(1)
+    return result
   }
 
-  requeue(fIndex) {
-    const cIndexL = fIndex * 2 + 1
-
-    if (cIndexL >= this.queue.length) return
-    if (this.queue[cIndexL] > this.queue[fIndex]) {
-      this.exchange(cIndexL, fIndex)
+  sortWithChild(index) {
+    const cIndex1 = index * 2 - 1
+    if (cIndex1 > this.queue.length) return
+    if (this.queue[index - 1] < this.queue[cIndex1]) {
+      const tmp = this.queue[index - 1]
+      this.queue[index - 1] = this.queue[cIndex1]
+      this.queue[cIndex1] = tmp
     }
 
-    const cIndexR = cIndexL + 1
-    if (cIndexR >= this.queue.length) return
-    if (this.queue[cIndexR] > this.queue[fIndex]) {
-      this.exchange(cIndexR, fIndex)
+    const cIndex2 = index * 2
+    if (cIndex2 > this.queue.length) return
+    if (this.queue[index - 1] < this.queue[cIndex2]) {
+      const tmp = this.queue[index - 1]
+      this.queue[index - 1] = this.queue[cIndex2]
+      this.queue[cIndex2] = tmp
     }
 
-    this.requeue(cIndexL)
-    this.requeue(cIndexR)
-  }
-
-  exchange(index1, index2) {
-    const tmp = this.queue[index1]
-    this.queue[index1] = this.queue[index2]
-    this.queue[index2] = tmp
-  }
-
-  sort(index) {
-    if (index <= 0) return
-    const fIndex = Math.floor((index - 1) / 2)
-
-    if (this.queue[index] > this.queue[fIndex]) {
-      this.exchange(index, fIndex)
-      this.sort(fIndex)
-    }
+    this.sortWithChild(cIndex1 + 1)
+    this.sortWithChild(cIndex2 + 1)
   }
 }
 
 /**
-* @param {number[]} nums
-* @param {number} k
-* @return {number[]}
-*/
-var maxSlidingWindow_heap = function(nums, k) {
-  if (k <= 1) return nums
-  const result = []
+  * @param {number[]} nums
+  * @param {number} k
+  * @return {number[]}
+  *
+  * 最大堆解法
+  */
+var maxSlidingWindow_2 = function(nums, k) {
+  if (!nums.length) return []
+  if (k === 0) return []
+  if (k === 1) return nums
 
   const heap = new Heap()
   const indexes = {}
 
-  let i = 0
-  while (i < k - 1) {
+  for (let i = 0; i < k; i += 1) {
     if (!indexes[nums[i]]) indexes[nums[i]] = []
     indexes[nums[i]].push(i)
-    heap.set(nums[i])
-    i += 1
+    heap.insert(nums[i])
   }
-  i = 0
-  let j = k - 1
-  while (j < nums.length) {
-    const num = nums[j]
-    heap.set(num)
-    console.log(`heap: ${heap.queue}`)
-    if (!indexes[num]) indexes[num] = []
-    indexes[num].push(j)
 
-    while (true) {
-      const val = heap.get()
-      const valIndexes = indexes[val]
-      console.log(`[${i},${j}] val: ${val}, queue: ${heap.queue}, valIndexes: ${valIndexes}`)
-      if (!valIndexes || !valIndexes.length) {
-        heap.remove()
-        continue
-      } else if (valIndexes[0] < i) {
-        heap.remove()
-        indexes[val].shift()
-        continue
+  const result = [heap.peak()]
+
+  for (let i = k; i < nums.length; i += 1) {
+    const input = nums[i]
+    if (!indexes[nums[i]]) indexes[nums[i]] = []
+    indexes[nums[i]].push(i)
+    heap.insert(input)
+
+    while (heap.peak() !== null) {
+      const peak = heap.peak()
+      if (!indexes[peak] || !indexes[peak].length) {
+        heap.shift()
+      } else if (indexes[peak][0] <= i - k) {
+        heap.shift()
+        indexes[peak].shift()
       } else {
-        result.push(val)
-
-        if (valIndexes[0] < i + 1) {
-          heap.remove()
-          indexes[val].shift()
-        }
+        result.push(peak)
         break
       }
     }
+  }
+  return result
+}
 
-    j += 1
-    i += 1
+// =============================================== Solution 3 ===============================================
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ *
+ * DP 动态规划
+ * https://leetcode-cn.com/problems/sliding-window-maximum/solution/hua-dong-chuang-kou-zui-da-zhi-by-leetcode-3/
+ */
+var maxSlidingWindow_3 = function(nums, k) {
+  if (!nums.length || !k) return []
+  if (k === 1) return nums
+
+  const left = []
+  for (let i = 0; i < nums.length; i += 1) {
+    if ((i + 1) % k === 0) {
+      left[i] = nums[i]
+    } else {
+      left[i] = Math.max(left[i - 1], nums[i])
+    }
+  }
+  const right = []
+  for (let i = nums.length - 1; i >= 0; i -= 1) {
+    if ((i + 1) % k === 0) {
+      right[i] = nums[i]
+    } else {
+      right[i] = Math.max(right[i + 1], nums[i])
+    }
+  }
+
+  const result = []
+  for (let i = 0; i <= nums.length - k; i += 1) {
+    result.push(
+      Math.max(left[i + k - 1], right[i])
+    )
   }
   return result
 }

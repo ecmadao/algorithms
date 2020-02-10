@@ -15,6 +15,9 @@
  * 2. Your algorithm should run in O(n2) complexity.
  *
  * Follow up: Could you improve it to O(n log n) time complexity?
+ *
+ * 给定一个无序的整数数组，找到其中最长上升子序列的长度。
+ * 寻找最长递增子序列
  */
 
 /**
@@ -126,7 +129,6 @@ var lengthOfLIS_4 = function(nums) {
   for (const num of nums) {
     const index = binarySearch(dp, num, 0, len)
     dp[Math.max(0, index)] = num
-
     if (Math.max(0, index) === len) len += 1
   }
 

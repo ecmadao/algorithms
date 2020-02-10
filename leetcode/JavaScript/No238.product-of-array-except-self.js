@@ -25,7 +25,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var productExceptSelf = function(nums) {
+var productExceptSelf_1 = function(nums) {
   const tmp = []
   const result = []
 
@@ -65,6 +65,58 @@ var productExceptSelf_2 = function(nums) {
 
     start += 1
     end -= 1
+  }
+  return result
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf_3 = function(nums) {
+  const left = nums.reduce((list, _, i) => {
+    if (i === 0) {
+      list.push(1)
+    } else {
+      list.push(list[list.length - 1] * nums[i - 1])
+    }
+    return list
+  }, [])
+  const right = []
+  for (let i = nums.length - 1; i >= 0; i -= 1) {
+    if (i === nums.length - 1) {
+      right.unshift(1)
+    } else {
+      right.unshift(right[0] * nums[i + 1])
+    }
+  }
+  return Array.from({ length: nums.length }, (_, i) => left[i] * right[i])
+}
+
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ *
+ * 常数空间复杂度（返回的数组不计入额外空间）
+ */
+var productExceptSelf_4 = function(nums) {
+  const result = nums.reduce((list, _, i) => {
+    if (i === 0) {
+      list.push(1)
+    } else {
+      list.push(list[list.length - 1] * nums[i - 1])
+    }
+    return list
+  }, [])
+
+  let rightProduct = 1
+  let i = nums.length - 1
+  while (i >= 0) {
+    const num = i + 1 === nums.length ? 1 : nums[i + 1]
+    result[i] *= num * rightProduct
+    rightProduct *= num
+    i -= 1
   }
   return result
 }

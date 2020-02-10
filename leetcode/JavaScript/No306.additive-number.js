@@ -31,7 +31,7 @@
  * @param {string} num
  * @return {boolean}
  */
-var isAdditiveNumber = function(num) {
+var isAdditiveNumber_1 = function(num) {
   if (num.length <= 2) return false;
 
   const checkValidate = (pre, start) => {
@@ -63,6 +63,35 @@ var isAdditiveNumber = function(num) {
   }
   return false;
 };
+
+/**
+ * @param {string} num
+ * @return {boolean}
+ */
+var isAdditiveNumber_2 = function(num) {
+  const isAdditive = (start, pre1, pre2, count) => {
+    if (start >= num.length) return count >= 3
+
+    for (let i = start + 1; i <= num.length; i += 1) {
+      if (i - start > 1 && num[start] === '0') return false
+      const n = parseInt(num.slice(start, i))
+
+      if (pre1 === null || pre2 === null || (pre1 + pre2 === n)) {
+        const result = isAdditive(
+          i,
+          pre1 === null ? n : (pre2 === null ? pre1 : pre2),
+          pre1 === null ? null : n,
+          count + 1
+        )
+        if (result) return true
+      }
+    }
+
+    return false
+  }
+  return isAdditive(0, null, null, 0)
+}
+
 
 console.log(isAdditiveNumber('111'));
 console.log(isAdditiveNumber('112'));

@@ -36,7 +36,7 @@ var climbStairs_1 = function(n) {
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
+var climbStairs_2 = function(n) {
   const tmp = {
     0: 0,
     1: 1
@@ -46,4 +46,23 @@ var climbStairs = function(n) {
     tmp[i] = (tmp[i - 1] || 1) + (tmp[i - 2] || 1)
   }
   return tmp[n]
+}
+
+/**
+ * Solution 3:
+ * 动态规划 + 空间优化
+ */
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs_3 = function(n) {
+  let dp1 = 1
+  let dp2 = 1
+
+  for (let i = 2; i <= n; i += 1) {
+    i % 2 === 0 ? (dp1 = dp1 + dp2) : (dp2 = dp1 + dp2)
+  }
+  return n % 2 === 0 ? dp1 : dp2
 }

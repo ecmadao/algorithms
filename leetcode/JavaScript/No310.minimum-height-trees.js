@@ -91,6 +91,13 @@ var findMinHeightTrees = function(n, edges) {
   const graph = new Graph(edges)
   let pathes = []
 
+  // for (const key of Object.keys(graph.adj)) {
+  //   if (graph.adj[key].length === 1) {
+  //     const dfs = new DFS(graph, key)
+  //     if (dfs.pathes.length > pathes.length) pathes = dfs.pathes
+  //   }
+  // }
+
   for (let i = 0; i < n; i += 1) {
     if (graph.adj[i].length === 1) {
       const dfs = new DFS(graph, i)
