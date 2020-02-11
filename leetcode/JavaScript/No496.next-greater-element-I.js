@@ -36,7 +36,7 @@
  * @param {number[]} nums2
  * @return {number[]}
  *
- * 单调递增栈
+ * 单调栈, 单调递增栈
  */
 var nextGreaterElement = function(nums1, nums2) {
   const queue = []

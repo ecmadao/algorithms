@@ -8,6 +8,7 @@
  * Example:
  * Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
  *
+ * 接雨水
  * 很有意思的题目。以一个数组中各元素的值作为围墙的高度，求其容积。只看题意不容易明白，但 LeetCode 上有配图，一目了然
  */
 
@@ -249,6 +250,7 @@ var trap3 = function(height, container = 0) {
 /**
  * ================================ Solution 4 ================================
  * 每一列每一列的补齐高度
+ * 详解一道高频面试题：接雨水: https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484482&amp;idx=1&amp;sn=9503dae2ec50bc8aa2ba96af11ea3311&source=41#wechat_redirect
  */
 
 /**

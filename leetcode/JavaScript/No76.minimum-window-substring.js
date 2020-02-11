@@ -6,16 +6,17 @@
  * Given a string S and a string T,
  * find the minimum window in S which will contain all the characters in T in complexity O(n).
  *
- * Example:
+ * Example 1:
  * S = "ADOBECODEBANC"
  * T = "ABC"
  * Minimum window is "BANC".
  *
+ * Example 2:
  * S = "aa"
  * T = "aa"
  * Minimum window is "aa".
  *
- * 给定一个母串 s 和一个模板串 t ，求一个 s 的最小子串使其包含 t 中所有的字符。
+ * 给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字母的最小子串
  */
 
 /**

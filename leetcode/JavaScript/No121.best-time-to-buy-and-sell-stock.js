@@ -26,16 +26,39 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
-  if (!prices.length) return 0
-  let minP = prices[0]
-  let maxP = 0
+var maxProfit_1 = function(prices) {
+  if (prices.length < 2) return 0
+
+  let result = 0
+  let min = prices[0]
   for (let i = 1; i < prices.length; i += 1) {
-    let p = prices[i]
-    if (maxP < p - minP) {
-      maxP = p - minP
-    }
-    if (minP > p) minP = p
+    result = Math.max(result, prices[i] - min)
+    if (min > prices[i]) min = prices[i]
   }
-  return maxP
+
+  return result
+}
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ *
+ * 动态规划
+ */
+var maxProfit_2 = function(prices) {
+  if (prices.length < 2) return 0
+
+  const dp = [{
+    buy: -prices[0],
+    sell: 0
+  }]
+  let result = 0
+  for (let i = 1; i < prices.length; i += 1) {
+    dp[i] = {
+      buy: Math.max(-prices[i], dp[i - 1].buy),
+      sell: Math.max(dp[i - 1].sell, dp[i - 1].buy + prices[i])
+    }
+    result = Math.max(result, dp[i].sell)
+  }
+  return result
 }

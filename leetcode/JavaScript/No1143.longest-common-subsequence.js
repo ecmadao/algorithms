@@ -27,6 +27,12 @@
  * 1 <= text1.length <= 1000
  * 1 <= text2.length <= 1000
  * The input strings consist of lowercase English characters only.
+ *
+ * 给定两个字符串 text1 和 text2，返回这两个字符串的最长公共子序列。
+ * 一个字符串的 子序列 是指这样一个新的字符串：它是由原字符串在不改变字符的相对顺序的情况下删除某些字符（也可以不删除任何字符）后组成的新字符串。
+ * 例如，"ace" 是 "abcde" 的子序列，但 "aec" 不是 "abcde" 的子序列。两个字符串的「公共子序列」是这两个字符串所共同拥有的子序列。
+ * 若这两个字符串没有公共子序列，则返回 0
+ * https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484486&amp;idx=1&amp;sn=0bdcb94c6390307ea32427757ec0072c&source=41#wechat_redirect
  */
 
 
@@ -34,6 +40,7 @@ const getNum = (tmp, i, j) => {
   if (!Array.isArray(tmp[i])) return 0
   return tmp[i][j] || 0
 }
+
 /**
 * @param {string} text1
 * @param {string} text2

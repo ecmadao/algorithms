@@ -26,7 +26,7 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+var maxProfit_1 = function(prices) {
   let buy = 0;
   let sell = 0;
   let cooldown = 0;
@@ -50,6 +50,35 @@ var maxProfit = function(prices) {
   return Math.max(cooldown, sell, buy);
 };
 
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit_2 = function(prices) {
+  if (prices.length < 2) return 0
+
+  let dp = [
+    {
+      buy: -prices[0],
+      sell: 0,
+    }
+  ]
+  let result = 0
+  for (let i = 1; i < prices.length; i += 1) {
+    dp[i] = {
+      buy: i - 2 < 0
+        ? Math.max(dp[i - 1].buy, dp[i - 1].sell - prices[i])
+        : Math.max(
+            dp[i - 1].buy,
+            dp[i - 2].sell - prices[i]
+        ),
+      sell: Math.max(dp[i - 1].buy + prices[i], dp[i - 1].sell)
+    }
+    result = Math.max(result, dp[i].sell)
+  }
+  return result
+}
+
 // Test case
-console.log(maxProfit([1,2,4])); // 3
-console.log(maxProfit([1,2,3,0,2])); // 3
+console.log(maxProfit_2([1,2,4])); // 3
+console.log(maxProfit_2([1,2,3,0,2])); // 3

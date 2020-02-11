@@ -16,6 +16,29 @@
  * [9, 9, 0, 3, 0, 7, 7, 7, 4, 1, 5, 0, 1, 7]
  * [3, 5, 3, 4, 1, 4, 5, 0, 7, 8, 5, 6, 9, 4, 1]
  *
+ * Example 1:
+ * Input: [3,3,5,0,0,3,1,4]
+ * Output: 6
+ * Explanation:
+ * Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+ * Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
+ *
+ * Example 2:
+ * Input: [1,2,3,4,5]
+ * Output: 4
+ * Explanation:
+ * Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+ * Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
+ *
+ * Example 3:
+ * Input: [7,6,4,3,1]
+ * Output: 0
+ * Explanation: In this case, no transaction is done, i.e. max profit = 0
+ *
+ * 给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。
+ * 设计一个算法来计算你所能获取的最大利润。你最多可以完成 两笔 交易。
+ * 注意: 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）
+ *
  * 和 No121.Best Time to Buy and Sell Stock 相比，该题在一个时间周期内允许最多两次的买卖，但是在买入之前必须已经卖出
  * 在同一天，可以先卖出然后再买入
  */
@@ -101,5 +124,45 @@ const maxProfit_2 = (prices) => {
 * =================== 方法三 ===================
 * 可以作为 No.188 Best Time to Buy and Sell Stock IV 的特殊情况处理：
 * 限制的 k 次交易，k = 2
-* 过程略，可见 ./leetcode/JavaScript/No188.best-time-to-buy-and-sell-stock-iv.js
 */
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ *
+ * 动态规划
+ * https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484508&idx=1&sn=42cae6e7c5ccab1f156a83ea65b00b78&chksm=9bd7fa54aca07342d12ae149dac3dfa76dc42bcdd55df2c71e78f92dedbbcbdb36dec56ac13b&scene=21#wechat_redirect
+ */
+var maxProfit_3 = function(prices, k = 2) {
+  const dp = {
+    0: {
+      1: {
+        buy: -prices[0],
+        sell: 0
+      },
+      2: {
+        buy: -Infinity,
+        sell: 0
+      }
+    }
+  }
+  let result = 0
+  for (let i = 1; i < prices.length; i += 1) {
+    if (!dp[i]) dp[i] = {}
+    for (let j = 1; j <= k; j += 1) {
+      if (!dp[i][j]) dp[i][j] = {}
+
+      dp[i][j].sell = Math.max(
+        dp[i - 1][j].sell,
+        dp[i - 1][j].buy + prices[i]
+      )
+      dp[i][j].buy = Math.max(
+        dp[i - 1][j].buy,
+        (j - 1 <= 0 ? 0 : dp[i - 1][j - 1].sell) - prices[i]
+      )
+      result = Math.max(result, dp[i][j].sell)
+    }
+  }
+  return result
+}
+

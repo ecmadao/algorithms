@@ -11,7 +11,9 @@
  * Given input array nums = [3,2,2,3], val = 3
  * Your function should return length = 2, with the first two elements of nums being 2.
  *
- * 给一个数组和目标值，在原数组中删除和目标值相等的元素
+ * 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
+ * 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+ * 元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素
  */
 
 /**
@@ -19,7 +21,7 @@
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
+var removeElement_1 = function(nums, val) {
   for (var i = 0; i < nums.length; i += 1) {
     if (nums[i] === val) {
       nums.splice(i, 1);
@@ -28,3 +30,26 @@ var removeElement = function(nums, val) {
   }
   return nums.length;
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ *
+ * 双指针
+ */
+var removeElement_2 = function(nums, val) {
+  if (!nums.length) return 0
+
+  let i = 0
+  let j = 0
+
+  while (j < nums.length) {
+    if (nums[j] !== val) {
+      nums[i] = nums[j]
+      i += 1
+    }
+    j += 1
+  }
+  return i
+}

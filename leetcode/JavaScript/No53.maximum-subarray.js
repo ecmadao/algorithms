@@ -9,7 +9,7 @@
  * given the array [-2, 1, -3, 4, -1, 2, 1, -5, 4],
  * the contiguous subarray [4, -1, 2, 1] has the largest sum = 6.
  *
- * 给一个数组，求出其中子数组的最大和
+ * 给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和
  */
 
 /**
@@ -26,7 +26,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
+var maxSubArray_1 = function(nums) {
   var max = nums[0]
   var sum = nums[0]
 
@@ -43,7 +43,7 @@ var maxSubArray = function(nums) {
  *
  * 滑动窗口解法
  */
-var maxSubArray = function(nums) {
+var maxSubArray_2 = function(nums) {
   let sum = 0
   let result = -Infinity
 
@@ -62,10 +62,8 @@ var maxSubArray = function(nums) {
 /**
  * @param {number[]} nums
  * @return {number}
- *
- * DP 解法
  */
-var maxSubArray = function(nums) {
+var maxSubArray_3 = function(nums) {
   let result = nums[0]
 
   for (let i = 1; i < nums.length; i += 1) {
@@ -73,6 +71,24 @@ var maxSubArray = function(nums) {
       nums[i] += nums[i - 1]
     }
     result = Math.max(result, nums[i])
+  }
+  return result
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * 动态规划
+ */
+var maxSubArray_4 = function(nums) {
+  if (nums.length < 1) return 0
+  const dp = [nums[0]]
+  let result = nums[0]
+
+  for (let i = 1; i < nums.length; i += 1) {
+    dp[i] = Math.max(dp[i - 1] + nums[i], nums[i])
+    result = Math.max(result, dp[i])
   }
   return result
 }

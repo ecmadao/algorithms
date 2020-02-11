@@ -19,7 +19,7 @@
 * @param {number[]} nums
 * @return {number}
 */
-var removeDuplicates = function(nums) {
+var removeDuplicates_1 = function(nums) {
   for (i = 0; i < nums.length; i++) {
     if (nums[i] == nums[i+1]) {
       nums.splice(i, 1);
@@ -28,3 +28,25 @@ var removeDuplicates = function(nums) {
   }
   return nums.length;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * 快慢双指针
+ * 只要 nums[slow] === nums[fast]，我们就增加 fast 以跳过重复项
+ */
+var removeDuplicates_2 = function(nums) {
+  if (!nums.length) return 0
+
+  let slow = 0
+  let fast = 1
+  while (fast < nums.length) {
+    if (nums[fast] !== nums[slow]) {
+      slow += 1
+      nums[slow] = nums[fast]
+    }
+    fast += 1
+  }
+  return slow + 1
+}
