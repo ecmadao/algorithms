@@ -261,11 +261,6 @@ LeetCode 上相关题目：
 2. [No.107 Binary Tree Level-Order Traversal II.js](./leetcode/JavaScript/No107.binary-tree-level-order-traversal-II.js)
 3. [No.103 Binary Tree Zigzag Level-Order Traversal.js](./leetcode/JavaScript/No103.binary-tree-zigzag-level-order-traversal.js)
 
-### 字典树
-
-- [Trie树（Prefix Tree）介绍](http://blog.csdn.net/lisonglisonglisong/article/details/45584721)
-- [数据结构之Trie树](http://dongxicheng.org/structure/trietree/)
-
 LeetCode 上相关题目：
 
 1. [No208 Implement Trie Prefix Tree](./leetcode/JavaScript/No208.implement-trie-prefix-tree.js)

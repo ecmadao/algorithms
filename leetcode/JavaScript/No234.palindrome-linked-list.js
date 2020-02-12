@@ -7,6 +7,8 @@
  *
  * Follow up:
  * Could you do it in O(n) time and O(1) space?
+ *
+ * 请判断一个链表是否为回文链表
  */
 
 /**
@@ -20,7 +22,7 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function(head) {
+var isPalindrome_1 = function(head) {
   let node = head;
   let length = 0;
   while (node) {
@@ -43,3 +45,43 @@ var isPalindrome = function(head) {
   }
   return true;
 };
+
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ *
+ * 快慢指针
+ */
+var isPalindrome_2 = function(head) {
+  if (!head) return true
+
+  let fast = head
+  let slow = head
+
+  while (fast) {
+    slow = slow.next
+    fast = fast.next
+    if (fast) fast = fast.next
+  }
+
+  fast = slow
+  slow = head
+  const arr1 = []
+  const arr2 = []
+
+  while (fast) {
+    arr1.push(slow.val)
+    slow = slow.next
+    arr2.push(fast.val)
+    fast = fast.next
+  }
+  return arr1.join('') === arr2.reverse().join('')
+}

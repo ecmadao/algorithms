@@ -17,6 +17,7 @@
  */
 
 /**
+ * ============================= Solution failed =============================
  * Time out solution
  */
 
@@ -59,14 +60,15 @@ var shortestPalindrome_timeout = function(s) {
 };
 
 /**
- * Accepted solution
+ * ============================= Solution 1 =============================
+ * Accepted solution, trick
  */
 
 /**
  * @param {string} s
  * @return {string}
  */
-var shortestPalindrome = function(s) {
+var shortestPalindrome_1 = function(s) {
   const reversed = s.split('').reverse().join('');
 
   for (let i = 0; i < s.length; i += 1) {
@@ -78,11 +80,44 @@ var shortestPalindrome = function(s) {
 };
 
 /**
- * KMP solution
+ * ============================= Solution 2 =============================
+ * Accepted solution, Brute force
  */
 
-// https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation
-var shortestPalindrome_kmp = function(s) {
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var shortestPalindrome_2 = function(s) {
+  let j = s.length - 1
+
+  while (j > 0) {
+    while (j > 0 && s[0] !== s[j]) j -= 1
+
+    let left = 0
+    let right = j
+    while (left < right && s[left] === s[right]) {
+      left += 1
+      right -= 1
+    }
+
+    if (left >= right) return `${s.slice(j + 1).split('').reverse().join('')}${s}`
+    j -= 1
+  }
+  return `${s.slice(1).split('').reverse().join('')}${s}`
+}
+
+/**
+ * ============================= Solution 3 =============================
+ * Accepted solution, KMP solution
+ * https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation
+ */
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var shortestPalindrome_3 = function(s) {
   const reverse = str => str.split('').reverse().join('');
   const reversed = reverse(s);
   const tmpStr = s + '#' + reversed;

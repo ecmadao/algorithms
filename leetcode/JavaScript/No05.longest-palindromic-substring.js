@@ -61,33 +61,26 @@ var longestPalindrome_1 = function(s) {
  */
 var longestPalindrome_2 = function(s) {
   if (s.length <= 1) return s
-  const tmp = {}
+
+  const dp = []
   let result = s[0]
 
   for (let i = 0; i < s.length; i += 1) {
-    if (!tmp[i]) tmp[i] = []
-    tmp[i][i] = true
+    if (!dp[i]) dp[i] = []
+    dp[i][i] = true
 
     let j = i - 1
     while (j >= 0 && i + (i - j) <= s.length) {
-      if (!tmp[j]) tmp[j] = []
-      tmp[j][j] = true
+      // 奇数对称的回文
+      const r1 = i + (i - j)
+      dp[j][r1] = s[j] === s[r1] && dp[j + 1][r1 - 1] !== false
 
-      const l1 = i + (i - j)
-      if (l1 < s.length) {
-        tmp[j][l1] = s[j] === s[l1] && tmp[j + 1][l1 - 1] !== false
-      }
+      // 偶数对称的回文
+      const r2 = i + (i - j) - 1
+      dp[j][r2] = s[j] === s[r2] && dp[j + 1][r2 - 1] !== false
 
-      const l2 = i + (i - j) - 1
-      tmp[j][l2] = s[j] === s[l2] && tmp[j + 1][l2 - 1] !== false
-
-      if (tmp[j][l1] && l1 + 1 - j > result.length) {
-        result = s.slice(j, l1 + 1)
-      }
-
-      if (tmp[j][l2] && l2 + 1 - j > result.length) {
-        result = s.slice(j, l2 + 1)
-      }
+      if (dp[j][r1] && r1 - j + 1 > result.length) result = s.slice(j, r1 + 1)
+      if (dp[j][r2] && r2 - j + 1 > result.length) result = s.slice(j, r2 + 1)
 
       j -= 1
     }
@@ -95,7 +88,6 @@ var longestPalindrome_2 = function(s) {
 
   return result
 }
-
 
 /*
  * 除了上面的方法以外，还有一种更加优化的方式，叫做 Manacher 算法

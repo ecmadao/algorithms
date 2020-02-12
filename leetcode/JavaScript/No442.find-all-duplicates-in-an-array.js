@@ -30,7 +30,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var findDuplicates = function(nums) {
+var findDuplicates_1 = function(nums) {
   var results = [];
   for (let i = 0; i < nums.length; i += 1) {
     if (nums[i] != nums[nums[i] - 1]) {
@@ -59,16 +59,16 @@ var findDuplicates = function(nums) {
  * @param {number[]} nums
  * @return {number[]}
  */
-var findDuplicates2 = function(nums) {
-  var results = [];
-  for (var i = 0; i < nums.length; i += 1) {
-    var num = Math.abs(nums[i]);
-    var index = num - 1;
-    if (nums[index] < 0) {
-      results.push(num);
+var findDuplicates_2 = function(nums) {
+  const result = []
+
+  for (let i = 0; i < nums.length; i += 1) {
+    const num = Math.abs(nums[i])
+    if (nums[num - 1] < 0) {
+      result.push(num)
     } else {
-      nums[index] = -nums[index];
+      nums[num - 1] = -nums[num - 1]
     }
   }
-  return results;
-};
+  return result
+}

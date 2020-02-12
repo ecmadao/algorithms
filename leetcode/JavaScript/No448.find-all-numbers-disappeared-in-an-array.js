@@ -26,20 +26,20 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function(nums) {
-  for (var i = 0; i < nums.length; i += 1) {
-    if (nums[i] != nums[nums[i] - 1]) {
-      var num = nums[i];
-      nums[i] = nums[num - 1];
-      nums[num - 1] = num;
-      i -= 1;
+  let i = 0
+  while (i < nums.length) {
+    const num = nums[i]
+    if (nums[num - 1] !== num) {
+      nums[i] = nums[num - 1]
+      nums[num - 1] = num
+    } else {
+      i += 1
     }
   }
-  var results = [];
-  for (var i = 0; i < nums.length; i += 1) {
-    var num = nums[i];
-    if (num === i + 1) continue;
-    results.push(i + 1);
-  }
-  return results;
-};
 
+  const result = []
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] !== i + 1) result.push(i + 1)
+  }
+  return result
+}

@@ -292,6 +292,8 @@ const shuffing = (array) => {
 
 ### 二分排序
 
+> [特别好用的二分查找法模板（Python 代码、Java 代码）-第 2 版](https://www.liwei.party/2019/06/19/leetcode-solution-new/search-insert-position/#toc-heading-6)
+
 ```javascript
 // 二分搜索
 // 查找目标值，如果不存在，则在最后的索引两侧查找可以插入的位置
@@ -330,9 +332,8 @@ console.log(search([0, 9], 3))
 console.log(search([0, 1, 3, 9], 5))
 ```
 
-### 排序算法的稳定性
-
-References:
+### References
 
 - [常见排序算法的稳定性分析和结论](https://blog.csdn.net/ithomer/article/details/5636226)
 - [Wiki - 排序算法稳定性](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95#%E7%A9%A9%E5%AE%9A%E6%80%A7)
+- [JavaScript 数组乱序](https://github.com/lessfish/underscore-analysis/issues/15)

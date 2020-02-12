@@ -29,6 +29,8 @@
  * 以及一个 Map 快速索引：
  * 1. 新插入，或者调用一个缓存时，该缓存被激活，认为是最频繁使用的，放在链表尾部
  * 2. 缓存满了之后，删除链表头部的缓存
+ *
+ * 如何实现 LRU 缓存机制: https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484500&amp;idx=1&amp;sn=83f4df1253f597898b2f74ea9dca9fd9&source=41#wechat_redirect
  */
 
 var ListNode = function(key, val, pre = null) {

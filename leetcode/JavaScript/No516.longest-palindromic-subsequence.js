@@ -18,6 +18,8 @@
  * Output:
  * 2
  * One possible longest palindromic subsequence is "bb".
+ *
+ * 给定一个字符串s，找到其中最长的回文子序列。可以假设s的最大长度为1000
  */
 
 /**
@@ -25,8 +27,9 @@
  * @return {number}
  *
  * Solution 1 - Memory Limit Exceeded
+ * 超时
  */
-var longestPalindromeSubseq_MLE = function(s) {
+var longestPalindromeSubseq_1 = function(s) {
   const tmp = {};
   const getNextEndIndex = (start, end) => {
     let i = end;
@@ -61,28 +64,37 @@ var longestPalindromeSubseq_MLE = function(s) {
 /**
  * @param {string} s
  * @return {number}
+ *
+ * =================================================================== Solution 2 ===================================================================
+ * 动态规划
  */
-var longestPalindromeSubseq = function(s) {
-  const tmpLen = [];
-  for (let i = s.length - 1; i >= 0; i -= 1) {
-    tmpLen[i] = [];
-    tmpLen[i][i] = 1;
-    const letter = s[i];
+var longestPalindromeSubseq_2 = function(s) {
+  if (s.length <= 1) return s.length
+  const dp = []
+  let result = 1
 
-    for (let j = i + 1; j < s.length; j += 1) {
-      let len = 0;
-      if (letter === s[j]) {
-        len = (tmpLen[i + 1] && tmpLen[i + 1][j - 1] ? tmpLen[i + 1][j - 1] : 0) + 2;
+  for (let i = 0; i < s.length; i += 1) {
+    if (!dp[i]) dp[i] = []
+    dp[i][i] = 1
+
+    let j = i - 1
+    while (j >= 0) {
+      let len = 0
+      if (s[j] === s[i]) {
+        len = (dp[j + 1] && dp[j + 1][i - 1] ? dp[j + 1][i - 1] : 0) + 2
       }
-      tmpLen[i][j] = Math.max(
+      dp[j][i] = Math.max(
         len,
-        tmpLen[i + 1][j],
-        tmpLen[i][j - 1]
-      );
+        dp[j + 1][i],
+        dp[j][i - 1]
+      )
+
+      result = Math.max(result, dp[j][i])
+      j -= 1
     }
   }
-  return tmpLen[0][s.length - 1];
-};
+  return result
+}
 
 
 // Test case
