@@ -2,6 +2,7 @@
  * Difficulty:
  * Medium
  *
+ * Desc:
  * Given an array of integers,
  * find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t
  * and the absolute difference between i and j is at most k.
@@ -21,7 +22,7 @@
  *
  * 因此思路如下：
  * 遍历数组，维护一个大小 <= k 的滑动窗口，以此保证任意两数的索引只差 <= k
- * 针对窗口内每个索引对应的数子，利用 t 求出其所属的桶，借此进行判断
+ * 针对窗口内每个索引对应的数字，利用 t 求出其所属的桶，借此进行判断
  */
 
 /**
@@ -29,26 +30,55 @@
  * @param {number} k
  * @param {number} t
  * @return {boolean}
+ *
+ * 滑动窗口 + 桶
  */
 var containsNearbyAlmostDuplicate = function(nums, k, t) {
-  if (t < 0 || k <= 0 || !nums.length) return false;
-  var tmp = {};
-  var w = t + 1;
-  for (var i = 0; i < nums.length; i += 1) {
-    var num = nums[i];
-    var n = Math.floor(num / w);
-    if (tmp[n] !== undefined) {
-      return true;
+  if (!nums.length || !k || t < 0) return false
+
+  const bucket = new Map()
+  const bucketWidth = t + 1
+
+  let i = 0
+  while (i < nums.length) {
+    const index = Math.floor(nums[i] / bucketWidth)
+    if (bucket.has(index)) return true
+    if (index && bucket.has(index - 1)) {
+      if (Math.abs(bucket.get(index - 1) - nums[i]) <= t) return true
     }
-    if (tmp[n - 1] !== undefined && Math.abs(tmp[n - 1] - num) < w) {
-      return true;
+    if (bucket.has(index + 1)) {
+      if (Math.abs(bucket.get(index + 1) - nums[i]) <= t) return true
     }
-    if (tmp[n + 1] !== undefined && Math.abs(tmp[n + 1] - num) < w) {
-      return true;
+    bucket.set(index, nums[i])
+    // 到达桶边界，删除上一个桶
+    if (i >= k) {
+      bucket.delete(
+        Math.floor(nums[i - k] / bucketWidth)
+      )
     }
-    tmp[n] = num;
-    // 把超出索引范围的数字所属的桶去除
-    if (i >= k) delete tmp[Math.floor(nums[i - k] / w)];
+    i += 1
   }
-  return false;
-};
+  return false
+}
+
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @param {number} t
+ * @return {boolean}
+ *
+ * 滑动窗口 + 暴力破解
+ */
+var containsNearbyAlmostDuplicate_2 = function(nums, k, t) {
+  for (let i = 0; i < nums.length - 1; i += 1) {
+    let j = i + 1
+
+    while (j < nums.length && j - i <= k) {
+      if (Math.abs(nums[j] - nums[i]) <= t) return true
+      j += 1
+    }
+  }
+  return false
+}

@@ -31,34 +31,33 @@
  * https://leetcode.com/articles/sequential-digits/
  */
 var sequentialDigits = function(low, high) {
-  const queue = ['1','2','3','4','5','6','7','8','9']
+  if (low < high) return []
+
+  // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  const digits = Array.from({ length: 9 }, (_, i) => i + 1)
   const result = []
 
-  let i = queue.indexOf(`${low}`[0])
-  let interval = `${low}`.length
-  let j = i + interval
+  let min = `${low}`.length
+  const max = `${high}`.length
 
   while (true) {
-    if (j >= queue.length + 1) {
-      if (i === 0) break
-      i = 0
-      interval += 1
-      j = i + interval
-    } else {
-      const num = Number(queue.slice(i, j).join(''))
-      if (num <= high && num >= low) {
-        result.push(num)
-        i += 1
-        j += 1
-      } else if (num > high) {
-        i = 0
-        interval += 1
-        j = i + interval
-      } else if (num < low) {
-        i += 1
-        j += 1
-      }
+    let i = 0
+    let j = 0
+    while (j < min) j += 1
+    if (j > max) break
+
+    while (j <= digits.length && parseInt(digits.slice(i, j).join('')) < low) {
+      i += 1
+      j += 1
     }
+
+    while (j <= digits.length && parseInt(digits.slice(i, j).join('')) <= high) {
+      result.push(parseInt(digits.slice(i, j).join('')))
+      j += 1
+      i += 1
+    }
+
+    min += 1
   }
 
   return result

@@ -25,6 +25,14 @@
  * words -> ["a","b","a"]
  * result -> [0, 2, 4]
  *
+ * s -> "a"
+ * words -> ["a"]
+ * result -> [0]
+ *
+ * s -> "aaaaaaaa"
+ * words -> ["aa","aa","aa"]
+ * result -> [0, 1, 2]
+ *
  * 注意几个问题：
  * 1. words 中元素可以重复
  * 2. words 中各元素长度一样
@@ -83,7 +91,7 @@ var mathString = function(words, totalLength) {
 * @param {string[]} words
 * @return {number[]}
 */
-var findSubstring = function(s, words) {
+var findSubstring_1 = function(s, words) {
   var result = [];
   if (!words.length) return result;
   // words 中各元素长度一样，则可以求出子字符串长度 length
@@ -103,3 +111,69 @@ var findSubstring = function(s, words) {
   }
   return result;
 };
+
+// =========================================================== Solution 2 ===========================================================
+
+/**
+ * @param {string} s
+ * @param {string[]} words
+ * @return {number[]}
+ *
+ * 滑动窗口
+ */
+var findSubstring_2 = function(s, words) {
+  let maxWordLen = 0
+  let minWordLen = 0
+  let count = words.length
+  let totalLen = 0
+
+  const MAP = words.reduce((map, word) => {
+    map[word] = (map[word] || 0) + 1
+    maxWordLen = Math.max(maxWordLen, word.length)
+    minWordLen = Math.min(minWordLen, word.length)
+    totalLen += word.length
+    return map
+  }, {})
+  const result = []
+
+  let dict = Object.assign({}, MAP)
+
+  for (const word of Object.keys(dict)) {
+    let index = 0
+    while (s.length - index >= totalLen) {
+      const nextStart = s.slice(index).indexOf(word)
+      if (nextStart === -1) break
+
+      index += nextStart
+
+      let i = index + word.length
+      let j = i + minWordLen
+
+      dict[word] -= 1
+      count -= 1
+
+      while (j <= s.length && j - i <= maxWordLen) {
+        if (dict[s.slice(i, j)]) {
+          dict[s.slice(i, j)] -= 1
+          i = j
+          j += minWordLen
+          count -= 1
+          if (count === 0) break
+        } else {
+          j += 1
+        }
+      }
+
+      if (!count) {
+        result.push(index)
+      }
+
+      count = words.length
+      dict = Object.assign({}, MAP)
+
+      index += 1
+    }
+  }
+
+  return result
+}

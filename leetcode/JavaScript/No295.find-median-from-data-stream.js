@@ -32,6 +32,14 @@
  * 2. double findMedian() - 返回目前所有元素的中位数
  */
 
+/*
+ * ================================================================= Solution 1 =================================================================
+ * 最大堆 + 最小堆
+ * 用于存储输入数字中较小一半的最大堆
+ * 用于存储输入数字的较大一半的最小堆
+ * 则取两个堆的堆顶元素，就是整个有序数组的中位数了
+ */
+
 const more = (a, b) => a - b > 0;
 const less = (a, b) => a - b < 0;
 // 数组中的两个元素交换位置
@@ -231,3 +239,63 @@ obj.addNum(9);
 console.log(obj.findMedian());
 obj.addNum(10);
 console.log(obj.findMedian());
+
+/*
+ * ================================================================= Solution 2 =================================================================
+ * 二分搜索查找插入位
+ */
+
+const searchInsert = (nums, val) => {
+  if (!nums.length) return 0
+  if (nums[0] >= val) return 0
+  if (nums[nums.length - 1] <= val) return nums.length
+
+  let i = 0
+  let j = nums.length - 1
+
+  while (i <= j) {
+    const mid = Math.floor((i + j) / 2)
+    const num = nums[mid]
+    if (num === val) return mid
+    if (num < val) {
+      i = mid + 1
+    } else {
+      j = mid - 1
+    }
+  }
+  return i
+}
+
+/**
+* initialize your data structure here.
+*/
+var MedianFinder = function() {
+  this.nums = []
+}
+
+/**
+* @param {number} num
+* @return {void}
+*/
+MedianFinder.prototype.addNum = function(num) {
+  const index = searchInsert(this.nums, num)
+  this.nums.splice(index, 0, num)
+}
+
+/**
+* @return {number}
+*/
+MedianFinder.prototype.findMedian = function() {
+  if (this.nums.length % 2 === 0) {
+    return (this.nums[this.nums.length / 2] + this.nums[this.nums.length / 2 - 1]) / 2
+  } else {
+    return this.nums[(this.nums.length - 1) / 2]
+  }
+}
+
+/**
+* Your MedianFinder object will be instantiated and called as such:
+* var obj = new MedianFinder()
+* obj.addNum(num)
+* var param_2 = obj.findMedian()
+*/
