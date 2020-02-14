@@ -131,3 +131,18 @@
 > [二分搜索只能用来查找元素吗？](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484598&idx=1&sn=69edaf4a7f6bfd0b1185cae5d0689c1d&chksm=9bd7fabeaca073a8820bc93cb67a8e26fa9eaa1ab9717b7e3ac41b4aac12235067c8af3520d5&scene=21#wechat_redirect)
 >
 > [动态规划设计之最长递增子序列 - 二分查找解法](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484498&idx=1&sn=df58ef249c457dd50ea632f7c2e6e761&chksm=9bd7fa5aaca0734c29bcf7979146359f63f521e3060c2acbf57a4992c887aeebe2a9e4bd8a89&scene=21#wechat_redirect)
+
+### 区间调度问题
+
+> [贪心算法之区间调度问题](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484493&amp;idx=1&amp;sn=1615b8a875b770f25875dab54b7f0f6f&source=41#wechat_redirect)
+>
+> [区间问题之合并相交区间](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484492&amp;idx=1&amp;sn=578d4bf538908b8042ed38ee92405455&source=41#wechat_redirect)
+>
+> [最长递增子序列之信封嵌套问题](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484494&amp;idx=1&amp;sn=0e90d7fbf812fd1f4c408b5cc5fdf8c6&source=41#wechat_redirect)
+
+- [No56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+- [No253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
+- [No354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)
+- [No435. 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals/)
+- [No646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
+- [No1024. 视频拼接](https://leetcode-cn.com/problems/video-stitching/comments/)

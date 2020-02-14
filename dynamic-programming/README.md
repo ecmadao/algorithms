@@ -41,9 +41,11 @@
 #### 基本的状态转移
 
 > [动态规划详解（修订版）](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484731&idx=1&sn=f1db6dee2c8e70c42240aead9fd224e6&chksm=9bd7fb33aca07225bee0b23a911c30295e0b90f393af75eca377caa4598ffb203549e1768336&scene=21#wechat_redirect)
+>
+> [动态规划答疑篇](https://mp.weixin.qq.com/s/qvlfyKBiXVX7CCwWFR-XKg)
 
-- [No509. 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/) - 可以 O(1) 空间、O(n) 时间
 - [No70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/submissions/)
+- [No509. 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/)
 
 #### 子序列问题
 
@@ -52,6 +54,10 @@
 > [经典面试题：最长公共子序列](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484486&idx=1&sn=0bdcb94c6390307ea32427757ec0072c&chksm=9bd7fa4eaca073583623cdb93b05dc9e1d0757b25697bb40b29b3e450124e929ff1a8eaac50f&scene=21#wechat_redirect)
 >
 > [子序列解题模板：最长回文子序列](https://mp.weixin.qq.com/s/zNai1pzXHeB2tQE6AdOXTA)
+
+- [No300. Longest Increasing Subsequence](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+- [No354. Russian Doll Envelopes](https://leetcode-cn.com/problems/russian-doll-envelopes/)
+- [No646. Maximum Length of Pair Chain](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 
 #### 状态机问题
 
@@ -65,3 +71,9 @@
 > [动态规划之博弈问题](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484496&amp;idx=1&amp;sn=d04bb89cb1df241993c6b46ffcabae7e&source=41#wechat_redirect)
 
 - [No877. 石子游戏](https://leetcode-cn.com/problems/stone-game/)
+- [No1025. 除数博弈](https://leetcode-cn.com/problems/divisor-game/)
+
+#### 背包问题
+
+- [No474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)
+- [No651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
