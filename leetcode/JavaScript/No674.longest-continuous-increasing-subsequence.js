@@ -23,7 +23,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findLengthOfLCIS = function(nums) {
+var findLengthOfLCIS_1 = function(nums) {
   let result = 0
 
   let tmp = 0

@@ -29,24 +29,27 @@
  * @param {TreeNode} root
  * @param {number} k
  * @return {number}
+ *
+ * 利用中序遍历，在 BST 二叉树中将从小到大返回数据
  */
 var kthSmallest = function(root, k) {
-  const arr = [];
-  const tmps = [];
-  let node = root;
-  while (node || tmps.length) {
+  let node = root
+  let queue = []
+  let result = []
+
+  while (node || queue.length) {
     if (node) {
-      tmps.push(node);
-      node = node.left;
+      queue.push(node)
+      node = node.left
     } else {
-      const tmp = tmps.pop();
-      arr.push(tmp.val);
-      node = tmp.right;
+      node = queue.pop()
+      result.push(node.val)
+      if (result.length === k) return result.pop()
+      node = node.right
     }
-    if (arr.length === k) break;
   }
-  return arr[k - 1];
-};
+  return result.pop()
+}
 
 /**
  * 方法二：计算每个节点所拥有的左右子节点总数

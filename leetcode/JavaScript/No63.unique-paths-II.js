@@ -29,7 +29,7 @@
  * @param {number[][]} obstacleGrid
  * @return {number}
  */
-var uniquePathsWithObstacles = function(obstacleGrid) {
+var uniquePathsWithObstacles_1 = function(obstacleGrid) {
   var steps = [];
   for (var i = 0; i < obstacleGrid.length; i += 1) {
     var col = obstacleGrid[i];
@@ -54,11 +54,51 @@ var uniquePathsWithObstacles = function(obstacleGrid) {
   return steps[`${obstacleGrid.length - 1}${obstacleGrid[0].length - 1}`];
 };
 
-console.log(uniquePathsWithObstacles([ [ 0 ] ]));
-console.log(uniquePathsWithObstacles(
-  [
-    [0,0,0],
-    [0,1,0],
-    [0,0,0]
+/**
+ * @param {number[][]} obstacleGrid
+ * @return {number}
+ *
+ * 动态规划
+ */
+var uniquePathsWithObstacles_2 = function(obstacleGrid) {
+  if (!obstacleGrid.length) return 0
+  if (obstacleGrid[0][0]) return 0
+
+  const m = obstacleGrid.length
+  const n = obstacleGrid[0].length
+
+  const dp = [
+    [
+      obstacleGrid[0][0] === 1 ? 0 : 1
+    ]
   ]
-));
+
+  for (let i = 0; i < m; i += 1) {
+    if (!dp[i]) dp[i] = []
+    for (let j = 0; j < n; j += 1) {
+      if (i === 0 && j === 0) continue
+      if (obstacleGrid[i][j]) {
+        dp[i][j] = 0
+      } else {
+        dp[i][j] = (i - 1 >= 0 ? dp[i - 1][j] : 0) + (j - 1 >= 0 ? dp[i][j - 1] : 0)
+      }
+    }
+  }
+  return dp[m - 1][n - 1]
+}
+
+console.log(
+  uniquePathsWithObstacles_2([[0]])
+)
+console.log(
+  uniquePathsWithObstacles_2([[1]])
+)
+console.log(
+  uniquePathsWithObstacles_2(
+    [
+      [0,0,0],
+      [0,1,0],
+      [0,0,0]
+    ]
+  )
+)

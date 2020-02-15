@@ -53,7 +53,7 @@ var findBottomBorder = function(matrix, row, column, tmp) {
 * @param {character[][]} matrix
 * @return {number}
 */
-var maximalRectangle = function(matrix) {
+var maximalRectangle_1 = function(matrix) {
   var area = 0;
   var tmp = {};
 
@@ -80,3 +80,70 @@ var maximalRectangle = function(matrix) {
   }
   return area;
 };
+
+
+/**
+ * @param {character[][]} matrix
+ * @return {number}
+ */
+var maximalRectangle_2 = function(matrix) {
+  const dp = []
+  let result = 0
+
+  for (let i = 0; i < matrix.length; i += 1) {
+    dp[i] = []
+    for (let j = 0; j < matrix[i].length; j += 1) {
+      if (matrix[i][j] === '0') {
+        dp[i][j] = { left: 0, top: 0 }
+        continue
+      }
+
+      if (i === 0 || j === 0) {
+        dp[i][j] = {
+          left: (j - 1 >= 0 ? dp[i][j - 1].left : 0) + 1,
+          top: (i - 1 >= 0 ? dp[i - 1][j].top : 0) + 1
+        }
+        result = Math.max(
+          result,
+          dp[i][j].left,
+          dp[i][j].top
+        )
+        continue
+      }
+
+      if (dp[i][j - 1].left === 0 || dp[i - 1][j].top === 0) {
+        result = Math.max(
+          result,
+          Math.max(dp[i][j - 1].left, dp[i - 1][j].top) + 1
+        )
+      } else {
+        let J = j - 1
+        let height = dp[i - 1][j].top + 1
+        while (J > j - dp[i - 1][j].left && dp[i][J].left && dp[i][J].top) {
+          height = Math.min(height, dp[i][J].top)
+          J -= 1
+        }
+
+        let I = i - 1
+        let width = dp[i][j - 1].left + 1
+        while (I > i - dp[i][j - 1].top && dp[I][j].left && dp[I][j].top) {
+          width = Math.min(width, dp[I][j].left)
+          I -= 1
+        }
+
+        result = Math.max(
+          result,
+          height * (j - J),
+          width * (i - I)
+        )
+      }
+
+      dp[i][j] = {
+        left: dp[i][j - 1].left + 1,
+        top: dp[i - 1][j].top + 1
+      }
+    }
+  }
+
+  return result
+}

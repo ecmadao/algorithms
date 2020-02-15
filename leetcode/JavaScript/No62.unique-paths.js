@@ -25,16 +25,18 @@ var goFromBack = function(m, n) {
 };
 
 /**
-* @param {number} m
-* @param {number} n
-* @return {number}
-*/
-var uniquePaths = function(m, n) {
+ * @param {number} m
+ * @param {number} n
+ * @return {number}
+ *
+ * 递归
+ */
+var uniquePaths_1 = function(m, n) {
   return goFromBack(m, n);
 };
 
-console.log(uniquePaths(23, 12));
-console.log(uniquePaths(3, 7));
+console.log(uniquePaths_1(23, 12));
+console.log(uniquePaths_1(3, 7));
 
 /**
  * 再进一步优化上面的方法
@@ -42,7 +44,7 @@ console.log(uniquePaths(3, 7));
  * 因此在遍历的过程中进行累加
  */
 // Advance version
-var uniquePaths2 = function(m, n) {
+var uniquePaths_2 = function(m, n) {
   var steps = [];
 
   for (var i = 1; i <= m; i += 1) {
@@ -60,5 +62,26 @@ var uniquePaths2 = function(m, n) {
   return steps[`${m}${n}`];
 };
 
-console.log(uniquePaths2(23, 12));
-console.log(uniquePaths2(3, 7));
+
+/**
+ * @param {number} m
+ * @param {number} n
+ * @return {number}
+ *
+ * 动态规划
+ */
+var uniquePaths_3 = function(m, n) {
+  const dp = Array.from({ length: m }, (_, i) => {
+    return Array.from({ length: n }, (_, j) => i === 0 ? 1 : (j === 0 ? 1 : 0))
+  })
+
+  for (let i = 1; i < m; i += 1) {
+    for (let j = 1; j < n; j += 1) {
+      dp[i][j] = (dp[i - 1][j] || 0) + (dp[i][j - 1] || 0)
+    }
+  }
+  return dp[m - 1][n - 1]
+}
+
+console.log(uniquePaths_3(23, 12))
+console.log(uniquePaths_3(3, 7))

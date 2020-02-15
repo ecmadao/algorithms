@@ -14,8 +14,8 @@
 1. 判断是否是动态规划问题：
 
 - 使用动态规划的问题一般都有一些特点可以遵循。例如，求最大/最小值；求可不可行；求方案总数。
-- 大规模问题的答案可以由小规模问题的答案递推得到。例如`f[i] = max{f[j] if j < i and …} + 1`, `f[i][j] = f[i - 1][j] + f[i][j - 1]`
-- 子问题的求解思路除了规模之外，没有任何区别
+- 大规模问题的答案可以由小规模问题的答案递推得到。即，**状态可以转移**，例如`f[i] = max{f[j] if j < i and …} + 1`, `f[i][j] = f[i - 1][j] + f[i][j - 1]`
+- 子问题的求解思路除了规模之外，没有任何区别。子问题相互独立，即**最优子结构**。可以从子问题的最优结果推断出更大规模问题的最优结果
 - 如果一个问题是要求出“所有的”方案和结果，则肯定不是使用动态规划
 - 有递归终止条件
 
@@ -32,9 +32,20 @@
 2. 缓存并复用以往结果
 3. 按顺序从小往大算
 
+确认遍历方式：
+
+1. 遍历的过程中，所需的状态必须是已经计算出来的
+2. 遍历的终点必须是存储结果的那个位置
+
+明确问题（求什么） -> 明确状态（达成解时的状态时什么） -> 明确子问题（状态转移） -> 确认遍历方式（自底向上解决问题，遍历方式依赖于状态转移方向） -> 明确 base case（边界条件）
+
 ### 概念
 
+0. 求最值
 1. 无后效性
+2. 重叠子问题
+3. 最优子结构
+4. 自底向上
 
 ### LeetCode
 
@@ -43,9 +54,13 @@
 > [动态规划详解（修订版）](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484731&idx=1&sn=f1db6dee2c8e70c42240aead9fd224e6&chksm=9bd7fb33aca07225bee0b23a911c30295e0b90f393af75eca377caa4598ffb203549e1768336&scene=21#wechat_redirect)
 >
 > [动态规划答疑篇](https://mp.weixin.qq.com/s/qvlfyKBiXVX7CCwWFR-XKg)
+>
+> [动态规划：不同的定义产生不同的解法](https://mp.weixin.qq.com/s/DeanOw0acBNU1ZoI4cE8nw)
 
 - [No70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/submissions/)
 - [No509. 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/)
+- [No983. 最低票价](https://leetcode-cn.com/problems/minimum-cost-for-tickets/)
+- [No1230. 抛掷硬币](https://leetcode-cn.com/problems/toss-strange-coins/)
 
 #### 子序列问题
 
@@ -77,3 +92,5 @@
 
 - [No474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)
 - [No651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
+- [No322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+- [No518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)

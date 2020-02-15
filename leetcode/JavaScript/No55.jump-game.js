@@ -40,7 +40,7 @@ var getZeroIndexs = function(nums) {
 * @param {number[]} nums
 * @return {boolean}
 */
-var canJump_normal = function(nums) {
+var canJump_1 = function(nums) {
   if (nums.length === 1) return true;
   var zeroIndexs = getZeroIndexs(nums);
   if (!zeroIndexs.length) return true;
@@ -87,7 +87,7 @@ var canJump_normal = function(nums) {
 * @param {number[]} nums
 * @return {boolean}
 */
-var canJump = function(nums) {
+var canJump_2 = function(nums) {
   var last = nums.length - 1;
   for (var i = last; i >= 0; i -= 1) {
     if (nums[i] + i >= last) {
@@ -97,6 +97,25 @@ var canJump = function(nums) {
   return last === 0;
 };
 
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ *
+ * 动态规划
+ */
+var canJump_3 = function(nums) {
+  const dp = [true]
+  for (let i = 1; i < nums.length; i += 1) {
+    dp[i] = false
+    for (let j = i - 1; j >= 0; j -= 1) {
+      if (dp[j] && nums[j] >= i - j) {
+        dp[i] = true
+        break
+      }
+    }
+  }
+  return dp[nums.length - 1]
+}
 
 // Test case
 // [3,0,0,0]
