@@ -24,9 +24,9 @@
  * @param {string[]} wordDict
  * @return {boolean}
  *
- * DFS
+ * 自顶向下，带备忘录的 DFS
  */
-var wordBreak = function(s, wordDict) {
+var wordBreak_1 = function(s, wordDict) {
   const set = new Set(wordDict)
   const tmp = {}
 
@@ -54,20 +54,18 @@ var wordBreak = function(s, wordDict) {
  * @param {string[]} wordDict
  * @return {boolean}
  *
- * Dynamic Programming
+ * 自低向上 动态规划
  */
-const wordBreak_2 = (s, wordDict) => {
+var wordBreak_2 = function(s, wordDict) {
   const set = new Set(wordDict)
-  const tmp = [true]
+  const dp = [true]
 
   for (let i = 1; i <= s.length; i += 1) {
-    for (let j = 0; j < i; j += 1) {
-      if (tmp[j] && set.has(s.slice(j, i))) {
-        tmp[i] = true
-        break
-      }
+    dp[i] = false
+    for (let j = i - 1; j >= 0; j -= 1) {
+      dp[i] = set.has(s.slice(j, i)) && (j === 0 ? true : dp[j])
+      if (dp[i]) break
     }
   }
-
-  return tmp[s.length] === true
+  return dp[s.length]
 }

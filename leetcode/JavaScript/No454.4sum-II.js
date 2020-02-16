@@ -37,28 +37,24 @@
  * @return {number}
  */
 var fourSumCount = function(A, B, C, D) {
-  let result = 0;
+  const map = {}
+  let result = 0
 
-  const sumTmpAB = {};
-  for (let a = 0; a < A.length; a += 1) {
-    const numA = A[a];
-    for (let b = 0; b < B.length; b += 1) {
-      const numB = B[b];
-      const sumAB = numA + numB;
-      sumTmpAB[sumAB] = sumTmpAB[sumAB] ? sumTmpAB[sumAB] + 1 : 1;
+  for (const a of A) {
+    for (const b of B) {
+      const num = 0 - (a + b)
+      map[num] = (map[num] || 0) + 1
     }
   }
 
-  for (let c = 0; c < C.length; c += 1) {
-    const numC = C[c];
-    for (let d = 0; d < D.length; d += 1) {
-      const numD = D[d];
-      const sumCD = numC + numD;
-      result += sumTmpAB[0 - sumCD] || 0;
+  for (const c of C) {
+    for (const d of D) {
+      if (map[c + d]) result += map[c + d]
     }
   }
-  return result;
-};
+
+  return result
+}
 
 // Testcase
 let A;

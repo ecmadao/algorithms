@@ -21,16 +21,11 @@
  * 4. Assume you have Uk, the kth ugly number. Then Uk+1 must be Min(L1 * 2, L2 * 3, L3 * 5).
  */
 
-var min = function(a, b, c) {
-  var tmp = a < b ? a : b;
-  return tmp < c ? tmp : c;
-};
-
 /**
 * @param {number} n
 * @return {number}
 */
-var nthUglyNumber = function(n) {
+var nthUglyNumber_1 = function(n) {
   var index2 = 0;
   var index3 = 0;
   var index5 = 0;
@@ -44,7 +39,7 @@ var nthUglyNumber = function(n) {
     var num5 = queue[index5] * 5;
     var num;
 
-    var num = min(num2, num3, num5);
+    var num = Math.min(num2, num3, num5);
     if (num === num2) {
       index2 += 1;
     } else if (num === num3) {
@@ -59,3 +54,36 @@ var nthUglyNumber = function(n) {
   }
   return queue[n - 1];
 };
+
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var nthUglyNumber_2 = function(n) {
+  const ugly = [1, 1, 1]
+  const index = [0, 0, 0]
+
+  for (let i = 1; i < n; i += 1) {
+    const n1 = ugly[index[0]] * 2
+    const n2 = ugly[index[1]] * 3
+    const n3 = ugly[index[2]] * 5
+    const min = Math.min(n1, n2, n3)
+
+    // 要使用三个并列的if让指针指向一个更大的数，不能用 else if。因为有这种情况：
+    // 丑数 6，可能由于丑数 2 乘以 3 产生；也可能由于丑数 3 乘以 2 产生。
+    // 丑数 10 = 2 * 5 = 5 * 2
+    // 等等
+    if (min === n1) {
+      index[0] += 1
+    }
+    if (min === n2) {
+      index[1] += 1
+    }
+    if (min === n3) {
+      index[2] += 1
+    }
+    ugly[i] = min
+  }
+  return ugly[n - 1]
+}
