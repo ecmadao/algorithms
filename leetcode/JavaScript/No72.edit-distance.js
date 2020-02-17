@@ -29,6 +29,9 @@
  * Wiki:
  * 编辑距离：https://zh.wikipedia.org/wiki/%E7%B7%A8%E8%BC%AF%E8%B7%9D%E9%9B%A2
  * 莱文斯坦距离：https://zh.wikipedia.org/wiki/%E8%90%8A%E6%96%87%E6%96%AF%E5%9D%A6%E8%B7%9D%E9%9B%A2
+ *
+ * 详解一道腾讯面试题：编辑距离
+ * https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484484&amp;idx=1&amp;sn=74594297022c84952162a68b7f739133&source=41#wechat_redirect
  */
 
 /**
@@ -37,30 +40,32 @@
  * @return {number}
  */
 var minDistance = function(word1, word2) {
-  const tmp = [];
-  if (!word1.length || !word2.length) return Math.max(word1.length, word2.length);
+  // 如果 word1, word2 某个为空，则编辑距离一定是非空字符的长度
+  const dp = Array.from({ length: word1.length + 1 }, (v, i) => {
+    return Array.from({ length: word2.length + 1 }, (_, j) => {
+      if (j === 0) return i
+      if (i === 0) return j
+      return Infinity
+    })
+  })
 
-  for (let i = 0; i < word1.length; i += 1) {
-    tmp[i] = [];
-    const letter1 = word1[i];
+  for (let i = 1; i <= word1.length; i += 1) {
+    for (let j = 1; j <= word2.length; j += 1) {
+      const w1 = word1[i - 1]
+      const w2 = word2[j - 1]
 
-    for (let j = 0; j < word2.length; j += 1) {
-      const letter2 = word2[j];
-      if (i === 0 && j === 0) {
-        tmp[i][j] = letter1 === letter2 ? 0 : 1;
-      } else if (i === 0) {
-        tmp[i][j] = letter1 === letter2 ? j : tmp[i][j - 1] + 1;
-      } else if (j === 0) {
-        tmp[i][j] = letter1 === letter2 ? i : tmp[i - 1][j] + 1;
+      if (w1 === w2) {
+        dp[i][j] = dp[i - 1][j - 1]
       } else {
-        tmp[i][j] = Math.min(
-          tmp[i][j - 1] + 1,
-          tmp[i - 1][j] + 1,
-          tmp[i - 1][j - 1] + (letter1 === letter2 ? 0 : 1)
-        );
+        dp[i][j] = Math.min(
+          dp[i][j],
+          dp[i - 1][j] + 1, // 删除当前字符
+          dp[i][j - 1] + 1, // 插入一个新字符
+          dp[i - 1][j - 1] + 1 // 替换当前字符
+        )
       }
     }
   }
 
-  return tmp[word1.length - 1][word2.length - 1];
-};
+  return dp[word1.length][word2.length]
+}

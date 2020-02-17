@@ -55,14 +55,14 @@ var kthSmallest_1 = function(matrix, k) {
  * @param {number[][]} matrix
  * @param {number} k
  * @return {number}
- * 
+ *
  * 二分法:
  * 1. 找出二维矩阵中最小的数 left，最大的数 right，那么第 k 小的数必定在 left ~ right 之间
  * 2. mid = (left + right) / 2；在二维矩阵中寻找小于等于 mid 的元素个数 count
  * 3. 若这个 count 小于 k，表明第 k 小的数在右半部分且不包含 mid，即 left = mid + 1，又保证了第 k 小的数在 left ~ right 之间
  * 4. 若这个 count 大于 k，表明第 k 小的数在左半部分且可能包含 mid，即 right = mid，又保证了第 k 小的数在 left ~ right 之间
- * 5. 因为每次循环中都保证了第 k 小的数在 left~right 之间，当 left == right 时，第 k 小的数即被找出，等于 right
- * 
+ * 5. 因为每次循环中都保证了第 k 小的数在 left ~ right 之间，当 left == right 时，第 k 小的数即被找出，等于 right
+ *
  * 链接：https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/solution/er-fen-chao-ji-jian-dan-by-jacksu1024/
  */
 var kthSmallest_2 = function(matrix, k) {

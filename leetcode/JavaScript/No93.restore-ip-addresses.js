@@ -12,37 +12,39 @@
  * 给一个字符串，返回所有可能的合法的 IP 地址。和 N-Queens 类似的题目。注意判断 IP 合法性
  */
 
-var checkIpSection = (str) => {
-  if (!str.length || (str[0] === '0' && str.length > 1) || Number(str) > 255) return false;
-  return true;
-};
-
 /**
-* @param {string} s
-* @return {string[]}
-*/
-const restoreIpAddresses = (s) => {
-  const len = s.length;
-  const getSection = (i, layer) => {
-    if (layer === 4) {
-      if (len - i > 3) return false;
-      const section = s.slice(i);
-      if (!checkIpSection(section)) return false;
-      return [section];
-    } else {
-      const results = [];
-      for (let l = 1; l <= 3; l += 1) {
-        const num = s.slice(i, i + l);
-        if (!checkIpSection(num)) continue;
-        const result = getSection(i + l, layer + 1);
-        if (result) {
-          results.push(
-            ...result.map(str => `${num}.${str}`)
-          );
-        }
+ * @param {string} s
+ * @return {string[]}
+ */
+var restoreIpAddresses = function(s) {
+  const result = []
+
+  const isValidate = (str) => {
+    if (str.length > 1 && /^0/.test(str)) return false
+    if (str < 0 || str > 255) return false
+    return true
+  }
+
+  const restore = (index, arr) => {
+    if (index >= s.length) return
+    if (arr.length === 3) {
+      if (isValidate(s.slice(index))) {
+        result.push(`${arr.join('.')}.${s.slice(index)}`)
       }
-      return results;
+      return
     }
-  };
-  return getSection(0, 1);
-};
+
+    let i = index + 1
+    while (i - index <= 3 && i <= s.length) {
+      if (isValidate(s.slice(index, i))) {
+        arr.push(s.slice(index, i))
+        restore(i, arr)
+        arr.pop()
+      }
+      i += 1
+    }
+  }
+
+  restore(0, [])
+  return result
+}
