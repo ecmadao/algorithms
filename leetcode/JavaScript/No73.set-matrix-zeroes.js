@@ -34,9 +34,8 @@
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
-var setZeroes = function(matrix) {
+var setZeroes_1 = function(matrix) {
   var rowCount = matrix.length;
-  var columnCount = matrix[0].length;
 
   var makeRowZero = function(matrix, rowIndex) {
     var c = 1;
@@ -82,9 +81,59 @@ var setZeroes = function(matrix) {
   if (matrix[0][0] === 0) {
     makeColumnZero(matrix, 0);
   }
-};
+}
+
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+var setZeroes_2 = function(matrix) {
+  let i = 0
+
+  while (i < matrix.length) {
+    let j = 0
+    while (j < matrix[i].length) {
+      if (matrix[i][j] !== 0) {
+        j += 1
+        continue
+      }
+      matrix[i][j] = '-1'
+      let r
+      let c
+
+      r = i - 1
+      while (r >= 0 && matrix[r][j] !== 0) { matrix[r][j] = '-1'; r -= 1 }
+      r = i + 1
+      while (r < matrix.length && matrix[r][j] !== 0) { matrix[r][j] = '-1'; r += 1 }
+
+      c = j - 1
+      while (c >= 0 && matrix[i][c] !== 0) { matrix[i][c] ='-1'; c -= 1 }
+      c = j + 1
+      while (c < matrix[i].length && matrix[i][c] !== 0) { matrix[i][c] = '-1'; c += 1 }
+
+      j = c
+    }
+    i += 1
+  }
+
+  for (let i = 0; i < matrix.length; i += 1) {
+    for (let j = 0; j < matrix[i].length; j += 1) {
+      if (matrix[i][j] === '-1') matrix[i][j] = 0
+    }
+  }
+}
 
 // test case
-var m = [[1,1,1],[0,1,2]];
-setZeroes(m);
-console.log(m);
+var m = [[1,1,1],[0,1,2]]
+setZeroes_2(m)
+console.log(m)
+
+m = [
+  [0,0,0,5],
+  [4,3,1,4],
+  [0,1,1,4],
+  [1,2,1,3],
+  [0,0,1,1]
+]
+setZeroes_2(m)
+console.log(m)

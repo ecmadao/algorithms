@@ -10,7 +10,8 @@
  * given array S = {-1 2 1 -4}, and target = 1.
  * The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
  *
- * 跟 3Sum 类似，只是要求求出最接近于指定数的和
+ * 给定一个包括 n 个整数的数组 nums 和 一个目标值 target。
+ * 找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案
  */
 
 var getTowClosest = function(nums, target) {
@@ -67,37 +68,34 @@ var threeSumClosest_1 = function(nums, target) {
 
 
 /**
-* @param {number[]} nums
-* @param {number} target
-* @return {number}
-* =========== 解法二 ===========
-*/
-const threeSumClosest_2 = (nums, target) => {
-  const sortedNums = nums.sort((a, b) => a - b);
-  let result = nums[0] + nums[1] + nums[2];
-  let diff = Math.abs(result - target);
+ * ====================== Solution 2 ======================
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ * 双指针
+ */
+var threeSumClosest = function(nums, target) {
+  nums.sort((n1, n2) => n1 - n2)
+  let min = Infinity
 
-  for (let i = 0; i < sortedNums.length; i += 1) {
-    const num = sortedNums[i];
-    let start = i + 1;
-    let end = sortedNums.length - 1;
+  const search = (i, j, base) => {
+    while (i < j) {
+      const sum = base + nums[i] + nums[j]
+      if (Math.abs(target - sum) < Math.abs(target - min)) min = sum
+      if (min === target) break
 
-    while (start < end) {
-      const sum = num + sortedNums[start] + sortedNums[end];
-      if (sum === target) {
-        return target;
+      if (sum > target) {
+        j -= 1
       } else {
-        if (Math.abs(sum - target) < diff) {
-          diff = Math.abs(sum - target);
-          result = sum;
-        }
-        if (sum < target) {
-          start += 1;
-        } else {
-          end -= 1;
-        }
+        i += 1
       }
     }
   }
-  return result;
-};
+
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] === nums[i - 1]) continue
+    search(i + 1, nums.length - 1, nums[i])
+    if (min === target) break
+  }
+  return min
+}

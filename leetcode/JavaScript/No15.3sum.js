@@ -96,40 +96,31 @@ var threeSum = function(nums) {
  * @return {number[][]}
  */
 var threeSum_2 = function(nums) {
-  nums.sort((a, b) => a - b)
-  const results = []
+  nums.sort((n1, n2) => n1 - n2)
+  const result = []
 
-  let start = 0
-  while (start <= nums.length - 3) {
-    if (start - 1 >= 0 && nums[start] === nums[start - 1]) {
-      start += 1
-      continue
-    }
-
-    const target = 0 - nums[start]
-    let i = start + 1
-    let j = nums.length - 1
-
-    while (i < j && i < nums.length - 1 && j > start + 1) {
-      const sum = nums[i] + nums[j]
-
-      if (sum < target) {
+  const search = (i, j, target) => {
+    while (i < j) {
+      if (nums[i] + nums[j] === target) {
+        result.push([0 - target, nums[i], nums[j]])
+        while (i < nums.length && nums[i] === nums[i + 1]) i += 1
         i += 1
-      } else if (sum > target) {
+        while (j >= 0 && nums[j] === nums[j - 1]) j -= 1
         j -= 1
-      } else {
-        results.push([nums[start], nums[i], nums[j]])
-        while (i + 1 < j && nums[i + 1] === nums[i]) i += 1
-        while (j - 1 > i && nums[j - 1] === nums[j]) j -= 1
-
+      } else if (nums[i] + nums[j] < target) {
         i += 1
+      } else {
         j -= 1
       }
     }
-
-    start += 1
   }
-  return results
+
+  for (let i = 0; i < nums.length - 2; i += 1) {
+    if (nums[i] === nums[i - 1]) continue
+    search(i + 1, nums.length - 1, 0 - nums[i])
+  }
+
+  return result
 }
 
 threeSum_2([0, 0, 0, 0])

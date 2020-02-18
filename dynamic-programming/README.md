@@ -73,6 +73,7 @@
 - [No300. Longest Increasing Subsequence](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 - [No354. Russian Doll Envelopes](https://leetcode-cn.com/problems/russian-doll-envelopes/)
 - [No646. Maximum Length of Pair Chain](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
+- [No1027. 最长等差数列](https://leetcode-cn.com/problems/longest-arithmetic-sequence/)
 
 #### 状态机问题
 
@@ -97,3 +98,50 @@
 - [No651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
 - [No322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [No518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)
+
+#### 区间 DP
+
+区间类动态规划是线性动态规划的扩展，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来由很大的关系。令状态`f(i, j)`表示将下标位置`i`到`j`的所有元素合并能获得的价值的最大值，那么`f(i, j) = max(f(i, k) + f(k + 1, j) + cost)`，`cost`为将这两组元素合并起来的代价。
+
+对整个问题设最优值，枚举合并点，将问题分解为左右两个部分，最后合并两个部分的最优值得到原问题的最优值。
+
+由于计算`f(i, j)`的值时需要知道所有`f(i, k)`和`f(k + 1, j)`的值，而这两个中包含的元素的数量都小于`f(i, j)`，所以我们以`len = j - i + 1`作为 DP 的阶段。首先从小到大枚举`len`，然后枚举`i`的值，根据`len`和`i`用公式计算出`j`的值，然后枚举在区间`[i, j]`中枚举`k`，时间复杂度为`O(n^3)`
+
+通用公式：
+
+```javascript
+// n 是区间总长度
+for (let i = 1; i <= n; i += 1) {
+  dp[i][i] = 初始值
+}
+
+for (let len = 2; len <= n; len += 1) { // 从小到大枚举区间长度
+  for (let i = 1; i <= n - l + 1; i += 1) { // 枚举区间左端点
+    let j = i + len - 1 // 根据左端点和区间长度求区间右端点
+    if (j > n) break
+
+    dp[i][j] = 极限值
+
+    for(k = i; k < j; ++k) { // 从区间 [i, j] 中任意位置截断
+      // w[i][j] 代表把两堆区间合并所需代价
+      // 求最大值则是 Math.max
+      dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k + 1][j] + w[i][j])
+    }
+  }
+}
+
+return dp[1][n]
+```
+
+References:
+
+- [动态规划学习系列——区间DP（一）](https://blog.csdn.net/fuyukai/article/details/43793863)
+- [动态规划学习系列——区间DP（二）](https://blog.csdn.net/fuyukai/article/details/43839145)
+- [**动态规划之矩阵链乘法理解**](https://blog.csdn.net/qq_16234613/article/details/52223410)
+- [Wiki - 矩阵链乘积](https://zh.wikipedia.org/zh-sg/%E7%9F%A9%E9%99%A3%E9%8F%88%E4%B9%98%E7%A9%8D)
+- [利用动态规划解决矩阵链乘法问题](https://chengfeng96.com/blog/2017/07/27/%E5%88%A9%E7%94%A8%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%A7%A3%E5%86%B3%E7%9F%A9%E9%98%B5%E9%93%BE%E4%B9%98%E6%B3%95%E9%97%AE%E9%A2%98/)
+
+- [No312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
+- [No813. 最大平均值和的分组](https://leetcode-cn.com/problems/largest-sum-of-averages/)
+- [No1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
+- [No1167. 连接棒材的最低费用](https://leetcode-cn.com/problems/minimum-cost-to-connect-sticks/) - 此题不要求拼接顺序，因此其实是贪心算法问题。如果要求仅相邻才可拼接，则是经典的矩阵链乘法衍生问题
