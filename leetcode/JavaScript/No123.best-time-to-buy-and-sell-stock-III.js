@@ -133,36 +133,38 @@ const maxProfit_2 = (prices) => {
  * 动态规划
  * https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484508&idx=1&sn=42cae6e7c5ccab1f156a83ea65b00b78&chksm=9bd7fa54aca07342d12ae149dac3dfa76dc42bcdd55df2c71e78f92dedbbcbdb36dec56ac13b&scene=21#wechat_redirect
  */
-var maxProfit_3 = function(prices, k = 2) {
-  const dp = {
-    0: {
-      1: {
+var maxProfit_3 = function(prices) {
+  if (!prices.length) return 0
+
+  const dp = [
+    [
+      // 第一次交易
+      {
         buy: -prices[0],
         sell: 0
       },
-      2: {
+      // 第二次交易
+      {
         buy: -Infinity,
         sell: 0
       }
-    }
-  }
-  let result = 0
+    ]
+  ]
+
   for (let i = 1; i < prices.length; i += 1) {
-    if (!dp[i]) dp[i] = {}
-    for (let j = 1; j <= k; j += 1) {
-      if (!dp[i][j]) dp[i][j] = {}
-
-      dp[i][j].sell = Math.max(
-        dp[i - 1][j].sell,
-        dp[i - 1][j].buy + prices[i]
-      )
+    dp[i] = []
+    for (let j = 0; j < 2; j += 1) {
+      dp[i][j] = {}
       dp[i][j].buy = Math.max(
-        dp[i - 1][j].buy,
-        (j - 1 <= 0 ? 0 : dp[i - 1][j - 1].sell) - prices[i]
+        (j - 1 >= 0 ? dp[i - 1][j - 1].sell : 0) - prices[i],
+        dp[i - 1][j].buy
       )
-      result = Math.max(result, dp[i][j].sell)
+      dp[i][j].sell = Math.max(
+        dp[i - 1][j].buy + prices[i],
+        dp[i - 1][j].sell
+      )
     }
   }
-  return result
-}
 
+  return Math.max(dp[prices.length - 1][0].sell, dp[prices.length - 1][1].sell)
+}

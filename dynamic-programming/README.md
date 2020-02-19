@@ -62,6 +62,21 @@
 - [No983. 最低票价](https://leetcode-cn.com/problems/minimum-cost-for-tickets/)
 - [No1230. 抛掷硬币](https://leetcode-cn.com/problems/toss-strange-coins/)
 
+股票系列问题
+
+> [LeetCode 股票问题的一种通用解法](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484509&amp;idx=1&amp;sn=21ace57f19d996d46e82bd7d806a2e3c&source=41#wechat_redirect)
+>
+> [团灭 LeetCode 股票买卖问题](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484508&idx=1&sn=42cae6e7c5ccab1f156a83ea65b00b78&chksm=9bd7fa54aca07342d12ae149dac3dfa76dc42bcdd55df2c71e78f92dedbbcbdb36dec56ac13b&scene=21#wechat_redirect)
+
+最基本思路：前一天的决策影响当天决策，经典的 DP 状态转移问题
+
+- [No121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/submissions/)
+- [No122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+- [No123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
+- [No188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
+- [No309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+- [No714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
 #### 子序列问题
 
 > [动态规划设计之最长递增子序列](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484498&idx=1&sn=df58ef249c457dd50ea632f7c2e6e761&chksm=9bd7fa5aaca0734c29bcf7979146359f63f521e3060c2acbf57a4992c887aeebe2a9e4bd8a89&scene=21#wechat_redirect)
@@ -70,10 +85,16 @@
 >
 > [子序列解题模板：最长回文子序列](https://mp.weixin.qq.com/s/zNai1pzXHeB2tQE6AdOXTA)
 
+- [No53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
+- [No115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)
 - [No300. Longest Increasing Subsequence](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 - [No354. Russian Doll Envelopes](https://leetcode-cn.com/problems/russian-doll-envelopes/)
+- [No368. 最大整除子集](https://leetcode-cn.com/problems/largest-divisible-subset/)
 - [No646. Maximum Length of Pair Chain](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
+- [No673. 最长递增子序列的个数](https://leetcode-cn.com/problems/number-of-longest-increasing-subsequence/)
+- [No718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)
 - [No1027. 最长等差数列](https://leetcode-cn.com/problems/longest-arithmetic-sequence/)
+- [No1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
 
 #### 状态机问题
 
@@ -140,8 +161,10 @@ References:
 - [**动态规划之矩阵链乘法理解**](https://blog.csdn.net/qq_16234613/article/details/52223410)
 - [Wiki - 矩阵链乘积](https://zh.wikipedia.org/zh-sg/%E7%9F%A9%E9%99%A3%E9%8F%88%E4%B9%98%E7%A9%8D)
 - [利用动态规划解决矩阵链乘法问题](https://chengfeng96.com/blog/2017/07/27/%E5%88%A9%E7%94%A8%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%A7%A3%E5%86%B3%E7%9F%A9%E9%98%B5%E9%93%BE%E4%B9%98%E6%B3%95%E9%97%AE%E9%A2%98/)
+- [《算法导论》读书笔记之第15章 动态规划—矩阵链乘法](https://www.cnblogs.com/Anker/archive/2013/03/10/2952475.html)
 
 - [No312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
+- [No664. 奇怪的打印机](https://leetcode-cn.com/problems/strange-printer/)
 - [No813. 最大平均值和的分组](https://leetcode-cn.com/problems/largest-sum-of-averages/)
 - [No1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
 - [No1167. 连接棒材的最低费用](https://leetcode-cn.com/problems/minimum-cost-to-connect-sticks/) - 此题不要求拼接顺序，因此其实是贪心算法问题。如果要求仅相邻才可拼接，则是经典的矩阵链乘法衍生问题

@@ -78,12 +78,13 @@ var widthOfBinaryTree = function(root) {
   if (!root) return 0
 
   let result = 0
-  const queue = [{ node: root, index: 0 }]
+  const queue = [{ node: root, index: 1 }]
 
   while (queue.length) {
     let i = queue.length
     let start = null
     let end = null
+
     while (i--) {
       const data = queue.shift()
       if (data.node.left) queue.push({ node: data.node.left, index: data.index * 2 })
@@ -92,6 +93,7 @@ var widthOfBinaryTree = function(root) {
       end = data.index
     }
 
+    // 此处判断 start === end，是为了防止 start/end 过大导致 end - start 溢出
     result = Math.max(result, start === end ? 1 : (end - start) + 1)
   }
 

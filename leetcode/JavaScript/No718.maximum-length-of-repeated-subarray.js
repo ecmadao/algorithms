@@ -27,18 +27,23 @@
  * @return {number}
  */
 var findLength = function(A, B) {
-  const dp = [];
-  let length = 0;
-  for (let a = 0; a < A.length; a += 1) {
-    dp[a] = [];
-    for (let b = 0; b < B.length; b += 1) {
-      if (A[a] === B[b]) {
-        dp[a][b] = dp[a - 1] && dp[a - 1][b - 1]
-          ? dp[a - 1][b - 1] + 1
-          : 1;
-        length = Math.max(length, dp[a][b]);
+  const dp = []
+  let result = 0
+
+  for (let i = 0; i < A.length; i += 1) {
+    dp[i] = []
+
+    for (let j = 0; j < B.length; j += 1) {
+      if (A[i] === B[j]) {
+        dp[i][j] = Math.max(
+          dp[i][j] || 0,
+          (i > 0 ? dp[i - 1][j - 1] || 0 : 0) + 1
+        )
+      } else {
+        dp[i][j] = 0
       }
+      result = Math.max(result, dp[i][j])
     }
   }
-  return length;
-};
+  return result
+}

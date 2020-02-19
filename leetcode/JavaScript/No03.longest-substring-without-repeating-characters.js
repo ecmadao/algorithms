@@ -43,7 +43,7 @@ var lengthOfLongestSubstring_1 = function(s) {
   return maxString.length;
 };
 
-lengthOfLongestSubstring('abcabcbb'); // abc, 3
+lengthOfLongestSubstring_1('abcabcbb'); // abc, 3
 
 /* ================= 优化版本 ================= */
 /**
@@ -72,34 +72,36 @@ var lengthOfLongestSubstring_2 = function(s) {
   return Math.max(len, max)
 }
 
+
+/*
+ * ================================== Solution 3 ==================================
+ * 双指针、滑动窗口
+ */
 /**
  * @param {string} s
  * @return {number}
  */
 var lengthOfLongestSubstring_3 = function(s) {
-  let result = 0
-  let start = 0
-  let tmpResult = 0
-  const tmp = {}
+  if (!s) return 0
+  let i = 0
+  let j = 1
+  let result = 1
+  const cache = new Map()
+  cache.set(s[i], 0)
 
-  for (let i = 0; i < s.length; i += 1) {
-    if (tmp[s[i]] !== undefined) {
-      let index = start
-      start = tmp[s[i]] + 1
-      while (index < start) {
-        delete tmp[s[index]]
-        index += 1
+  while (j < s.length) {
+    if (cache.has(s[j])) {
+      result = Math.max(result, j - i)
+      const index = cache.get(s[j])
+      while (i <= index) {
+        cache.delete(s[i])
+        i += 1
       }
-      tmpResult = i + 1 - start
-    } else {
-      tmpResult += 1
     }
-
-    if (result < tmpResult) result = tmpResult
-
-    tmp[s[i]] = i
+    cache.set(s[j], j)
+    j += 1
   }
-  return result
+  return Math.max(result, j - i)
 }
 
 // Test case

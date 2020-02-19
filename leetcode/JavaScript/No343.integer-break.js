@@ -60,6 +60,28 @@ var integerBreak_2 = function(n) {
   return tmp[n]
 }
 
+/**
+ * @param {number} n
+ * @return {number}
+ *
+ * 动态规划
+ */
+var integerBreak_3 = function(n) {
+  const dp = [0, 1]
+
+  for (let i = 2; i <= n; i += 1) {
+    dp[i] = i
+    for (let j = 1; j < i; j += 1) {
+      dp[i] = Math.max(
+        dp[i],
+        dp[i - j] * j
+      )
+    }
+  }
+
+  return dp[n] === n ? Math.floor(n / 2) * Math.ceil(n / 2) : dp[n]
+}
+
 // Test case
 console.log(integerBreak_2(10)); // 35
 console.log(integerBreak_2(9)); // 27

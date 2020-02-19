@@ -65,29 +65,27 @@ var findNumberOfLIS_1 = function(nums) {
  * @return {number}
  */
 var findNumberOfLIS_2 = function(nums) {
-  const tmp = []
+  if (!nums.length) return 0
+
   let maxLen = 1
 
-  for (let i = 0; i < nums.length; i += 1) {
-    tmp[i] = {
-      count: 1,
-      length: 1
-    }
+  const dp = Array.from({ length: nums.length }, (_, i) => ({ len: 1, count: 1 }))
 
-    for (let j = 0; j < i; j += 1) {
-      if (nums[j] < nums[i]) {
-        if (tmp[j].length === tmp[i].length) {
-          tmp[i].length = tmp[j].length + 1
-          tmp[i].count = tmp[j].count
-        } else if (tmp[j].length + 1 === tmp[i].length) {
-          tmp[i].count += tmp[j].count
+  for (let i = 0; i < nums.length; i += 1) {
+    for (let j = i - 1; j >= 0; j -= 1) {
+      if (nums[i] > nums[j]) {
+        if (dp[j].len + 1 > dp[i].len) {
+          dp[i].len = dp[j].len + 1
+          dp[i].count = dp[j].count
+        } else if (dp[j].len + 1 === dp[i].len) {
+          dp[i].count += dp[j].count
         }
-        maxLen = Math.max(tmp[i].length, maxLen)
       }
+      maxLen = Math.max(maxLen, dp[i].len)
     }
   }
 
-  return tmp.filter(item => item.length === maxLen).reduce((num, item) => num + item.count, 0)
+  return dp.filter(data => data.len === maxLen).reduce((n, d) => n + d.count, 0)
 }
 
 // Test case

@@ -14,6 +14,9 @@
  * nums: [1,2,4,8]
  * Result: [1,2,4,8]
  *
+ * 给出一个由无重复的正整数组成的集合，找出其中最大的整除子集，子集中任意一对 (Si，Sj) 都要满足：Si % Sj = 0 或 Sj % Si = 0。
+ * 如果有多个目标子集，返回其中任何一个均可
+ *
  * Trick:
  * 按照要求，返回的数组内两两数组是可整除的。将数组排序，例如 arr = [1, 2, 4, 8]，
  * 对于新的数字 num，如果 num < arr[0] 且 arr[0] % num === 0；或者
@@ -24,7 +27,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var largestDivisibleSubset = function(nums) {
+var largestDivisibleSubset_1 = function(nums) {
   if (nums.length <= 1) return nums;
   nums.sort((a, b) => a - b);
 
@@ -64,8 +67,35 @@ var largestDivisibleSubset = function(nums) {
   return results;
 };
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ *
+ * 动态规划
+ */
+var largestDivisibleSubset_2 = function(nums) {
+  if (nums.length <= 1) return nums
+
+  nums.sort((n1, n2) => n1 - n2)
+  const dp = Array.from({ length: nums.length }, (_, i) => [nums[i]])
+  let max = []
+
+  for (let i = 1; i < nums.length; i += 1) {
+    for (let j = i - 1; j >= 0; j -= 1) {
+      const list = dp[j]
+      if (nums[i] % list[list.length - 1] === 0) {
+        if (dp[i].length <= dp[j].length) {
+          dp[i] = [...dp[j], nums[i]]
+        }
+      }
+      if (dp[i].length > max.length) max = dp[i]
+    }
+  }
+  return max
+}
+
 // Test case
-largestDivisibleSubset([3,4,16,8]);
-largestDivisibleSubset([546,669]);
-largestDivisibleSubset([1,2,3]);
-largestDivisibleSubset([1,2,3,6,9,27]);
+largestDivisibleSubset_2([3,4,16,8]);
+largestDivisibleSubset_2([546,669]);
+largestDivisibleSubset_2([1,2,3]);
+largestDivisibleSubset_2([1,2,3,6,9,27]);

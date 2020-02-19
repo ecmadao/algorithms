@@ -37,34 +37,31 @@
  */
 
 
-const getNum = (tmp, i, j) => {
-  if (!Array.isArray(tmp[i])) return 0
-  return tmp[i][j] || 0
-}
-
-/**
-* @param {string} text1
-* @param {string} text2
-* @return {number}
-* 动态规划
-*/
+ /**
+ * @param {string} text1
+ * @param {string} text2
+ * @return {number}
+ */
 var longestCommonSubsequence = function(text1, text2) {
-  const tmp = []
+  const dp = []
 
   for (let i = 0; i < text1.length; i += 1) {
-    if (!tmp[i]) tmp[i] = []
+    dp[i] = []
 
     for (let j = 0; j < text2.length; j += 1) {
       if (text1[i] === text2[j]) {
-        tmp[i][j] = getNum(tmp, i - 1, j - 1) + 1
+        dp[i][j] = Math.max(
+          dp[i][j] || 0,
+          (i > 0 ? (dp[i - 1][j - 1] || 0) : 0) + 1
+        )
       } else {
-        tmp[i][j] = Math.max(
-          getNum(tmp, i - 1, j),
-          getNum(tmp, i,j - 1)
+        dp[i][j] = Math.max(
+          i > 0 ? dp[i - 1][j] || 0 : 0,
+          dp[i][j - 1] || 0
         )
       }
     }
   }
 
-  return tmp[text1.length - 1][text2.length - 1]
+  return dp[text1.length - 1][text2.length - 1]
 }

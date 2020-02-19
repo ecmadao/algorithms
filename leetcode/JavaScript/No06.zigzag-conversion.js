@@ -14,6 +14,14 @@
  *
  * string convert(string text, int nRows);
  * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
+ *
+ * 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+ * 比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
+ * L   C   I   R
+ * E T O E S I I G
+ * E   D   H   N
+ * 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
+ * 请你实现这个将字符串进行指定行数变换的函数
  */
 
 var getNumberIndex = function(i, numRows) {
@@ -28,7 +36,7 @@ var getNumberIndex = function(i, numRows) {
 * @param {number} numRows
 * @return {string}
 */
-var convert = function(s, numRows) {
+var convert_1 = function(s, numRows) {
   if (numRows === 1) {
     return s;
   }
@@ -51,7 +59,7 @@ var convert = function(s, numRows) {
   return result;
 };
 
-const convert2 = (s, numRows) => {
+const convert_2 = (s, numRows) => {
   if (numRows === 1) return s;
   if (s.length <= numRows) return s;
 
@@ -73,3 +81,50 @@ const convert2 = (s, numRows) => {
     return r;
   }, []).join('');
 };
+
+/**
+ * @param {string} s
+ * @param {number} numRows
+ * @return {string}
+ */
+var convert_3 = function(s, numRows) {
+  if (numRows === s.length || numRows === 1) return s
+
+  const getNext = [
+    r => r + 1,
+    r => r - 1
+  ]
+
+  let r = 0
+  let dir = 'down'
+  const result = []
+
+  for (let i = 0; i < s.length; i += 1) {
+    const str = s[i]
+    if (!result[r]) result[r] = []
+    result[r].push(str)
+
+    const next = Math.floor(i / (numRows - 1)) % 2
+    r = getNext[next](r)
+
+    // 或者利用 dir 寻找下一次移动方向
+    // if (r === numRows - 1) {
+    //     dir = 'up'
+    // } else if (r === 0) {
+    //     dir = 'down'
+    // }
+
+    // switch (dir) {
+    //     case 'up':
+    //         r -= 1
+    //         break
+    //     case 'down':
+    //         r += 1
+    //         break
+    // }
+  }
+
+  return result.reduce((str, arr) => {
+    return str + arr.join('')
+  }, '')
+}
