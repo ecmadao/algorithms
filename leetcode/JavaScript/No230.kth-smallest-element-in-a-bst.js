@@ -33,9 +33,10 @@
  * 利用中序遍历，在 BST 二叉树中将从小到大返回数据
  */
 var kthSmallest = function(root, k) {
+  if (!root || !k) return null
+
   let node = root
-  let queue = []
-  let result = []
+  const queue = []
 
   while (node || queue.length) {
     if (node) {
@@ -43,12 +44,11 @@ var kthSmallest = function(root, k) {
       node = node.left
     } else {
       node = queue.pop()
-      result.push(node.val)
-      if (result.length === k) return result.pop()
+      k -= 1
+      if (!k) return node.val
       node = node.right
     }
   }
-  return result.pop()
 }
 
 /**

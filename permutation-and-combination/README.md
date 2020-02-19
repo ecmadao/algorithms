@@ -4,7 +4,12 @@
 
 - [排列组合](#%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88)
   - [全排列](#%E5%85%A8%E6%8E%92%E5%88%97)
+    - [插入法（递归解法）](#%E6%8F%92%E5%85%A5%E6%B3%95%E9%80%92%E5%BD%92%E8%A7%A3%E6%B3%95)
+    - [字典序解法](#%E5%AD%97%E5%85%B8%E5%BA%8F%E8%A7%A3%E6%B3%95)
+    - [邻位对换法](#%E9%82%BB%E4%BD%8D%E5%AF%B9%E6%8D%A2%E6%B3%95)
+    - [LeetCode 相关问题](#leetcode-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98)
   - [组合](#%E7%BB%84%E5%90%88)
+    - [LeetCode 相关问题](#leetcode-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

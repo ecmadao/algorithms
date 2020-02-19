@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [数字格式转换问题](#%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98)
+  - [罗马数字 - 阿拉伯数字相互转换](#%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97---%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2)
+    - [罗马数字的特点](#%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E7%9A%84%E7%89%B9%E7%82%B9)
+    - [阿拉伯数字 -> 罗马数字](#%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97---%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97)
+    - [罗马数字 -> 阿拉伯数字](#%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97---%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97)
+  - [中文数字 - 阿拉伯数字相互转换](#%E4%B8%AD%E6%96%87%E6%95%B0%E5%AD%97---%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2)
+    - [中文数字的特点](#%E4%B8%AD%E6%96%87%E6%95%B0%E5%AD%97%E7%9A%84%E7%89%B9%E7%82%B9)
+    - [阿拉伯数字 -> 中文数字](#%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97---%E4%B8%AD%E6%96%87%E6%95%B0%E5%AD%97)
+    - [中文数字 -> 阿拉伯数字](#%E4%B8%AD%E6%96%87%E6%95%B0%E5%AD%97---%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 数字格式转换问题
 
 ### 罗马数字 - 阿拉伯数字相互转换

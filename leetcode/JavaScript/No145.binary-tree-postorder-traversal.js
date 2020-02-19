@@ -81,4 +81,38 @@ const postorderTraversal_iteratively_2 = (root) => {
 }
 
 /* ============================ Morris Solution ============================ */
-// TODO:
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ *
+ * 利用特性：
+ * 前序遍历是：中 -> 左 -> 右
+ * 后序遍历是：左 -> 右 -> 中
+ *
+ * 因此我们只需要按照前序遍历的方式，以 中 -> 右 -> 左 顺序输出，最后反转即可
+ */
+var postorderTraversal_mirror = function(root) {
+  let prev = null
+  let node = root
+
+  const result = []
+  while (node) {
+    if (!node.right) {
+      result.push(node.val)
+      node = node.left
+    } else {
+      prev = node.right
+      while (prev.left && prev.left !== node) prev = prev.left
+      if (prev.left === null) {
+        prev.left = node
+        result.push(node.val)
+        node = node.right
+      } else {
+        prev.left = null
+        node = node.left
+      }
+    }
+  }
+
+  return result.reverse()
+}

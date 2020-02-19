@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [总结 & 反思](#%E6%80%BB%E7%BB%93--%E5%8F%8D%E6%80%9D)
+  - [Two pointers](#two-pointers)
+  - [Dynamic programming](#dynamic-programming)
+    - [股票系列问题](#%E8%82%A1%E7%A5%A8%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98)
+    - [回文系列问题](#%E5%9B%9E%E6%96%87%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98)
+  - [排列组合问题](#%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E9%97%AE%E9%A2%98)
+    - [全排列问题](#%E5%85%A8%E6%8E%92%E5%88%97%E9%97%AE%E9%A2%98)
+    - [组合问题](#%E7%BB%84%E5%90%88%E9%97%AE%E9%A2%98)
+  - [Subarray 问题](#subarray-%E9%97%AE%E9%A2%98)
+  - [状态机/回溯](#%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%9E%E6%BA%AF)
+  - [滑动窗口问题](#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%97%AE%E9%A2%98)
+  - [单调栈和双端队列](#%E5%8D%95%E8%B0%83%E6%A0%88%E5%92%8C%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97)
+  - [二分搜索](#%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2)
+  - [区间调度问题](#%E5%8C%BA%E9%97%B4%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## 总结 & 反思
 

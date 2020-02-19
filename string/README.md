@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [字符串问题](#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%97%AE%E9%A2%98)
+    - [K-common substring problem](#k-common-substring-problem)
+    - [字典树](#%E5%AD%97%E5%85%B8%E6%A0%91)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## 字符串问题
 

@@ -86,5 +86,33 @@ const preorderTraversal_iteratively_2 = (root) => {
   return result
 }
 
-/* ============================ Morris Solution ============================ */
-// TODO:
+/* ============================ Morris Traversal Solution ============================ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var preorderTraversal_mirror = function(root) {
+  let prev = null
+  let node = root
+
+  const result = []
+  while (node) {
+    if (!node.left) {
+      result.push(node.val)
+      node = node.right
+    } else {
+      prev = node.left
+      while (prev.right && prev.right !== node) prev = prev.right
+      if (!prev.right) {
+        prev.right = node
+        result.push(node.val)
+        node = node.left
+      } else {
+        prev.right = null
+        node = node.right
+      }
+    }
+  }
+
+  return result
+}

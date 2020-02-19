@@ -6,14 +6,6 @@
   - [预储备](#%E9%A2%84%E5%82%A8%E5%A4%87)
   - [Topic](#topic)
   - [LeetCode](#leetcode)
-    - [JavaScript Solution](#javascript-solution)
-    - [Swift4 Solution](#swift4-solution)
-    - [Haskell Solution](#haskell-solution)
-    - [Ruby Solution](#ruby-solution)
-  - [Codewars](#codewars)
-    - [Haskell Solution](#haskell-solution-1)
-    - [JavaScript Solution](#javascript-solution-1)
-    - [Ruby Solution](#ruby-solution-1)
   - [Run demo](#run-demo)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->

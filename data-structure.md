@@ -18,10 +18,13 @@
     - [BST 的遍历](#bst-%E7%9A%84%E9%81%8D%E5%8E%86)
   - [图](#%E5%9B%BE)
     - [图的遍历](#%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86)
+  - [并查集 Union Find](#%E5%B9%B6%E6%9F%A5%E9%9B%86-union-find)
   - [深度优先搜索 DFS/Depth-First-Search](#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-dfsdepth-first-search)
   - [广度优先搜索 BFS/Breadth-First-Search](#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-bfsbreadth-first-search)
   - [算法基本概念](#%E7%AE%97%E6%B3%95%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
     - [复杂度 - 大 O 表示法](#%E5%A4%8D%E6%9D%82%E5%BA%A6---%E5%A4%A7-o-%E8%A1%A8%E7%A4%BA%E6%B3%95)
+    - [动态规划](#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
+    - [字符串问题](#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%97%AE%E9%A2%98)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -249,9 +252,9 @@ LeetCode 上相关题目：
 
 查看
 
-- [前序遍历的递归/循环](./leetcode/JavaScript/No144.binary-tree-preorder-traversal.js)
-- [中序遍历的递归/循环/Morris 实现](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
-- [后序遍历的递归/循环](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
+- [前序遍历的递归/循环/Morris Traversal 实现](./leetcode/JavaScript/No144.binary-tree-preorder-traversal.js)
+- [中序遍历的递归/循环/Morris Traversal 实现](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
+- [后序遍历的递归/循环/Morris Traversal 实现](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
 
 - 层序遍历（level-order）
 

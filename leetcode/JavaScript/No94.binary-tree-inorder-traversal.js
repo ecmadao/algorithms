@@ -68,32 +68,33 @@ const inorderTraversal_iteratively = (root) => {
   return result
 }
 
-/* ============================ Morris Solution ============================ */
-const inorderTraversal_morris = (root) => {
-  const result = [];
-  if (!root) return result;
+/* ============================ Morris Traversal Solution ============================ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal_mirror = function(root) {
+  let prev = null
+  let node = root
 
-  let node = root;
-  let preNode = null;
+  const result = []
   while (node) {
     if (!node.left) {
-      result.push(node.val);
-      node = node.right;
+      result.push(node.val)
+      node = node.right
     } else {
-      preNode = node.left;
-      while (preNode.right !== null && preNode.right !== node) {
-        preNode = preNode.right;
-      }
-
-      if (!preNode.right) {
-        preNode.right = node;
-        node = node.left;
+      prev = node.left
+      while (prev.right && prev.right !== node) prev = prev.right
+      if (!prev.right) {
+        prev.right = node
+        node = node.left
       } else {
-        preNode.right = null;
-        result.push(node.val);
-        node = node.right;
+        prev.right = null
+        result.push(node.val)
+        node = node.right
       }
     }
   }
-  return result;
-};
+
+  return result
+}

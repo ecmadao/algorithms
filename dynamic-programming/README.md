@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [动态规划](#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
+  - [基本思路](#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF)
+    - [References](#references)
+  - [概念](#%E6%A6%82%E5%BF%B5)
+  - [LeetCode](#leetcode)
+    - [基本的状态转移](#%E5%9F%BA%E6%9C%AC%E7%9A%84%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB)
+    - [子序列问题](#%E5%AD%90%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98)
+    - [状态机问题](#%E7%8A%B6%E6%80%81%E6%9C%BA%E9%97%AE%E9%A2%98)
+    - [博弈问题](#%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98)
+    - [背包问题](#%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98)
+    - [区间 DP](#%E5%8C%BA%E9%97%B4-dp)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## 动态规划
 
