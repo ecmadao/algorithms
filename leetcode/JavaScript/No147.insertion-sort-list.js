@@ -47,7 +47,7 @@ var sort = function(head, node) {
 * @param {ListNode} head
 * @return {ListNode}
 */
-var insertionSortList = function(head) {
+var insertionSortList_1 = function(head) {
   if (!head || !head.next) return head;
 
   var current = head;
@@ -65,3 +65,39 @@ var insertionSortList = function(head) {
   }
   return head;
 };
+
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var insertionSortList_2 = function(head) {
+  if (!head || !head.next) return head
+
+  let result = new ListNode(null)
+  result.next = head
+
+  let node = head
+  while (node && node.next) {
+    if (node.next.val < node.val) {
+      const rawNext = node.next
+      node.next = rawNext.next
+
+      let cur = result
+      while (cur && cur.next && cur.next.val < rawNext.val) cur = cur.next
+      rawNext.next = cur.next
+      cur.next = rawNext
+    } else {
+      node = node.next
+    }
+  }
+
+  return result.next
+}

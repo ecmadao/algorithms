@@ -22,6 +22,9 @@
     0 --- 2
          / \
          \_/
+
+ * 给你无向 连通 图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
+ * 图中的每个节点都包含它的值 val（int） 和其邻居的列表（list[Node]）
  */
 
 /**
@@ -36,7 +39,7 @@
  * @param {UndirectedGraphNode} graph
  * @return {UndirectedGraphNode}
  */
-var cloneGraph = function(graph) {
+var cloneGraph_1 = function(graph) {
   const tmp = {};
   if (!graph) return null;
   const clone = (node) => {
@@ -56,3 +59,29 @@ var cloneGraph = function(graph) {
   };
   return clone(graph);
 };
+
+/**
+ * // Definition for a Node.
+ * function Node(val, neighbors) {
+ *    this.val = val === undefined ? 0 : val;
+ *    this.neighbors = neighbors === undefined ? [] : neighbors;
+ * };
+ */
+/**
+ * @param {Node} node
+ * @return {Node}
+ */
+var cloneGraph_2 = function(node) {
+  if (!node) return null
+
+  const dfs = (n, cache) => {
+    if (cache.has(n.val)) return cache.get(n.val)
+    const newNode = new Node(n.val)
+
+    cache.set(n.val, newNode)
+    newNode.neighbors = n.neighbors.map(neighbor => dfs(neighbor, cache))
+    return newNode
+  }
+
+  return dfs(node, new Map())
+}

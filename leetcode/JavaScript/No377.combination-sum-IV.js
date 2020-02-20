@@ -61,14 +61,15 @@ var combinationSum4_1 = function(nums, target) {
  * 动态规划 DP
  */
 var combinationSum4_2 = function(nums, target) {
-  if (!target) return 0
-  const tmp = { 0: 1 }
+  const dp = Array.from({ length: target + 1 }, (_, i) => i === 0 ? 1 : 0)
+  nums.sort((n1, n2) => n1 - n2)
 
   for (let i = 1; i <= target; i += 1) {
-    for (const num of nums) {
-      if (num > i) break
-      tmp[i] = (tmp[i - num] || 0) + (tmp[i] || 0)
+    for (let j = 0; j < nums.length; j += 1) {
+      if (nums[j] > i) break
+      dp[i] += dp[i - nums[j]]
     }
   }
-  return tmp[target] || 0
+
+  return dp[target]
 }

@@ -40,6 +40,8 @@ var lastStoneWeight = function(stones) {
 
   while (stones.length > 1) {
     const diff = stones.pop() - stones.pop()
+    if (!diff) continue
+
     let i = 0
     while (stones[i] < diff) i += 1
     stones.splice(i, 0, diff)

@@ -97,6 +97,7 @@ results.push([...nums])
 - [No46.Permutations](../leetcode/JavaScript/No46.permutations.js)
 - [No47.Permutations II](../leetcode/JavaScript/No47.permutations-II.js)
 - [No60.Permutation sequence](../leetcode/JavaScript/No60.permutation-sequence.js)
+- [No556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
 
 ### 组合
 

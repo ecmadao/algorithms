@@ -25,7 +25,7 @@
  *
  * 滑动窗口
  */
-var lengthOfLongestSubstringKDistinct = function(s, k) {
+var lengthOfLongestSubstringKDistinct_1 = function(s, k) {
   if (!k) return 0
   const map = {}
 
@@ -50,6 +50,43 @@ var lengthOfLongestSubstringKDistinct = function(s, k) {
       map[s[j]] += 1
       j += 1
     }
+  }
+
+  return Math.max(result, j - i)
+}
+
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
+ */
+var lengthOfLongestSubstringKDistinct_2 = function(s, k) {
+  if (!k || !s) return 0
+
+  let i = 0
+  let j = 1
+  let result = 0
+  const map = new Map()
+  map.set(s[i], 1)
+
+  while (j < s.length) {
+    if (!map.has(s[j])) {
+      if (map.size === k) {
+        result = Math.max(result, j - i)
+        while (i < j && map.size === k) {
+          let num = map.get(s[i])
+          num -= 1
+          if (!num) {
+            map.delete(s[i])
+          } else {
+            map.set(s[i], num)
+          }
+          i += 1
+        }
+      }
+    }
+    map.set(s[j], (map.get(s[j]) || 0) + 1)
+    j += 1
   }
 
   return Math.max(result, j - i)

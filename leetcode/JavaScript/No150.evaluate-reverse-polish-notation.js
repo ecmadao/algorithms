@@ -51,3 +51,38 @@ var evalRPN = function(tokens) {
   }
   return Number(numbers[0]);
 };
+
+
+/**
+ * @param {string[]} tokens
+ * @return {number}
+ */
+var evalRPN = function(tokens) {
+  const isOp = s => s === '+' || s === '-' || s === '*' || s === '/'
+  const cal = (n1, n2, op) => {
+    switch (op) {
+      case '+':
+        return n1 + n2
+      case '-':
+        return n1 - n2
+      case '*':
+        return n1 * n2
+      case '/':
+        return (n1 / n2) < 0 ? Math.ceil(n1 / n2) : Math.floor(n1 / n2)
+    }
+  }
+
+  let i = 0
+  while (tokens.length >= 3) {
+    while (!isOp(tokens[i]) && i < tokens.length) i += 1
+    if (i >= tokens.length) break
+
+    tokens.splice(
+      i - 2,
+      3,
+      cal(Number(tokens[i - 2]), Number(tokens[i - 1]), tokens[i])
+    )
+    i = i - 2 + 1
+  }
+  return tokens.shift()
+}
