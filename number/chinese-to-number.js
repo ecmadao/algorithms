@@ -24,7 +24,7 @@ const ZERO = '零'
  * @param {string} chinese
  * @return {number}
  */
-const convert2Number = (chinese) => {
+const chinese2Number = (chinese) => {
   console.log(` ======================== input: ${chinese} ======================== `)
 
   let result = 0
@@ -32,10 +32,9 @@ const convert2Number = (chinese) => {
   if (chinese === ZERO) return result
 
   // 遍历输入。保留一个小节缓存字段，每遍历到权位时，累加权位值并清空小节的缓存
-  let tmp = [
-    NUMS[chinese[0]]
-  ]
-  let i = 1
+  let tmp = []
+  let i = 0
+
   while (i < chinese.length) {
     let str = chinese[i]
     // console.log(`result: ${result}, tmp: ${tmp}, str: ${str}`)
@@ -48,6 +47,7 @@ const convert2Number = (chinese) => {
     if (SECTIONS[str]) {
       // 处理小节权位。之前缓存的值 tmp，需要累加后和权位相乘
       if (SECTIONS[chinese[i + 1]]) {
+        // 为了确认一下权位是“万”，还是“万亿”
         str = chinese.slice(i, i + 2)
         i += 1
       }
@@ -70,47 +70,47 @@ const convert2Number = (chinese) => {
 }
 
 console.log(
-  `convert2Number: 一 (1) -> ${convert2Number('一')}`
+  `chinese2Number: 一 (1) -> ${chinese2Number('一')}`
 )
 console.log(
-  `convert2Number: 一十 (10) -> ${convert2Number('一十')}`
+  `chinese2Number: 一十 (10) -> ${chinese2Number('一十')}`
 )
 console.log(
-  `convert2Number: 一百 (100) -> ${convert2Number('一百')}`
+  `chinese2Number: 一百 (100) -> ${chinese2Number('一百')}`
 )
 console.log(
-  `convert2Number: 一千 (1000) -> ${convert2Number('一千')}`
+  `chinese2Number: 一千 (1000) -> ${chinese2Number('一千')}`
 )
 console.log(
-  `convert2Number: 一万零一百零一 (10101) -> ${convert2Number('一万零一百零一')}`
+  `chinese2Number: 一万零一百零一 (10101) -> ${chinese2Number('一万零一百零一')}`
 )
 console.log(
-  `convert2Number: 一万一千零一 (11001) -> ${convert2Number('一万一千零一')}`
+  `chinese2Number: 一万一千零一 (11001) -> ${chinese2Number('一万一千零一')}`
 )
 console.log(
-  `convert2Number: 一万 (10000) -> ${convert2Number('一万')}`
+  `chinese2Number: 一万 (10000) -> ${chinese2Number('一万')}`
 )
 console.log(
-  `convert2Number: 一千亿一千万 (100010000000) -> ${convert2Number('一千亿一千万')}`
+  `chinese2Number: 一千亿一千万 (100010000000) -> ${chinese2Number('一千亿一千万')}`
 )
 console.log(
-  `convert2Number: 一千亿 (100000000000) -> ${convert2Number('一千亿')}`
+  `chinese2Number: 一千亿 (100000000000) -> ${chinese2Number('一千亿')}`
 )
 console.log(
-  `convert2Number: 一万亿一千亿一千万 (1100010000000) -> ${convert2Number('一万亿一千亿一千万')}`
+  `chinese2Number: 一万亿一千亿一千万 (1100010000000) -> ${chinese2Number('一万亿一千亿一千万')}`
 )
 console.log(
-  `convert2Number: 一千二百三十九万六千四百八十七 (12396487) -> ${convert2Number('一千二百三十九万六千四百八十七')}`
+  `chinese2Number: 一千二百三十九万六千四百八十七 (12396487) -> ${chinese2Number('一千二百三十九万六千四百八十七')}`
 )
 console.log(
-  `convert2Number: 八亿一千二百三十九万六千四百八十七 (812396487) -> ${convert2Number('八亿一千二百三十九万六千四百八十七')}`
+  `chinese2Number: 八亿一千二百三十九万六千四百八十七 (812396487) -> ${chinese2Number('八亿一千二百三十九万六千四百八十七')}`
 )
 console.log(
-  `convert2Number: 九万六千四百八十七 (96487) -> ${convert2Number('九万六千四百八十七')}`
+  `chinese2Number: 九万六千四百八十七 (96487) -> ${chinese2Number('九万六千四百八十七')}`
 )
 console.log(
-  `convert2Number: 二千万一千二百三十四 (20001234) -> ${convert2Number('二千万一千二百三十四')}`
+  `chinese2Number: 二千万一千二百三十四 (20001234) -> ${chinese2Number('二千万一千二百三十四')}`
 )
 console.log(
-  `convert2Number: 二百亿零二百零二万零二百 (20002020200) -> ${convert2Number('二百亿零二百零二万零二百')}`
+  `chinese2Number: 二百亿零二百零二万零二百 (20002020200) -> ${chinese2Number('二百亿零二百零二万零二百')}`
 )

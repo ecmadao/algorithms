@@ -12,7 +12,7 @@ const ZERO = '零'
  * @param {number} input
  * @return {string}
  */
-const convert2Chinese = (input) => {
+const number2Chinese = (input) => {
   console.log(` ======================== input: ${input} ======================== `)
 
   if (input < 0) return ''
@@ -80,61 +80,61 @@ const handleSection = (section) => {
 
 console.log(
   // 一
-  `convert2Chinese: 1 (一) -> ${convert2Chinese('1')}`
+  `number2Chinese: 1 (一) -> ${number2Chinese('1')}`
 )
 console.log(
   // 一十
-  `convert2Chinese: 10 (一十) -> ${convert2Chinese('10')}`
+  `number2Chinese: 10 (一十) -> ${number2Chinese('10')}`
 )
 console.log(
   // 一百
-  `convert2Chinese: 100 (一百) -> ${convert2Chinese('100')}`
+  `number2Chinese: 100 (一百) -> ${number2Chinese('100')}`
 )
 console.log(
   // 一千
-  `convert2Chinese: 1000 (一千) -> ${convert2Chinese('1000')}`
+  `number2Chinese: 1000 (一千) -> ${number2Chinese('1000')}`
 )
 console.log(
   // 一万零一百零一
-  `convert2Chinese: 10101 (一万零一百零一) -> ${convert2Chinese('10101')}`
+  `number2Chinese: 10101 (一万零一百零一) -> ${number2Chinese('10101')}`
 )
 console.log(
   // 一万一千零一
-  `convert2Chinese: 11001 (一万一千零一) -> ${convert2Chinese('11001')}`
+  `number2Chinese: 11001 (一万一千零一) -> ${number2Chinese('11001')}`
 )
 console.log(
   // 一万
-  `convert2Chinese: 10000 (一万) -> ${convert2Chinese('10000')}`
+  `number2Chinese: 10000 (一万) -> ${number2Chinese('10000')}`
 )
 console.log(
   // 一千亿一千万
-  `convert2Chinese: 100010000000 (一千亿一千万) -> ${convert2Chinese('100010000000')}`
+  `number2Chinese: 100010000000 (一千亿一千万) -> ${number2Chinese('100010000000')}`
 )
 console.log(
   // 一千亿
-  `convert2Chinese: 100000000000 (一千亿) -> ${convert2Chinese('100000000000')}`
+  `number2Chinese: 100000000000 (一千亿) -> ${number2Chinese('100000000000')}`
 )
 console.log(
   // 一万亿一千亿一千万
-  `convert2Chinese: 1100010000000 (一万亿一千亿一千万) -> ${convert2Chinese('1100010000000')}`
+  `number2Chinese: 1100010000000 (一万亿一千亿一千万) -> ${number2Chinese('1100010000000')}`
 )
 console.log(
   // 一千二百三十九万六千四百八十七
-  `convert2Chinese: 12396487 (一千二百三十九万六千四百八十七) -> ${convert2Chinese('12396487')}`
+  `number2Chinese: 12396487 (一千二百三十九万六千四百八十七) -> ${number2Chinese('12396487')}`
 )
 console.log(
   // 八亿一千二百三十九万六千四百八十七
-  `convert2Chinese: 812396487 (八亿一千二百三十九万六千四百八十七) -> ${convert2Chinese('812396487')}`
+  `number2Chinese: 812396487 (八亿一千二百三十九万六千四百八十七) -> ${number2Chinese('812396487')}`
 )
 console.log(
   // 九万六千四百八十七
-  `convert2Chinese: 96487 (九万六千四百八十七) -> ${convert2Chinese('96487')}`
+  `number2Chinese: 96487 (九万六千四百八十七) -> ${number2Chinese('96487')}`
 )
 console.log(
   // 二千万一千二百三十四
-  `convert2Chinese: 20001234 (二千万一千二百三十四) -> ${convert2Chinese('20001234')}`
+  `number2Chinese: 20001234 (二千万一千二百三十四) -> ${number2Chinese('20001234')}`
 )
 console.log(
   // 二百亿零二百零二万零二百
-  `convert2Chinese: 20002020200 (二百亿零二百零二万零二百) -> ${convert2Chinese('20002020200')}`
+  `number2Chinese: 20002020200 (二百亿零二百零二万零二百) -> ${number2Chinese('20002020200')}`
 )

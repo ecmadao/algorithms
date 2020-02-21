@@ -43,7 +43,7 @@
  *
  * 递归
  */
-var change = function(amount, coins) {
+var change_1 = function(amount, coins) {
   if (!amount) return 1
   coins = [...new Set(coins)].sort((c1, c2) => c1 - c2)
   const tmp = {}
@@ -69,6 +69,57 @@ var change = function(amount, coins) {
   return _change(amount, 0)
 }
 
+/*
+ * ======================================== 动态规划 ========================================
+ * 背包问题
+ */
+
+/**
+ * @param {number} amount
+ * @param {number[]} coins
+ * @return {number}
+ *
+ * 普通解法，二维背包
+ */
+var change_2 = function(amount, coins) {
+  coins.sort((c1, c2) => c1 - c2)
+  const dp = Array.from({ length: coins.length + 1 }, (_, i) => {
+    return Array.from({ length: amount + 1 }, (_, j) => {
+      return j === 0 ? 1 : 0
+    })
+  })
+
+  for (let i = 1; i <= coins.length; i += 1) {
+    for (let j = 1; j <= amount; j += 1) {
+      dp[i][j] = dp[i - 1][j] + (
+        j < coins[i - 1] ? 0 : dp[i][j - coins[i - 1]]
+      )
+    }
+  }
+
+  return dp[coins.length][amount]
+}
+
+/**
+ * @param {number} amount
+ * @param {number[]} coins
+ * @return {number}
+ *
+ * 优化空间，一维背包
+ */
+var change_3 = function(amount, coins) {
+  const dp = Array.from({ length: amount + 1 }, (_, i) => 0)
+  dp[0] = 1
+
+  for (const coin of coins) {
+    for (let j = coin; j <= amount; j += 1) {
+      dp[j] += dp[j - coin]
+    }
+  }
+
+  return dp[amount]
+}
+
 /**
  * @param {number} amount
  * @param {number[]} coins
@@ -76,16 +127,16 @@ var change = function(amount, coins) {
  *
  * DP
  */
-var change_dp = function(amount, coins) {
-  const tmp = {
+var change_4 = function(amount, coins) {
+  const dp = {
     0: 1
   }
 
   for (const coin of coins) {
     for (let i = coin; i <= amount; i += 1) {
-      tmp[i] = (tmp[i] || 0) + (tmp[i - coin] || 0)
+      dp[i] = (dp[i] || 0) + (dp[i - coin] || 0)
     }
   }
 
-  return tmp[amount] || 0
+  return dp[amount] || 0
 }

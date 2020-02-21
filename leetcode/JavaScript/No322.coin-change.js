@@ -61,6 +61,59 @@ var coinChange_1 = function(coins, amount) {
   return find(coins.length - 1, amount);
 };
 
+/*
+ * ======================================== 动态规划 ========================================
+ * 背包问题
+ */
+
+/**
+ * @param {number[]} coins
+ * @param {number} amount
+ * @return {number}
+ *
+ * 普通解法，二维背包
+ */
+var coinChange_2 = function(coins, amount) {
+  const dp = Array.from({ length: coins.length + 1 }, (_, i) => {
+    return Array.from({ length: amount + 1 }, (_, j) => {
+      return i > 0 && coins[i - 1] === j ? 1 : (j === 0 ? 0 : Infinity)
+    })
+  })
+  coins.sort((c1, c2) => c1 - c2)
+
+  for (let i = 1; i <= coins.length; i += 1) {
+    for (let j = 1; j <= amount; j += 1) {
+      if (j < coins[i - 1]) {
+        dp[i][j] = dp[i - 1][j]
+      } else {
+        dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - coins[i - 1]] + 1)
+      }
+    }
+  }
+
+  return dp[coins.length][amount] === Infinity ? -1 : dp[coins.length][amount]
+}
+
+/**
+ * @param {number[]} coins
+ * @param {number} amount
+ * @return {number}
+ *
+ * 优化空间，一维背包
+ */
+var coinChange_3 = function(coins, amount) {
+  const dp = Array.from({ length: amount + 1 }, (_, i) => Infinity)
+  dp[0] = 0
+  coins.sort((c1, c2) => c1 - c2)
+
+  for (const coin of coins) {
+    for (let i = coin; i <= amount; i += 1) {
+      dp[i] = Math.min(dp[i], dp[i - coin] + 1)
+    }
+  }
+  return dp[amount] === Infinity ? -1 : dp[amount]
+}
+
 /**
  * @param {number[]} coins
  * @param {number} amount
@@ -68,19 +121,19 @@ var coinChange_1 = function(coins, amount) {
  *
  * DP
  */
-const coinChange_2 = (coins, amount) => {
-  const tmp = [0]
+const coinChange_4 = (coins, amount) => {
+  const dp = [0]
   coins.sort((c1, c2) => c1 - c2)
 
   for (let i = 1; i <= amount; i += 1) {
-    tmp[i] = Infinity
+    dp[i] = Infinity
 
     for (const coin of coins) {
       if (coin > i) break
-      tmp[i] = Math.min(tmp[i], tmp[i - coin] + 1)
+      dp[i] = Math.min(dp[i], dp[i - coin] + 1)
     }
   }
-  return tmp[amount] === Infinity ? -1 : tmp[amount]
+  return dp[amount] === Infinity ? -1 : dp[amount]
 }
 
 

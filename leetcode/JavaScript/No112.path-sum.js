@@ -34,16 +34,21 @@
  * @return {boolean}
  */
 var hasPathSum = function(root, sum) {
-  if (!root) return false;
-  const getSum = (node, preSum = 0) => {
-    const curSum = preSum + node.val;
-    if (!node.left && !node.right) {
-      if (curSum === sum) return true;
-      return false;
+  if (!root) return false
+
+  const dfs = (node, num) => {
+    num += node.val
+    if (!node.left && !node.right) return num === sum
+
+    if (node.left) {
+      const check = dfs(node.left, num)
+      if (check) return true
     }
-    if (node.left && getSum(node.left, curSum)) return true;
-    if (node.right && getSum(node.right, curSum)) return true;
-    return false;
-  };
-  return getSum(root);
-};
+    if (node.right) {
+      const check = dfs(node.right, num)
+      if (check) return true
+    }
+    return false
+  }
+  return dfs(root, 0)
+}

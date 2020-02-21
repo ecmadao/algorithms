@@ -27,7 +27,7 @@ const duplicate = (str, count) =>
  * @param {number} num
  * @return {string}
  */
-var intToRoman = function(input) {
+var number2Roman = function(input) {
   const result = []
 
   let base = 10

@@ -19,10 +19,33 @@
  * @return {number}
  */
 var findPeakElement = function(nums) {
-  if (nums.length === 1) return 0;
-  for (let i = 1; i < nums.length - 1; i += 1) {
-    if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) return i;
+  if (nums.length === 1) return 0
+
+  for (let i = 0; i < nums.length; i += 1) {
+    if (i === 0 && nums[i] > nums[i + 1]) return i
+    if (i === nums.length - 1 && nums[i] > nums[i - 1]) return i
+    if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) return i
   }
-  if (nums[0] > nums[1]) return 0;
-  if (nums[nums.length - 1] > nums[nums.length - 2]) return nums.length - 1;
-};
+  return nums.length - 1
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * 二分搜索
+ */
+var findPeakElement = function(nums) {
+  let left = 0
+  let right = nums.length - 1
+
+  while (left <= right) {
+    if (left === right) return left
+    const mid = Math.floor((left + right) / 2)
+    if (nums[mid] > nums[mid + 1]) {
+      right = mid
+    } else {
+      left = mid + 1
+    }
+  }
+}

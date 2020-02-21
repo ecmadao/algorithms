@@ -19,26 +19,26 @@
  */
 var letterCombinations = function(digits) {
   const map = {
-      2: 'abc',
-      3: 'def',
-      4: 'ghi',
-      5: 'jkl',
-      6: 'mno',
-      7: 'pqrs',
-      8: 'tuv',
-      9: 'wxyz'
+    2: 'abc',
+    3: 'def',
+    4: 'ghi',
+    5: 'jkl',
+    6: 'mno',
+    7: 'pqrs',
+    8: 'tuv',
+    9: 'wxyz'
   }
 
   const results = []
   if (!digits) return results
   const generate = (index, prefix) => {
-      if (index >= digits.length) {
-          results.push(prefix)
-          return
-      }
-      for (const letter of map[digits[index]]) {
-          generate(index + 1, prefix + letter)
-      }
+    if (index >= digits.length) {
+      results.push(prefix)
+      return
+    }
+    for (const letter of map[digits[index]]) {
+      generate(index + 1, prefix + letter)
+    }
   }
   generate(0, '')
   return results

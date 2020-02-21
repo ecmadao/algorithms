@@ -120,19 +120,19 @@ var generateParenthesis_solution_2 = function(n) {
 var generateParenthesis = function(n) {
   const result = []
 
-  const buildParenthesisStr = (prefix, leftCount, rightCount) => {
-    if (leftCount === n) {
+  const dfs = (prefix, left, right) => {
+    if (left === n) {
       result.push(
-        `${prefix}${Array.from({ length: n - rightCount }).fill(')').join('')}`
+        `${prefix}${Array.from({ length: n - prefix.length }, (_, i) => ')').join('')}`
       )
       return
     }
-    buildParenthesisStr(prefix + '(', leftCount + 1, rightCount)
-    if (rightCount < leftCount) {
-      buildParenthesisStr(prefix + ')', leftCount, rightCount + 1)
+    dfs(prefix + '(', left + 1, right)
+    if (right < left) {
+      dfs(prefix + ')', left, right + 1)
     }
   }
 
-  buildParenthesisStr('', 0, 0)
+  dfs('', 0, 0)
   return result
 }

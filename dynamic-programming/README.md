@@ -140,16 +140,18 @@
 > [LeetCode 动态规划专题 7：面试中的 0-1 背包问题](https://www.liwei.party/2018/09/21/leetcode-solution/dynamic-programming-7)
 >
 > [用背包问题思想来理解硬币找零系列问题](https://leetcode-cn.com/problems/coin-change/solution/yong-bei-bao-wen-ti-si-xiang-lai-li-jie-ying-bi-zh/)
+>
+> [动态规划之背包问题系列](https://zhuanlan.zhihu.com/p/93857890)
 
 - [No139. 单词拆分](https://leetcode-cn.com/problems/word-break/)
-- [No322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+- [No322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) - 完全背包问题
 - [No377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/)
 - [No416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
 - [No474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)
 - [No494. 目标和](https://leetcode-cn.com/problems/target-sum/)
-- [No518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)
+- [No518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/) - 完全背包问题
 - [No651. 4 键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
-- [No1049. 最后一块石头的重量 II](https://leetcode-cn.com/problems/last-stone-weight-ii/)
+- [No1049. 最后一块石头的重量 II](https://leetcode-cn.com/problems/last-stone-weight-ii/) - 01 背包问题
 
 #### 区间 DP
 

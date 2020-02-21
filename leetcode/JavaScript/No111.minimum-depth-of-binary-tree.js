@@ -19,7 +19,7 @@
 /**
  * @param {TreeNode} root
  * @return {number}
- * 
+ *
  * 递归法
  */
 var minDepth_1 = function(root) {
