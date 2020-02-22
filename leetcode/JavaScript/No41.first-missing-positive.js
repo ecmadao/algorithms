@@ -28,26 +28,19 @@
  * i + 1 即是第一个缺失的正整数
  */
 var firstMissingPositive_1 = function(nums) {
-  var result = nums.length + 1;
-
-  for (var i = 0; i < nums.length; i += 1) {
-    while(nums[i] > 0 && nums[i] !== nums[nums[i] - 1] && nums[i] < i + 1) {
-      var index = nums[i] - 1;
-      var temp = nums[index];
-      nums[index] = nums[i];
-      nums[i] = temp;
+  for (let i = 0; i < nums.length; i += 1) {
+    while (nums[i] > 0 && nums[i] !== i + 1 && nums[i] - 1 < nums.length && nums[i] !== nums[nums[i] - 1]) {
+        const tmp = nums[nums[i] - 1]
+        nums[nums[i] - 1] = nums[i]
+        nums[i] = tmp
     }
   }
 
-  for (var i = 0; i < nums.length; i += 1) {
-    if (nums[i] !== i + 1) {
-      result = i + 1;
-      break;
-    }
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] !== i + 1) return i + 1
   }
-
-  return result;
-};
+  return nums.length + 1
+}
 
 /**
  * @param {number[]} nums

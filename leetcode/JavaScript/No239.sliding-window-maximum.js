@@ -222,7 +222,7 @@ var maxSlidingWindow_3 = function(nums, k) {
 
 // =============================================== Solution 4 ===============================================
 
-// 双端队列
+// 单调队列
 class Deque {
   constructor() {
     this.deque = []
@@ -240,7 +240,8 @@ class Deque {
     this.deque.push(val)
   }
 
-  pop(val) {
+  // 从顶部移除值。如果被移除的是最大值，则需要移除；否则对结果没有影响，无需移除
+  shift(val) {
     if (this.deque.length && this.deque[0] === val) {
       this.deque.shift()
     }
@@ -252,7 +253,7 @@ class Deque {
   * @param {number} k
   * @return {number[]}
   *
-  * 双端队列法：
+  * 单调队列法：
   * https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484506&amp;idx=1&amp;sn=fcaae7325b10905c808e085f8802b4eb&source=41#wechat_redirect
   */
 var maxSlidingWindow_4 = function(nums, k) {
@@ -264,7 +265,7 @@ var maxSlidingWindow_4 = function(nums, k) {
   for (let i = 0; i < nums.length; i += 1) {
     deque.push(nums[i])
     if (i >= k - 1) {
-      deque.pop(nums[i - k])
+      i - k >= 0 && deque.shift(nums[i - k])
       result.push(deque.peak())
     }
   }

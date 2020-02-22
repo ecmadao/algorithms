@@ -75,3 +75,28 @@ var subsetsWithDup_2 = function(nums) {
   }
   return results
 }
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsetsWithDup_3 = function(nums) {
+  nums.sort((a, b) => a - b)
+  const result = []
+
+  const dfs = (index, arr) => {
+    result.push(arr.slice(0))
+
+    if (index >= nums.length) return
+
+    for (let i = index; i < nums.length; i += 1) {
+      if (i > index && nums[i] === nums[i - 1]) continue
+      arr.push(nums[i])
+      dfs(i + 1, arr)
+      arr.pop()
+    }
+  }
+
+  dfs(0, [])
+  return result
+}

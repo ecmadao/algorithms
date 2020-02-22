@@ -79,3 +79,47 @@ var subsets_2 = function(nums) {
   }
   return results
 }
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ *
+ * 对于每一位，都有选择、不选择两种
+ */
+var subsets_3 = function(nums) {
+  const result = []
+
+  const dfs = (index, arr) => {
+    if (index >= nums.length) {
+      result.push(arr.slice(0))
+      return
+    }
+    dfs(index + 1, [...arr, nums[index]])
+    dfs(index + 1, [...arr])
+  }
+
+  dfs(0, [])
+  return result
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsets_4 = function(nums) {
+  const result = []
+
+  const dfs = (index, arr) => {
+    result.push(arr.slice(0))
+    if (index >= nums.length) return
+
+    for (let i = index; i < nums.length; i += 1) {
+      arr.push(nums[i])
+      dfs(i + 1, arr)
+      arr.pop()
+    }
+  }
+
+  dfs(0, [])
+  return result
+}

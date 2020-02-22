@@ -435,8 +435,6 @@ const flatArray = (arg) => {
 - [算法复杂度分析](http://www.cnblogs.com/gaochundong/p/complexity_of_algorithms.html)
 - [算法时间复杂度的表示法O(n²)、O(n)、O(1)、O(nlogn)等是什么意思？](https://www.zhihu.com/question/21387264)
 
-#### 动态规划
+#### [动态规划](./dynamic-programming)
 
-- [Dynamic Programming Patterns](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)
-
-#### [字符串问题]('./string/README.md')
+#### [字符串问题](./string)

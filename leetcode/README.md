@@ -81,8 +81,15 @@
 
 #### 组合问题
 
-- [No78.Subsets](../leetcode/JavaScript/No78.subsets.js)
-- [No90.Subsets II](../leetcode/JavaScript/No90.subsets-II.js)
+- [No17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+- [No39. 组合总和](https://leetcode-cn.com/problems/combination-sum/)
+- [No40. 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)
+- [No77. 组合](https://leetcode-cn.com/problems/combinations/)
+- [No78. 子集](https://leetcode-cn.com/problems/subsets/)
+- [No90. 子集 II](https://leetcode-cn.com/problems/subsets-ii/)
+- [No216. 组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)
+- [No254. 因子的组合](https://leetcode-cn.com/problems/factor-combinations/)
+- [No320. 列举单词的全部缩写](https://leetcode-cn.com/problems/generalized-abbreviation/)
 
 ### Subarray 问题
 
