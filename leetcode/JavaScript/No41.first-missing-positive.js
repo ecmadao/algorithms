@@ -30,9 +30,9 @@
 var firstMissingPositive_1 = function(nums) {
   for (let i = 0; i < nums.length; i += 1) {
     while (nums[i] > 0 && nums[i] !== i + 1 && nums[i] - 1 < nums.length && nums[i] !== nums[nums[i] - 1]) {
-        const tmp = nums[nums[i] - 1]
-        nums[nums[i] - 1] = nums[i]
-        nums[i] = tmp
+      const tmp = nums[nums[i] - 1]
+      nums[nums[i] - 1] = nums[i]
+      nums[i] = tmp
     }
   }
 

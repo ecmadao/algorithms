@@ -75,18 +75,16 @@ var permute_1 = function(nums) {
 
 const permute_2 = (nums) => {
   // 该方法没有处理列表中含有相同元素时的情况，即 [1,1] 会被全排列为 [1,1]
-  if (nums.length === 1) return [[nums[0]]]
+  if (nums.length <= 1) return [nums]
 
   const result = []
   for (let i = 0; i < nums.length; i += 1) {
-    const num = nums[i]
-    const remains = [...nums.slice(0, i), ...nums.slice(i + 1)]
-    const arrays = permute_2(remains)
-    for (const array of arrays) {
-      result.push(
-        [num, ...array]
-      )
-    }
+    result.push(
+      ...permute_2([
+        ...nums.slice(0, i),
+        ...nums.slice(i + 1)
+      ]).map(data => [nums[i], ...data])
+    )
   }
   return result
 }

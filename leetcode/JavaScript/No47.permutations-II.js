@@ -71,28 +71,22 @@ var permuteUnique_1 = function(nums) {
  */
 
 const permuteUnique_2 = (nums) => {
-  const permute = (nums) => {
-    if (nums.length === 1) return [[nums[0]]];
-    const cache = new Set();
+  if (nums.length <= 1) return [nums]
 
-    const result = [];
-    for (let i = 0; i < nums.length; i += 1) {
-      const num = nums[i];
-      if (cache.has(num)) continue;
-      cache.add(num);
-      const remains = [...nums.slice(0, i), ...nums.slice(i + 1)];
-      const arrays = permute(remains);
-      for (const array of arrays) {
-        result.push(
-          [num, ...array]
-        );
-      }
-    }
-    return result;
-  };
-
-  return permute(nums);
-};
+  const cache = new Set()
+  const result = []
+  for (let i = 0; i < nums.length; i += 1) {
+    if (cache.has(nums[i])) continue
+    cache.add(nums[i])
+    result.push(
+      ...permuteUnique_2([
+        ...nums.slice(0, i),
+        ...nums.slice(i + 1)
+      ]).map(data => [nums[i], ...data])
+    )
+  }
+  return result
+}
 
 /* ===================================== SOLUTION 3 ======================================= */
 
