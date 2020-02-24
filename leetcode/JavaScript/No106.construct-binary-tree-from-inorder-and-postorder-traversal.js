@@ -31,17 +31,17 @@
  * @return {TreeNode}
  */
 var buildTree = function(inorder, postorder) {
-  if (!postorder.length) return null;
-  const val = postorder[postorder.length - 1];
-  const root = new TreeNode(val);
-  const rootIndex = inorder.findIndex(v => v === val);
+  if (!inorder.length || !postorder.length) return null
 
-  const leftInorder = inorder.slice(0, rootIndex);
-  const rightInorder = inorder.slice(rootIndex + 1);
-  const rightPostorder = postorder.slice(postorder.length - 1 - rightInorder.length, postorder.length - 1);
-  const leftPostorder = postorder.slice(0, postorder.length - 1 - rightInorder.length);
+  const val = postorder.pop()
+  const node = new TreeNode(val)
 
-  root.left = buildTree(leftInorder, leftPostorder);
-  root.right = buildTree(rightInorder, rightPostorder);
-  return root;
-};
+  const index = inorder.indexOf(val)
+  const rightLen = inorder.length - 1 - index
+  const leftLen = index
+
+  node.left = buildTree(inorder.slice(0, index), postorder.slice(0, leftLen))
+  node.right = buildTree(inorder.slice(index + 1), postorder.slice(postorder.length - rightLen))
+
+  return node
+}

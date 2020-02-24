@@ -45,17 +45,14 @@
  * @return {TreeNode}
  */
 var buildTree = function(preorder, inorder) {
-  if (!preorder.length) return null;
-  const val = preorder[0];
-  const root = new TreeNode(val);
-  const rootIndex = inorder.findIndex(v => v === val);
+  if (!preorder.length || !inorder.length) return null
 
-  const inLeft = inorder.slice(0, rootIndex);
-  const inRight = inorder.slice(rootIndex + 1);
-  const preLeft = preorder.slice(1, inLeft.length + 1);
-  const preRight = preorder.slice(inLeft.length + 1);
+  const val = preorder[0]
+  const index = inorder.indexOf(val)
 
-  root.left = buildTree(preLeft, inLeft);
-  root.right = buildTree(preRight, inRight);
-  return root;
-};
+  const node = new TreeNode(val)
+  node.left = buildTree(preorder.slice(1, index + 1), inorder.slice(0, index))
+  node.right = buildTree(preorder.slice(index + 1) ,inorder.slice(index + 1))
+
+  return node
+}

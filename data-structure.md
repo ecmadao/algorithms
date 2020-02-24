@@ -219,29 +219,29 @@ LeetCode 上相关题目：
 
 #### BST 的遍历
 
-- 前序遍历（preorder）
+##### 前序遍历（preorder）
 
 先访问父节点，再访问其所有子节点。即中左右顺序。LeetCode 中相关题目：
 
-1. [No.144 Binary Tree Preorder Traversal](./leetcode/JavaScript/No144.binary-tree-preorder-traversal.js)
+1. [**No.144 Binary Tree Preorder Traversal**](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 2. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/JavaScript/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 
-- 中序遍历（inorder）
+##### 中序遍历（inorder）
 
 按照**从最小到最大的顺序访问二叉树中的各节点**。即对于每个节点，先遍历左子节点，然后根节点，最后右子节点。LeetCode 中相关题目：
 
-1. [No.94 Binary Tree Inorder Traversal](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
+1. [**No.94 Binary Tree Inorder Traversal**](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
 2. [No.99 Recover Binary Search Tree](./leetcode/JavaScript/No99.recover-binary-search-tree.js)
 3. [No.173 Binary Search Tree Iterator](./leetcode/JavaScript/No173.binary-search-tree-iterator.js)
 4. [No.105 Construct Binary Tree from Preorder and Inorder Traversal](./leetcode/JavaScript/No105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 5. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/JavaScript/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 6. [No285. Inorder Successor in BST.js](./leetcode/JavaScript/No285.inorder-successor-in-bst.js)
 
-- 后序遍历（postorder）
+##### 后序遍历（postorder）
 
 先访问所有子节点，再访问父节点。即左右中。LeetCode 中相关题目：
 
-1. [No.145 Binary Tree Postorder Traversal](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
+1. [**No.145 Binary Tree Postorder Traversal**](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
 2. [No.106 Construct Binary Tree from Inorder and Postorder Traversal.js](./leetcode/JavaScript/No106.construct-binary-tree-from-inorder-and-postorder-traversal.js)
 
 **对于前/中/后序三种遍历，都可以通过三种形式实现：**
@@ -256,7 +256,14 @@ LeetCode 上相关题目：
 - [中序遍历的递归/循环/Morris Traversal 实现](./leetcode/JavaScript/No94.binary-tree-inorder-traversal.js)
 - [后序遍历的递归/循环/Morris Traversal 实现](./leetcode/JavaScript/No145.binary-tree-postorder-traversal.js)
 
-- 层序遍历（level-order）
+二叉树复原：
+
+- [No105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+- [No106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+- [No889. 根据前序和后序遍历构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
+- [No1008. 先序遍历构造二叉树](https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/)
+
+##### 层序遍历（level-order）
 
 每次遍历二叉树的一层，遍历完当前层后再进行下一层的遍历 -> 广度优先算法
 
