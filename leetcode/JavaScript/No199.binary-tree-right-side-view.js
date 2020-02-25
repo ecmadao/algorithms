@@ -31,30 +31,20 @@
  * @return {number[]}
  */
 var rightSideView = function(root) {
-  const results = [];
-  if (!root) return results;
+  if (!root) return []
 
-  const queue = [{
-    index: 0,
-    node: root
-  }];
+  const result = []
+  const queue = [root]
 
   while (queue.length) {
-    const {
-      node,
-      index,
-    } = queue.shift();
-
-    if (results.length === index) results.push(node.val);
-
-    if (node.right) queue.push({
-      index: index + 1,
-      node: node.right
-    });
-    if (node.left) queue.push({
-      index: index + 1,
-      node: node.left
-    });
+    let len = queue.length
+    while (len) {
+      const node = queue.shift()
+      if (node.left) queue.push(node.left)
+      if (node.right) queue.push(node.right)
+      len -= 1
+      if (!len) result.push(node.val)
+    }
   }
-  return results;
-};
+  return result
+}

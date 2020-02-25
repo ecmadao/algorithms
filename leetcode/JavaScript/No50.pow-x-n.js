@@ -56,3 +56,19 @@ var myPow = function(x, n) {
   if (result >= INT_MAX) result = INT_MAX;
   return result;
 };
+
+/**
+ * @param {number} x
+ * @param {number} n
+ * @return {number}
+ */
+var myPow_2 = function(x, n) {
+  if (n === 0) return 1
+  const isNegative = n < 0
+  n = Math.abs(n)
+
+  const isEven = n % 2 === 0
+
+  const result = isEven ? myPow(x * x, n / 2) : x * myPow(x * x, (n - 1) / 2)
+  return isNegative ? 1 / result : result
+}
