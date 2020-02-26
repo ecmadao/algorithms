@@ -177,3 +177,17 @@
 - [No435. 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals/)
 - [No646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 - [No1024. 视频拼接](https://leetcode-cn.com/problems/video-stitching/comments/)
+
+### 实际应用 / Design
+
+- [No146. LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
+- [No460. LFU缓存](https://leetcode-cn.com/problems/lfu-cache/)
+
+- [No380. 常数时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
+- [No432. 全 O(1) 的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure/)
+
+- [No295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
+- [No1286. 字母组合迭代器](https://leetcode-cn.com/problems/iterator-for-combination/)
+
+- [No355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
+- [No1348. 推文计数](https://leetcode-cn.com/problems/tweet-counts-per-frequency/)

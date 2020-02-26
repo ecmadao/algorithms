@@ -45,7 +45,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 - [图](./graph/README.md)
 - [数字转换](./number)
 
-### [LeetCode](https://leetcode.com/ecmadao/)
+### [LeetCode](./leetcode/README.md)
 
 ### Run demo
 
