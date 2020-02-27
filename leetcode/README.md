@@ -16,6 +16,7 @@
   - [单调栈和双端队列](#%E5%8D%95%E8%B0%83%E6%A0%88%E5%92%8C%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97)
   - [二分搜索](#%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2)
   - [区间调度问题](#%E5%8C%BA%E9%97%B4%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98)
+  - [实际应用 / Design](#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8--design)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
