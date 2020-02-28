@@ -69,6 +69,6 @@ var myPow_2 = function(x, n) {
 
   const isEven = n % 2 === 0
 
-  const result = isEven ? myPow(x * x, n / 2) : x * myPow(x * x, (n - 1) / 2)
+  const result = isEven ? myPow_2(x * x, n / 2) : x * myPow_2(x * x, (n - 1) / 2)
   return isNegative ? 1 / result : result
 }

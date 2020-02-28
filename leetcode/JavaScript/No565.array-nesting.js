@@ -29,7 +29,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var arrayNesting = function(nums) {
+var arrayNesting_1 = function(nums) {
   let result = 0;
   const tmpMap = new Map();
 
@@ -54,3 +54,30 @@ var arrayNesting = function(nums) {
   }
   return result;
 };
+
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var arrayNesting_2 = function(nums) {
+  let i = 0
+  let result = 0
+  let cache = new Set()
+
+  while (i < nums.length) {
+    if (cache.has(i)) { i += 1; continue }
+
+    const set = new Set()
+    let j = i
+    while (!set.has(nums[j])) {
+      set.add(nums[j])
+      cache.add(j)
+      j = nums[j]
+    }
+    if (result < set.size) result = set.size
+    i += 1
+  }
+
+  return result
+}
