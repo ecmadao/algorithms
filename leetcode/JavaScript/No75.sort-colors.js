@@ -40,7 +40,7 @@ var update = function(temp, nums, index, key) {
 * @param {number[]} nums
 * @return {void} Do not return anything, modify nums in-place instead.
 */
-var sortColors = function(nums) {
+var sortColors_1 = function(nums) {
   var temp = {};
   for (var i = 0; i < nums.length; i += 1) {
     var num = nums[i];
@@ -53,3 +53,36 @@ var sortColors = function(nums) {
 };
 
 
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var sortColors_2 = function(nums) {
+  let start = 0
+  let end = nums.length - 1
+
+  let i = 0
+  while (i <= end) {
+    if (nums[i] === 1) {
+      i += 1
+      continue
+    }
+    if (nums[i] === 0) {
+      while (start < i && nums[start] === 0) start += 1
+      if (i === start) {
+        i += 1
+        continue
+      }
+      nums[i] = nums[start]
+      nums[start] = 0
+    } else if (nums[i] === 2) {
+      while (end > i && nums[end] === 2) end -= 1
+      if (i === end) break
+      nums[i] = nums[end]
+      nums[end] = 2
+    }
+  }
+}
+
+// [1,3,2,1,3,1]
+// [1,3,2,2,3,1]

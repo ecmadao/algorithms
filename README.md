@@ -44,6 +44,7 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 - [排列组合](./permutation-and-combination/README.md)
 - [图](./graph/README.md)
 - [数字转换](./number)
+- [跳跃链表](./skiplist)
 
 ### [LeetCode](./leetcode/README.md)
 
