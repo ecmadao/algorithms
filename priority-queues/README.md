@@ -201,3 +201,9 @@ const getMinK = (array, k) => {
   return heaps[0];
 };
 ```
+
+### LeetCode
+
+- [No215. 数组中的第 K 个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
+- [No347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
+- [No973. 最接近原点的 K 个点](https://leetcode-cn.com/problems/k-closest-points-to-origin/)

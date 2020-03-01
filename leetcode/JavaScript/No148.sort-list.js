@@ -55,7 +55,7 @@ var merge = function(list1, list2) {
 var sortList = function(head) {
   if (!head || !head.next) return head;
   var slow = head;
-  var fast  =head;
+  var fast = head;
 
   // 每次 fast 索引向后走的步长是 slow 的两倍。
   // 当 fast 到达链表的结尾处时，slow 正好处于中间位置

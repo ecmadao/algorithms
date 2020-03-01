@@ -84,5 +84,35 @@ var sortColors_2 = function(nums) {
   }
 }
 
-// [1,3,2,1,3,1]
-// [1,3,2,2,3,1]
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ *
+ * 荷兰旗问题
+ * https://en.wikipedia.org/wiki/Dutch_national_flag_problem
+ */
+var sortColors = function(nums) {
+  let i = 0
+  let j = 0
+  let k = nums.length - 1
+  const mid = 1
+
+  const swip = (i1, i2) => {
+    const tmp = nums[i1]
+    nums[i1] = nums[i2]
+    nums[i2] = tmp
+  }
+
+  while (j <= k) {
+    if (nums[j] > mid) {
+      swip(j, k)
+      k -= 1
+    } else if (nums[j] < mid) {
+      swip(i, j)
+      i += 1
+      j += 1
+    } else {
+      j += 1
+    }
+  }
+}

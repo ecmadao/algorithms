@@ -15,7 +15,11 @@
  * 求乱序数组中第 K 大的元素。最小堆问题
  */
 
-/* ================= 最小堆 ================= */
+/**
+ * ========================================= Solution 1 =========================================
+ * 最小堆
+ */
+
 const buildFromTail = (array) => {
   let binaryHeaps = [...array];
   for (let i = binaryHeaps.length - 1; i >= 0; i -= 1) {
@@ -59,7 +63,7 @@ const sortWithChild = (heaps, fatherIndex) => {
 * @param {number} k
 * @return {number}
 */
-var findKthLargest = function(nums, k) {
+var findKthLargest_1 = function(nums, k) {
   const kItems = nums.slice(0, k);
   const heaps = buildFromTail(kItems);
 
@@ -73,3 +77,60 @@ var findKthLargest = function(nums, k) {
   }
   return heaps[0];
 };
+
+/**
+ * ========================================= Solution 2 =========================================
+ * 3-way-partion 三向切分
+ */
+
+const partition = (nums, i, k, target) => {
+  if (i >= k) return i
+
+  const swap = (i1, i2) => {
+    const tmp = nums[i1]
+    nums[i1] = nums[i2]
+    nums[i2] = tmp
+  }
+
+  let j = i
+  while (j <= k) {
+    if (nums[j] > target) {
+      swap(j, k)
+      k -= 1
+    } else if (nums[j] < target) {
+      swap(i, j)
+      i += 1
+      j += 1
+    } else {
+      j += 1
+    }
+  }
+
+  return i
+}
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ *
+ * 3-way-partion 三向切分
+ */
+var findKthLargest_2 = function(nums, k) {
+  let i = 0
+  let j = nums.length
+
+  const getRandomIndex = (i1, i2) => Math.floor(Math.random() * (i2 - i1) + i1)
+
+  while (true) {
+    const mid = getRandomIndex(i, j)
+    const pivot = partition(nums, i, j - 1, nums[mid])
+    if (pivot + k === nums.length) return nums[pivot]
+    if (pivot + k < nums.length) {
+      i = pivot + 1
+    } else {
+      j = pivot
+    }
+  }
+}

@@ -182,3 +182,15 @@ const quicksort = (array, start = null, end = null) => {
 
 > [三种快速排序以及快速排序的优化](https://blog.csdn.net/insistGoGo/article/details/7785038)
 > [快速排序一步一步优化](https://www.cnblogs.com/vipchenwei/p/7460293.html)
+
+### 快排分区的利用
+
+#### 分区/荷兰旗问题/三向切分
+
+LeetCode
+
+- [No75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)
+- [No215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
+- [No324. 摆动排序 II](https://leetcode-cn.com/problems/wiggle-sort-ii/)
+- [No347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
+- [No973. 最接近原点的 K 个点](https://leetcode-cn.com/problems/k-closest-points-to-origin/)

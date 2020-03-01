@@ -179,6 +179,14 @@
 - [No646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 - [No1024. 视频拼接](https://leetcode-cn.com/problems/video-stitching/comments/)
 
+### 排序相关
+
+#### 荷兰旗问题/三向切分
+
+- [No75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)
+- [No215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
+- [No324. 摆动排序 II](https://leetcode-cn.com/problems/wiggle-sort-ii/)
+
 ### 实际应用 / Design
 
 - [No146. LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
