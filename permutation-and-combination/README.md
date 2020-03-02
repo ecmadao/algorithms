@@ -96,6 +96,8 @@ results.push([...nums])
 - [No31.Next permutation](../leetcode/JavaScript/No31.next-permutation.js)
 - [No46.Permutations](../leetcode/JavaScript/No46.permutations.js)
 - [No47.Permutations II](../leetcode/JavaScript/No47.permutations-II.js)
+- [No51. N 皇后](https://leetcode-cn.com/problems/n-queens/)
+- [No52. N 皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)
 - [No60.Permutation sequence](../leetcode/JavaScript/No60.permutation-sequence.js)
 - [No556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
 

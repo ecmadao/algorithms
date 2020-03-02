@@ -110,3 +110,81 @@ const totalNQueens_permutation = (n) => {
   const solutions = permute(new Set(baseArray));
   return solutions.length;
 };
+
+
+/**
+ * ============================= Solution 3 =============================
+ * 全排列法
+*/
+
+const isDiagonal = (queue) => {
+  const n = queue.length
+  for (let i = 0; i < queue.length; i += 1) {
+    let row
+    let col
+
+    row = i + 1
+    col = queue[i] + 1
+    while (row < n && col < n) {
+      if (queue[row] === col) return true
+      row += 1
+      col += 1
+    }
+    row = i - 1
+    col = queue[i] - 1
+    while (row >= 0 && col >= 0) {
+      if (queue[row] === col) return true
+      row -= 1
+      col -= 1
+    }
+    row = i + 1
+    col = queue[i] - 1
+    while (row < n && col >= 0) {
+      if (queue[row] === col) return true
+      row += 1
+      col -= 1
+    }
+    row = i - 1
+    col = queue[i] + 1
+    while (row >= 0 && col < n) {
+      if (queue[row] === col) return true
+      row -= 1
+      col += 1
+    }
+  }
+  return false
+}
+/**
+* @param {number} n
+* @return {string[][]}
+*/
+var totalNQueens_3 = function(n) {
+  if (n === 1) return 1
+
+  let queue = Array.from({ length: n }, (_, i) => i)
+  let result = 0
+
+  while (true) {
+    let j = queue.length - 1
+    while (j > 0 && queue[j] < queue[j - 1]) j -= 1
+    if (j === 0) break
+
+    const index = j - 1
+    const tmp = queue[index]
+    j = queue.length - 1
+
+    while (j > index && queue[j] < tmp) j -= 1
+    queue[index] = queue[j]
+    queue[j] = tmp
+
+    queue = [
+      ...queue.slice(0, index + 1),
+      ...queue.slice(index + 1).sort((n1, n2) => n1 - n2)
+    ]
+
+    if (!isDiagonal(queue)) result += 1
+  }
+
+  return result
+}
+

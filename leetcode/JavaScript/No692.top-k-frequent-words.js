@@ -25,8 +25,15 @@
  *
  * Follow up:
  * Try to solve it in O(n log k) time and O(n) extra space.
+ *
+ * 给一非空的单词列表，返回前 k 个出现次数最多的单词。
+ * 返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出现频率，按字母顺序排序
  */
 
+/*
+ * ========================= Solution 1 =========================
+ * 最大堆
+ */
 
 // 数组中的两个元素交换位置
 const exchange = (array, indexA, indexB) => {
@@ -95,7 +102,7 @@ class Heap {
  * @param {number} k
  * @return {string[]}
  */
-var topKFrequent = function(words, k) {
+var topKFrequent_1 = function(words, k) {
   const compare = (n, m) => {
     if (n.count > m.count) return true;
     if (n.count === m.count) return n.word < m.word;
@@ -128,3 +135,74 @@ var topKFrequent = function(words, k) {
   return results;
 };
 
+/*
+ * ========================= Solution 2 =========================
+ * 快排分区法
+ */
+
+const partition = (list, i, j) => {
+  const target = i
+  const base = list[target]
+
+  while (i < j) {
+    while (i < j && list[j][1] <= base[1]) j -= 1
+    while (i < j && list[i][1] >= base[1]) i += 1
+
+    if (i >= j) break
+    const tmp = list[i]
+    list[i] = list[j]
+    list[j] = tmp
+  }
+
+  list[target] = list[i]
+  list[i] = base
+  return i
+}
+
+/**
+* @param {string[]} words
+* @param {number} k
+* @return {string[]}
+*/
+var topKFrequent_2 = function(words, k) {
+  const dict = words.reduce((m, word) => {
+    m[word] = (m[word] || 0) + 1
+    return m
+  }, {})
+  const list = Object.entries(dict)
+  const map = list.reduce((m, item) => {
+    if (!m[item[1]]) m[item[1]] = []
+    m[item[1]].push(item[0])
+    return m
+  }, {})
+
+  let i = 0
+  let j = list.length - 1
+  while (i < j) {
+    const mid = partition(list, i, j)
+    if (mid === k) break
+    if (mid < k) {
+      i = mid + 1
+    } else {
+      j = mid - 1
+    }
+  }
+  const data = list.slice(0, k).sort((i1, i2) => {
+    if (i1[1] === i2[1]) {
+      if (i1[0] > i2[0]) return 1
+      if (i1[0] < i2[0]) return -1
+      return 0
+    }
+    return i2[1] - i1[1]
+  })
+
+  i = data.length - 1
+  const last = data[i]
+  while (i - 1 >= 0 && data[i - 1][1] === last[1]) i -= 1
+
+  const result = data.slice(0, i).map(item => item[0])
+  result.push(
+    ...map[last[1]].sort().slice(0, data.length - i)
+  )
+  return result
+}

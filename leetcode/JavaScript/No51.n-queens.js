@@ -178,3 +178,90 @@ const solveNQueens_permutation = (n) => {
   permute(new Set(baseArray));
   return boards;
 };
+
+/**
+ * ============================= Solution 3 =============================
+ * 全排列法
+*/
+
+const buildBoard = (base, postions) => {
+  return postions.map((pos) => {
+    base[pos] = 'Q'
+    const result = base.join('')
+    base[pos] = '.'
+    return result
+  })
+}
+
+// 确保没有任意两点在对角线上。需要提升计算效率
+const isDiagonal = (queue) => {
+  const n = queue.length
+  for (let i = 0; i < queue.length; i += 1) {
+    let row
+    let col
+
+    row = i + 1
+    col = queue[i] + 1
+    while (row < n && col < n) {
+      if (queue[row] === col) return true
+      row += 1
+      col += 1
+    }
+    row = i - 1
+    col = queue[i] - 1
+    while (row >= 0 && col >= 0) {
+      if (queue[row] === col) return true
+      row -= 1
+      col -= 1
+    }
+    row = i + 1
+    col = queue[i] - 1
+    while (row < n && col >= 0) {
+      if (queue[row] === col) return true
+      row += 1
+      col -= 1
+    }
+    row = i - 1
+    col = queue[i] + 1
+    while (row >= 0 && col < n) {
+      if (queue[row] === col) return true
+      row -= 1
+      col += 1
+    }
+  }
+  return false
+}
+/**
+* @param {number} n
+* @return {string[][]}
+*/
+var solveNQueens_3 = function(n) {
+  if (n === 1) return [['Q']]
+
+  const base = Array.from({ length: n }, (_, i) => '.')
+  let queue = Array.from({ length: n }, (_, i) => i)
+  const result = []
+
+  while (true) {
+    let j = queue.length - 1
+    while (j > 0 && queue[j] < queue[j - 1]) j -= 1
+    if (j === 0) break
+
+    const index = j - 1
+    const tmp = queue[index]
+    j = queue.length - 1
+
+    while (j > index && queue[j] < tmp) j -= 1
+    queue[index] = queue[j]
+    queue[j] = tmp
+
+    queue = [
+      ...queue.slice(0, index + 1),
+      ...queue.slice(index + 1).sort((n1, n2) => n1 - n2)
+    ]
+
+    if (!isDiagonal(queue)) result.push(buildBoard(base, queue))
+  }
+
+  return result
+}

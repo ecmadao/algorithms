@@ -190,7 +190,8 @@ const quicksort = (array, start = null, end = null) => {
 LeetCode
 
 - [No75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)
-- [No215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
+- [No215. 数组中的第 K 个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
 - [No324. 摆动排序 II](https://leetcode-cn.com/problems/wiggle-sort-ii/)
 - [No347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
+- [No692. 前 K 个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words/)
 - [No973. 最接近原点的 K 个点](https://leetcode-cn.com/problems/k-closest-points-to-origin/)

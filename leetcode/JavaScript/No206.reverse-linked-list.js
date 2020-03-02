@@ -4,6 +4,8 @@
  *
  * Desc:
  * Reverse a singly linked list.
+ *
+ * 反转一个单链表
  */
 
 /**
@@ -18,14 +20,15 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  let node = null
+  let pre = null
+  let node = head
 
-  while (head) {
-    const tmp = new ListNode(head.val)
-
-    tmp.next = node
-    node = tmp
-    head = head.next
+  while (node) {
+    const rawNext = node.next
+    node.next = pre
+    pre = node
+    node = rawNext
   }
-  return node
+
+  return pre
 }
