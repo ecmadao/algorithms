@@ -328,6 +328,21 @@ LeetCode 上相关题目：
 
 3. 邻节点访问完毕之后，标注 V 为**已完全探索**
 
+```javascript
+// 常见遍历式 DFS
+const data = {} // something..
+const queue = [data]
+
+while (queue.length) {
+  const item = queue.pop()
+
+  // 针对某节点遍历到最底部
+  for (const something of item.next()) {
+    queue.push(something)
+  }
+}
+```
+
 LeetCode 上 DFS 相关题目：
 
 1. [No.98 Validate Binary Search Tree](./leetcode/JavaScript/No98.validate-binary-search-tree.js)
@@ -369,6 +384,26 @@ LeetCode 上 DFS 相关题目：
    2.3. 取出 V 的所有未访问邻节点，放入队列
 
    2.4. 将 V 标注为**已完全探索**
+
+```javascript
+// 常见遍历式 BFS
+const data = {} // something..
+const queue = [data]
+
+while (queue.length) {
+  let len = queue.length
+  // 每次处理一层
+  while (len) {
+    const item = queue.shift()
+
+    for (const something of item.next()) {
+      queue.push(something)
+    }
+
+    len -= 1
+  }
+}
+```
 
 LeetCode 上 BFS 相关题目：
 

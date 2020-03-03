@@ -2,6 +2,7 @@
  * Difficulty:
  * Medium
  *
+ * Desc:
  * Given strings A and B of the same length, we say A[i] and B[i] are equivalent characters.
  *
  * For example, if A = "abc" and B = "cde", then we have 'a' == 'c', 'b' == 'd', 'c' == 'e'.

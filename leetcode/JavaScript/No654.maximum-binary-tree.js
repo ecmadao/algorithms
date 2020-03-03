@@ -23,6 +23,12 @@
  *
  * Note:
  * The size of the given array will be in the range [1,1000].
+ *
+ * 给定一个不含重复元素的整数数组。一个以此数组构建的最大二叉树定义如下：
+ * 1. 二叉树的根是数组中的最大元素。
+ * 2. 左子树是通过数组中最大值左边部分构造出的最大二叉树。
+ * 3. 右子树是通过数组中最大值右边部分构造出的最大二叉树。
+ * 通过给定的数组构建最大二叉树，并且输出这个树的根节点
  */
 
 /**
@@ -33,27 +39,19 @@
  * }
  */
 
-const findIndex = (nums, target) => {
-  for (let i = 0; i < nums.length; i += 1) {
-    if (nums[i] === target) return i;
-  }
-};
-
 /**
  * @param {number[]} nums
  * @return {TreeNode}
  */
 var constructMaximumBinaryTree = function(nums) {
-  if (!nums.length) return null;
+  if (!nums.length) return null
 
-  const max = Math.max(...nums);
-  const root = new TreeNode(max);
+  const max = Math.max(...nums)
+  const index = nums.indexOf(max)
 
-  if (max.length === 1) return root;
+  const root = new TreeNode(max)
+  root.left = constructMaximumBinaryTree(nums.slice(0, index))
+  root.right = constructMaximumBinaryTree(nums.slice(index + 1))
+  return root
+}
 
-  const index = findIndex(nums, max);
-  root.left = constructMaximumBinaryTree(nums.slice(0, index));
-  root.right = constructMaximumBinaryTree(nums.slice(index + 1));
-
-  return root;
-};

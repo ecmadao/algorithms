@@ -11,6 +11,9 @@
  * The number of elements initialized in nums1 and nums2 are m and n respectively.
  *
  * 给出两个排好序的数组 nums1, nums2，要求把 nums1 的前 m 个元素和 nums2 的前 n 个元素合并，并直接修改 nums1
+ *
+ * 给定两个排序后的数组 A 和 B，其中 A 的末端有足够的缓冲空间容纳 B。 编写一个方法，将 B 合并入 A 并排序。
+ * 初始化 A 和 B 的元素数量分别为 m 和 n
  */
 
 /**
@@ -20,7 +23,7 @@
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-var merge = function(nums1, m, nums2, n) {
+var merge_1 = function(nums1, m, nums2, n) {
   let i = m - 1
   let j = n - 1
   let index = m + n - 1
@@ -41,3 +44,25 @@ var merge = function(nums1, m, nums2, n) {
     j -= 1
   }
 }
+
+/**
+ * @param {number[]} A
+ * @param {number} m
+ * @param {number[]} B
+ * @param {number} n
+ * @return {void} Do not return anything, modify A in-place instead.
+ */
+var merge_2 = function(A, m, B, n) {
+  let i = 0
+  let j = 0
+
+  while (i < A.length && j < B.length) {
+    if (j === n) break
+    if (A[i] > B[j] || i >= (m + j)) {
+      A.splice(i, 0, B[j])
+      j += 1
+    }
+    i += 1
+  }
+  A.splice(m + n, A.length - m - n)
+};
