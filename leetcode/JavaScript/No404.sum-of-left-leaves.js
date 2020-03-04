@@ -25,7 +25,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var sumOfLeftLeaves = function(root) {
+var sumOfLeftLeaves_1 = function(root) {
   const isLeave = node => node && !node.left && !node.right;
 
   let sum = 0;
@@ -44,3 +44,20 @@ var sumOfLeftLeaves = function(root) {
   }
   return sum;
 };
+
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var sumOfLeftLeaves_2 = function(root) {
+  if (!root) return 0
+
+  let left = 0
+  if (root.left && !root.left.left && !root.left.right) {
+    left = root.left.val
+  } else {
+    left = sumOfLeftLeaves_2(root.left)
+  }
+
+  return left + sumOfLeftLeaves_2(root.right)
+}
