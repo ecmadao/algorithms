@@ -14,12 +14,12 @@
  * Input: a = 1, b = 2, c = 5
  * Output: [1,2]
  * Explanation: Move the stone from 5 to 3, or move the stone from 5 to 4 to 3.
- * 
+ *
  * Example 2:
  * Input: a = 4, b = 3, c = 2
  * Output: [0,0]
  * Explanation: We cannot make any moves.
- * 
+ *
  * Example 3:
  * Input: a = 3, b = 5, c = 1
  * Output: [1,2]
@@ -30,7 +30,7 @@
  * 2. 1 <= b <= 100
  * 3. 1 <= c <= 100
  * 4. a != b, b != c, c != a
- * 
+ *
  * 三枚石子放置在数轴上，位置分别为 a，b，c。
  * 每一回合，我们假设这三枚石子当前分别位于位置 x, y, z 且 x < y < z。
  * 从位置 x 或者是位置 z 拿起一枚石子，并将该石子移动到某一整数位置 k 处，其中 x < k < z 且 k != y。
