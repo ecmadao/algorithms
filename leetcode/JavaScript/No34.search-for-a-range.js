@@ -18,28 +18,21 @@
  * 如果只有一个目标值，比如在上述数组中查找 5，则返回 [0, 0]
  */
 
-// 用二分法进行左右搜索
-var search = function(nums, target, left, right, results) {
-  while(left <= right) {
-    var midIndex = Math.floor((left + right) / 2);
-    var mid = nums[midIndex];
-    if (mid === target) {
-      results.push(midIndex);
+// 用二分法搜索
+const search = (nums, target) => {
+  let i = 0
+  let j = nums.length - 1
 
-      if (midIndex - 1 >= left && nums[midIndex - 1] === target) {
-        search(nums, target, left, midIndex - 1, results);
-      }
-      if (midIndex + 1 <= right && nums[midIndex + 1] === target) {
-        search(nums, target, midIndex + 1, right, results);
-      }
-      break;
-    } else if (mid > target) {
-      right = midIndex - 1;
+  while (i <= j) {
+    const mid = Math.floor((i + j) / 2)
+    if (nums[mid] >= target) {
+      j = mid - 1
     } else {
-      left = midIndex + 1;
+      i = mid + 1
     }
   }
-};
+  return i
+}
 
 /**
 * @param {number[]} nums
@@ -47,24 +40,14 @@ var search = function(nums, target, left, right, results) {
 * @return {number[]}
 */
 var searchRange = function(nums, target) {
-  var left = 0;
-  var results = [];
-  var right = nums.length - 1;
+  if (!nums.length || nums[0] > target || nums[nums.length - 1] < target) return [-1, -1]
 
-  search(nums, target, left, right, results);
-  if (!results.length) {
-    return [-1, -1];
-  } else if (results.length === 1) {
-    results.push(results[0]);
-  } else {
-    results.sort((a, b) => a - b);
-    results = [
-      results[0],
-      results[results.length - 1]
-    ];
-  }
-  return results;
-};
+  const index = search(nums, target)
+  if (nums[index] !== target) return [-1, -1]
+  let i = index
+  while (nums[i] === target) i += 1
+  return [index, i - 1]
+}
 
 searchRange([5, 7, 7, 8, 8, 10], 8)
 searchRange([5, 7, 7, 7, 8, 8, 10], 7)

@@ -10,6 +10,15 @@
  * the contiguous subarray [4, -1, 2, 1] has the largest sum = 6.
  *
  * 给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和
+ *
+ * Leetcode 53：最大子序和（最详细的解法！！！）
+ * https://blog.csdn.net/qq_17550379/article/details/82963541
+ *
+ * 最大子数列问题
+ * https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98
+ *
+ * Kadane’s Algorithm Explained
+ * https://hackernoon.com/kadanes-algorithm-explained-50316f4fd8a6#subscribe-embed
  */
 
 /**
@@ -42,6 +51,7 @@ var maxSubArray_1 = function(nums) {
  * @return {number}
  *
  * 滑动窗口解法
+ * kadane algorithm
  */
 var maxSubArray_2 = function(nums) {
   let sum = 0
@@ -80,6 +90,7 @@ var maxSubArray_3 = function(nums) {
  * @return {number}
  *
  * 动态规划
+ * f(k)表示以当前元素结尾的子数组的最大值，则f(k)应该等于max(num[k],f(k-1)+num[k])
  */
 var maxSubArray_4 = function(nums) {
   if (nums.length < 1) return 0
