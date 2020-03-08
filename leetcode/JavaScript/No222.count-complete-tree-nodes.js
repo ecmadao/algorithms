@@ -34,11 +34,17 @@
  *     this.left = this.right = null;
  * }
  */
+
+/**
+ * ====================== Solution 1 ======================
+ * DFS
+*/
+
 /**
  * @param {TreeNode} root
  * @return {number}
  */
-var countNodes = function(root) {
+var countNodes_1 = function(root) {
   if (!root) return 0
   const queue = [root]
   let result = 0
@@ -52,36 +58,47 @@ var countNodes = function(root) {
   return result
 }
 
-// Test case
-function TreeNode(val) {
-  this.val = val;
-  this.left = this.right = null;
-}
+/**
+ * ====================== Solution 2 ======================
+ * BFS 到最后一层，然后二分搜索
+*/
 
-const buildTree = (arr) => {
-  let head = null;
-  const nodes = [];
+const isSec = node => node.left && !node.left.left && !node.left.right
 
-  while (arr.length) {
-    const num = arr.shift();
-    const treeNode = new TreeNode(num);
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var countNodes_2 = function(root) {
+  if (!root) return 0
 
-    if (head === null) head = treeNode;
+  let count = 0
+  const queue = [root]
 
-    if (nodes.length) {
-      const node = nodes.shift();
-      if (!node.left) {
-        node.left = treeNode;
-      } else if (!node.right) {
-        node.right = treeNode
-      }
-      if (!node.right) nodes.unshift(node);
+  while (queue.length) {
+    let len = queue.length
+    count += len
+    if (isSec(queue[0]))break
+
+    while (len) {
+      const node = queue.shift()
+      if (node.left) queue.push(node.left)
+      if (node.right) queue.push(node.right)
+      len -= 1
     }
-    nodes.push(treeNode);
   }
 
-  return head;
-};
+  let i = 0
+  let j = queue.length - 1
+  while (i <= j) {
+    const mid = Math.floor((i + j) / 2)
+    const node = queue[mid]
+    if (node.left && node.right) {
+      i = mid + 1
+    } else {
+      j = mid - 1
+    }
+  }
 
-const nodeTree = buildTree([1,2,3,4,5,6]);
-countNodes(nodeTree);
+  return count + i * 2 + (queue[i] && queue[i].left ? 1 : 0)
+}
