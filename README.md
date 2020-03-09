@@ -29,24 +29,24 @@ Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
 
 ### Topic
 
-- [并查集](./union-find/README.md)
-- [基本排序](./elementary-sorts/README.md)
-- [归并排序](./mergesort/README.md)
-- [快速排序](./quicksort/README.md)
-- [优先队列](./priority-queues/README.md)
-- [二叉搜索树](./binary-search-trees/README.md)
+- [并查集](./union-find)
+- [基本排序](./elementary-sorts)
+- [归并排序](./mergesort)
+- [快速排序](./quicksort)
+- [优先队列](./priority-queues)
+- [二叉搜索树](./binary-search-trees)
 - 平衡二叉搜索树
-  - [AVL 二叉搜索树](./balanced-search-trees/README.md)
-  - [2-3 二叉搜索树](./2-3-search-trees/README.md)
-  - [红黑二叉搜索树](./red-black-bsts/README.md)
-  - [区间二叉搜索树](./interval-search-trees/README.md)
-- [k-d 树](./k-d-trees/README.md)
-- [排列组合](./permutation-and-combination/README.md)
-- [图](./graph/README.md)
+  - [AVL 二叉搜索树](./balanced-search-trees)
+  - [2-3 二叉搜索树](./2-3-search-trees)
+  - [红黑二叉搜索树](./red-black-bsts)
+  - [区间二叉搜索树](./interval-search-trees)
+- [k-d 树](./k-d-trees)
+- [排列组合](./permutation-and-combination)
+- [图](./graph)
 - [数字转换](./number)
 - [跳跃链表](./skiplist)
 
-### [LeetCode](./leetcode/README.md)
+### [LeetCode](./leetcode)
 
 ### Run demo
 
