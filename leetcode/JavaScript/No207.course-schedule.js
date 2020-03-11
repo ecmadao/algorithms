@@ -54,7 +54,7 @@ class Graph {
 * @param {number[][]} prerequisites
 * @return {boolean}
 */
-var canFinish = function(numCourses, prerequisites) {
+var canFinish_1 = function(numCourses, prerequisites) {
   const graph = new Graph(prerequisites)
 
   for (let i = 0; i < numCourses; i += 1) {
@@ -64,9 +64,45 @@ var canFinish = function(numCourses, prerequisites) {
   return true
 }
 
+/**
+ * @param {number} numCourses
+ * @param {number[][]} prerequisites
+ * @return {boolean}
+ */
+var canFinish_2 = function(numCourses, prerequisites) {
+  const adjs = {}
+  const visited = {}
+
+  for (const [i, j] of prerequisites) {
+    if (!adjs[i]) adjs[i] = []
+    adjs[i].push(j)
+  }
+
+  const dfs = (i, marked) => {
+    if (visited[i]) return true
+    visited[i] = true
+    marked[i] = true
+
+    for (const p of adjs[i] || []) {
+      if (marked[p]) return false
+      const res = dfs(p, marked)
+      if (!res) return false
+    }
+    marked[i] = false
+    return true
+  }
+
+  for (const key of Object.keys(adjs)) {
+    const res = dfs(key, {})
+    if (!res) return false
+  }
+
+  return true
+}
+
 console.log(
-  canFinish(2, [[1,0],[0,1]]) // false
+  canFinish_2(2, [[1,0],[0,1]]) // false
 )
 console.log(
-  canFinish(3, [[0,1],[0,2],[1,2]]) // true
+  canFinish_2(3, [[0,1],[0,2],[1,2]]) // true
 )

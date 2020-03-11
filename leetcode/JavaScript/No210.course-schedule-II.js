@@ -80,7 +80,7 @@ class DFS {
 * @return {number[]}
 * 拓扑排序/逆后排序
 */
-var findOrder = function(numCourses, prerequisites) {
+var findOrder_1 = function(numCourses, prerequisites) {
   const full = Array.from({ length: numCourses }, (_, i) => i)
   if (!prerequisites.length) return full
   const graph = new Graph(prerequisites, full)
@@ -93,17 +93,60 @@ var findOrder = function(numCourses, prerequisites) {
   }
   if (dfs.hasCircle) return []
   return [...dfs.pathes, ...graph.full]
-};
+}
+
+/**
+ * @param {number} numCourses
+ * @param {number[][]} prerequisites
+ * @return {number[]}
+ */
+var findOrder_2 = function(numCourses, prerequisites) {
+  const adjs = {}
+  const visited = {}
+  const individuals = new Set(
+    Array.from({ length: numCourses }, (_, i) => i)
+  )
+  for (const [i, j] of prerequisites) {
+    if (!adjs[j]) adjs[j] = []
+    adjs[j].push(i)
+    individuals.delete(i)
+    individuals.delete(j)
+  }
+
+  const pathes = [...individuals]
+
+  const dfs = (i, marked) => {
+    if (visited[i]) return true
+    visited[i] = true
+    marked[i] = true
+
+    for (const p of adjs[i] || []) {
+      if (marked[p]) return false
+      const res = dfs(p, marked)
+      if (!res) return false
+    }
+
+    marked[i] = false
+    pathes.unshift(i)
+    return true
+  }
+
+  for (const key of Object.keys(adjs)) {
+    const res = dfs(key, {})
+    if (!res) return []
+  }
+  return pathes
+}
 
 console.log(
-  findOrder(2, [[0, 1]])
+  findOrder_2(2, [[0, 1]])
 )
 console.log(
-  findOrder(2, [[1, 0]])
+  findOrder_2(2, [[1, 0]])
 )
 console.log(
-  findOrder(3, [[1, 0]])
+  findOrder_2(3, [[1, 0]])
 )
 console.log(
-  findOrder(4, [[1, 0], [2, 0], [3, 1], [3, 2]])
+  findOrder_2(4, [[1, 0], [2, 0], [3, 1], [3, 2]])
 )
