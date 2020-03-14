@@ -76,3 +76,71 @@ MinStack.prototype.getMin = function() {
 * var param_3 = obj.top()
 * var param_4 = obj.getMin()
 */
+
+// ============================== Solution 2 ==============================
+
+/**
+ * initialize your data structure here.
+ */
+var MinStack_2 = function() {
+  this.queue = []
+  this.sorted = []
+};
+
+MinStack_2.prototype.search = function(num) {
+  let i = 0
+  let j = this.sorted.length - 1
+  while (i <= j) {
+    const mid = Math.floor((i + j) / 2)
+    if (this.sorted[mid] === num) return mid
+    if (this.sorted[mid] < num) {
+      i = mid + 1
+    } else {
+      j = mid - 1
+    }
+  }
+  return i
+}
+
+/**
+* @param {number} x
+* @return {void}
+*/
+MinStack_2.prototype.push = function(x) {
+  const index = this.search(x)
+  this.sorted.splice(index, 0, x)
+  this.queue.push([index, x])
+};
+
+/**
+* @return {void}
+*/
+MinStack_2.prototype.pop = function() {
+  const [index, num] = this.queue.pop()
+  this.sorted.splice(index, 1)
+};
+
+/**
+* @return {number}
+*/
+MinStack_2.prototype.top = function() {
+  if (!this.queue.length) return null
+  return this.queue[this.queue.length - 1][1]
+};
+
+/**
+* @return {number}
+*/
+MinStack_2.prototype.getMin = function() {
+  if (!this.sorted.length) return null
+  return this.sorted[0]
+};
+
+/**
+* Your MinStack object will be instantiated and called as such:
+* var obj = new MinStack()
+* obj.push(x)
+* obj.pop()
+* var param_3 = obj.top()
+* var param_4 = obj.getMin()
+*/
