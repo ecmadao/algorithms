@@ -98,3 +98,22 @@ var candy = function(ratings) {
   const sum = Object.keys(tmpCache).reduce((pre, cur) => pre + tmpCache[cur], 0);
   return sum;
 };
+
+
+/**
+ * @param {number[]} ratings
+ * @return {number}
+ *
+ * 从头到尾、从尾到头分别遍历 1 次，寻找应该多发的数目
+ */
+var candy_2 = function(ratings) {
+  const diff = Array.from({ length: ratings.length }, (_, i) => 0)
+
+  for (let i = 1; i < ratings.length; i += 1) {
+    if (ratings[i] > ratings[i - 1]) diff[i] = diff[i - 1] + 1
+  }
+  for (let i = ratings.length - 2; i >= 0; i -= 1) {
+    if (ratings[i] > ratings[i + 1]) diff[i] = Math.max(diff[i], diff[i + 1] + 1)
+  }
+  return ratings.length + diff.reduce((n1, n2) => n1 + n2, 0)
+}
