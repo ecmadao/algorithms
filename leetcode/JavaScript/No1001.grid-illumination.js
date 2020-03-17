@@ -61,6 +61,9 @@ var gridIllumination = function(N, lamps, queries) {
     dict[`${i}-${j}`] = 1
     lights.row[i] = (lights.row[i] || 0) + 1
     lights.col[j] = (lights.col[j] || 0) + 1
+    // 正反对角线：
+    // 正对角线：对于 [row, col], 位于正对角线上的任意两点，row - col 必然相等
+    // 反对角线：对于 [row, col], 位于正对角线上的任意两点，row + col 必然相等
     lights.diagonal1[i - j] = (lights.diagonal1[i - j] || 0) + 1
     lights.diagonal2[i + j] = (lights.diagonal2[i + j] || 0) + 1
   }
