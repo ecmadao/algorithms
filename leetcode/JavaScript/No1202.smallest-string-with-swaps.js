@@ -49,21 +49,22 @@
  */
 var smallestStringWithSwaps = function(s, pairs) {
   const find = (uf, i) => {
-    while (uf[i] !== i) i = uf[i]
-    return i
+    let d = 1
+    while (uf[i] !== i) { i = uf[i]; d += 1 }
+    return [i, d]
   }
 
   const union = (uf, n1, n2) => {
     if (uf[n1] === undefined) uf[n1] = n1
     if (uf[n2] === undefined) uf[n2] = n2
 
-    const f1 = find(uf, n1)
-    const f2 = find(uf, n2)
+    const [f1, d1] = find(uf, n1)
+    const [f2, d2] = find(uf, n2)
 
-    if (s[f1] < s[f2]) {
-      uf[f2] = f1
-    } else {
+    if (d1 <= d2) {
       uf[f1] = f2
+    } else {
+      uf[f2] = f1
     }
   }
 
@@ -74,7 +75,7 @@ var smallestStringWithSwaps = function(s, pairs) {
 
   const map = {}
   for (let i = 0; i < uf.length; i += 1) {
-    const f = find(uf, uf[i])
+    const [f, _] = find(uf, uf[i])
     if (!map[f]) map[f] = []
     map[f].push(i)
   }

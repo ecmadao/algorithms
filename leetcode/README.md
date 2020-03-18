@@ -139,6 +139,7 @@
 - [No487. 最大连续1的个数 II](https://leetcode-cn.com/problems/max-consecutive-ones-ii/)
 - [No1004. 最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/)
 - [No1040. 移动石子直到连续 II](https://leetcode-cn.com/problems/moving-stones-until-consecutive-ii/)
+- [No1052. 爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner/)
 - [No1291. 顺次数](https://leetcode-cn.com/problems/sequential-digits/)
 
 ### 单调栈和双端队列

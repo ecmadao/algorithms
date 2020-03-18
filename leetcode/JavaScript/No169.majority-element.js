@@ -31,6 +31,8 @@ var majorityElement_1 = function(nums) {
  * 初始化，从第一个数开始，count = 1, num = nums[0]
  * index = 1 开始遍历数组，遇到相同数字则 count++，遇到不同数字则 count--
  * count 为 0 时，从当前位的数字开始重新初始化
+ *
+ * 摩尔投票法
  */
 var majorityElement_2 = function(nums) {
   let count = 1
@@ -47,4 +49,5 @@ var majorityElement_2 = function(nums) {
       count += 1
     }
   }
+  return num
 }
