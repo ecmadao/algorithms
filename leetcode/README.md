@@ -182,6 +182,11 @@
 - [No646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 - [No1024. 视频拼接](https://leetcode-cn.com/problems/video-stitching/comments/)
 
+#### 区间加法
+
+- [No1094. 拼车](https://leetcode-cn.com/problems/car-pooling/)
+- [No1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)
+
 ### 排序相关
 
 #### 荷兰旗问题/三向切分
