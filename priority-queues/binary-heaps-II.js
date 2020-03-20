@@ -56,7 +56,6 @@ class Heap {
 
       fPos = cPos
       cPos = fPos * 2
-      
     }
 
     this.queue[fPos - 1] = target
