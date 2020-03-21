@@ -170,13 +170,13 @@ for (let i = 1; i <= n; i += 1) {
 }
 
 for (let len = 2; len <= n; len += 1) { // 从小到大枚举区间长度
-  for (let i = 1; i <= n - l + 1; i += 1) { // 枚举区间左端点
+  for (let i = 1; i <= n - len + 1; i += 1) { // 枚举区间左端点
     let j = i + len - 1 // 根据左端点和区间长度求区间右端点
     if (j > n) break
 
     dp[i][j] = 极限值
 
-    for(k = i; k < j; ++k) { // 从区间 [i, j] 中任意位置截断
+    for(k = i; k < j; k += 1) { // 从区间 [i, j] 中任意位置截断
       // w[i][j] 代表把两堆区间合并所需代价
       // 求最大值则是 Math.max
       dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k + 1][j] + w[i][j])
