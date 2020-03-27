@@ -2,6 +2,7 @@
  * Difficulty:
  * Medium
  *
+ * Desc:
  * Design your implementation of the circular double-ended queue (deque).
  * Your implementation should support following operations:
  *

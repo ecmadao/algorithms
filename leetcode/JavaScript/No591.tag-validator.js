@@ -14,16 +14,16 @@
  * 6. A < is unmatched if you cannot find a subsequent >. And when you find a < or </, all the subsequent characters until the next > should be parsed as TAG_NAME (not necessarily valid).
  * 7. The cdata has the following format : <![CDATA[CDATA_CONTENT]]>. The range of CDATA_CONTENT is defined as the characters between <![CDATA[ and the first subsequent ]]>.
  * 8. CDATA_CONTENT may contain any characters. The function of cdata is to forbid the validator to parse CDATA_CONTENT, so even it has some characters that can be parsed as tag (no matter valid or invalid), you should treat it as regular characters.
- * 
+ *
  * Example 1:
  * Input: "<DIV>This is the first line <![CDATA[<div>]]></DIV>"
  * Output: True
- * Explanation: 
- * The code is wrapped in a closed tag : <DIV> and </DIV>. 
- * The TAG_NAME is valid, the TAG_CONTENT consists of some characters and cdata. 
+ * Explanation:
+ * The code is wrapped in a closed tag : <DIV> and </DIV>.
+ * The TAG_NAME is valid, the TAG_CONTENT consists of some characters and cdata.
  * Although CDATA_CONTENT has unmatched start tag with invalid TAG_NAME, it should be considered as plain text, not parsed as tag.
  * So TAG_CONTENT is valid, and then the code is valid. Thus return true.
- * 
+ *
  * Example 2:
  * Input: "<DIV>>>  ![cdata[]] <![CDATA[<div>]>]]>]]>>]</DIV>"
  * Output: True
@@ -35,40 +35,40 @@
  * text1 -> ">>  ![cdata[]] "
  * cdata -> "<![CDATA[<div>]>]]>", where the CDATA_CONTENT is "<div>]>"
  * text2 -> "]]>>]"
- * 
+ *
  * The reason why start_tag is NOT "<DIV>>>" is because of the rule 6.
  * The reason why cdata is NOT "<![CDATA[<div>]>]]>]]>" is because of the rule 7.
- * 
+ *
  * Invalid Code Examples 1:
  * Input: "<A>  <B> </A>   </B>"
  * Output: False
  * Explanation: Unbalanced. If "<A>" is closed, then "<B>" must be unmatched, and vice versa.
- * 
+ *
  * Invalid Code Examples 2:
  * Input: "<DIV>  div tag is not closed  <DIV>"
  * Output: False
- * 
+ *
  * Invalid Code Examples 3:
  * Input: "<DIV>  unmatched <  </DIV>"
  * Output: False
- * 
+ *
  * Invalid Code Examples 4:
  * Input: "<DIV> closed tags with invalid tag name  <b>123</b> </DIV>"
  * Output: False
- * 
+ *
  * Invalid Code Examples 5:
  * Input: "<DIV> unmatched tags with invalid tag name  </1234567890> and <CDATA[[]]>  </DIV>"
  * Output: False
- * 
+ *
  * Invalid Code Examples 6:
  * Input: "<DIV>  unmatched start tag <B>  and unmatched end tag </C>  </DIV>"
  * Output: False
- * 
+ *
  * Note:
  * For simplicity, you could assume the input code (including the any characters mentioned above) only contain letters, digits, '<','>','/','!','[',']' and ' '
- * 
+ *
  * 给定一个表示代码片段的字符串，你需要实现一个验证器来解析这段代码，并返回它是否合法。合法的代码片段需要遵守以下的所有规则：
- * 
+ *
  * 1. 代码必须被合法的闭合标签包围。否则，代码是无效的。
  * 2. 闭合标签（不一定合法）要严格符合格式：<TAG_NAME>TAG_CONTENT</TAG_NAME>。其中，<TAG_NAME>是起始标签，</TAG_NAME>是结束标签。起始和结束标签中的 TAG_NAME 应当相同。当且仅当 TAG_NAME 和 TAG_CONTENT 都是合法的，闭合标签才是合法的。
  * 3. 合法的 TAG_NAME 仅含有大写字母，长度在范围 [1,9] 之间。否则，该 TAG_NAME 是不合法的。
@@ -77,7 +77,7 @@
  * 6. 一个 <，如果你找不到一个后续的>与之匹配，是不合法的。并且当你找到一个<或</时，所有直到下一个>的前的字符，都应当被解析为 TAG_NAME（不一定合法）。
  * 7. cdata 有如下格式：<![CDATA[CDATA_CONTENT]]>。CDATA_CONTENT 的范围被定义成 <![CDATA[ 和后续的第一个 ]]>之间的字符。
  * 8. CDATA_CONTENT 可以包含任意字符。cdata 的功能是阻止验证器解析CDATA_CONTENT，所以即使其中有一些字符可以被解析为标签（无论合法还是不合法），也应该将它们视为常规字符
- * 
+ *
  * 为简明起见，你可以假设输入的代码（包括提到的任意字符）只包含数字, 字母, '<','>','/','!','[',']'和' '
  */
 
