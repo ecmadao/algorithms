@@ -49,7 +49,7 @@ LeetCode 上相关题目：
 3. [No.215 Kth Largest Element in an Array](./leetcode/JavaScript/No215.kth-largest-element-in-an-array.js)
 4. [No.264 Ugly Number II](./leetcode/JavaScript/No264.ugly-number-II.js)
 5. [No.347 Top K Frequent Elements](./leetcode/JavaScript/No347.top-k-frequent-elements.js)
-5. [No.451 Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js)
+6. [No.451 Sort Characters By Frequency](./leetcode/JavaScript/No451.sort-characters-by-frequency.js)
 
 #### 栈，stack
 
@@ -79,8 +79,9 @@ LeetCode 上相关题目：
 LeetCode 上相关题目：
 
 1. [No.621 Task Scheduler](./leetcode/JavaScript/No621.task-scheduler.js)
-1. [No.622 Design Circular Queue](./leetcode/JavaScript/No622.design-circular-queue.js)
-1. [No.641 Design Circular Deque](./leetcode/JavaScript/No641.design-circular-deque.js)
+2. [No.622 Design Circular Queue](./leetcode/JavaScript/No622.design-circular-queue.js)
+3. [No.641 Design Circular Deque](./leetcode/JavaScript/No641.design-circular-deque.js)
+4. [面试题 09. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
 ### 链表
 
