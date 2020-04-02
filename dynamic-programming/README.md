@@ -113,6 +113,7 @@
 - [No718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)
 - [No1027. 最长等差数列](https://leetcode-cn.com/problems/longest-arithmetic-sequence/)
 - [No1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
+- [面试题 17.08. 马戏团人塔](https://leetcode-cn.com/problems/circus-tower-lcci/)
 
 #### 状态机问题
 
@@ -201,3 +202,4 @@ References:
 - [No813. 最大平均值和的分组](https://leetcode-cn.com/problems/largest-sum-of-averages/)
 - [No1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
 - [No1167. 连接棒材的最低费用](https://leetcode-cn.com/problems/minimum-cost-to-connect-sticks/) - 此题不要求拼接顺序，因此其实是贪心算法问题。如果要求仅相邻才可拼接，则是经典的矩阵链乘法衍生问题
+- [No1130. 叶值的最小代价生成树](https://leetcode-cn.com/problems/minimum-cost-tree-from-leaf-values/)

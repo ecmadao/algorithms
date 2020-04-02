@@ -14,7 +14,7 @@
  * 1. There may be more than one LIS combination, it is only necessary for you to return the length.
  * 2. Your algorithm should run in O(n2) complexity.
  *
- * Follow up: Could you improve it to O(n log n) time complexity?
+ * Follow up: Could you improve it to O(nlogn) time complexity?
  *
  * 给定一个无序的整数数组，找到其中最长上升子序列的长度。
  * 寻找最长递增子序列
