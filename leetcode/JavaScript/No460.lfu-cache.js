@@ -205,3 +205,120 @@ LFUCache.prototype.put = function(key, value) {
  * var param_1 = obj.get(key)
  * obj.put(key,value)
  */
+
+// ============================================= Solution 2 =============================================
+
+var Node = function(val) {
+  this.val = val
+  this.pre = null
+  this.next = null
+  this.keys = new Set()
+}
+
+/**
+* @param {number} capacity
+*/
+var LFUCache = function(capacity) {
+  this.capacity = capacity
+  this.cache = new Map()
+  this.frequency = new Map()
+
+  this.head = new Node()
+};
+
+/**
+* @param {number} key
+* @return {number}
+*/
+LFUCache.prototype.get = function(key) {
+  if (!this.cache.has(key)) return -1
+  const [val, freq] = this.cache.get(key)
+
+  const node = this.frequency.get(freq)
+  node.keys.delete(key)
+
+  const { pre, next } = node
+  if (!node.keys.size) {
+    pre.next = next
+    if (next) next.pre = pre
+    this.frequency.delete(freq)
+  }
+
+  const f = freq + 1
+  if (this.frequency.has(f)) {
+    const nextNode = this.frequency.get(f)
+    nextNode.keys.add(key)
+    this.frequency.set(f, nextNode)
+  } else {
+    const newNode = new Node(f)
+    newNode.keys.add(key)
+
+    const preNode = node.keys.size ? node : pre
+
+    const preNodeNext = preNode.next
+    preNode.next = newNode
+    newNode.pre = preNode
+    newNode.next = preNodeNext
+    if (preNodeNext) preNodeNext.pre = newNode
+    this.frequency.set(f, newNode)
+  }
+
+  this.cache.set(key, [val, f])
+
+  return val
+};
+
+/**
+* @param {number} key
+* @param {number} value
+* @return {void}
+*/
+LFUCache.prototype.put = function(key, value) {
+  if (!this.capacity) return
+
+  if (this.cache.has(key)) {
+    this.cache.set(key, [value, this.cache.get(key)[1]])
+    this.get(key)
+    return
+  }
+
+  if (this.cache.size === this.capacity) {
+    const node = this.head.next
+    for (const key of node.keys.values()) {
+      node.keys.delete(key)
+      this.cache.delete(key)
+      break
+    }
+    if (!node.keys.size) {
+      const { pre, next } = node
+      pre.next = next
+      if (next) next.pre = pre
+      this.frequency.delete(node.val)
+    }
+  }
+
+  this.cache.set(key, [value, 1])
+
+  if (this.frequency.has(1)) {
+    const nextNode = this.frequency.get(1)
+    nextNode.keys.add(key)
+    this.frequency.set(1, nextNode)
+  } else {
+    const newNode = new Node(1)
+    newNode.keys.add(key)
+
+    const next = this.head.next
+    this.head.next = newNode
+    newNode.pre = this.head
+    newNode.next = next
+    if (next) next.pre = newNode
+    this.frequency.set(1, newNode)
+  }
+};
+
+/**
+* Your LFUCache object will be instantiated and called as such:
+* var obj = new LFUCache(capacity)
+* var param_1 = obj.get(key)
+* obj.put(key,value)
+*/
