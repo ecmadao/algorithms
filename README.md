@@ -14,7 +14,7 @@
 
 > 在设计算法时，面对的第一个任务是精准地定义问题。
 
-Algorithms notes & code & leetcode solution by Node.js, Swift and Haskell.
+Algorithms notes & code & leetcode solution by Node.js, Swift, Haskell and C#.
 
 ### 预储备
 
