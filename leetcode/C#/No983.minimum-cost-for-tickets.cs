@@ -43,9 +43,9 @@
 public class Solution {
     public int MincostTickets(int[] days, int[] costs) {
         HashSet<int> set = new HashSet<int>(days);
-        int[] dp = new int[days[days.Length - 1] + 1];
+        int[] dp = new int[days[^1] + 1];
 
-        for (int i = 1; i <= days[days.Length - 1]; i += 1) {
+        for (int i = 1; i <= days[^1]; i += 1) {
             if (!set.Contains(i)) {
                 dp[i] = dp[i - 1];
             } else {
@@ -56,6 +56,6 @@ public class Solution {
                 }.Min();
             }
         }
-        return dp[dp.Length - 1];
+        return dp[^1];
     }
 }

@@ -23,8 +23,8 @@ public class Solution {
         Array.Sort(nums);
 
         return Math.Max(
-            nums[0] * nums[1] * nums[nums.Length - 1],
-            nums[nums.Length - 3] * nums[nums.Length - 2] * nums[nums.Length - 1]
+            nums[0] * nums[1] * nums[^1],
+            nums[nums.Length - 3] * nums[nums.Length - 2] * nums[^1]
         );
     }
 }

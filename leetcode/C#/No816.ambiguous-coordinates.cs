@@ -40,7 +40,7 @@ public class Solution {
             string baseStr = string.Join("", letters);
             res.Add(baseStr);
         }
-        if (letters[letters.Length - 1] == '0') return res;
+        if (letters[^1] == '0') return res;
 
         for (int i = 1; i < letters.Length; i += 1) {
             if (int.Parse(string.Join("", letters[i..])) == 0) break;
@@ -54,7 +54,7 @@ public class Solution {
     }
 
     public IList<string> AmbiguousCoordinates(string S) {
-        char[] letters = S.ToCharArray()[1..(S.Length - 1)];
+        char[] letters = S.ToCharArray()[1..^1];
 
         List<string> res = new List<string>();
 

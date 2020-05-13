@@ -48,8 +48,8 @@ public class Solution {
                 }
                 while (stack.Count > 0 && stack.Count > count) cur -= stack.Pop().Length;
             }
-            cur += tmp[tmp.Length - 1].Length;
-            stack.Push(tmp[tmp.Length - 1]);
+            cur += tmp[^1].Length;
+            stack.Push(tmp[^1]);
         }
 
         if (stack.Count > 0 && stack.Peek().Split('.').Length > 1) res = Math.Max(res, cur + stack.Count - 1);

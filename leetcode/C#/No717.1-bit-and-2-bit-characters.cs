@@ -41,8 +41,8 @@ public class Solution {
 
     public bool IsOneBitCharacter(int[] bits) {
         if (bits.Length == 0) return false;
-        if (bits[bits.Length - 1] != 0) return false;
+        if (bits[^1] != 0) return false;
 
-        return IsValidateBitCharacter(bits[0..(bits.Length - 1)]);
+        return IsValidateBitCharacter(bits[0..^1]);
     }
 }

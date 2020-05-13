@@ -52,6 +52,6 @@ public class Solution {
             }
         }
 
-        return dp[nums.Length - 1];
+        return dp[^1];
     }
 }
