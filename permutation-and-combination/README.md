@@ -2,14 +2,14 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [排列组合](#%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88)
-  - [全排列](#%E5%85%A8%E6%8E%92%E5%88%97)
-    - [插入法（递归解法）](#%E6%8F%92%E5%85%A5%E6%B3%95%E9%80%92%E5%BD%92%E8%A7%A3%E6%B3%95)
-    - [字典序解法](#%E5%AD%97%E5%85%B8%E5%BA%8F%E8%A7%A3%E6%B3%95)
-    - [邻位对换法](#%E9%82%BB%E4%BD%8D%E5%AF%B9%E6%8D%A2%E6%B3%95)
-    - [LeetCode 相关问题](#leetcode-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98)
-  - [组合](#%E7%BB%84%E5%90%88)
-    - [LeetCode 相关问题](#leetcode-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98-1)
+- [排列组合](#%e6%8e%92%e5%88%97%e7%bb%84%e5%90%88)
+  - [全排列](#%e5%85%a8%e6%8e%92%e5%88%97)
+    - [插入法（递归解法）](#%e6%8f%92%e5%85%a5%e6%b3%95%e9%80%92%e5%bd%92%e8%a7%a3%e6%b3%95)
+    - [字典序解法](#%e5%ad%97%e5%85%b8%e5%ba%8f%e8%a7%a3%e6%b3%95)
+    - [邻位对换法](#%e9%82%bb%e4%bd%8d%e5%af%b9%e6%8d%a2%e6%b3%95)
+    - [LeetCode 相关问题](#leetcode-%e7%9b%b8%e5%85%b3%e9%97%ae%e9%a2%98)
+  - [组合](#%e7%bb%84%e5%90%88)
+    - [LeetCode 相关问题](#leetcode-%e7%9b%b8%e5%85%b3%e9%97%ae%e9%a2%98-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -93,13 +93,15 @@ results.push([...nums])
 
 #### LeetCode 相关问题
 
-- [No31.Next permutation](../leetcode/JavaScript/No31.next-permutation.js)
-- [No46.Permutations](../leetcode/JavaScript/No46.permutations.js)
-- [No47.Permutations II](../leetcode/JavaScript/No47.permutations-II.js)
+- [No31.Next permutation](https://leetcode-cn.com/problems/next-permutation)
+- [No46.Permutations](https://leetcode-cn.com/problems/permutations)
+- [No47.Permutations II](https://leetcode-cn.com/problems/permutations-ii)
 - [No51. N 皇后](https://leetcode-cn.com/problems/n-queens/)
 - [No52. N 皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)
-- [No60.Permutation sequence](../leetcode/JavaScript/No60.permutation-sequence.js)
+- [No60.Permutation sequence](https://leetcode-cn.com/problems/permutation-sequence)
 - [No556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
+- [面试题 08.07. 无重复字符串的排列组合](https://leetcode-cn.com/problems/permutation-i-lcci/)
+- [面试题 08.08. 有重复字符串的排列组合](https://leetcode-cn.com/problems/permutation-ii-lcci/)
 
 ### 组合
 
