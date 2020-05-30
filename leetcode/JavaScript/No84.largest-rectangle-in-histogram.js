@@ -22,7 +22,7 @@
  */
 
 /**
- * 跪拜在这道题脚下...
+ * Reference
  *
  * http://www.cnblogs.com/lichen782/p/leetcode_Largest_Rectangle_in_Histogram.html
  * http://fisherlei.blogspot.com/2012/12/leetcode-largest-rectangle-in-histogram.html
@@ -33,21 +33,23 @@
  * @return {number}
  */
 var largestRectangleArea = function(heights) {
-  heights.push(0);
-  var stack = [0];
-  var maxArea = 0;
-  for (var i = 1; i < heights.length; i += 1) {
+  heights.push(0)
+
+  const stack = [0]
+  let maxArea = 0
+
+  for (let i = 1; i < heights.length; i += 1) {
     // 如果高度递增，则直接把索引放入栈头部
     // 保证栈内的索引对应的高度始终是递增的
-    var num = heights[i];
-    if (stack.length && num < heights[stack[0]]) {
-      // 如果不再递增，则把栈内大于 num 的数全部取出，并每次计算最大面积
-      while (stack.length && heights[stack[0]] > num) {
-        var end = stack.shift();
-        maxArea = Math.max(maxArea, (stack.length ? i - stack[0] - 1 : i) * heights[end]);
-      }
+
+    while (stack.length && heights[stack.slice(-1)[0]] > heights[i]) {
+      const end = stack.pop()
+      maxArea = Math.max(
+        maxArea,
+        (stack.length ? i - stack.slice(-1)[0] - 1 : i) * heights[end]
+      )
     }
-    stack.unshift(i);
+    stack.push(i)
   }
-  return maxArea;
-};
+  return maxArea
+}
