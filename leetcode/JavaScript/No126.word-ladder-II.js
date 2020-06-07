@@ -27,62 +27,54 @@
  * 5. You may assume beginWord and endWord are non-empty and are not the same.
  */
 
-/**
+ /**
  * @param {string} beginWord
  * @param {string} endWord
  * @param {string[]} wordList
  * @return {string[][]}
  */
+
 var findLadders = function(beginWord, endWord, wordList) {
   if (!beginWord || !endWord || !wordList.length) return [];
   const set = new Set(wordList);
-  set.delete(beginWord);
-  const results = [];
-  let resultsTmp = [
-    [beginWord]
-  ];
-  let queue = [beginWord];
-  let finish = false;
 
-  const loopLayer = () => {
-    const queueSize = queue.length;
+  const res = [];
+  const queue = [];
+  queue.push([beginWord]);
 
-    for (let i = 0; i < queue.length; i += 1) {
-      set.delete(queue[i]);
-    }
+  while (queue.length && !res.length) {
+    for (const list of queue) set.delete(list[list.length - 1]);
 
-    const arr = [];
-    const tmp = [];
-    for (let z = 0; z < queueSize; z += 1) {
-      const word = queue.shift();
+    let len = queue.length;
+    while (len > 0) {
+      const list = queue.shift();
+      const word = list[list.length - 1];
 
-      for (let i = 0; i < word.length; i += 1) {
-        let shouldBreak = false;
-        for (let j = 97; j <= 122; j += 1) {
+      let done = false;
+      for (let i = 0; i < word.length && !done; i += 1) {
+        for (let j = 97; j <= 122 && !done; j += 1) {
           const letter = String.fromCharCode(j);
           if (letter === word[i]) continue;
-          const w = `${word.slice(0, i)}${letter}${word.slice(i + 1)}`;
-          if (set.has(w)) {
-            const wordArr = [...resultsTmp[z], w];
-            if (w === endWord) {
-              results.push(wordArr);
-              finish = true;
-              shouldBreak = true;
-              break;
-            }
-            arr.push(w);
-            tmp.push(wordArr);
-          }
-        }
-        if (shouldBreak) break;
-      }
-    }
-    resultsTmp = tmp;
-    queue = arr;
-  };
 
-  while (queue.length && !finish) {
-    loopLayer();
+          const newWord = `${word.slice(0, i)}${letter}${word.slice(i + 1)}`;
+          if (!set.has(newWord)) continue;
+
+          if (newWord === endWord) {
+            list.push(newWord);
+            res.push(list);
+            done = true;
+            break;
+          }
+
+          queue.push([
+            ...list,
+            newWord
+          ]);
+        }
+      }
+      len -= 1;
+    }
   }
-  return results;
+
+  return res;
 };
