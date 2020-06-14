@@ -34,8 +34,10 @@
  * @param {number[]} arr
  * @param {number} target
  * @return {number}
+ * 
+ * leetcode 更新了测试用例，下面的方法已经无法通过测试。可以在该方法的基础上进行改造
  */
-var findBestValue = function(arr, target) {
+var findBestValue_abandoned = function(arr, target) {
   arr.sort((n1, n2) => n1 - n2)
   const avg = Math.round(target / arr.length)
 
@@ -53,21 +55,68 @@ var findBestValue = function(arr, target) {
   if (i === 0) return avg
   if (i === arr.length) return arr.pop()
 
-  let left = i
+  let left = i - 1
   let sum = 0
-  while (left - 1 >= 0 && arr[left - 1] === avg) {
-    left -= 1
-    sum += arr[left]
-  }
-  if (left === 0) return avg
+  while (left >= 0 && arr[left] === avg) sum += arr[left--]
+  if (left < 0) return avg
 
-  while (left - 1 >= 0) {
-    left -= 1
-    sum += arr[left]
-  }
+  while (left >= 0) sum += arr[left--]
 
   const r1 = Math.floor((target - sum) / (arr.length - i))
   const r2 = Math.ceil((target - sum) / (arr.length - i))
   if (target - (sum + r1 * (arr.length - i)) <= (sum + r2 * (arr.length - i)) - target) return r1
   return r2
 }
+
+
+/**
+ * @param {number[]} arr
+ * @param {number} target
+ * @return {number}
+ */
+var findBestValue = function(arr, target) {
+  arr.sort((n1, n2) => n1 - n2)
+  const sumPrefix = [0];
+  for (let i = 0; i < arr.length; i += 1) sumPrefix[i + 1] = arr[i] + sumPrefix[i];
+
+  const search = (left, num) => {
+    let i = left;
+    let j = arr.length - 1;
+    
+    while (i <= j) {
+      const mid = Math.floor((i + j) / 2)
+      if (arr[mid] <= num) {
+        i = mid + 1
+      } else {
+        j = mid - 1
+      }
+    }
+    
+    return i;
+  }
+  
+  const find = (index, num, avg) => {
+    const i = search(index, avg)
+    if (i === index) return [avg, avg * (arr.length - index)]
+
+    const sum = sumPrefix[i] - sumPrefix[index];
+    const value = findValue(i, num - sum);
+    return [value, sum + value * (arr.length - index)]
+  }
+  
+  const findValue = (index, num) => {
+    const count = arr.length - index;
+    if (count === 1) return Math.min(arr[index], num);
+
+    const avg = Math.floor(num / count);
+    const res1 = find(index, num, avg);
+    if (num % count === 0) return res1[0]
+
+    const res2 = find(index, num, avg + 1);
+    
+    if (Math.abs(num - res1[1]) <= Math.abs(num - res2[1])) return res1[0];
+    return res2[0];
+  }
+
+  return findValue(0, target)
+};
