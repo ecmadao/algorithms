@@ -20,8 +20,6 @@
  * num中不会出现 0, 1 这两个数字
  */
 
-
-
 public class WordTree {
     char word;
     public bool finish;
