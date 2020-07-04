@@ -7,22 +7,22 @@ class Heap {
 
   push(val) {
     this.queue.push(val)
-    this.sortWithFather(this.queue.length)
+    this.sortWithFather(this.size())
   }
 
   size() {
     return this.queue.length
   }
 
-  shift() {
-    if (!this.queue.length) return null
-    if (this.queue.length === 1) return this.queue.pop()
+  pop() {
+    if (!this.size()) return null
 
     const last = this.queue[this.queue.length - 1]
     this.queue[this.queue.length - 1] = this.queue[0]
     this.queue[0] = last
+
     const result = this.queue.pop()
-    this.sortWithChildren(1)
+    if (this.size() > 0) this.sortWithChildren(1)
 
     return result
   }
@@ -52,8 +52,8 @@ class Heap {
       }
 
       if (this.queue[cPos - 1] >= target) break
-      this.queue[fPos - 1] = this.queue[cPos - 1]
 
+      this.queue[fPos - 1] = this.queue[cPos - 1]
       fPos = cPos
       cPos = fPos * 2
     }
@@ -76,5 +76,5 @@ for (let i = 0; i < 4; i += 1) {
 console.log(`[${heap.queue}]`)
 
 while (heap.size()) {
-  console.log(heap.shift())
+  console.log(heap.pop())
 }

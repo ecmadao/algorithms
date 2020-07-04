@@ -90,17 +90,3 @@ var kthSmallest_2 = function(matrix, k) {
   }
   return right
 }
-
-// Test case
-console.log(
-  kthSmallest_2([[2,1,1],[2,3,1],[3,4,1]], 4) // 2
-)
-console.log(
-  kthSmallest_2([[1,2,1],[2,3,2],[1,3,2]], 3) // 1
-)
-console.log(
-  kthSmallest_2([[2,1,1],[2,3,1],[3,4,1]], 4) // 2
-)
-console.log(
-  kthSmallest_2([[1,2,1],[2,3,2],[1,3,4]], 3) // 1
-)
