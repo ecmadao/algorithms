@@ -66,12 +66,9 @@ var maxProfit_2 = function(prices) {
   let result = 0
   for (let i = 1; i < prices.length; i += 1) {
     dp[i] = {
-      buy: i - 2 < 0
-        ? Math.max(dp[i - 1].buy, dp[i - 1].sell - prices[i])
-        : Math.max(
-            dp[i - 1].buy,
-            dp[i - 2].sell - prices[i]
-        ),
+      buy: i < 2
+        ? Math.max(dp[i - 1].buy, -prices[i])
+        : Math.max(dp[i - 1].buy, dp[i - 2].sell - prices[i]),
       sell: Math.max(dp[i - 1].buy + prices[i], dp[i - 1].sell)
     }
     result = Math.max(result, dp[i].sell)
