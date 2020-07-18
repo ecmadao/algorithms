@@ -3,8 +3,8 @@ namespace Ecmadao.Algorighms
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Algorithms.BinaryHeaps;
-    using Algorithms.BinaryHeaps.Interfaces;
+    using Ecmadao.Algorithms.BinaryHeap;
+    using Ecmadao.Algorithms.BinaryHeap.Interfaces;
 
     class Program
     {

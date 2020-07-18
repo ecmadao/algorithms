@@ -28,7 +28,7 @@
  * @param {number[][]} triangle
  * @return {number}
  */
-var minimumTotal = function(triangle) {
+var minimumTotal_DFS = function(triangle) {
   const tmp = {};
   const getSum = (index, preSum, numIndex) => {
     if (index >= triangle.length) return preSum;
@@ -45,3 +45,30 @@ var minimumTotal = function(triangle) {
   };
   return getSum(1, triangle[0][0], 0);
 };
+
+/**
+ * @param {number[][]} triangle
+ * @return {number}
+ */
+var minimumTotal_DP = function(triangle) {
+  let dp = [];
+
+  for (let i = 0; i < triangle.length; i += 1) {
+    let cache = [];
+
+    for (let j = 0; j < triangle[i].length; j += 1) {
+      cache[j] = triangle[i][j];
+
+      if (i > 0) {
+        cache[i] += Math.min(
+          j < dp.length ? dp[j] : Infinity,
+          j > 0 ? dp[j - 1] : Infinity
+        );
+      }
+    }
+
+    dp = cache;
+  }
+
+  return Math.min(...dp);
+}

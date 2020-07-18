@@ -57,10 +57,10 @@ var numTrees = function(n) {
  *
  * 动态规划
  */
-var numTrees = function(n) {
-  const dp = [1, 1]
+var numTrees_DP = function(n) {
+  const dp = [1]
 
-  for (let i = 2; i <= n; i += 1) {
+  for (let i = 1; i <= n; i += 1) {
     dp[i] = 0
     for (let j = 1; j <= i; j += 1) {
       dp[i] += dp[j - 1] * dp[i - j]

@@ -31,9 +31,12 @@
  */
 var isInterleave = function(s1, s2, s3) {
   if (s1.length + s2.length !== s3.length) return false;
+
   const tmp = [];
+
   for (let i = 0; i < s1.length + 1; i += 1) {
-    if (tmp[i] === undefined) tmp[i] = [];
+    tmp[i] = [];
+  
     for (let j = 0; j < s2.length + 1; j += 1) {
       if (i === 0 && j === 0) {
         // 当 s1, s2 都是空字符串时，一定可以组成长度为 0 的 s3
@@ -47,7 +50,7 @@ var isInterleave = function(s1, s2, s3) {
         // 若能组成，则必有 tmp[i - 1][j] 为 true，且 s1, s3 的当前字母相等
         tmp[i][j] = tmp[i - 1][j] && (s3[i + j - 1] === s1[i - 1]);
       } else {
-        tmp[i][j] = (tmp[i][j - 1] && (s3[i + j - 1] === s2[j - 1])) || (tmp[i - 1][j] && (s3[i + j - 1] === s1[i - 1]))
+        tmp[i][j] = (tmp[i][j - 1] && (s3[i + j - 1] === s2[j - 1])) || (tmp[i - 1][j] && (s3[i + j - 1] === s1[i - 1]));
       }
     }
   }
